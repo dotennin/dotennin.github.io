@@ -1,1 +1,2 @@
-#typescript-standard-setup
+#Koiwaclib
+## Web Capture using with `PhantomJS` + `SlimerJS`
