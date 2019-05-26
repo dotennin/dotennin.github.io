@@ -12,7 +12,7 @@
     "dev:watch": "npx ts-node-dev --respawn src/index.ts",
     "clean": "rimraf dist/*",
     "build": "npm-run-all clean tsc",
-    "start": "node .",
+    "start": "node src/website-scraper.js",
     "eslint": "eslint --fix src/*.*"
   },
   "husky": {
@@ -27,10 +27,12 @@
     ]
   },
   "dependencies": {
-    "typescript": "^3.4.5"
+    "typescript": "^3.4.5",
+    "website-scraper": "^4.0.1"
   },
   "devDependencies": {
     "@types/node": "^12.0.2",
+    "@types/website-scraper": "^1.2.4",
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@typescript-eslint/parser": "^1.9.0",
     "eslint": "^5.16.0",

@@ -28,6 +28,8 @@ module.exports = {
         useTabs: false
       }
     ],
+    "no-undef": 'off',
+    "@typescript-eslint/no-var-requires": 'off',
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "no-unused-vars": "error",
     "@typescript-eslint/no-unused-vars": "error",
