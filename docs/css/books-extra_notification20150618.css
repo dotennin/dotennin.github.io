@@ -1,0 +1,39 @@
+@charset "euc-jp";
+/*****************************************************************
+ * books-extra_notification.css
+ *
+ * ver:  1.0.0
+ * date: 2015-06-18
+*****************************************************************/
+div#contents div#extra #extraInformation{
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+div#contents div#extra #extraInformation .box {
+    background: #ffffdd none repeat scroll 0 0;
+    border: 1px solid #cecece;
+    margin: 0 0 10px;
+    padding: 3px;
+    text-align: left;
+}
+
+div#contents div#extra #extraInformation .box .title{
+	padding: 0;
+	margin: 0 0 3px;
+}
+div#contents div#extra #extraInformation .box .center{
+	text-align: center;
+}
+div#contents div#extra #extraInformation .box .txtbold{
+	font-weight: bold;
+}
+div#contents div#extra #extraInformation .box .caution{
+  background: url(../images/icon_extrainformation.gif) left 1px no-repeat;
+  padding-left: 20px;
+}
+div#contents div#extra #extraInformation .box .information{
+  background: url(../images/icon_information.gif) left 1px no-repeat;
+  padding-left: 20px;
+}

@@ -1,0 +1,206 @@
+#subSectionNavDorpDown {
+  z-index: 20;
+  display: block;
+}
+
+#subSectionNavDorpDown dt {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+}
+
+#subSectionNavDorpDown:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0.1em;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+#subSectionNavDorpDown .menuList {
+    font-size: 75%;
+    line-height: 1.1;
+    padding-left: 10px;
+}
+
+#subSectionNavDorpDown .menuList ul li a {
+    border-right: 1px solid #999999;
+    color: #666666;
+    display: block;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+#subSectionNavDorpDown .menuList ul li {
+  display: inline;
+  float: left;
+  list-style-type: none;
+  padding: 0 0 0  8px;
+  margin: 5px 0 5px;
+  border: 1px solid transparent;
+  position: relative;
+  z-index: 5;
+}
+
+#subSectionNavDorpDown .menuList ul li.last a {
+    border: medium none;
+    padding-right: 0;
+}
+#subSectionNavDorpDown .menuList ul li.current {
+    font-weight: bold;
+}
+
+#subSectionNavDorpDown .menuList ul li.submenu {
+  background: none;
+  margin-right: 5px;
+  padding-left: 0;
+}
+#subSectionNavDorpDown .menuList ul li.submenu a {
+  padding-left: 8px;
+  background: transparent url(../images/downarrow.gif) right 8px no-repeat;
+}
+
+#subSectionNavDorpDown .menuList ul li a:link, 
+#subSectionNavDorpDown .menuList ul li a:visited {
+    color: #666666;
+    font-weight: bold;
+}
+
+
+#subSectionNavDorpDown .menuList ul li.active {
+  border: 1px solid #999999;
+}
+#subSectionNavDorpDown .menuList ul li.active > a {
+  text-decoration: none !important;
+  background: white url(../images/downarrow.gif) right 8px no-repeat;
+  position: relative;
+  z-index: 3;
+}
+#subSectionNavDorpDown .menuList ul li .submenubox {
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  left: -1px;
+  background: #ffffff;
+  min-width: 120px;
+  width: auto;
+  padding: 1px 0px;
+  border: 1px solid #999999;
+  margin: -1px 0 0;
+  display: none;
+}
+#subSectionNavDorpDown .menuList ul li .submenubox li {
+  float: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+#subSectionNavDorpDown .menuList ul li .submenubox li.last {
+  border-bottom: none;
+}
+#subSectionNavDorpDown .menuList ul li .submenubox li a {
+  color: #0F33CC;
+  font-weight: normal;
+  display: block;
+  background: none;
+  border: none;
+  border-left: 4px solid #ffffff;
+  padding: 5px 5px 5px 13px;
+  margin: 0;
+}
+#subSectionNavDorpDown .menuList ul li .submenubox li a:hover {
+  text-decoration: none;
+  color: #000;
+  background: #E9E9E9;
+  border: none;
+  border-left: 4px solid #bf0000;
+}
+#subSectionNavDorpDown .menuList ul li a {
+  padding: 5px 12px 2px 0px;
+  border: 1px solid transparent;
+}
+#subSectionNavDorpDown .menuList ul li.kobo {
+  background: none;
+}
+#subSectionNavDorpDown .menuList ul li.kobo a {
+  display: block;
+}
+#subSectionNavDorpDown .menuList ul li.kobo img {
+    margin-top: -1px;
+    padding-bottom: 1px;
+}
+
+
+#subSectionNavDorpDown .menuList ul li.alignRight {
+  background: none;
+  padding-left: 0;
+}
+#subSectionNavDorpDown .menuList ul li.alignRight a {
+  display: block;
+  margin-left: -5px;
+}
+#subSectionNavDorpDown .menuList ul li.alignRight.submenu a {
+  margin-right: 0;
+  background: #fff;
+}
+#subSectionNavDorpDown .menuList ul li.alignRight .submenubox {
+  background: #ffffff;
+  right: -1px;
+  left: auto;
+}
+#subSectionNavDorpDown .menuList ul li.alignRight .submenubox li {
+  float: none;
+}
+#subSectionNavDorpDown .menuList ul li.alignRight .submenubox li a:hover {
+  border: none;
+  border-left: 4px solid #bf0000;
+}
+
+#subSectionNavDorpDown .menuList ul li.alignRight {
+    float: right;
+    margin-right: 10px;
+    padding-left: 5px;
+}
+#subSectionNavDorpDown .menuList ul li.alignRight img {
+  vertical-align: middle;
+  width: 12px;
+  height: 17px;
+  margin-right: 4px;
+  background-image: url("../images/icon_beginner.gif");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+
+/*Start Clearfix*/
+#grpheader:after{
+  clear: both;
+  content: ".";
+  display: block;
+  font-size: 0.1em;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+
+#grpheader{
+  display: inline-block;
+}
+
+* html #grpheader{
+  height: 1%;
+}
+
+#grpheader{
+  display: block;
+}
+
+
+div#sidemenu {
+    z-index: 19  !important;
+}

@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=1280, maximum-scale=1, user-scalable=yes">
+<link rel="alternate" type="application/rss+xml" title="AWS WEB問題集で学習しよう RSS Feed" href="https://aws.koiwaclub.com/feed/">
+<link rel="pingback" href="https://aws.koiwaclub.com/xmlrpc.php">
+<meta name="description" content="オンプレミスからAWSへの移行についての総合問題オンプレミスで仮想マシンを構築していますが、ライセンス管理・機器の保守・および運用コストを考慮してAWSへ移行することになりました。インポートの可否オンプレミス側で使用している製品はVMwar">
+<!-- OGP -->
+<meta property="og:type" content="article">
+<meta property="og:description" content="オンプレミスからAWSへの移行についての総合問題オンプレミスで仮想マシンを構築していますが、ライセンス管理・機器の保守・および運用コストを考慮してAWSへ移行することになりました。インポートの可否オンプレミス側で使用している製品はVMwar">
+<meta property="og:title" content="ソリューションアーキテクト#05">
+<meta property="og:url" content="https://aws.koiwaclub.com/aws-exam2/aws-exam05/">
+<meta property="og:image" content="images/og-image.jpg">
+<meta property="og:site_name" content="AWS WEB問題集で学習しよう">
+<meta property="og:locale" content="ja_JP">
+<!-- /OGP -->
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="オンプレミスからAWSへの移行についての総合問題オンプレミスで仮想マシンを構築していますが、ライセンス管理・機器の保守・および運用コストを考慮してAWSへ移行することになりました。インポートの可否オンプレミス側で使用している製品はVMwar">
+<meta name="twitter:title" content="ソリューションアーキテクト#05">
+<meta name="twitter:url" content="https://aws.koiwaclub.com/aws-exam2/aws-exam05/">
+<meta name="twitter:image" content="https://aws.koiwaclub.com/wp-content/themes/simplicity2-child/images/og-image.jpg">
+<meta name="twitter:domain" content="aws.koiwaclub.com">
+<!-- /Twitter Card -->
+
+<title>ソリューションアーキテクト#05</title>
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="AWS WEB問題集で学習しよう &raquo; フィード" href="https://aws.koiwaclub.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="AWS WEB問題集で学習しよう &raquo; コメントフィード" href="https://aws.koiwaclub.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="AWS WEB問題集で学習しよう &raquo; ソリューションアーキテクト#05 のコメントのフィード" href="https://aws.koiwaclub.com/aws-exam2/aws-exam05/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/aws.koiwaclub.com\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="mtq_CoreStyleSheets-css" href="css/mtq_core_style.css" type="text/css" media="all">
+<link rel="stylesheet" id="mtq_ThemeStyleSheets-css" href="css/mtq_theme_style.css" type="text/css" media="all">
+<link rel="stylesheet" id="simplicity-style-css" href="css/style_1.css" type="text/css" media="all">
+<link rel="stylesheet" id="responsive-style-css" href="css/responsive-pc.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-style-css" href="css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="icomoon-style-css" href="css/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="extension-style-css" href="css/extension.css" type="text/css" media="all">
+<style id="extension-style-inline-css" type="text/css">
+#header .alignleft{margin-right:30px;max-width:none}@media screen and (max-width:639px){.article br{display:block}}
+</style>
+<link rel="stylesheet" id="child-style-css" href="css/style_2.css" type="text/css" media="all">
+<link rel="stylesheet" id="print-style-css" href="css/print.css" type="text/css" media="print">
+<link rel="stylesheet" id="sns-twitter-type-style-css" href="css/sns-twitter-type.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="css/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="bbp-default-css" href="css/bbpress.css" type="text/css" media="screen">
+<link rel="stylesheet" id="moderation-tools-bbpress-css" href="css/front.css" type="text/css" media="all">
+<link rel="stylesheet" id="swpm.common-css" href="css/swpm.common.css" type="text/css" media="all">
+<link rel="stylesheet" id="accordioncssfree-css" href="css/jquery.accordion.css" type="text/css" media="all">
+<link rel="stylesheet" id="whats-new-style-css" href="css/whats-new.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpProQuiz_front_style-css" href="css/wpProQuiz_front.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="sccss_style-css" href="index_1.html" type="text/css" media="all">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/jquery.accordion.js"></script>
+<link rel="canonical" href="https://aws.koiwaclub.com/aws-exam2/aws-exam05/">
+<link rel="shortlink" href="https://aws.koiwaclub.com/?p=219">
+<link rel="alternate" type="application/json+oembed" href="https://aws.koiwaclub.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Faws.koiwaclub.com%2Faws-exam2%2Faws-exam05%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://aws.koiwaclub.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Faws.koiwaclub.com%2Faws-exam2%2Faws-exam05%2F&#038;format=xml">
+<script type="text/javascript">
+             jQuery(document).bind("keydown", function(e) {
+               if(e.ctrlKey && (e.which == 65 || e.which == 67 || e.which == 88 || e.which == 83 ||e.which == 85)) {
+                 e.preventDefault();
+                 return false;
+                 }
+             });
+
+         jQuery(document).on( "mousedown", function(event) {
+             if(event.which=="3")
+             {
+             document.oncontextmenu = document.body.oncontextmenu = function() {return false;}
+
+             }
+             });
+            </script>
+
+            <style type="text/css">
+            body{
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    -khtml-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+               }
+            </style></head>
+  <body class="page-template-default page page-id-219 page-child parent-pageid-41" itemscope itemtype="http://schema.org/WebPage">
+    <div id="container">
+
+      <!-- header -->
+      <header itemscope itemtype="http://schema.org/WPHeader">
+        <div id="header" class="clearfix">
+          <div id="header-in">
+
+                        <div id="h-top">
+              <!-- モバイルメニュー表示用のボタン -->
+<div id="mobile-menu">
+  <a id="mobile-menu-toggle" href="#"><span class="fa fa-bars fa-2x"></span></a>
+</div>
+
+              <div class="alignleft top-title-catchphrase">
+                <!-- サイトのタイトル -->
+<p id="site-title" itemscope itemtype="http://schema.org/Organization">
+  <a href="https://aws.koiwaclub.com/">AWS WEB問題集で学習しよう</a></p>
+<!-- サイトの概要 -->
+<p id="site-description">
+  赤本ではなく黒本の問題集から学習する方向け</p>
+              </div>
+
+              <div class="alignright top-sns-follows">
+                              </div>
+
+            </div><!-- /#h-top -->
+          </div><!-- /#header-in -->
+        </div><!-- /#header -->
+      </header>
+
+      <!-- Navigation -->
+<nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+  <div id="navi">
+      	<div id="navi-in">
+      <div class="menu-wiziapp_custom-container"><ul id="menu-wiziapp_custom" class="menu"><li id="menu-item-531" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-531"><a href="https://aws.koiwaclub.com/">はじめに</a></li>
+<li id="menu-item-523" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-523"><a href="https://aws.koiwaclub.com/sample/">サンプル問題集</a></li>
+<li id="menu-item-1696" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1696"><a href="https://aws.koiwaclub.com/exam/">WEB問題集</a>
+<ul class="sub-menu">
+	<li id="menu-item-530" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-530"><a href="https://aws.koiwaclub.com/aws-exam2/">SAA</a></li>
+	<li id="menu-item-713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-713"><a href="https://aws.koiwaclub.com/aws-exam2/aws-field/">SAA（分野別問題集）</a></li>
+	<li id="menu-item-1733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1733"><a href="https://aws.koiwaclub.com/exam/sysops/">SysOps</a></li>
+	<li id="menu-item-2202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2202"><a href="https://aws.koiwaclub.com/exam/sap/">SAP</a></li>
+	<li id="menu-item-2880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2880"><a href="https://aws.koiwaclub.com/exam/clf/">CLF</a></li>
+	<li id="menu-item-2072" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2072"><a href="https://aws.koiwaclub.com/exam/learningvideo/">学習動画</a></li>
+	<li id="menu-item-1989" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1989"><a href="https://aws.koiwaclub.com/exam/gradebook/">みんなの成績表</a></li>
+</ul>
+</li>
+<li id="menu-item-1846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1846"><a href="https://aws.koiwaclub.com/spot_exam/">スポット問題集</a></li>
+<li id="menu-item-525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-525"><a href="https://aws.koiwaclub.com/membership-registration/">会員登録</a>
+<ul class="sub-menu">
+	<li id="menu-item-528" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-528"><a href="https://aws.koiwaclub.com/membership-registration/membership-login/">ログインページ</a></li>
+	<li id="menu-item-527" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-527"><a href="https://aws.koiwaclub.com/membership-registration/membership-profile/">プロフィール</a></li>
+	<li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526"><a href="https://aws.koiwaclub.com/membership-registration/password-reset/">パスワード初期化</a></li>
+	<li id="menu-item-545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-545"><a href="https://aws.koiwaclub.com/paid-membership-registration/">有料会員登録</a></li>
+</ul>
+</li>
+<li id="menu-item-529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529"><a href="https://aws.koiwaclub.com/support/">フォーラム</a></li>
+<li id="menu-item-2528" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2528"><a href="https://aws.koiwaclub.com/faqp/">FAQ</a></li>
+<li id="menu-item-524" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-524"><a href="https://aws.koiwaclub.com/change-log/">更新履歴</a></li>
+</ul></div>    </div><!-- /#navi-in -->
+  </div><!-- /#navi -->
+</nav>
+<!-- /Navigation -->
+      <!-- 本体部分 -->
+      <div id="body">
+        <div id="body-in" class="cf">
+
+          
+          <!-- main -->
+          <main itemscope itemprop="mainContentOfPage">
+            <div id="main" itemscope itemtype="http://schema.org/Blog">
+          <div id="post-219" class="post-219 page type-page status-publish">
+        <article class="article">
+          <header>
+            <h1 class="entry-title">ソリューションアーキテクト#05</h1>
+            <p class="post-meta">
+                  
+              
+              
+              
+                          </p>
+
+            
+            
+            
+                          <div id="widget-over-page-article" class="widgets">
+              <div id="pc_text-2" class="widget-over-page-article widget_pc_text">      <div class="text-pc">
+        <script async src="js/adsbygoogle.js"></script>
+<!-- 336*280 -->
+<ins class="adsbygoogle" style="display: inline-block; width: 336px; height: 280px;" data-ad-client="ca-pub-1600680293185006" data-ad-slot="7697083373"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>      </div>
+      </div>                      </div>
+                    </header>
+
+        
+        <div id="the-content" class="entry-content">
+        <p>
+</p><h2>オンプレミスからAWSへの移行についての総合問題</h2>オンプレミスで仮想マシンを構築していますが、ライセンス管理・機器の保守・および運用コストを考慮してAWSへ移行することになりました。<br>
+<h4>インポートの可否</h4>
+オンプレミス側で使用している製品はVMware ESX および Microsoft Hyper-V の2種類です。この2種類の仮想マシンイメージをAWS上にインポートする予定です。どの機能を使用すればインポートできますか？最も適したものを一つ選択してください。 <div id="mtq_quiz_area-1" class="mtq_quiz_area mtq_color_blue"> 
+  <!--Quiz generated using mTouch Quiz Version 3.1.3 by G. Michael Guy (http://gmichaelguy.com/quizplugin/)-->
+        
+      
+  <!-- Shortcode entered mtouchquiz id=9 --> 
+  <!-- Shortcode interpreted mtouchquiz id=9 alerts=off singlepage=off hints=off startscreen=off finalscreen=off multiplechances=off showanswers=now show_stamps=on randomq=off randoma=on status=on labels=on title=on proofread=off list=on time=off scoring=off formid= vform=on autoadvance=off autosubmit=off inform=off forcecf=off forcegf=off offset=1 questions=1 firstid=46 lastid=46 color=blue --> 
+  <!--form action="" method="post" class="quiz-form" id="quiz-9"-->
+    <div id="mtq_quiztitle-1" class="mtq_quiztitle">
+  <h2></h2>
+  </div>
+      <noscript>
+  <div id="mtq_javawarning-1" class="mtq_javawarning">
+  Please wait while the activity loads.<br> If this activity does not load, try refreshing your browser. Also, this page requires javascript. Please visit using a browser with javascript enabled.  <div class="mtq_failed_button" onclick="mtq_start_one(1)">
+  もしロードが出来なかったら、ここをクリックしてください  </div></div>
+  </noscript>
+    
+  <!-- root element for mtqscrollable -->
+
+  <div id="mtq_question_container-1">
+  <div class="mtqscrollable" id="mtq_scroll_container-1">
+        <!-- root element for the items -->
+    
+    <div id="mtq_scroll_items_container-1" class="items">
+            <div class="mtq_question mtq_scroll_item-1" id="mtq_question-1-1"><table class="mtq_question_heading_table"><tr><td><div class="mtq_question_label ">問題1</div><div id="mtq_stamp-1-1" class="mtq_stamp"></div></td></tr></table><div id="mtq_question_text-1-1" class="mtq_question_text">　</div><table class="mtq_answer_table"><colgroup><col class="mtq_oce_first"></colgroup><tr id="mtq_row-1-1-1" onclick="mtq_button_click(1,1,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-1-1" class="mtq_css_letter_button mtq_letter_button_0" alt="問題1, Choice 1">A</div><div id="mtq_marker-1-1-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-1-1" class="mtq_answer_text">VMイメージからのインポートはサポートしていない</div></td></tr><tr id="mtq_row-1-2-1" onclick="mtq_button_click(1,2,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-2-1" class="mtq_css_letter_button mtq_letter_button_1" alt="問題1, Choice 2">B</div><div id="mtq_marker-1-2-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-2-1" class="mtq_answer_text">AMI Import/Export</div></td></tr><tr id="mtq_row-1-3-1" onclick="mtq_button_click(1,3,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-3-1" class="mtq_css_letter_button mtq_letter_button_2" alt="問題1, Choice 3">C</div><div id="mtq_marker-1-3-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-3-1" class="mtq_answer_text">VMDK Import/Export</div></td></tr><tr id="mtq_row-1-4-1" onclick="mtq_button_click(1,4,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-4-1" class="mtq_css_letter_button mtq_letter_button_3" alt="問題1, Choice 4">D</div><div id="mtq_marker-1-4-1" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-4-1" class="mtq_answer_text">VM Import/Export
+</div></td></tr></table><div id="mtq_question_explanation-1-1" class="mtq_explanation"><div class="mtq_explanation-label">問題 1 の説明および補足&nbsp;</div><div class="mtq_explanation-text"> 再構築の手間なく簡単にAWSへ移行するにはVM Import/Exportという機能を使います。イメージをそのままAmazon EC2インスタンスに変換して起動させることが可能です。サポートされる仮想マシンイメージは、VMware ESXやVMWare vSphereで利用されるVMDK、Microsoft Hyper-VやCitrix XenServerで利用されるVHDになります。</div></div></div>                </div>
+        <!--End of mtqscrollable items--> 
+    
+  </div>
+  <!--End of mtqscrollable--> 
+  <!--mtq_status-->
+    <div id="mtq_quiz_status-1" class="mtq_quiz_status">
+  完了するには、1質問があります。  </div>
+      </div> 
+  <!--Holds all questions-->
+    <div id="mtq_navigator-1" class="mtq_navigator"> <div id="mtq_return_list_t-1" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,1)"> <div class="mtq_return_text">
+    戻る    </div> </div> <div id="mtq_shaded_item_msg-1" class="mtq_shaded_item_msg">
+    網掛け部分は完了した項目です。    </div>
+    <table id="mtq_question_list_container-1" class="mtq_question_list_container">
+      <tr>
+        <td id="mtq_list_item-1-1" class="mtq_list_item" onclick="mtq_nav_click(1,1)">1</td>      </tr>
+    </table>
+    <div id="mtq_return_list_b-1" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,1)"> <div class="mtq_return_text">
+    戻る    </div> </div></div>
+    <div id="mtq_variables" class="mtq_preload" style="display:none"> <input type="hidden" id="mtq_id-1" name="mtq_id_value" value="1"><input type="hidden" name="question_id[]" value="46"><input type="hidden" id="mtq_is_answered-1-1" value="0"><input type="hidden" id="mtq_is_correct-1-1" value="0"><input type="hidden" id="mtq_is_worth-1-1" value="100"><input type="hidden" id="mtq_num_attempts-1-1" value="0"><input type="hidden" id="mtq_points_awarded-1-1" value="0"><input type="hidden" id="mtq_is_correct-1-1-1" value="0"><input type="hidden" id="mtq_was_selected-1-1-1" value="0"><input type="hidden" id="mtq_was_ever_selected-1-1-1" value="0"><input type="hidden" id="mtq_has_hint-1-1-1" value="0"><input type="hidden" id="mtq_is_correct-1-2-1" value="0"><input type="hidden" id="mtq_was_selected-1-2-1" value="0"><input type="hidden" id="mtq_was_ever_selected-1-2-1" value="0"><input type="hidden" id="mtq_has_hint-1-2-1" value="0"><input type="hidden" id="mtq_is_correct-1-3-1" value="0"><input type="hidden" id="mtq_was_selected-1-3-1" value="0"><input type="hidden" id="mtq_was_ever_selected-1-3-1" value="0"><input type="hidden" id="mtq_has_hint-1-3-1" value="0"><input type="hidden" id="mtq_is_correct-1-4-1" value="1"><input type="hidden" id="mtq_was_selected-1-4-1" value="0"><input type="hidden" id="mtq_was_ever_selected-1-4-1" value="0"><input type="hidden" id="mtq_has_hint-1-4-1" value="0"><input type="hidden" id="mtq_num_ans-1-1" value="4"><input type="hidden" id="mtq_num_correct-1-1" value="1"> <div id="mtq_have_completed_string" class="mtq_preload">
+    現在のあなたの成績    </div> <div id="mtq_questions_string" class="mtq_preload">
+    問正解！！    </div> <div id="mtq_question_string" class="mtq_preload">
+    質問    </div> <div id="mtq_your_score_is_string" class="mtq_preload">
+    正解率は    </div> <div id="mtq_correct_string" class="mtq_preload">
+    正解    </div> <div id="mtq_wrong_string" class="mtq_preload">
+    不正解    </div> <div id="mtq_partial_string" class="mtq_preload">
+    正解！だけど、正解率が少し下がっちゃったね・・・（＞＜）    </div> <div id="mtq_exit_warning_string" class="mtq_preload">
+    終わりですか？クイズが終わりなっかたら、入録した答えがなくなります。    </div> <div id="mtq_correct_answer_string" class="mtq_preload">
+    Correct Answer    </div> <div id="mtq_you_selected_string" class="mtq_preload">
+    You Selected    </div> <div id="mtq_not_attempted_string" class="mtq_preload">
+    Not Attempted    </div> <div id="mtq_final_score_on_quiz_string" class="mtq_preload">
+    Final Score on Quiz    </div> <div id="mtq_attempted_questions_correct_string" class="mtq_preload">
+    Attempted Questions Correct    </div> <div id="mtq_attempted_questions_wrong_string" class="mtq_preload">
+    Attempted Questions Wrong    </div> <div id="mtq_questions_not_attempted_string" class="mtq_preload">
+    Questions Not Attempted    </div> <div id="mtq_total_questions_on_quiz_string" class="mtq_preload">
+    Total Questions on Quiz    </div> <div id="mtq_question_details_string" class="mtq_preload">
+    Question Details    </div> <div id="mtq_quiz_results_string" class="mtq_preload">
+    Results    </div> <div id="mtq_date_string" class="mtq_preload">
+    Date    </div> <div id="mtq_score_string" class="mtq_preload">
+    Score    </div> <div id="mtq_hint_string" class="mtq_preload">
+    ★    </div>
+    <div id="mtq_time_allowed_string" class="mtq_preload">Time allowed</div>
+<div id="mtq_minutes_string" class="mtq_preload">minutes</div>
+<div id="mtq_seconds_string" class="mtq_preload">seconds</div>
+<div id="mtq_time_used_string" class="mtq_preload">Time used</div>
+<div id="mtq_answer_choices_selected_string" class="mtq_preload">Answer Choice(s) Selected</div>
+<div id="mtq_question_text_string" class="mtq_preload">Question Text</div>
+
+
+    <input type="hidden" id="mtq_answer_display-1" value="2">
+    <input type="hidden" id="mtq_autoadvance-1" value="0">
+    <input type="hidden" id="mtq_autosubmit-1" value="0">
+    <input type="hidden" id="mtq_single_page-1" value="0">
+    <input type="hidden" id="mtq_show_hints-1" value="0">
+    <input type="hidden" id="mtq_show_start-1" value="0">
+    <input type="hidden" id="mtq_show_final-1" value="0">
+    <input type="hidden" id="mtq_show_alerts-1" value="0">
+    <input type="hidden" id="mtq_multiple_chances-1" value="0">
+    <input type="hidden" id="mtq_proofread-1" value="0">
+    <input type="hidden" id="mtq_scoring-1" value="0">
+    <input type="hidden" id="mtq_vform-1" value="1">
+    <input type="hidden" name="quiz_id" id="quiz_id-1" value="9">
+    <input type="hidden" name="mtq_total_questions" id="mtq_total_questions-1" value="1">
+    <input type="hidden" name="mtq_current_score" id="mtq_current_score-1" value="0">
+    <input type="hidden" name="mtq_max_score" id="mtq_max_score-1" value="0">
+    <input type="hidden" name="mtq_questions_attempted" id="mtq_questions_attempted-1" value="0">
+    <input type="hidden" name="mtq_questions_correct" id="mtq_questions_correct-1" value="0">
+    <input type="hidden" name="mtq_questions_wrong" id="mtq_questions_wrong-1" value="0">
+    <input type="hidden" name="mtq_questions_not_attempted" id="mtq_questions_not_attempted-1" value="0">
+    <input type="hidden" id="mtq_display_number-1" value="1">
+    <input type="hidden" id="mtq_show_list_option-1" value="1">
+    <input type="hidden" id="mtq_show_stamps-1" value="1">
+    <input type="hidden" id="mtq_num_ratings-1" value="6"><input type="hidden" id="mtq_ratingval-1-1" value="-1"><div id="mtq_rating-1-1" class="mtq_preload">すべて完成</div><input type="hidden" id="mtq_ratingval-2-1" value="0"><div id="mtq_rating-2-1" class="mtq_preload">You need more practice! （もっと勉強が必要です。頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-3-1" value="40"><div id="mtq_rating-3-1" class="mtq_preload">Keep trying! （引き続き頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-4-1" value="60"><div id="mtq_rating-4-1" class="mtq_preload">Not bad! （まぁまぁです。このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-5-1" value="80"><div id="mtq_rating-5-1" class="mtq_preload">Good work! （惜しい・・・ですが、よくできました！このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-6-1" value="100"><div id="mtq_rating-6-1" class="mtq_preload">Perfect! （パーフェクト！！この調子で頑張りましょう！）</div>    <input type="hidden" id="mtq_gf_present-1" value="0">
+    <input type="hidden" id="mtq_cf7_present-1" value="0">
+    <input type="hidden" id="mtq_quiz_in_form-1" value="0">
+    <input type="hidden" id="mtq_gf_formid_number-1" value>
+
+  </div>
+  
+  <!--Variables Div--> 
+  <!--/form--> 
+</div>
+<!--Quiz area div-->
+
+ <br>
+<h4>動作環境の確認（OS）</h4>
+Amazon EC2インスタンスにインポートして起動させたところ、Windowsは以下OSですべて動作することができました。<br>
+<br>
+■Windows<br>
+・Microsoft Windows Server 2003（Standard、Datacenter、Enterprise）（Service Pack 1 適用済み）以降。<br>
+・Microsoft Windows Server 2003 R2（Standard、Datacenter、Enterprise）<br>
+・Microsoft Windows Server 2008（Standard、Datacenter、Enterprise）<br>
+・Microsoft Windows Server 2008 R2（Standard、Datacenter、Enterprise）<br>
+・Microsoft Windows Server 2012（Standard、Datacenter）<br>
+・Microsoft Windows Server 2012 R2（Standard、Datacenter）<br>
+・Microsoft Windows 7（Professional、Enterprise、Ultimate）<br>
+・Microsoft Windows 8（Professional、Enterprise）<br>
+・Microsoft Windows 8.1（Professional、Enterprise）<br>
+<br>
+しかしながら、linuxの一部で動作しないディストリビューションがありました。動作環境を確認したところ、対応していないディストリビューションとバージョンがあるようです。<br>
+<br>
+次のLinuxのうちVM Import/Exportに未対応なディストリビューションとバージョンはどれですか。二つ選択してください。<div id="mtq_quiz_area-2" class="mtq_quiz_area mtq_color_blue"> 
+  <!--Quiz generated using mTouch Quiz Version 3.1.3 by G. Michael Guy (http://gmichaelguy.com/quizplugin/)-->
+        
+      
+  <!-- Shortcode entered mtouchquiz id=10 --> 
+  <!-- Shortcode interpreted mtouchquiz id=1off alerts=off singlepage=off hints=off startscreen=off finalscreen=off multiplechances=off showanswers=now show_stamps=on randomq=off randoma=on status=on labels=on title=on proofread=off list=on time=off scoring=off formid= vform=on autoadvance=off autosubmit=off inform=off forcecf=off forcegf=off offset=1 questions=1 firstid=47 lastid=47 color=blue --> 
+  <!--form action="" method="post" class="quiz-form" id="quiz-10"-->
+    <div id="mtq_quiztitle-2" class="mtq_quiztitle">
+  <h2></h2>
+  </div>
+      <noscript>
+  <div id="mtq_javawarning-2" class="mtq_javawarning">
+  Please wait while the activity loads.<br> If this activity does not load, try refreshing your browser. Also, this page requires javascript. Please visit using a browser with javascript enabled.  <div class="mtq_failed_button" onclick="mtq_start_one(2)">
+  もしロードが出来なかったら、ここをクリックしてください  </div></div>
+  </noscript>
+    
+  <!-- root element for mtqscrollable -->
+
+  <div id="mtq_question_container-2">
+  <div class="mtqscrollable" id="mtq_scroll_container-2">
+        <!-- root element for the items -->
+    
+    <div id="mtq_scroll_items_container-2" class="items">
+            <div class="mtq_question mtq_scroll_item-2" id="mtq_question-1-2"><table class="mtq_question_heading_table"><tr><td><div class="mtq_question_label ">問題1</div><div id="mtq_stamp-1-2" class="mtq_stamp"></div></td></tr></table><div id="mtq_question_text-1-2" class="mtq_question_text">　</div><table class="mtq_answer_table"><colgroup><col class="mtq_oce_first"></colgroup><tr id="mtq_row-1-1-2" onclick="mtq_button_click(1,1,2)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-1-2" class="mtq_css_letter_button mtq_letter_button_0" alt="問題1, Choice 1">A</div><div id="mtq_marker-1-1-2" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-1-2" class="mtq_answer_text">RHEL 6.0</div></td></tr><tr id="mtq_row-1-2-2" onclick="mtq_button_click(1,2,2)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-2-2" class="mtq_css_letter_button mtq_letter_button_1" alt="問題1, Choice 2">B</div><div id="mtq_marker-1-2-2" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-2-2" class="mtq_answer_text">CENTOS7.1</div></td></tr><tr id="mtq_row-1-3-2" onclick="mtq_button_click(1,3,2)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-3-2" class="mtq_css_letter_button mtq_letter_button_2" alt="問題1, Choice 3">C</div><div id="mtq_marker-1-3-2" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-3-2" class="mtq_answer_text">Debian(64bit)全般</div></td></tr><tr id="mtq_row-1-4-2" onclick="mtq_button_click(1,4,2)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-4-2" class="mtq_css_letter_button mtq_letter_button_3" alt="問題1, Choice 4">D</div><div id="mtq_marker-1-4-2" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-4-2" class="mtq_answer_text">32Bit版全般
+</div></td></tr><tr id="mtq_row-1-5-2" onclick="mtq_button_click(1,5,2)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-5-2" class="mtq_css_letter_button mtq_letter_button_4" alt="問題1, Choice 5">E</div><div id="mtq_marker-1-5-2" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-5-2" class="mtq_answer_text">Red Hat Enterprise Linux(64bit)：5.1</div></td></tr></table><div id="mtq_question_explanation-1-2" class="mtq_explanation"><div class="mtq_explanation-label">問題 1 の説明および補足&nbsp;</div><div class="mtq_explanation-text"> Amazon EC2 で実行するときに必要なドライバが存在しないため、RHEL 6.0 はサポートされていません。またLinux/Unix（32 ビット）もサポートしていません。</div></div></div>                </div>
+        <!--End of mtqscrollable items--> 
+    
+  </div>
+  <!--End of mtqscrollable--> 
+  <!--mtq_status-->
+    <div id="mtq_quiz_status-2" class="mtq_quiz_status">
+  完了するには、1質問があります。  </div>
+      </div> 
+  <!--Holds all questions-->
+    <div id="mtq_navigator-2" class="mtq_navigator"> <div id="mtq_return_list_t-2" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,2)"> <div class="mtq_return_text">
+    戻る    </div> </div> <div id="mtq_shaded_item_msg-2" class="mtq_shaded_item_msg">
+    網掛け部分は完了した項目です。    </div>
+    <table id="mtq_question_list_container-2" class="mtq_question_list_container">
+      <tr>
+        <td id="mtq_list_item-1-2" class="mtq_list_item" onclick="mtq_nav_click(1,2)">1</td>      </tr>
+    </table>
+    <div id="mtq_return_list_b-2" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,2)"> <div class="mtq_return_text">
+    戻る    </div> </div></div>
+    <div id="mtq_variables" class="mtq_preload" style="display:none"> <input type="hidden" id="mtq_id-2" name="mtq_id_value" value="2"><input type="hidden" name="question_id[]" value="47"><input type="hidden" id="mtq_is_answered-1-2" value="0"><input type="hidden" id="mtq_is_correct-1-2" value="0"><input type="hidden" id="mtq_is_worth-1-2" value="100"><input type="hidden" id="mtq_num_attempts-1-2" value="0"><input type="hidden" id="mtq_points_awarded-1-2" value="0"><input type="hidden" id="mtq_is_correct-1-1-2" value="1"><input type="hidden" id="mtq_was_selected-1-1-2" value="0"><input type="hidden" id="mtq_was_ever_selected-1-1-2" value="0"><input type="hidden" id="mtq_has_hint-1-1-2" value="0"><input type="hidden" id="mtq_is_correct-1-2-2" value="0"><input type="hidden" id="mtq_was_selected-1-2-2" value="0"><input type="hidden" id="mtq_was_ever_selected-1-2-2" value="0"><input type="hidden" id="mtq_has_hint-1-2-2" value="0"><input type="hidden" id="mtq_is_correct-1-3-2" value="0"><input type="hidden" id="mtq_was_selected-1-3-2" value="0"><input type="hidden" id="mtq_was_ever_selected-1-3-2" value="0"><input type="hidden" id="mtq_has_hint-1-3-2" value="0"><input type="hidden" id="mtq_is_correct-1-4-2" value="1"><input type="hidden" id="mtq_was_selected-1-4-2" value="0"><input type="hidden" id="mtq_was_ever_selected-1-4-2" value="0"><input type="hidden" id="mtq_has_hint-1-4-2" value="0"><input type="hidden" id="mtq_is_correct-1-5-2" value="0"><input type="hidden" id="mtq_was_selected-1-5-2" value="0"><input type="hidden" id="mtq_was_ever_selected-1-5-2" value="0"><input type="hidden" id="mtq_has_hint-1-5-2" value="0"><input type="hidden" id="mtq_num_ans-1-2" value="5"><input type="hidden" id="mtq_num_correct-1-2" value="2"> <div id="mtq_have_completed_string" class="mtq_preload">
+    現在のあなたの成績    </div> <div id="mtq_questions_string" class="mtq_preload">
+    問正解！！    </div> <div id="mtq_question_string" class="mtq_preload">
+    質問    </div> <div id="mtq_your_score_is_string" class="mtq_preload">
+    正解率は    </div> <div id="mtq_correct_string" class="mtq_preload">
+    正解    </div> <div id="mtq_wrong_string" class="mtq_preload">
+    不正解    </div> <div id="mtq_partial_string" class="mtq_preload">
+    正解！だけど、正解率が少し下がっちゃったね・・・（＞＜）    </div> <div id="mtq_exit_warning_string" class="mtq_preload">
+    終わりですか？クイズが終わりなっかたら、入録した答えがなくなります。    </div> <div id="mtq_correct_answer_string" class="mtq_preload">
+    Correct Answer    </div> <div id="mtq_you_selected_string" class="mtq_preload">
+    You Selected    </div> <div id="mtq_not_attempted_string" class="mtq_preload">
+    Not Attempted    </div> <div id="mtq_final_score_on_quiz_string" class="mtq_preload">
+    Final Score on Quiz    </div> <div id="mtq_attempted_questions_correct_string" class="mtq_preload">
+    Attempted Questions Correct    </div> <div id="mtq_attempted_questions_wrong_string" class="mtq_preload">
+    Attempted Questions Wrong    </div> <div id="mtq_questions_not_attempted_string" class="mtq_preload">
+    Questions Not Attempted    </div> <div id="mtq_total_questions_on_quiz_string" class="mtq_preload">
+    Total Questions on Quiz    </div> <div id="mtq_question_details_string" class="mtq_preload">
+    Question Details    </div> <div id="mtq_quiz_results_string" class="mtq_preload">
+    Results    </div> <div id="mtq_date_string" class="mtq_preload">
+    Date    </div> <div id="mtq_score_string" class="mtq_preload">
+    Score    </div> <div id="mtq_hint_string" class="mtq_preload">
+    ★    </div>
+    <div id="mtq_time_allowed_string" class="mtq_preload">Time allowed</div>
+<div id="mtq_minutes_string" class="mtq_preload">minutes</div>
+<div id="mtq_seconds_string" class="mtq_preload">seconds</div>
+<div id="mtq_time_used_string" class="mtq_preload">Time used</div>
+<div id="mtq_answer_choices_selected_string" class="mtq_preload">Answer Choice(s) Selected</div>
+<div id="mtq_question_text_string" class="mtq_preload">Question Text</div>
+
+
+    <input type="hidden" id="mtq_answer_display-2" value="2">
+    <input type="hidden" id="mtq_autoadvance-2" value="0">
+    <input type="hidden" id="mtq_autosubmit-2" value="0">
+    <input type="hidden" id="mtq_single_page-2" value="0">
+    <input type="hidden" id="mtq_show_hints-2" value="0">
+    <input type="hidden" id="mtq_show_start-2" value="0">
+    <input type="hidden" id="mtq_show_final-2" value="0">
+    <input type="hidden" id="mtq_show_alerts-2" value="0">
+    <input type="hidden" id="mtq_multiple_chances-2" value="0">
+    <input type="hidden" id="mtq_proofread-2" value="0">
+    <input type="hidden" id="mtq_scoring-2" value="0">
+    <input type="hidden" id="mtq_vform-2" value="1">
+    <input type="hidden" name="quiz_id" id="quiz_id-2" value="10">
+    <input type="hidden" name="mtq_total_questions" id="mtq_total_questions-2" value="1">
+    <input type="hidden" name="mtq_current_score" id="mtq_current_score-2" value="0">
+    <input type="hidden" name="mtq_max_score" id="mtq_max_score-2" value="0">
+    <input type="hidden" name="mtq_questions_attempted" id="mtq_questions_attempted-2" value="0">
+    <input type="hidden" name="mtq_questions_correct" id="mtq_questions_correct-2" value="0">
+    <input type="hidden" name="mtq_questions_wrong" id="mtq_questions_wrong-2" value="0">
+    <input type="hidden" name="mtq_questions_not_attempted" id="mtq_questions_not_attempted-2" value="0">
+    <input type="hidden" id="mtq_display_number-2" value="1">
+    <input type="hidden" id="mtq_show_list_option-2" value="1">
+    <input type="hidden" id="mtq_show_stamps-2" value="1">
+    <input type="hidden" id="mtq_num_ratings-2" value="6"><input type="hidden" id="mtq_ratingval-1-2" value="-1"><div id="mtq_rating-1-2" class="mtq_preload">すべて完成</div><input type="hidden" id="mtq_ratingval-2-2" value="0"><div id="mtq_rating-2-2" class="mtq_preload">You need more practice! （もっと勉強が必要です。頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-3-2" value="40"><div id="mtq_rating-3-2" class="mtq_preload">Keep trying! （引き続き頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-4-2" value="60"><div id="mtq_rating-4-2" class="mtq_preload">Not bad! （まぁまぁです。このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-5-2" value="80"><div id="mtq_rating-5-2" class="mtq_preload">Good work! （惜しい・・・ですが、よくできました！このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-6-2" value="100"><div id="mtq_rating-6-2" class="mtq_preload">Perfect! （パーフェクト！！この調子で頑張りましょう！）</div>    <input type="hidden" id="mtq_gf_present-2" value="0">
+    <input type="hidden" id="mtq_cf7_present-2" value="0">
+    <input type="hidden" id="mtq_quiz_in_form-2" value="0">
+    <input type="hidden" id="mtq_gf_formid_number-2" value>
+
+  </div>
+  
+  <!--Variables Div--> 
+  <!--/form--> 
+</div>
+<!--Quiz area div-->
+
+ <br>
+<br>
+■Linuxの動作環境で対応ずみは以下の通りです。<br>
+Linux/Unix（64 ビット）<br>
+・Red Hat Enterprise Linux (RHEL) 5.1-5.11、6.1-6.6、7.0-7.1<br>
+　　Amazon EC2 で実行するときに必要なドライバが存在しないため、RHEL 6.0 はサポートされていません。<br>
+・CentOS 5.1～5.11、6.1～6.6、7.0-7.1<br>
+　　Amazon EC2 で実行するときに必要なドライバが存在しないため、CentOS 6.0 はサポートされていません。<br>
+・Ubuntu 12.04、12.10、13.04、13.10、14.04、14.10<br>
+・Debian 6.0.0-6.0.8, 7.0.0-7.2.0<br>
+<h4>インスタンスタイプの選択</h4>
+VM Import時にRHEL7.1のインスタンスタイプが複数あり、サイジングの変更の要望を受けました。任意のインスタンスタイプへのインポートがサポートされますか。<div id="mtq_quiz_area-3" class="mtq_quiz_area mtq_color_blue"> 
+  <!--Quiz generated using mTouch Quiz Version 3.1.3 by G. Michael Guy (http://gmichaelguy.com/quizplugin/)-->
+        
+      
+  <!-- Shortcode entered mtouchquiz id=11 --> 
+  <!-- Shortcode interpreted mtouchquiz id=1on alerts=off singlepage=off hints=off startscreen=off finalscreen=off multiplechances=off showanswers=now show_stamps=on randomq=off randoma=on status=on labels=on title=on proofread=off list=on time=off scoring=off formid= vform=on autoadvance=off autosubmit=off inform=off forcecf=off forcegf=off offset=1 questions=1 firstid=48 lastid=48 color=blue --> 
+  <!--form action="" method="post" class="quiz-form" id="quiz-11"-->
+    <div id="mtq_quiztitle-3" class="mtq_quiztitle">
+  <h2></h2>
+  </div>
+      <noscript>
+  <div id="mtq_javawarning-3" class="mtq_javawarning">
+  Please wait while the activity loads.<br> If this activity does not load, try refreshing your browser. Also, this page requires javascript. Please visit using a browser with javascript enabled.  <div class="mtq_failed_button" onclick="mtq_start_one(3)">
+  もしロードが出来なかったら、ここをクリックしてください  </div></div>
+  </noscript>
+    
+  <!-- root element for mtqscrollable -->
+
+  <div id="mtq_question_container-3">
+  <div class="mtqscrollable" id="mtq_scroll_container-3">
+        <!-- root element for the items -->
+    
+    <div id="mtq_scroll_items_container-3" class="items">
+            <div class="mtq_question mtq_scroll_item-3" id="mtq_question-1-3"><table class="mtq_question_heading_table"><tr><td><div class="mtq_question_label ">問題1</div><div id="mtq_stamp-1-3" class="mtq_stamp"></div></td></tr></table><div id="mtq_question_text-1-3" class="mtq_question_text"> </div><table class="mtq_answer_table"><colgroup><col class="mtq_oce_first"></colgroup><tr id="mtq_row-1-1-3" onclick="mtq_button_click(1,1,3)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-1-3" class="mtq_css_letter_button mtq_letter_button_0" alt="問題1, Choice 1">A</div><div id="mtq_marker-1-1-3" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-1-3" class="mtq_answer_text">Linux：一部のインスタンスのみをサポート
+</div></td></tr><tr id="mtq_row-1-2-3" onclick="mtq_button_click(1,2,3)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-2-3" class="mtq_css_letter_button mtq_letter_button_1" alt="問題1, Choice 2">B</div><div id="mtq_marker-1-2-3" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-2-3" class="mtq_answer_text">Linux：任意のインスタンスをサポート</div></td></tr></table><div id="mtq_question_explanation-1-3" class="mtq_explanation"><div class="mtq_explanation-label">問題 1 の説明および補足&nbsp;</div><div class="mtq_explanation-text"> Linux インスタンスは一部のインスタンスのみサポートされています。</div></div></div>                </div>
+        <!--End of mtqscrollable items--> 
+    
+  </div>
+  <!--End of mtqscrollable--> 
+  <!--mtq_status-->
+    <div id="mtq_quiz_status-3" class="mtq_quiz_status">
+  完了するには、1質問があります。  </div>
+      </div> 
+  <!--Holds all questions-->
+    <div id="mtq_navigator-3" class="mtq_navigator"> <div id="mtq_return_list_t-3" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,3)"> <div class="mtq_return_text">
+    戻る    </div> </div> <div id="mtq_shaded_item_msg-3" class="mtq_shaded_item_msg">
+    網掛け部分は完了した項目です。    </div>
+    <table id="mtq_question_list_container-3" class="mtq_question_list_container">
+      <tr>
+        <td id="mtq_list_item-1-3" class="mtq_list_item" onclick="mtq_nav_click(1,3)">1</td>      </tr>
+    </table>
+    <div id="mtq_return_list_b-3" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,3)"> <div class="mtq_return_text">
+    戻る    </div> </div></div>
+    <div id="mtq_variables" class="mtq_preload" style="display:none"> <input type="hidden" id="mtq_id-3" name="mtq_id_value" value="3"><input type="hidden" name="question_id[]" value="48"><input type="hidden" id="mtq_is_answered-1-3" value="0"><input type="hidden" id="mtq_is_correct-1-3" value="0"><input type="hidden" id="mtq_is_worth-1-3" value="100"><input type="hidden" id="mtq_num_attempts-1-3" value="0"><input type="hidden" id="mtq_points_awarded-1-3" value="0"><input type="hidden" id="mtq_is_correct-1-1-3" value="1"><input type="hidden" id="mtq_was_selected-1-1-3" value="0"><input type="hidden" id="mtq_was_ever_selected-1-1-3" value="0"><input type="hidden" id="mtq_has_hint-1-1-3" value="0"><input type="hidden" id="mtq_is_correct-1-2-3" value="0"><input type="hidden" id="mtq_was_selected-1-2-3" value="0"><input type="hidden" id="mtq_was_ever_selected-1-2-3" value="0"><input type="hidden" id="mtq_has_hint-1-2-3" value="0"><input type="hidden" id="mtq_num_ans-1-3" value="2"><input type="hidden" id="mtq_num_correct-1-3" value="1"> <div id="mtq_have_completed_string" class="mtq_preload">
+    現在のあなたの成績    </div> <div id="mtq_questions_string" class="mtq_preload">
+    問正解！！    </div> <div id="mtq_question_string" class="mtq_preload">
+    質問    </div> <div id="mtq_your_score_is_string" class="mtq_preload">
+    正解率は    </div> <div id="mtq_correct_string" class="mtq_preload">
+    正解    </div> <div id="mtq_wrong_string" class="mtq_preload">
+    不正解    </div> <div id="mtq_partial_string" class="mtq_preload">
+    正解！だけど、正解率が少し下がっちゃったね・・・（＞＜）    </div> <div id="mtq_exit_warning_string" class="mtq_preload">
+    終わりですか？クイズが終わりなっかたら、入録した答えがなくなります。    </div> <div id="mtq_correct_answer_string" class="mtq_preload">
+    Correct Answer    </div> <div id="mtq_you_selected_string" class="mtq_preload">
+    You Selected    </div> <div id="mtq_not_attempted_string" class="mtq_preload">
+    Not Attempted    </div> <div id="mtq_final_score_on_quiz_string" class="mtq_preload">
+    Final Score on Quiz    </div> <div id="mtq_attempted_questions_correct_string" class="mtq_preload">
+    Attempted Questions Correct    </div> <div id="mtq_attempted_questions_wrong_string" class="mtq_preload">
+    Attempted Questions Wrong    </div> <div id="mtq_questions_not_attempted_string" class="mtq_preload">
+    Questions Not Attempted    </div> <div id="mtq_total_questions_on_quiz_string" class="mtq_preload">
+    Total Questions on Quiz    </div> <div id="mtq_question_details_string" class="mtq_preload">
+    Question Details    </div> <div id="mtq_quiz_results_string" class="mtq_preload">
+    Results    </div> <div id="mtq_date_string" class="mtq_preload">
+    Date    </div> <div id="mtq_score_string" class="mtq_preload">
+    Score    </div> <div id="mtq_hint_string" class="mtq_preload">
+    ★    </div>
+    <div id="mtq_time_allowed_string" class="mtq_preload">Time allowed</div>
+<div id="mtq_minutes_string" class="mtq_preload">minutes</div>
+<div id="mtq_seconds_string" class="mtq_preload">seconds</div>
+<div id="mtq_time_used_string" class="mtq_preload">Time used</div>
+<div id="mtq_answer_choices_selected_string" class="mtq_preload">Answer Choice(s) Selected</div>
+<div id="mtq_question_text_string" class="mtq_preload">Question Text</div>
+
+
+    <input type="hidden" id="mtq_answer_display-3" value="2">
+    <input type="hidden" id="mtq_autoadvance-3" value="0">
+    <input type="hidden" id="mtq_autosubmit-3" value="0">
+    <input type="hidden" id="mtq_single_page-3" value="0">
+    <input type="hidden" id="mtq_show_hints-3" value="0">
+    <input type="hidden" id="mtq_show_start-3" value="0">
+    <input type="hidden" id="mtq_show_final-3" value="0">
+    <input type="hidden" id="mtq_show_alerts-3" value="0">
+    <input type="hidden" id="mtq_multiple_chances-3" value="0">
+    <input type="hidden" id="mtq_proofread-3" value="0">
+    <input type="hidden" id="mtq_scoring-3" value="0">
+    <input type="hidden" id="mtq_vform-3" value="1">
+    <input type="hidden" name="quiz_id" id="quiz_id-3" value="11">
+    <input type="hidden" name="mtq_total_questions" id="mtq_total_questions-3" value="1">
+    <input type="hidden" name="mtq_current_score" id="mtq_current_score-3" value="0">
+    <input type="hidden" name="mtq_max_score" id="mtq_max_score-3" value="0">
+    <input type="hidden" name="mtq_questions_attempted" id="mtq_questions_attempted-3" value="0">
+    <input type="hidden" name="mtq_questions_correct" id="mtq_questions_correct-3" value="0">
+    <input type="hidden" name="mtq_questions_wrong" id="mtq_questions_wrong-3" value="0">
+    <input type="hidden" name="mtq_questions_not_attempted" id="mtq_questions_not_attempted-3" value="0">
+    <input type="hidden" id="mtq_display_number-3" value="1">
+    <input type="hidden" id="mtq_show_list_option-3" value="1">
+    <input type="hidden" id="mtq_show_stamps-3" value="1">
+    <input type="hidden" id="mtq_num_ratings-3" value="6"><input type="hidden" id="mtq_ratingval-1-3" value="-1"><div id="mtq_rating-1-3" class="mtq_preload">すべて完成</div><input type="hidden" id="mtq_ratingval-2-3" value="0"><div id="mtq_rating-2-3" class="mtq_preload">You need more practice! （もっと勉強が必要です。頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-3-3" value="40"><div id="mtq_rating-3-3" class="mtq_preload">Keep trying! （引き続き頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-4-3" value="60"><div id="mtq_rating-4-3" class="mtq_preload">Not bad! （まぁまぁです。このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-5-3" value="80"><div id="mtq_rating-5-3" class="mtq_preload">Good work! （惜しい・・・ですが、よくできました！このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-6-3" value="100"><div id="mtq_rating-6-3" class="mtq_preload">Perfect! （パーフェクト！！この調子で頑張りましょう！）</div>    <input type="hidden" id="mtq_gf_present-3" value="0">
+    <input type="hidden" id="mtq_cf7_present-3" value="0">
+    <input type="hidden" id="mtq_quiz_in_form-3" value="0">
+    <input type="hidden" id="mtq_gf_formid_number-3" value>
+
+  </div>
+  
+  <!--Variables Div--> 
+  <!--/form--> 
+</div>
+<!--Quiz area div-->
+
+<br>
+<br>
+<br>
+■Linuxでサポートされているインスタンスは以下の通りです。<br>
+・汎用: t2.micro | t2.small | t2.medium | m3.medium | m3.large | m3.xlarge | m3.2xlarge<br>
+・コンピューティングの最適化: c3.large | c3.xlarge | c3.2xlarge | c3.4xlarge | cc2.8xlarge<br>
+・メモリを最適化: cr1.8xlarge<br>
+・ストレージの最適化: hi1.4xlarge | hs1.8xlarge | i2.xlarge | i2.2xlarge | i2.4xlarge<br>
+・GPU: cg1.4xlarge<br>
+<br>
+※補足：サポート対象のWindowsの場合は任意のインスタンスに対応しております。<br>
+<br>
+<h4>ボリュームタイプとファイルシステム</h4>
+VM Import/Export で Windowsのインスタンスをインポートしました。マスターブートレコード (MBR)でフォーマットされた、NTFS ファイルシステムを使用されたボリュームはうまくインポートすることができました。Linuxも同様にMBR パーティション分割ボリュームのインポートは問題ありませんでした。<br>
+<br>
+GPTでフォーマットされている3TBのボリュームのWindowsおよびLinuxのインポートを計画しています。GUID Partition Table（GPT）の対応について適したものを２つ選択してください。<div id="mtq_quiz_area-4" class="mtq_quiz_area mtq_color_blue"> 
+  <!--Quiz generated using mTouch Quiz Version 3.1.3 by G. Michael Guy (http://gmichaelguy.com/quizplugin/)-->
+        
+      
+  <!-- Shortcode entered mtouchquiz id=12 --> 
+  <!-- Shortcode interpreted mtouchquiz id=12 alerts=off singlepage=off hints=off startscreen=off finalscreen=off multiplechances=off showanswers=now show_stamps=on randomq=off randoma=on status=on labels=on title=on proofread=off list=on time=off scoring=off formid= vform=on autoadvance=off autosubmit=off inform=off forcecf=off forcegf=off offset=1 questions=1 firstid=49 lastid=49 color=blue --> 
+  <!--form action="" method="post" class="quiz-form" id="quiz-12"-->
+    <div id="mtq_quiztitle-4" class="mtq_quiztitle">
+  <h2></h2>
+  </div>
+      <noscript>
+  <div id="mtq_javawarning-4" class="mtq_javawarning">
+  Please wait while the activity loads.<br> If this activity does not load, try refreshing your browser. Also, this page requires javascript. Please visit using a browser with javascript enabled.  <div class="mtq_failed_button" onclick="mtq_start_one(4)">
+  もしロードが出来なかったら、ここをクリックしてください  </div></div>
+  </noscript>
+    
+  <!-- root element for mtqscrollable -->
+
+  <div id="mtq_question_container-4">
+  <div class="mtqscrollable" id="mtq_scroll_container-4">
+        <!-- root element for the items -->
+    
+    <div id="mtq_scroll_items_container-4" class="items">
+            <div class="mtq_question mtq_scroll_item-4" id="mtq_question-1-4"><table class="mtq_question_heading_table"><tr><td><div class="mtq_question_label ">問題1</div><div id="mtq_stamp-1-4" class="mtq_stamp"></div></td></tr></table><div id="mtq_question_text-1-4" class="mtq_question_text">　</div><table class="mtq_answer_table"><colgroup><col class="mtq_oce_first"></colgroup><tr id="mtq_row-1-1-4" onclick="mtq_button_click(1,1,4)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-1-4" class="mtq_css_letter_button mtq_letter_button_0" alt="問題1, Choice 1">A</div><div id="mtq_marker-1-1-4" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-1-4" class="mtq_answer_text">Linux：サポートしない</div></td></tr><tr id="mtq_row-1-2-4" onclick="mtq_button_click(1,2,4)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-2-4" class="mtq_css_letter_button mtq_letter_button_1" alt="問題1, Choice 2">B</div><div id="mtq_marker-1-2-4" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-2-4" class="mtq_answer_text">Linux：GPTをサポート</div></td></tr><tr id="mtq_row-1-3-4" onclick="mtq_button_click(1,3,4)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-3-4" class="mtq_css_letter_button mtq_letter_button_2" alt="問題1, Choice 3">C</div><div id="mtq_marker-1-3-4" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-3-4" class="mtq_answer_text">Windows：サポートしない</div></td></tr><tr id="mtq_row-1-4-4" onclick="mtq_button_click(1,4,4)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-4-4" class="mtq_css_letter_button mtq_letter_button_3" alt="問題1, Choice 4">D</div><div id="mtq_marker-1-4-4" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-4-4" class="mtq_answer_text">Windows：GPTをサポート
+</div></td></tr></table><div id="mtq_question_explanation-1-4" class="mtq_explanation"><div class="mtq_explanation-label">問題 1 の説明および補足&nbsp;</div><div class="mtq_explanation-text"> Windows および Linux インスタンスのインポートにGUID Partition Table（GPT）をサポートしていません。</div></div></div>                </div>
+        <!--End of mtqscrollable items--> 
+    
+  </div>
+  <!--End of mtqscrollable--> 
+  <!--mtq_status-->
+    <div id="mtq_quiz_status-4" class="mtq_quiz_status">
+  完了するには、1質問があります。  </div>
+      </div> 
+  <!--Holds all questions-->
+    <div id="mtq_navigator-4" class="mtq_navigator"> <div id="mtq_return_list_t-4" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,4)"> <div class="mtq_return_text">
+    戻る    </div> </div> <div id="mtq_shaded_item_msg-4" class="mtq_shaded_item_msg">
+    網掛け部分は完了した項目です。    </div>
+    <table id="mtq_question_list_container-4" class="mtq_question_list_container">
+      <tr>
+        <td id="mtq_list_item-1-4" class="mtq_list_item" onclick="mtq_nav_click(1,4)">1</td>      </tr>
+    </table>
+    <div id="mtq_return_list_b-4" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,4)"> <div class="mtq_return_text">
+    戻る    </div> </div></div>
+    <div id="mtq_variables" class="mtq_preload" style="display:none"> <input type="hidden" id="mtq_id-4" name="mtq_id_value" value="4"><input type="hidden" name="question_id[]" value="49"><input type="hidden" id="mtq_is_answered-1-4" value="0"><input type="hidden" id="mtq_is_correct-1-4" value="0"><input type="hidden" id="mtq_is_worth-1-4" value="100"><input type="hidden" id="mtq_num_attempts-1-4" value="0"><input type="hidden" id="mtq_points_awarded-1-4" value="0"><input type="hidden" id="mtq_is_correct-1-1-4" value="1"><input type="hidden" id="mtq_was_selected-1-1-4" value="0"><input type="hidden" id="mtq_was_ever_selected-1-1-4" value="0"><input type="hidden" id="mtq_has_hint-1-1-4" value="0"><input type="hidden" id="mtq_is_correct-1-2-4" value="0"><input type="hidden" id="mtq_was_selected-1-2-4" value="0"><input type="hidden" id="mtq_was_ever_selected-1-2-4" value="0"><input type="hidden" id="mtq_has_hint-1-2-4" value="0"><input type="hidden" id="mtq_is_correct-1-3-4" value="1"><input type="hidden" id="mtq_was_selected-1-3-4" value="0"><input type="hidden" id="mtq_was_ever_selected-1-3-4" value="0"><input type="hidden" id="mtq_has_hint-1-3-4" value="0"><input type="hidden" id="mtq_is_correct-1-4-4" value="0"><input type="hidden" id="mtq_was_selected-1-4-4" value="0"><input type="hidden" id="mtq_was_ever_selected-1-4-4" value="0"><input type="hidden" id="mtq_has_hint-1-4-4" value="0"><input type="hidden" id="mtq_num_ans-1-4" value="4"><input type="hidden" id="mtq_num_correct-1-4" value="2"> <div id="mtq_have_completed_string" class="mtq_preload">
+    現在のあなたの成績    </div> <div id="mtq_questions_string" class="mtq_preload">
+    問正解！！    </div> <div id="mtq_question_string" class="mtq_preload">
+    質問    </div> <div id="mtq_your_score_is_string" class="mtq_preload">
+    正解率は    </div> <div id="mtq_correct_string" class="mtq_preload">
+    正解    </div> <div id="mtq_wrong_string" class="mtq_preload">
+    不正解    </div> <div id="mtq_partial_string" class="mtq_preload">
+    正解！だけど、正解率が少し下がっちゃったね・・・（＞＜）    </div> <div id="mtq_exit_warning_string" class="mtq_preload">
+    終わりですか？クイズが終わりなっかたら、入録した答えがなくなります。    </div> <div id="mtq_correct_answer_string" class="mtq_preload">
+    Correct Answer    </div> <div id="mtq_you_selected_string" class="mtq_preload">
+    You Selected    </div> <div id="mtq_not_attempted_string" class="mtq_preload">
+    Not Attempted    </div> <div id="mtq_final_score_on_quiz_string" class="mtq_preload">
+    Final Score on Quiz    </div> <div id="mtq_attempted_questions_correct_string" class="mtq_preload">
+    Attempted Questions Correct    </div> <div id="mtq_attempted_questions_wrong_string" class="mtq_preload">
+    Attempted Questions Wrong    </div> <div id="mtq_questions_not_attempted_string" class="mtq_preload">
+    Questions Not Attempted    </div> <div id="mtq_total_questions_on_quiz_string" class="mtq_preload">
+    Total Questions on Quiz    </div> <div id="mtq_question_details_string" class="mtq_preload">
+    Question Details    </div> <div id="mtq_quiz_results_string" class="mtq_preload">
+    Results    </div> <div id="mtq_date_string" class="mtq_preload">
+    Date    </div> <div id="mtq_score_string" class="mtq_preload">
+    Score    </div> <div id="mtq_hint_string" class="mtq_preload">
+    ★    </div>
+    <div id="mtq_time_allowed_string" class="mtq_preload">Time allowed</div>
+<div id="mtq_minutes_string" class="mtq_preload">minutes</div>
+<div id="mtq_seconds_string" class="mtq_preload">seconds</div>
+<div id="mtq_time_used_string" class="mtq_preload">Time used</div>
+<div id="mtq_answer_choices_selected_string" class="mtq_preload">Answer Choice(s) Selected</div>
+<div id="mtq_question_text_string" class="mtq_preload">Question Text</div>
+
+
+    <input type="hidden" id="mtq_answer_display-4" value="2">
+    <input type="hidden" id="mtq_autoadvance-4" value="0">
+    <input type="hidden" id="mtq_autosubmit-4" value="0">
+    <input type="hidden" id="mtq_single_page-4" value="0">
+    <input type="hidden" id="mtq_show_hints-4" value="0">
+    <input type="hidden" id="mtq_show_start-4" value="0">
+    <input type="hidden" id="mtq_show_final-4" value="0">
+    <input type="hidden" id="mtq_show_alerts-4" value="0">
+    <input type="hidden" id="mtq_multiple_chances-4" value="0">
+    <input type="hidden" id="mtq_proofread-4" value="0">
+    <input type="hidden" id="mtq_scoring-4" value="0">
+    <input type="hidden" id="mtq_vform-4" value="1">
+    <input type="hidden" name="quiz_id" id="quiz_id-4" value="12">
+    <input type="hidden" name="mtq_total_questions" id="mtq_total_questions-4" value="1">
+    <input type="hidden" name="mtq_current_score" id="mtq_current_score-4" value="0">
+    <input type="hidden" name="mtq_max_score" id="mtq_max_score-4" value="0">
+    <input type="hidden" name="mtq_questions_attempted" id="mtq_questions_attempted-4" value="0">
+    <input type="hidden" name="mtq_questions_correct" id="mtq_questions_correct-4" value="0">
+    <input type="hidden" name="mtq_questions_wrong" id="mtq_questions_wrong-4" value="0">
+    <input type="hidden" name="mtq_questions_not_attempted" id="mtq_questions_not_attempted-4" value="0">
+    <input type="hidden" id="mtq_display_number-4" value="1">
+    <input type="hidden" id="mtq_show_list_option-4" value="1">
+    <input type="hidden" id="mtq_show_stamps-4" value="1">
+    <input type="hidden" id="mtq_num_ratings-4" value="6"><input type="hidden" id="mtq_ratingval-1-4" value="-1"><div id="mtq_rating-1-4" class="mtq_preload">すべて完成</div><input type="hidden" id="mtq_ratingval-2-4" value="0"><div id="mtq_rating-2-4" class="mtq_preload">You need more practice! （もっと勉強が必要です。頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-3-4" value="40"><div id="mtq_rating-3-4" class="mtq_preload">Keep trying! （引き続き頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-4-4" value="60"><div id="mtq_rating-4-4" class="mtq_preload">Not bad! （まぁまぁです。このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-5-4" value="80"><div id="mtq_rating-5-4" class="mtq_preload">Good work! （惜しい・・・ですが、よくできました！このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-6-4" value="100"><div id="mtq_rating-6-4" class="mtq_preload">Perfect! （パーフェクト！！この調子で頑張りましょう！）</div>    <input type="hidden" id="mtq_gf_present-4" value="0">
+    <input type="hidden" id="mtq_cf7_present-4" value="0">
+    <input type="hidden" id="mtq_quiz_in_form-4" value="0">
+    <input type="hidden" id="mtq_gf_formid_number-4" value>
+
+  </div>
+  
+  <!--Variables Div--> 
+  <!--/form--> 
+</div>
+<!--Quiz area div-->
+
+<br>
+<h4>インポート時の注意点（Windows）</h4>
+仮想マシンイメージをインポートするときに、さまざまな理由でインポートが失敗する場合や想定した動作を行わないことがありました。<br>
+<h5>ログインできない</h5>インポートされたWindowsインスタンスにログインすることができない事象が発生しました。解決策について説明しているものを一つ選択してください。 <div id="mtq_quiz_area-5" class="mtq_quiz_area mtq_color_blue"> 
+  <!--Quiz generated using mTouch Quiz Version 3.1.3 by G. Michael Guy (http://gmichaelguy.com/quizplugin/)-->
+        
+      
+  <!-- Shortcode entered mtouchquiz id=13 --> 
+  <!-- Shortcode interpreted mtouchquiz id=13 alerts=off singlepage=off hints=off startscreen=off finalscreen=off multiplechances=off showanswers=now show_stamps=on randomq=off randoma=on status=on labels=on title=on proofread=off list=on time=off scoring=off formid= vform=on autoadvance=off autosubmit=off inform=off forcecf=off forcegf=off offset=1 questions=1 firstid=50 lastid=50 color=blue --> 
+  <!--form action="" method="post" class="quiz-form" id="quiz-13"-->
+    <div id="mtq_quiztitle-5" class="mtq_quiztitle">
+  <h2></h2>
+  </div>
+      <noscript>
+  <div id="mtq_javawarning-5" class="mtq_javawarning">
+  Please wait while the activity loads.<br> If this activity does not load, try refreshing your browser. Also, this page requires javascript. Please visit using a browser with javascript enabled.  <div class="mtq_failed_button" onclick="mtq_start_one(5)">
+  もしロードが出来なかったら、ここをクリックしてください  </div></div>
+  </noscript>
+    
+  <!-- root element for mtqscrollable -->
+
+  <div id="mtq_question_container-5">
+  <div class="mtqscrollable" id="mtq_scroll_container-5">
+        <!-- root element for the items -->
+    
+    <div id="mtq_scroll_items_container-5" class="items">
+            <div class="mtq_question mtq_scroll_item-5" id="mtq_question-1-5"><table class="mtq_question_heading_table"><tr><td><div class="mtq_question_label ">問題1</div><div id="mtq_stamp-1-5" class="mtq_stamp"></div></td></tr></table><div id="mtq_question_text-1-5" class="mtq_question_text">　</div><table class="mtq_answer_table"><colgroup><col class="mtq_oce_first"></colgroup><tr id="mtq_row-1-1-5" onclick="mtq_button_click(1,1,5)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-1-5" class="mtq_css_letter_button mtq_letter_button_0" alt="問題1, Choice 1">A</div><div id="mtq_marker-1-1-5" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-1-5" class="mtq_answer_text">VM Import/Exportのオプションでリモートデスクトップを有効にする</div></td></tr><tr id="mtq_row-1-2-5" onclick="mtq_button_click(1,2,5)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-2-5" class="mtq_css_letter_button mtq_letter_button_1" alt="問題1, Choice 2">B</div><div id="mtq_marker-1-2-5" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-2-5" class="mtq_answer_text">リモートデスクトップ（RDP）によるリモート管理を有効にしておく
+</div></td></tr></table><div id="mtq_question_explanation-1-5" class="mtq_explanation"><div class="mtq_explanation-label">問題 1 の説明および補足&nbsp;</div><div class="mtq_explanation-text"> Windowsでリモートデスクトップによるリモート管理を有効にしていないと、インポート完了後にEC2インスタンスにログオンすることができません。また、Windows FirewallでRDP（TCP:3389）のポートをブロックしないに設定しておきます。ブロックしているとEC2インスタンスに接続することができません。AWS側はSecurity Groupの設定でTCP:3389を開ける必要もあります。</div></div></div>                </div>
+        <!--End of mtqscrollable items--> 
+    
+  </div>
+  <!--End of mtqscrollable--> 
+  <!--mtq_status-->
+    <div id="mtq_quiz_status-5" class="mtq_quiz_status">
+  完了するには、1質問があります。  </div>
+      </div> 
+  <!--Holds all questions-->
+    <div id="mtq_navigator-5" class="mtq_navigator"> <div id="mtq_return_list_t-5" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,5)"> <div class="mtq_return_text">
+    戻る    </div> </div> <div id="mtq_shaded_item_msg-5" class="mtq_shaded_item_msg">
+    網掛け部分は完了した項目です。    </div>
+    <table id="mtq_question_list_container-5" class="mtq_question_list_container">
+      <tr>
+        <td id="mtq_list_item-1-5" class="mtq_list_item" onclick="mtq_nav_click(1,5)">1</td>      </tr>
+    </table>
+    <div id="mtq_return_list_b-5" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,5)"> <div class="mtq_return_text">
+    戻る    </div> </div></div>
+    <div id="mtq_variables" class="mtq_preload" style="display:none"> <input type="hidden" id="mtq_id-5" name="mtq_id_value" value="5"><input type="hidden" name="question_id[]" value="50"><input type="hidden" id="mtq_is_answered-1-5" value="0"><input type="hidden" id="mtq_is_correct-1-5" value="0"><input type="hidden" id="mtq_is_worth-1-5" value="100"><input type="hidden" id="mtq_num_attempts-1-5" value="0"><input type="hidden" id="mtq_points_awarded-1-5" value="0"><input type="hidden" id="mtq_is_correct-1-1-5" value="0"><input type="hidden" id="mtq_was_selected-1-1-5" value="0"><input type="hidden" id="mtq_was_ever_selected-1-1-5" value="0"><input type="hidden" id="mtq_has_hint-1-1-5" value="0"><input type="hidden" id="mtq_is_correct-1-2-5" value="1"><input type="hidden" id="mtq_was_selected-1-2-5" value="0"><input type="hidden" id="mtq_was_ever_selected-1-2-5" value="0"><input type="hidden" id="mtq_has_hint-1-2-5" value="0"><input type="hidden" id="mtq_num_ans-1-5" value="2"><input type="hidden" id="mtq_num_correct-1-5" value="1"> <div id="mtq_have_completed_string" class="mtq_preload">
+    現在のあなたの成績    </div> <div id="mtq_questions_string" class="mtq_preload">
+    問正解！！    </div> <div id="mtq_question_string" class="mtq_preload">
+    質問    </div> <div id="mtq_your_score_is_string" class="mtq_preload">
+    正解率は    </div> <div id="mtq_correct_string" class="mtq_preload">
+    正解    </div> <div id="mtq_wrong_string" class="mtq_preload">
+    不正解    </div> <div id="mtq_partial_string" class="mtq_preload">
+    正解！だけど、正解率が少し下がっちゃったね・・・（＞＜）    </div> <div id="mtq_exit_warning_string" class="mtq_preload">
+    終わりですか？クイズが終わりなっかたら、入録した答えがなくなります。    </div> <div id="mtq_correct_answer_string" class="mtq_preload">
+    Correct Answer    </div> <div id="mtq_you_selected_string" class="mtq_preload">
+    You Selected    </div> <div id="mtq_not_attempted_string" class="mtq_preload">
+    Not Attempted    </div> <div id="mtq_final_score_on_quiz_string" class="mtq_preload">
+    Final Score on Quiz    </div> <div id="mtq_attempted_questions_correct_string" class="mtq_preload">
+    Attempted Questions Correct    </div> <div id="mtq_attempted_questions_wrong_string" class="mtq_preload">
+    Attempted Questions Wrong    </div> <div id="mtq_questions_not_attempted_string" class="mtq_preload">
+    Questions Not Attempted    </div> <div id="mtq_total_questions_on_quiz_string" class="mtq_preload">
+    Total Questions on Quiz    </div> <div id="mtq_question_details_string" class="mtq_preload">
+    Question Details    </div> <div id="mtq_quiz_results_string" class="mtq_preload">
+    Results    </div> <div id="mtq_date_string" class="mtq_preload">
+    Date    </div> <div id="mtq_score_string" class="mtq_preload">
+    Score    </div> <div id="mtq_hint_string" class="mtq_preload">
+    ★    </div>
+    <div id="mtq_time_allowed_string" class="mtq_preload">Time allowed</div>
+<div id="mtq_minutes_string" class="mtq_preload">minutes</div>
+<div id="mtq_seconds_string" class="mtq_preload">seconds</div>
+<div id="mtq_time_used_string" class="mtq_preload">Time used</div>
+<div id="mtq_answer_choices_selected_string" class="mtq_preload">Answer Choice(s) Selected</div>
+<div id="mtq_question_text_string" class="mtq_preload">Question Text</div>
+
+
+    <input type="hidden" id="mtq_answer_display-5" value="2">
+    <input type="hidden" id="mtq_autoadvance-5" value="0">
+    <input type="hidden" id="mtq_autosubmit-5" value="0">
+    <input type="hidden" id="mtq_single_page-5" value="0">
+    <input type="hidden" id="mtq_show_hints-5" value="0">
+    <input type="hidden" id="mtq_show_start-5" value="0">
+    <input type="hidden" id="mtq_show_final-5" value="0">
+    <input type="hidden" id="mtq_show_alerts-5" value="0">
+    <input type="hidden" id="mtq_multiple_chances-5" value="0">
+    <input type="hidden" id="mtq_proofread-5" value="0">
+    <input type="hidden" id="mtq_scoring-5" value="0">
+    <input type="hidden" id="mtq_vform-5" value="1">
+    <input type="hidden" name="quiz_id" id="quiz_id-5" value="13">
+    <input type="hidden" name="mtq_total_questions" id="mtq_total_questions-5" value="1">
+    <input type="hidden" name="mtq_current_score" id="mtq_current_score-5" value="0">
+    <input type="hidden" name="mtq_max_score" id="mtq_max_score-5" value="0">
+    <input type="hidden" name="mtq_questions_attempted" id="mtq_questions_attempted-5" value="0">
+    <input type="hidden" name="mtq_questions_correct" id="mtq_questions_correct-5" value="0">
+    <input type="hidden" name="mtq_questions_wrong" id="mtq_questions_wrong-5" value="0">
+    <input type="hidden" name="mtq_questions_not_attempted" id="mtq_questions_not_attempted-5" value="0">
+    <input type="hidden" id="mtq_display_number-5" value="1">
+    <input type="hidden" id="mtq_show_list_option-5" value="1">
+    <input type="hidden" id="mtq_show_stamps-5" value="1">
+    <input type="hidden" id="mtq_num_ratings-5" value="6"><input type="hidden" id="mtq_ratingval-1-5" value="-1"><div id="mtq_rating-1-5" class="mtq_preload">すべて完成</div><input type="hidden" id="mtq_ratingval-2-5" value="0"><div id="mtq_rating-2-5" class="mtq_preload">You need more practice! （もっと勉強が必要です。頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-3-5" value="40"><div id="mtq_rating-3-5" class="mtq_preload">Keep trying! （引き続き頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-4-5" value="60"><div id="mtq_rating-4-5" class="mtq_preload">Not bad! （まぁまぁです。このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-5-5" value="80"><div id="mtq_rating-5-5" class="mtq_preload">Good work! （惜しい・・・ですが、よくできました！このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-6-5" value="100"><div id="mtq_rating-6-5" class="mtq_preload">Perfect! （パーフェクト！！この調子で頑張りましょう！）</div>    <input type="hidden" id="mtq_gf_present-5" value="0">
+    <input type="hidden" id="mtq_cf7_present-5" value="0">
+    <input type="hidden" id="mtq_quiz_in_form-5" value="0">
+    <input type="hidden" id="mtq_gf_formid_number-5" value>
+
+  </div>
+  
+  <!--Variables Div--> 
+  <!--/form--> 
+</div>
+<!--Quiz area div-->
+
+ <br>
+<h5>インポート失敗1</h5>VM Importはインポート中に自動的にEC2Config Serviceをインストールします。あるインスタンスでインポートに失敗しました。解決策について説明しているものを一つ選択してください。<div id="mtq_quiz_area-6" class="mtq_quiz_area mtq_color_blue"> 
+  <!--Quiz generated using mTouch Quiz Version 3.1.3 by G. Michael Guy (http://gmichaelguy.com/quizplugin/)-->
+        
+      
+  <!-- Shortcode entered mtouchquiz id=14 --> 
+  <!-- Shortcode interpreted mtouchquiz id=14 alerts=off singlepage=off hints=off startscreen=off finalscreen=off multiplechances=off showanswers=now show_stamps=on randomq=off randoma=on status=on labels=on title=on proofread=off list=on time=off scoring=off formid= vform=on autoadvance=off autosubmit=off inform=off forcecf=off forcegf=off offset=1 questions=1 firstid=51 lastid=51 color=blue --> 
+  <!--form action="" method="post" class="quiz-form" id="quiz-14"-->
+    <div id="mtq_quiztitle-6" class="mtq_quiztitle">
+  <h2></h2>
+  </div>
+      <noscript>
+  <div id="mtq_javawarning-6" class="mtq_javawarning">
+  Please wait while the activity loads.<br> If this activity does not load, try refreshing your browser. Also, this page requires javascript. Please visit using a browser with javascript enabled.  <div class="mtq_failed_button" onclick="mtq_start_one(6)">
+  もしロードが出来なかったら、ここをクリックしてください  </div></div>
+  </noscript>
+    
+  <!-- root element for mtqscrollable -->
+
+  <div id="mtq_question_container-6">
+  <div class="mtqscrollable" id="mtq_scroll_container-6">
+        <!-- root element for the items -->
+    
+    <div id="mtq_scroll_items_container-6" class="items">
+            <div class="mtq_question mtq_scroll_item-6" id="mtq_question-1-6"><table class="mtq_question_heading_table"><tr><td><div class="mtq_question_label ">問題1</div><div id="mtq_stamp-1-6" class="mtq_stamp"></div></td></tr></table><div id="mtq_question_text-1-6" class="mtq_question_text">　</div><table class="mtq_answer_table"><colgroup><col class="mtq_oce_first"></colgroup><tr id="mtq_row-1-1-6" onclick="mtq_button_click(1,1,6)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-1-6" class="mtq_css_letter_button mtq_letter_button_0" alt="問題1, Choice 1">A</div><div id="mtq_marker-1-1-6" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-1-6" class="mtq_answer_text">NET Framework 3.5 SP1があらかじめインストールする</div></td></tr><tr id="mtq_row-1-2-6" onclick="mtq_button_click(1,2,6)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-2-6" class="mtq_css_letter_button mtq_letter_button_1" alt="問題1, Choice 2">B</div><div id="mtq_marker-1-2-6" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-2-6" class="mtq_answer_text">SSH:22をブロックしない設定にする</div></td></tr><tr id="mtq_row-1-3-6" onclick="mtq_button_click(1,3,6)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-3-6" class="mtq_css_letter_button mtq_letter_button_2" alt="問題1, Choice 3">C</div><div id="mtq_marker-1-3-6" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-3-6" class="mtq_answer_text">Windowsの自動アップデートを有効にする
+</div></td></tr><tr id="mtq_row-1-4-6" onclick="mtq_button_click(1,4,6)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-4-6" class="mtq_css_letter_button mtq_letter_button_3" alt="問題1, Choice 4">D</div><div id="mtq_marker-1-4-6" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-4-6" class="mtq_answer_text">TCP:3389をブロックしない設定にする</div></td></tr></table><div id="mtq_question_explanation-1-6" class="mtq_explanation"><div class="mtq_explanation-label">問題 1 の説明および補足&nbsp;</div><div class="mtq_explanation-text"> VM Importはインポート中に自動的にEC2Config Serviceをインストールするため、あらかじめ.NET Framework 3.5 SP1をインストールしておく必要があります。インストールされていないとインポートに失敗します。</div></div></div>                </div>
+        <!--End of mtqscrollable items--> 
+    
+  </div>
+  <!--End of mtqscrollable--> 
+  <!--mtq_status-->
+    <div id="mtq_quiz_status-6" class="mtq_quiz_status">
+  完了するには、1質問があります。  </div>
+      </div> 
+  <!--Holds all questions-->
+    <div id="mtq_navigator-6" class="mtq_navigator"> <div id="mtq_return_list_t-6" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,6)"> <div class="mtq_return_text">
+    戻る    </div> </div> <div id="mtq_shaded_item_msg-6" class="mtq_shaded_item_msg">
+    網掛け部分は完了した項目です。    </div>
+    <table id="mtq_question_list_container-6" class="mtq_question_list_container">
+      <tr>
+        <td id="mtq_list_item-1-6" class="mtq_list_item" onclick="mtq_nav_click(1,6)">1</td>      </tr>
+    </table>
+    <div id="mtq_return_list_b-6" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,6)"> <div class="mtq_return_text">
+    戻る    </div> </div></div>
+    <div id="mtq_variables" class="mtq_preload" style="display:none"> <input type="hidden" id="mtq_id-6" name="mtq_id_value" value="6"><input type="hidden" name="question_id[]" value="51"><input type="hidden" id="mtq_is_answered-1-6" value="0"><input type="hidden" id="mtq_is_correct-1-6" value="0"><input type="hidden" id="mtq_is_worth-1-6" value="100"><input type="hidden" id="mtq_num_attempts-1-6" value="0"><input type="hidden" id="mtq_points_awarded-1-6" value="0"><input type="hidden" id="mtq_is_correct-1-1-6" value="1"><input type="hidden" id="mtq_was_selected-1-1-6" value="0"><input type="hidden" id="mtq_was_ever_selected-1-1-6" value="0"><input type="hidden" id="mtq_has_hint-1-1-6" value="0"><input type="hidden" id="mtq_is_correct-1-2-6" value="0"><input type="hidden" id="mtq_was_selected-1-2-6" value="0"><input type="hidden" id="mtq_was_ever_selected-1-2-6" value="0"><input type="hidden" id="mtq_has_hint-1-2-6" value="0"><input type="hidden" id="mtq_is_correct-1-3-6" value="0"><input type="hidden" id="mtq_was_selected-1-3-6" value="0"><input type="hidden" id="mtq_was_ever_selected-1-3-6" value="0"><input type="hidden" id="mtq_has_hint-1-3-6" value="0"><input type="hidden" id="mtq_is_correct-1-4-6" value="0"><input type="hidden" id="mtq_was_selected-1-4-6" value="0"><input type="hidden" id="mtq_was_ever_selected-1-4-6" value="0"><input type="hidden" id="mtq_has_hint-1-4-6" value="0"><input type="hidden" id="mtq_num_ans-1-6" value="4"><input type="hidden" id="mtq_num_correct-1-6" value="1"> <div id="mtq_have_completed_string" class="mtq_preload">
+    現在のあなたの成績    </div> <div id="mtq_questions_string" class="mtq_preload">
+    問正解！！    </div> <div id="mtq_question_string" class="mtq_preload">
+    質問    </div> <div id="mtq_your_score_is_string" class="mtq_preload">
+    正解率は    </div> <div id="mtq_correct_string" class="mtq_preload">
+    正解    </div> <div id="mtq_wrong_string" class="mtq_preload">
+    不正解    </div> <div id="mtq_partial_string" class="mtq_preload">
+    正解！だけど、正解率が少し下がっちゃったね・・・（＞＜）    </div> <div id="mtq_exit_warning_string" class="mtq_preload">
+    終わりですか？クイズが終わりなっかたら、入録した答えがなくなります。    </div> <div id="mtq_correct_answer_string" class="mtq_preload">
+    Correct Answer    </div> <div id="mtq_you_selected_string" class="mtq_preload">
+    You Selected    </div> <div id="mtq_not_attempted_string" class="mtq_preload">
+    Not Attempted    </div> <div id="mtq_final_score_on_quiz_string" class="mtq_preload">
+    Final Score on Quiz    </div> <div id="mtq_attempted_questions_correct_string" class="mtq_preload">
+    Attempted Questions Correct    </div> <div id="mtq_attempted_questions_wrong_string" class="mtq_preload">
+    Attempted Questions Wrong    </div> <div id="mtq_questions_not_attempted_string" class="mtq_preload">
+    Questions Not Attempted    </div> <div id="mtq_total_questions_on_quiz_string" class="mtq_preload">
+    Total Questions on Quiz    </div> <div id="mtq_question_details_string" class="mtq_preload">
+    Question Details    </div> <div id="mtq_quiz_results_string" class="mtq_preload">
+    Results    </div> <div id="mtq_date_string" class="mtq_preload">
+    Date    </div> <div id="mtq_score_string" class="mtq_preload">
+    Score    </div> <div id="mtq_hint_string" class="mtq_preload">
+    ★    </div>
+    <div id="mtq_time_allowed_string" class="mtq_preload">Time allowed</div>
+<div id="mtq_minutes_string" class="mtq_preload">minutes</div>
+<div id="mtq_seconds_string" class="mtq_preload">seconds</div>
+<div id="mtq_time_used_string" class="mtq_preload">Time used</div>
+<div id="mtq_answer_choices_selected_string" class="mtq_preload">Answer Choice(s) Selected</div>
+<div id="mtq_question_text_string" class="mtq_preload">Question Text</div>
+
+
+    <input type="hidden" id="mtq_answer_display-6" value="2">
+    <input type="hidden" id="mtq_autoadvance-6" value="0">
+    <input type="hidden" id="mtq_autosubmit-6" value="0">
+    <input type="hidden" id="mtq_single_page-6" value="0">
+    <input type="hidden" id="mtq_show_hints-6" value="0">
+    <input type="hidden" id="mtq_show_start-6" value="0">
+    <input type="hidden" id="mtq_show_final-6" value="0">
+    <input type="hidden" id="mtq_show_alerts-6" value="0">
+    <input type="hidden" id="mtq_multiple_chances-6" value="0">
+    <input type="hidden" id="mtq_proofread-6" value="0">
+    <input type="hidden" id="mtq_scoring-6" value="0">
+    <input type="hidden" id="mtq_vform-6" value="1">
+    <input type="hidden" name="quiz_id" id="quiz_id-6" value="14">
+    <input type="hidden" name="mtq_total_questions" id="mtq_total_questions-6" value="1">
+    <input type="hidden" name="mtq_current_score" id="mtq_current_score-6" value="0">
+    <input type="hidden" name="mtq_max_score" id="mtq_max_score-6" value="0">
+    <input type="hidden" name="mtq_questions_attempted" id="mtq_questions_attempted-6" value="0">
+    <input type="hidden" name="mtq_questions_correct" id="mtq_questions_correct-6" value="0">
+    <input type="hidden" name="mtq_questions_wrong" id="mtq_questions_wrong-6" value="0">
+    <input type="hidden" name="mtq_questions_not_attempted" id="mtq_questions_not_attempted-6" value="0">
+    <input type="hidden" id="mtq_display_number-6" value="1">
+    <input type="hidden" id="mtq_show_list_option-6" value="1">
+    <input type="hidden" id="mtq_show_stamps-6" value="1">
+    <input type="hidden" id="mtq_num_ratings-6" value="6"><input type="hidden" id="mtq_ratingval-1-6" value="-1"><div id="mtq_rating-1-6" class="mtq_preload">すべて完成</div><input type="hidden" id="mtq_ratingval-2-6" value="0"><div id="mtq_rating-2-6" class="mtq_preload">You need more practice! （もっと勉強が必要です。頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-3-6" value="40"><div id="mtq_rating-3-6" class="mtq_preload">Keep trying! （引き続き頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-4-6" value="60"><div id="mtq_rating-4-6" class="mtq_preload">Not bad! （まぁまぁです。このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-5-6" value="80"><div id="mtq_rating-5-6" class="mtq_preload">Good work! （惜しい・・・ですが、よくできました！このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-6-6" value="100"><div id="mtq_rating-6-6" class="mtq_preload">Perfect! （パーフェクト！！この調子で頑張りましょう！）</div>    <input type="hidden" id="mtq_gf_present-6" value="0">
+    <input type="hidden" id="mtq_cf7_present-6" value="0">
+    <input type="hidden" id="mtq_quiz_in_form-6" value="0">
+    <input type="hidden" id="mtq_gf_formid_number-6" value>
+
+  </div>
+  
+  <!--Variables Div--> 
+  <!--/form--> 
+</div>
+<!--Quiz area div-->
+
+<br>
+<h5>インポート失敗2</h5>
+VM Importでインポートしたインスタンスを起動したところ、Windowsのアクティベーションが失敗するようになりました。有効なシリアルを入力しましたが、失敗してしまいます。解決策について説明しているものを一つ選択してください。<div id="mtq_quiz_area-7" class="mtq_quiz_area mtq_color_blue"> 
+  <!--Quiz generated using mTouch Quiz Version 3.1.3 by G. Michael Guy (http://gmichaelguy.com/quizplugin/)-->
+        
+      
+  <!-- Shortcode entered mtouchquiz id=15 --> 
+  <!-- Shortcode interpreted mtouchquiz id=15 alerts=off singlepage=off hints=off startscreen=off finalscreen=off multiplechances=off showanswers=now show_stamps=on randomq=off randoma=on status=on labels=on title=on proofread=off list=on time=off scoring=off formid= vform=on autoadvance=off autosubmit=off inform=off forcecf=off forcegf=off offset=1 questions=1 firstid=52 lastid=52 color=blue --> 
+  <!--form action="" method="post" class="quiz-form" id="quiz-15"-->
+    <div id="mtq_quiztitle-7" class="mtq_quiztitle">
+  <h2></h2>
+  </div>
+      <noscript>
+  <div id="mtq_javawarning-7" class="mtq_javawarning">
+  Please wait while the activity loads.<br> If this activity does not load, try refreshing your browser. Also, this page requires javascript. Please visit using a browser with javascript enabled.  <div class="mtq_failed_button" onclick="mtq_start_one(7)">
+  もしロードが出来なかったら、ここをクリックしてください  </div></div>
+  </noscript>
+    
+  <!-- root element for mtqscrollable -->
+
+  <div id="mtq_question_container-7">
+  <div class="mtqscrollable" id="mtq_scroll_container-7">
+        <!-- root element for the items -->
+    
+    <div id="mtq_scroll_items_container-7" class="items">
+            <div class="mtq_question mtq_scroll_item-7" id="mtq_question-1-7"><table class="mtq_question_heading_table"><tr><td><div class="mtq_question_label ">問題1</div><div id="mtq_stamp-1-7" class="mtq_stamp"></div></td></tr></table><div id="mtq_question_text-1-7" class="mtq_question_text"> </div><table class="mtq_answer_table"><colgroup><col class="mtq_oce_first"></colgroup><tr id="mtq_row-1-1-7" onclick="mtq_button_click(1,1,7)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-1-7" class="mtq_css_letter_button mtq_letter_button_0" alt="問題1, Choice 1">A</div><div id="mtq_marker-1-1-7" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-1-7" class="mtq_answer_text">タイムゾーンをUTCに設定する
+</div></td></tr><tr id="mtq_row-1-2-7" onclick="mtq_button_click(1,2,7)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-2-7" class="mtq_css_letter_button mtq_letter_button_1" alt="問題1, Choice 2">B</div><div id="mtq_marker-1-2-7" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-2-7" class="mtq_answer_text">Windowsの自動アップデートを有効にする
+</div></td></tr><tr id="mtq_row-1-3-7" onclick="mtq_button_click(1,3,7)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-3-7" class="mtq_css_letter_button mtq_letter_button_2" alt="問題1, Choice 3">C</div><div id="mtq_marker-1-3-7" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-3-7" class="mtq_answer_text">NET Framework 3.5 SP1があらかじめインストールする</div></td></tr><tr id="mtq_row-1-4-7" onclick="mtq_button_click(1,4,7)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-4-7" class="mtq_css_letter_button mtq_letter_button_3" alt="問題1, Choice 4">D</div><div id="mtq_marker-1-4-7" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-4-7" class="mtq_answer_text">DNS:53をブロックしない設定にする</div></td></tr></table><div id="mtq_question_explanation-1-7" class="mtq_explanation"><div class="mtq_explanation-label">問題 1 の説明および補足&nbsp;</div><div class="mtq_explanation-text"> インポート完了後に時刻の設定がずれることが原因でWindowsのアクティベーションが失敗することがあります。<br>
+インポート以前にタイムゾーンをUTCに設定しておくか、インポート完了後にタイムゾーンをUTCに設定してNTPサーバーと時刻同期をおこなうことで、Windowsのアクティベーションが成功します。</div></div></div>                </div>
+        <!--End of mtqscrollable items--> 
+    
+  </div>
+  <!--End of mtqscrollable--> 
+  <!--mtq_status-->
+    <div id="mtq_quiz_status-7" class="mtq_quiz_status">
+  完了するには、1質問があります。  </div>
+      </div> 
+  <!--Holds all questions-->
+    <div id="mtq_navigator-7" class="mtq_navigator"> <div id="mtq_return_list_t-7" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,7)"> <div class="mtq_return_text">
+    戻る    </div> </div> <div id="mtq_shaded_item_msg-7" class="mtq_shaded_item_msg">
+    網掛け部分は完了した項目です。    </div>
+    <table id="mtq_question_list_container-7" class="mtq_question_list_container">
+      <tr>
+        <td id="mtq_list_item-1-7" class="mtq_list_item" onclick="mtq_nav_click(1,7)">1</td>      </tr>
+    </table>
+    <div id="mtq_return_list_b-7" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,7)"> <div class="mtq_return_text">
+    戻る    </div> </div></div>
+    <div id="mtq_variables" class="mtq_preload" style="display:none"> <input type="hidden" id="mtq_id-7" name="mtq_id_value" value="7"><input type="hidden" name="question_id[]" value="52"><input type="hidden" id="mtq_is_answered-1-7" value="0"><input type="hidden" id="mtq_is_correct-1-7" value="0"><input type="hidden" id="mtq_is_worth-1-7" value="100"><input type="hidden" id="mtq_num_attempts-1-7" value="0"><input type="hidden" id="mtq_points_awarded-1-7" value="0"><input type="hidden" id="mtq_is_correct-1-1-7" value="1"><input type="hidden" id="mtq_was_selected-1-1-7" value="0"><input type="hidden" id="mtq_was_ever_selected-1-1-7" value="0"><input type="hidden" id="mtq_has_hint-1-1-7" value="0"><input type="hidden" id="mtq_is_correct-1-2-7" value="0"><input type="hidden" id="mtq_was_selected-1-2-7" value="0"><input type="hidden" id="mtq_was_ever_selected-1-2-7" value="0"><input type="hidden" id="mtq_has_hint-1-2-7" value="0"><input type="hidden" id="mtq_is_correct-1-3-7" value="0"><input type="hidden" id="mtq_was_selected-1-3-7" value="0"><input type="hidden" id="mtq_was_ever_selected-1-3-7" value="0"><input type="hidden" id="mtq_has_hint-1-3-7" value="0"><input type="hidden" id="mtq_is_correct-1-4-7" value="0"><input type="hidden" id="mtq_was_selected-1-4-7" value="0"><input type="hidden" id="mtq_was_ever_selected-1-4-7" value="0"><input type="hidden" id="mtq_has_hint-1-4-7" value="0"><input type="hidden" id="mtq_num_ans-1-7" value="4"><input type="hidden" id="mtq_num_correct-1-7" value="1"> <div id="mtq_have_completed_string" class="mtq_preload">
+    現在のあなたの成績    </div> <div id="mtq_questions_string" class="mtq_preload">
+    問正解！！    </div> <div id="mtq_question_string" class="mtq_preload">
+    質問    </div> <div id="mtq_your_score_is_string" class="mtq_preload">
+    正解率は    </div> <div id="mtq_correct_string" class="mtq_preload">
+    正解    </div> <div id="mtq_wrong_string" class="mtq_preload">
+    不正解    </div> <div id="mtq_partial_string" class="mtq_preload">
+    正解！だけど、正解率が少し下がっちゃったね・・・（＞＜）    </div> <div id="mtq_exit_warning_string" class="mtq_preload">
+    終わりですか？クイズが終わりなっかたら、入録した答えがなくなります。    </div> <div id="mtq_correct_answer_string" class="mtq_preload">
+    Correct Answer    </div> <div id="mtq_you_selected_string" class="mtq_preload">
+    You Selected    </div> <div id="mtq_not_attempted_string" class="mtq_preload">
+    Not Attempted    </div> <div id="mtq_final_score_on_quiz_string" class="mtq_preload">
+    Final Score on Quiz    </div> <div id="mtq_attempted_questions_correct_string" class="mtq_preload">
+    Attempted Questions Correct    </div> <div id="mtq_attempted_questions_wrong_string" class="mtq_preload">
+    Attempted Questions Wrong    </div> <div id="mtq_questions_not_attempted_string" class="mtq_preload">
+    Questions Not Attempted    </div> <div id="mtq_total_questions_on_quiz_string" class="mtq_preload">
+    Total Questions on Quiz    </div> <div id="mtq_question_details_string" class="mtq_preload">
+    Question Details    </div> <div id="mtq_quiz_results_string" class="mtq_preload">
+    Results    </div> <div id="mtq_date_string" class="mtq_preload">
+    Date    </div> <div id="mtq_score_string" class="mtq_preload">
+    Score    </div> <div id="mtq_hint_string" class="mtq_preload">
+    ★    </div>
+    <div id="mtq_time_allowed_string" class="mtq_preload">Time allowed</div>
+<div id="mtq_minutes_string" class="mtq_preload">minutes</div>
+<div id="mtq_seconds_string" class="mtq_preload">seconds</div>
+<div id="mtq_time_used_string" class="mtq_preload">Time used</div>
+<div id="mtq_answer_choices_selected_string" class="mtq_preload">Answer Choice(s) Selected</div>
+<div id="mtq_question_text_string" class="mtq_preload">Question Text</div>
+
+
+    <input type="hidden" id="mtq_answer_display-7" value="2">
+    <input type="hidden" id="mtq_autoadvance-7" value="0">
+    <input type="hidden" id="mtq_autosubmit-7" value="0">
+    <input type="hidden" id="mtq_single_page-7" value="0">
+    <input type="hidden" id="mtq_show_hints-7" value="0">
+    <input type="hidden" id="mtq_show_start-7" value="0">
+    <input type="hidden" id="mtq_show_final-7" value="0">
+    <input type="hidden" id="mtq_show_alerts-7" value="0">
+    <input type="hidden" id="mtq_multiple_chances-7" value="0">
+    <input type="hidden" id="mtq_proofread-7" value="0">
+    <input type="hidden" id="mtq_scoring-7" value="0">
+    <input type="hidden" id="mtq_vform-7" value="1">
+    <input type="hidden" name="quiz_id" id="quiz_id-7" value="15">
+    <input type="hidden" name="mtq_total_questions" id="mtq_total_questions-7" value="1">
+    <input type="hidden" name="mtq_current_score" id="mtq_current_score-7" value="0">
+    <input type="hidden" name="mtq_max_score" id="mtq_max_score-7" value="0">
+    <input type="hidden" name="mtq_questions_attempted" id="mtq_questions_attempted-7" value="0">
+    <input type="hidden" name="mtq_questions_correct" id="mtq_questions_correct-7" value="0">
+    <input type="hidden" name="mtq_questions_wrong" id="mtq_questions_wrong-7" value="0">
+    <input type="hidden" name="mtq_questions_not_attempted" id="mtq_questions_not_attempted-7" value="0">
+    <input type="hidden" id="mtq_display_number-7" value="1">
+    <input type="hidden" id="mtq_show_list_option-7" value="1">
+    <input type="hidden" id="mtq_show_stamps-7" value="1">
+    <input type="hidden" id="mtq_num_ratings-7" value="6"><input type="hidden" id="mtq_ratingval-1-7" value="-1"><div id="mtq_rating-1-7" class="mtq_preload">すべて完成</div><input type="hidden" id="mtq_ratingval-2-7" value="0"><div id="mtq_rating-2-7" class="mtq_preload">You need more practice! （もっと勉強が必要です。頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-3-7" value="40"><div id="mtq_rating-3-7" class="mtq_preload">Keep trying! （引き続き頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-4-7" value="60"><div id="mtq_rating-4-7" class="mtq_preload">Not bad! （まぁまぁです。このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-5-7" value="80"><div id="mtq_rating-5-7" class="mtq_preload">Good work! （惜しい・・・ですが、よくできました！このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-6-7" value="100"><div id="mtq_rating-6-7" class="mtq_preload">Perfect! （パーフェクト！！この調子で頑張りましょう！）</div>    <input type="hidden" id="mtq_gf_present-7" value="0">
+    <input type="hidden" id="mtq_cf7_present-7" value="0">
+    <input type="hidden" id="mtq_quiz_in_form-7" value="0">
+    <input type="hidden" id="mtq_gf_formid_number-7" value>
+
+  </div>
+  
+  <!--Variables Div--> 
+  <!--/form--> 
+</div>
+<!--Quiz area div-->
+
+<br>
+<h5>インポート失敗3</h5>
+192.168.10.100の固定IPアドレスに設定されているWindows2003のVMイメージをVM Importでインポートしましたが、失敗してしまいます。解決策について説明しているものを一つ選択してください。<div id="mtq_quiz_area-8" class="mtq_quiz_area mtq_color_blue"> 
+  <!--Quiz generated using mTouch Quiz Version 3.1.3 by G. Michael Guy (http://gmichaelguy.com/quizplugin/)-->
+        
+      
+  <!-- Shortcode entered mtouchquiz id=16 --> 
+  <!-- Shortcode interpreted mtouchquiz id=16 alerts=off singlepage=off hints=off startscreen=off finalscreen=off multiplechances=off showanswers=now show_stamps=on randomq=off randoma=on status=on labels=on title=on proofread=off list=on time=off scoring=off formid= vform=on autoadvance=off autosubmit=off inform=off forcecf=off forcegf=off offset=1 questions=1 firstid=53 lastid=53 color=blue --> 
+  <!--form action="" method="post" class="quiz-form" id="quiz-16"-->
+    <div id="mtq_quiztitle-8" class="mtq_quiztitle">
+  <h2></h2>
+  </div>
+      <noscript>
+  <div id="mtq_javawarning-8" class="mtq_javawarning">
+  Please wait while the activity loads.<br> If this activity does not load, try refreshing your browser. Also, this page requires javascript. Please visit using a browser with javascript enabled.  <div class="mtq_failed_button" onclick="mtq_start_one(8)">
+  もしロードが出来なかったら、ここをクリックしてください  </div></div>
+  </noscript>
+    
+  <!-- root element for mtqscrollable -->
+
+  <div id="mtq_question_container-8">
+  <div class="mtqscrollable" id="mtq_scroll_container-8">
+        <!-- root element for the items -->
+    
+    <div id="mtq_scroll_items_container-8" class="items">
+            <div class="mtq_question mtq_scroll_item-8" id="mtq_question-1-8"><table class="mtq_question_heading_table"><tr><td><div class="mtq_question_label ">問題1</div><div id="mtq_stamp-1-8" class="mtq_stamp"></div></td></tr></table><div id="mtq_question_text-1-8" class="mtq_question_text">　</div><table class="mtq_answer_table"><colgroup><col class="mtq_oce_first"></colgroup><tr id="mtq_row-1-1-8" onclick="mtq_button_click(1,1,8)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-1-8" class="mtq_css_letter_button mtq_letter_button_0" alt="問題1, Choice 1">A</div><div id="mtq_marker-1-1-8" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-1-8" class="mtq_answer_text">Windowsは非対応（Linuxのみ対応）</div></td></tr><tr id="mtq_row-1-2-8" onclick="mtq_button_click(1,2,8)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-2-8" class="mtq_css_letter_button mtq_letter_button_1" alt="問題1, Choice 2">B</div><div id="mtq_marker-1-2-8" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-2-8" class="mtq_answer_text">10.110.x.xを使用する</div></td></tr><tr id="mtq_row-1-3-8" onclick="mtq_button_click(1,3,8)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-3-8" class="mtq_css_letter_button mtq_letter_button_2" alt="問題1, Choice 3">C</div><div id="mtq_marker-1-3-8" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-3-8" class="mtq_answer_text">DHCPを有効にする
+</div></td></tr><tr id="mtq_row-1-4-8" onclick="mtq_button_click(1,4,8)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-4-8" class="mtq_css_letter_button mtq_letter_button_3" alt="問題1, Choice 4">D</div><div id="mtq_marker-1-4-8" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-4-8" class="mtq_answer_text">Windows2003は固定IPアドレスに対応していない
+</div></td></tr><tr id="mtq_row-1-5-8" onclick="mtq_button_click(1,5,8)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-5-8" class="mtq_css_letter_button mtq_letter_button_4" alt="問題1, Choice 5">E</div><div id="mtq_marker-1-5-8" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-5-8" class="mtq_answer_text">ネットワークサービスを再起動する</div></td></tr></table><div id="mtq_question_explanation-1-8" class="mtq_explanation"><div class="mtq_explanation-label">問題 1 の説明および補足&nbsp;</div><div class="mtq_explanation-text"> インポート後、EC2インスタンスはIPアドレスを取得することができません。そのためインポートが失敗します。DHCPを有効にしてインポートすることでEC2インスタンスはIPアドレスを取得することができるようになります。しかし、インポート前のネットワークと異なり新たにIPアドレスが払い出されます。</div></div></div>                </div>
+        <!--End of mtqscrollable items--> 
+    
+  </div>
+  <!--End of mtqscrollable--> 
+  <!--mtq_status-->
+    <div id="mtq_quiz_status-8" class="mtq_quiz_status">
+  完了するには、1質問があります。  </div>
+      </div> 
+  <!--Holds all questions-->
+    <div id="mtq_navigator-8" class="mtq_navigator"> <div id="mtq_return_list_t-8" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,8)"> <div class="mtq_return_text">
+    戻る    </div> </div> <div id="mtq_shaded_item_msg-8" class="mtq_shaded_item_msg">
+    網掛け部分は完了した項目です。    </div>
+    <table id="mtq_question_list_container-8" class="mtq_question_list_container">
+      <tr>
+        <td id="mtq_list_item-1-8" class="mtq_list_item" onclick="mtq_nav_click(1,8)">1</td>      </tr>
+    </table>
+    <div id="mtq_return_list_b-8" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,8)"> <div class="mtq_return_text">
+    戻る    </div> </div></div>
+    <div id="mtq_variables" class="mtq_preload" style="display:none"> <input type="hidden" id="mtq_id-8" name="mtq_id_value" value="8"><input type="hidden" name="question_id[]" value="53"><input type="hidden" id="mtq_is_answered-1-8" value="0"><input type="hidden" id="mtq_is_correct-1-8" value="0"><input type="hidden" id="mtq_is_worth-1-8" value="100"><input type="hidden" id="mtq_num_attempts-1-8" value="0"><input type="hidden" id="mtq_points_awarded-1-8" value="0"><input type="hidden" id="mtq_is_correct-1-1-8" value="0"><input type="hidden" id="mtq_was_selected-1-1-8" value="0"><input type="hidden" id="mtq_was_ever_selected-1-1-8" value="0"><input type="hidden" id="mtq_has_hint-1-1-8" value="0"><input type="hidden" id="mtq_is_correct-1-2-8" value="0"><input type="hidden" id="mtq_was_selected-1-2-8" value="0"><input type="hidden" id="mtq_was_ever_selected-1-2-8" value="0"><input type="hidden" id="mtq_has_hint-1-2-8" value="0"><input type="hidden" id="mtq_is_correct-1-3-8" value="1"><input type="hidden" id="mtq_was_selected-1-3-8" value="0"><input type="hidden" id="mtq_was_ever_selected-1-3-8" value="0"><input type="hidden" id="mtq_has_hint-1-3-8" value="0"><input type="hidden" id="mtq_is_correct-1-4-8" value="0"><input type="hidden" id="mtq_was_selected-1-4-8" value="0"><input type="hidden" id="mtq_was_ever_selected-1-4-8" value="0"><input type="hidden" id="mtq_has_hint-1-4-8" value="0"><input type="hidden" id="mtq_is_correct-1-5-8" value="0"><input type="hidden" id="mtq_was_selected-1-5-8" value="0"><input type="hidden" id="mtq_was_ever_selected-1-5-8" value="0"><input type="hidden" id="mtq_has_hint-1-5-8" value="0"><input type="hidden" id="mtq_num_ans-1-8" value="5"><input type="hidden" id="mtq_num_correct-1-8" value="1"> <div id="mtq_have_completed_string" class="mtq_preload">
+    現在のあなたの成績    </div> <div id="mtq_questions_string" class="mtq_preload">
+    問正解！！    </div> <div id="mtq_question_string" class="mtq_preload">
+    質問    </div> <div id="mtq_your_score_is_string" class="mtq_preload">
+    正解率は    </div> <div id="mtq_correct_string" class="mtq_preload">
+    正解    </div> <div id="mtq_wrong_string" class="mtq_preload">
+    不正解    </div> <div id="mtq_partial_string" class="mtq_preload">
+    正解！だけど、正解率が少し下がっちゃったね・・・（＞＜）    </div> <div id="mtq_exit_warning_string" class="mtq_preload">
+    終わりですか？クイズが終わりなっかたら、入録した答えがなくなります。    </div> <div id="mtq_correct_answer_string" class="mtq_preload">
+    Correct Answer    </div> <div id="mtq_you_selected_string" class="mtq_preload">
+    You Selected    </div> <div id="mtq_not_attempted_string" class="mtq_preload">
+    Not Attempted    </div> <div id="mtq_final_score_on_quiz_string" class="mtq_preload">
+    Final Score on Quiz    </div> <div id="mtq_attempted_questions_correct_string" class="mtq_preload">
+    Attempted Questions Correct    </div> <div id="mtq_attempted_questions_wrong_string" class="mtq_preload">
+    Attempted Questions Wrong    </div> <div id="mtq_questions_not_attempted_string" class="mtq_preload">
+    Questions Not Attempted    </div> <div id="mtq_total_questions_on_quiz_string" class="mtq_preload">
+    Total Questions on Quiz    </div> <div id="mtq_question_details_string" class="mtq_preload">
+    Question Details    </div> <div id="mtq_quiz_results_string" class="mtq_preload">
+    Results    </div> <div id="mtq_date_string" class="mtq_preload">
+    Date    </div> <div id="mtq_score_string" class="mtq_preload">
+    Score    </div> <div id="mtq_hint_string" class="mtq_preload">
+    ★    </div>
+    <div id="mtq_time_allowed_string" class="mtq_preload">Time allowed</div>
+<div id="mtq_minutes_string" class="mtq_preload">minutes</div>
+<div id="mtq_seconds_string" class="mtq_preload">seconds</div>
+<div id="mtq_time_used_string" class="mtq_preload">Time used</div>
+<div id="mtq_answer_choices_selected_string" class="mtq_preload">Answer Choice(s) Selected</div>
+<div id="mtq_question_text_string" class="mtq_preload">Question Text</div>
+
+
+    <input type="hidden" id="mtq_answer_display-8" value="2">
+    <input type="hidden" id="mtq_autoadvance-8" value="0">
+    <input type="hidden" id="mtq_autosubmit-8" value="0">
+    <input type="hidden" id="mtq_single_page-8" value="0">
+    <input type="hidden" id="mtq_show_hints-8" value="0">
+    <input type="hidden" id="mtq_show_start-8" value="0">
+    <input type="hidden" id="mtq_show_final-8" value="0">
+    <input type="hidden" id="mtq_show_alerts-8" value="0">
+    <input type="hidden" id="mtq_multiple_chances-8" value="0">
+    <input type="hidden" id="mtq_proofread-8" value="0">
+    <input type="hidden" id="mtq_scoring-8" value="0">
+    <input type="hidden" id="mtq_vform-8" value="1">
+    <input type="hidden" name="quiz_id" id="quiz_id-8" value="16">
+    <input type="hidden" name="mtq_total_questions" id="mtq_total_questions-8" value="1">
+    <input type="hidden" name="mtq_current_score" id="mtq_current_score-8" value="0">
+    <input type="hidden" name="mtq_max_score" id="mtq_max_score-8" value="0">
+    <input type="hidden" name="mtq_questions_attempted" id="mtq_questions_attempted-8" value="0">
+    <input type="hidden" name="mtq_questions_correct" id="mtq_questions_correct-8" value="0">
+    <input type="hidden" name="mtq_questions_wrong" id="mtq_questions_wrong-8" value="0">
+    <input type="hidden" name="mtq_questions_not_attempted" id="mtq_questions_not_attempted-8" value="0">
+    <input type="hidden" id="mtq_display_number-8" value="1">
+    <input type="hidden" id="mtq_show_list_option-8" value="1">
+    <input type="hidden" id="mtq_show_stamps-8" value="1">
+    <input type="hidden" id="mtq_num_ratings-8" value="6"><input type="hidden" id="mtq_ratingval-1-8" value="-1"><div id="mtq_rating-1-8" class="mtq_preload">すべて完成</div><input type="hidden" id="mtq_ratingval-2-8" value="0"><div id="mtq_rating-2-8" class="mtq_preload">You need more practice! （もっと勉強が必要です。頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-3-8" value="40"><div id="mtq_rating-3-8" class="mtq_preload">Keep trying! （引き続き頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-4-8" value="60"><div id="mtq_rating-4-8" class="mtq_preload">Not bad! （まぁまぁです。このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-5-8" value="80"><div id="mtq_rating-5-8" class="mtq_preload">Good work! （惜しい・・・ですが、よくできました！このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-6-8" value="100"><div id="mtq_rating-6-8" class="mtq_preload">Perfect! （パーフェクト！！この調子で頑張りましょう！）</div>    <input type="hidden" id="mtq_gf_present-8" value="0">
+    <input type="hidden" id="mtq_cf7_present-8" value="0">
+    <input type="hidden" id="mtq_quiz_in_form-8" value="0">
+    <input type="hidden" id="mtq_gf_formid_number-8" value>
+
+  </div>
+  
+  <!--Variables Div--> 
+  <!--/form--> 
+</div>
+<!--Quiz area div-->
+
+<br>
+<br>
+アンチウイルスソフトは事前にアンインストールしておくなど、他にもあると思いますが有名どころは上記の通りです。<p></p>
+        </div>
+
+        <footer>
+          <!-- ページリンク -->
+
+                      <div id="widget-under-page-article" class="widgets">
+            <div id="text-16" class="widget-under-page-article widget_text">			<div class="textwidget"><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');  ga('create', 'UA-23162773-1', 'auto');  ga('send', 'pageview');</script></div>
+		</div>                </div>
+          
+
+            <!-- 文章下広告 -->
+                     <div class="ad-article-bottom ad-space">
+          <div class="ad-label">スポンサーリンク</div>
+          <div class="ad-left ad-pc adsense-336">			<div class="textwidget"><script async src="js/adsbygoogle.js"></script>
+<!-- 336*280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-1600680293185006" data-ad-slot="7697083373"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>
+          <div class="ad-right ad-pc adsense-336">			<div class="textwidget"><script async src="js/adsbygoogle.js"></script>
+<!-- 336*280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-1600680293185006" data-ad-slot="7697083373"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>
+          <div class="clear"></div>
+        </div>
+            
+          
+                    <div id="sns-group">
+          
+                    </div>
+          
+          
+          <p class="footer-post-meta">
+
+            
+            
+                      </p>
+        </footer>
+        </article><!-- .article -->
+      </div><!-- .page -->
+    
+            </div><!-- /#main -->
+          </main>
+        <!-- sidebar -->
+<div id="sidebar" role="complementary">
+    
+  <div id="sidebar-widget">
+  <!-- ウイジェット -->
+  <aside id="text-12" class="widget widget_text"><h3 class="widget_title sidebar_widget_title">◆ログイン</h3>			<div class="textwidget"><div class="swpm-login-widget-logged">
+    <div class="swpm-logged-username">
+        <div class="swpm-logged-username-label swpm-logged-label">ログイン中: </div>
+        <div class="swpm-logged-username-value swpm-logged-value">nochi0105</div>
+    </div>
+    <div class="swpm-logged-status">
+        <div class="swpm-logged-status-label swpm-logged-label">アカウント状態</div>
+        <div class="swpm-logged-status-value swpm-logged-value">Active</div>
+    </div>
+    <div class="swpm-logged-membership">
+        <div class="swpm-logged-membership-label swpm-logged-label">メンバーシップ</div>
+        <div class="swpm-logged-membership-value swpm-logged-value">ゴールドプラン</div>
+    </div>
+    <div class="swpm-logged-expiry">
+        <div class="swpm-logged-expiry-label swpm-logged-label">アカウントの有効期限</div>
+        <div class="swpm-logged-expiry-value swpm-logged-value">2019年5月31日</div>
+    </div>
+    <div class="swpm-edit-profile-link"><a href="https://aws.koiwaclub.com/membership-login/membership-profile/">Edit Profile</a></div>    <div class="swpm-logged-logout-link">
+        <a href="?swpm-logout=true">ログアウト</a>
+    </div>
+</div></div>
+		</aside><aside id="text-11" class="widget widget_text"><h3 class="widget_title sidebar_widget_title">◆問題集(SAA)</h3>			<div class="textwidget">・フリープラン<br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam01/">AWSソリューションアーキテクト#01</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam02/">AWSソリューションアーキテクト#02</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam03/">AWSソリューションアーキテクト#03</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/exam-part1/">AWS理解度確認テストPart1</a><br>
+・ゴールドプラン以上<br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam04/">AWSソリューションアーキテクト#04</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam05/">AWSソリューションアーキテクト#05</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam06/">AWSソリューションアーキテクト#06</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam07/">AWSソリューションアーキテクト#07</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam08/">AWSソリューションアーキテクト#08</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam09/">AWSソリューションアーキテクト#09</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam10/">AWSソリューションアーキテクト#10</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam11/">AWSソリューションアーキテクト#11</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam12/">AWSソリューションアーキテクト#12</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam13/">AWSソリューションアーキテクト#13</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam14/">AWSソリューションアーキテクト#14</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam15/">AWSソリューションアーキテクト#15</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam16/">AWSソリューションアーキテクト#16</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam17/">AWSソリューションアーキテクト#17</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam18/">AWSソリューションアーキテクト#18</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam19/">AWSソリューションアーキテクト#19</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam20/">AWSソリューションアーキテクト#20</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam21/">AWSソリューションアーキテクト#21</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam22/">AWSソリューションアーキテクト#22</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam23/">AWSソリューションアーキテクト#23</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam24/">AWSソリューションアーキテクト#24</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam25/">AWSソリューションアーキテクト#25</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam26/">AWSソリューションアーキテクト#26</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam27/">AWSソリューションアーキテクト#27</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam28/">AWSソリューションアーキテクト#28</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam29/">AWSソリューションアーキテクト#29</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam30/">AWSソリューションアーキテクト#30</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam31/">AWSソリューションアーキテクト#31</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam32/">AWSソリューションアーキテクト#32</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam33/">AWSソリューションアーキテクト#33</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam34/">AWSソリューションアーキテクト#34</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam35/">AWSソリューションアーキテクト#35</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam36/">AWSソリューションアーキテクト#36</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam37/">AWSソリューションアーキテクト#37</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam38/">AWSソリューションアーキテクト#38</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam39/">AWSソリューションアーキテクト#39</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam40/">AWSソリューションアーキテクト#40</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam41/">AWSソリューションアーキテクト#41</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam42/">AWSソリューションアーキテクト#42</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam43/">AWSソリューションアーキテクト#43</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam44/">AWSソリューションアーキテクト#44</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam45/">AWSソリューションアーキテクト#45</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam46/">AWSソリューションアーキテクト#46</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam47/">AWSソリューションアーキテクト#47</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam48/">AWSソリューションアーキテクト#48</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam49/">AWSソリューションアーキテクト#49</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam50/">AWSソリューションアーキテクト#50</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam51/">AWSソリューションアーキテクト#51</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam52/">AWSソリューションアーキテクト#52</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam53/">AWSソリューションアーキテクト#53</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam54/">AWSソリューションアーキテクト#54</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam55/">AWSソリューションアーキテクト#55</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam56/">AWSソリューションアーキテクト#56</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam57/">AWSソリューションアーキテクト#57</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam58/">AWSソリューションアーキテクト#58</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam59/">AWSソリューションアーキテクト#59</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam60/">AWSソリューションアーキテクト#60</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam61/">AWSソリューションアーキテクト#61</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam62/">AWSソリューションアーキテクト#62</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam63/">AWSソリューションアーキテクト#63</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam64/">AWSソリューションアーキテクト#64</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam65/">AWSソリューションアーキテクト#65</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam66/">AWSソリューションアーキテクト#66</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam67/">AWSソリューションアーキテクト#67</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam68/">AWSソリューションアーキテクト#68</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam69/">AWSソリューションアーキテクト#69</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam70/">AWSソリューションアーキテクト#70</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam71/">AWSソリューションアーキテクト#71</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam72/">AWSソリューションアーキテクト#72</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam73/">AWSソリューションアーキテクト#73</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam74/">AWSソリューションアーキテクト#74</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam75/">AWSソリューションアーキテクト#75</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam76/">AWSソリューションアーキテクト#76</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam77/">AWSソリューションアーキテクト#77</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam78/">AWSソリューションアーキテクト#78</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam79/">AWSソリューションアーキテクト#79</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam80/">AWSソリューションアーキテクト#80</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam81/">AWSソリューションアーキテクト#81</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam82/">AWSソリューションアーキテクト#82</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam83/">AWSソリューションアーキテクト#83</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam84/">AWSソリューションアーキテクト#84</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam85/">AWSソリューションアーキテクト#85</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam86/">AWSソリューションアーキテクト#86</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam87/">AWSソリューションアーキテクト#87</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam88/">AWSソリューションアーキテクト#88</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam89/">AWSソリューションアーキテクト#89</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam90/">AWSソリューションアーキテクト#90</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam91/">AWSソリューションアーキテクト#91</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam92/">AWSソリューションアーキテクト#92</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam93/">AWSソリューションアーキテクト#93</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam94/">AWSソリューションアーキテクト#94</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam95/">AWSソリューションアーキテクト#95</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam96/">AWSソリューションアーキテクト#96</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam97/">AWSソリューションアーキテクト#97</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam98/">AWSソリューションアーキテクト#98</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam99/">AWSソリューションアーキテクト#99</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam100/">AWSソリューションアーキテクト#100</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam101/">AWSソリューションアーキテクト#101</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam102/">AWSソリューションアーキテクト#102</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam103/">AWSソリューションアーキテクト#103</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam104/">AWSソリューションアーキテクト#104</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam105/">AWSソリューションアーキテクト#105</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa106/">SAA#106</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa107/">SAA#107</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa108/">SAA#108</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa109/">SAA#109</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa110/">SAA#110</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa111/">SAA#111</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa112/">SAA#112</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa113/">SAA#113</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa114/">SAA#114</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa115/">SAA#115</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa116/">SAA#116</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa117/">SAA#117</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa118/">SAA#118</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa119/">SAA#119</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa120/">SAA#120</a><br></div>
+		</aside><aside id="search-2" class="widget widget_search"><form method="get" id="searchform" action="https://aws.koiwaclub.com/">
+	<input type="text" placeholder="ブログ内を検索" name="s" id="s">
+	<input type="submit" id="searchsubmit" value>
+</form></aside>  </div>
+
+  
+</div><!-- /#sidebar -->
+        </div><!-- /#body-in -->
+      </div><!-- /#body -->
+
+      <!-- footer -->
+      <footer itemscope itemtype="http://schema.org/WPFooter">
+        <div id="footer" class="main-footer">
+          <div id="footer-in">
+
+            
+          <div class="clear"></div>
+            <div id="copyright" class="wrapper">
+                            <div class="credit">
+                &copy; 2015  <a href="https://aws.koiwaclub.com">AWS WEB問題集で学習しよう</a>.              </div>
+
+                          </div>
+        </div><!-- /#footer-in -->
+        </div><!-- /#footer -->
+      </footer>
+      <div id="page-top">
+      <a id="move-page-top"><span class="fa fa-angle-double-up fa-2x"></span></a>
+  
+</div>
+          </div><!-- /#container -->
+    <script src="js/comment-reply.min.js" async></script>
+<script src="js/javascript_1.js" defer></script>
+<script src="js/javascript.js" defer></script>
+<script type="text/javascript" src="js/editor.js"></script>
+<script type="text/javascript" src="js/wp-embed.min.js"></script>
+            <!-- はてブシェアボタン用スクリプト -->
+<script type="text/javascript" src="js/bookmark_button.js" charset="utf-8" async="async"></script>
+    
+
+    
+  </body>
+</html>

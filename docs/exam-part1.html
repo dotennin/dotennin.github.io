@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=1280, maximum-scale=1, user-scalable=yes">
+<link rel="alternate" type="application/rss+xml" title="AWS WEB問題集で学習しよう RSS Feed" href="https://aws.koiwaclub.com/feed/">
+<link rel="pingback" href="https://aws.koiwaclub.com/xmlrpc.php">
+<meta name="description" content="AWS理解度確認テスト Part1【閲覧権限】フリープラン、シルバープラン、ゴールドプラン【目的】EXAM系を全て学習した方向けの最終的な理解度確認用のテストになります。【問題集について】EXAM系から試験範囲の問題集の抜粋になり、解答の説">
+<!-- OGP -->
+<meta property="og:type" content="article">
+<meta property="og:description" content="AWS理解度確認テスト Part1【閲覧権限】フリープラン、シルバープラン、ゴールドプラン【目的】EXAM系を全て学習した方向けの最終的な理解度確認用のテストになります。【問題集について】EXAM系から試験範囲の問題集の抜粋になり、解答の説">
+<meta property="og:title" content="AWS理解度確認テスト Part1">
+<meta property="og:url" content="https://aws.koiwaclub.com/aws-exam2/exam-part1/">
+<meta property="og:image" content="images/all_exam.jpg">
+<meta property="og:site_name" content="AWS WEB問題集で学習しよう">
+<meta property="og:locale" content="ja_JP">
+<!-- /OGP -->
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="AWS理解度確認テスト Part1【閲覧権限】フリープラン、シルバープラン、ゴールドプラン【目的】EXAM系を全て学習した方向けの最終的な理解度確認用のテストになります。【問題集について】EXAM系から試験範囲の問題集の抜粋になり、解答の説">
+<meta name="twitter:title" content="AWS理解度確認テスト Part1">
+<meta name="twitter:url" content="https://aws.koiwaclub.com/aws-exam2/exam-part1/">
+<meta name="twitter:image" content="https://aws.koiwaclub.com/wp-content/uploads/2016/01/all_exam.jpg">
+<meta name="twitter:domain" content="aws.koiwaclub.com">
+<!-- /Twitter Card -->
+
+<title>AWS理解度確認テスト Part1</title>
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="AWS WEB問題集で学習しよう &raquo; フィード" href="https://aws.koiwaclub.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="AWS WEB問題集で学習しよう &raquo; コメントフィード" href="https://aws.koiwaclub.com/comments/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/aws.koiwaclub.com\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="mtq_CoreStyleSheets-css" href="css/mtq_core_style.css" type="text/css" media="all">
+<link rel="stylesheet" id="mtq_ThemeStyleSheets-css" href="css/mtq_theme_style.css" type="text/css" media="all">
+<link rel="stylesheet" id="simplicity-style-css" href="css/style_1.css" type="text/css" media="all">
+<link rel="stylesheet" id="responsive-style-css" href="css/responsive-pc.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-style-css" href="css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="icomoon-style-css" href="css/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="extension-style-css" href="css/extension.css" type="text/css" media="all">
+<style id="extension-style-inline-css" type="text/css">
+#header .alignleft{margin-right:30px;max-width:none}@media screen and (max-width:639px){.article br{display:block}}
+</style>
+<link rel="stylesheet" id="child-style-css" href="css/style_2.css" type="text/css" media="all">
+<link rel="stylesheet" id="print-style-css" href="css/print.css" type="text/css" media="print">
+<link rel="stylesheet" id="sns-twitter-type-style-css" href="css/sns-twitter-type.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="css/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="bbp-default-css" href="css/bbpress.css" type="text/css" media="screen">
+<link rel="stylesheet" id="moderation-tools-bbpress-css" href="css/front.css" type="text/css" media="all">
+<link rel="stylesheet" id="swpm.common-css" href="css/swpm.common.css" type="text/css" media="all">
+<link rel="stylesheet" id="accordioncssfree-css" href="css/jquery.accordion.css" type="text/css" media="all">
+<link rel="stylesheet" id="whats-new-style-css" href="css/whats-new.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpProQuiz_front_style-css" href="css/wpProQuiz_front.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="sccss_style-css" href="index_1.html" type="text/css" media="all">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/jquery.accordion.js"></script>
+<link rel="canonical" href="https://aws.koiwaclub.com/aws-exam2/exam-part1/">
+<link rel="shortlink" href="https://aws.koiwaclub.com/?p=968">
+<link rel="alternate" type="application/json+oembed" href="https://aws.koiwaclub.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Faws.koiwaclub.com%2Faws-exam2%2Fexam-part1%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://aws.koiwaclub.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Faws.koiwaclub.com%2Faws-exam2%2Fexam-part1%2F&#038;format=xml">
+<script type="text/javascript">
+             jQuery(document).bind("keydown", function(e) {
+               if(e.ctrlKey && (e.which == 65 || e.which == 67 || e.which == 88 || e.which == 83 ||e.which == 85)) {
+                 e.preventDefault();
+                 return false;
+                 }
+             });
+
+         jQuery(document).on( "mousedown", function(event) {
+             if(event.which=="3")
+             {
+             document.oncontextmenu = document.body.oncontextmenu = function() {return false;}
+
+             }
+             });
+            </script>
+
+            <style type="text/css">
+            body{
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    -khtml-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+               }
+            </style></head>
+  <body class="page-template-default page page-id-968 page-child parent-pageid-41" itemscope itemtype="http://schema.org/WebPage">
+    <div id="container">
+
+      <!-- header -->
+      <header itemscope itemtype="http://schema.org/WPHeader">
+        <div id="header" class="clearfix">
+          <div id="header-in">
+
+                        <div id="h-top">
+              <!-- モバイルメニュー表示用のボタン -->
+<div id="mobile-menu">
+  <a id="mobile-menu-toggle" href="#"><span class="fa fa-bars fa-2x"></span></a>
+</div>
+
+              <div class="alignleft top-title-catchphrase">
+                <!-- サイトのタイトル -->
+<p id="site-title" itemscope itemtype="http://schema.org/Organization">
+  <a href="https://aws.koiwaclub.com/">AWS WEB問題集で学習しよう</a></p>
+<!-- サイトの概要 -->
+<p id="site-description">
+  赤本ではなく黒本の問題集から学習する方向け</p>
+              </div>
+
+              <div class="alignright top-sns-follows">
+                              </div>
+
+            </div><!-- /#h-top -->
+          </div><!-- /#header-in -->
+        </div><!-- /#header -->
+      </header>
+
+      <!-- Navigation -->
+<nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+  <div id="navi">
+      	<div id="navi-in">
+      <div class="menu-wiziapp_custom-container"><ul id="menu-wiziapp_custom" class="menu"><li id="menu-item-531" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-531"><a href="https://aws.koiwaclub.com/">はじめに</a></li>
+<li id="menu-item-523" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-523"><a href="https://aws.koiwaclub.com/sample/">サンプル問題集</a></li>
+<li id="menu-item-1696" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1696"><a href="https://aws.koiwaclub.com/exam/">WEB問題集</a>
+<ul class="sub-menu">
+	<li id="menu-item-530" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-530"><a href="https://aws.koiwaclub.com/aws-exam2/">SAA</a></li>
+	<li id="menu-item-713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-713"><a href="https://aws.koiwaclub.com/aws-exam2/aws-field/">SAA（分野別問題集）</a></li>
+	<li id="menu-item-1733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1733"><a href="https://aws.koiwaclub.com/exam/sysops/">SysOps</a></li>
+	<li id="menu-item-2202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2202"><a href="https://aws.koiwaclub.com/exam/sap/">SAP</a></li>
+	<li id="menu-item-2880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2880"><a href="https://aws.koiwaclub.com/exam/clf/">CLF</a></li>
+	<li id="menu-item-2072" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2072"><a href="https://aws.koiwaclub.com/exam/learningvideo/">学習動画</a></li>
+	<li id="menu-item-1989" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1989"><a href="https://aws.koiwaclub.com/exam/gradebook/">みんなの成績表</a></li>
+</ul>
+</li>
+<li id="menu-item-1846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1846"><a href="https://aws.koiwaclub.com/spot_exam/">スポット問題集</a></li>
+<li id="menu-item-525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-525"><a href="https://aws.koiwaclub.com/membership-registration/">会員登録</a>
+<ul class="sub-menu">
+	<li id="menu-item-528" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-528"><a href="https://aws.koiwaclub.com/membership-registration/membership-login/">ログインページ</a></li>
+	<li id="menu-item-527" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-527"><a href="https://aws.koiwaclub.com/membership-registration/membership-profile/">プロフィール</a></li>
+	<li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526"><a href="https://aws.koiwaclub.com/membership-registration/password-reset/">パスワード初期化</a></li>
+	<li id="menu-item-545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-545"><a href="https://aws.koiwaclub.com/paid-membership-registration/">有料会員登録</a></li>
+</ul>
+</li>
+<li id="menu-item-529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529"><a href="https://aws.koiwaclub.com/support/">フォーラム</a></li>
+<li id="menu-item-2528" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2528"><a href="https://aws.koiwaclub.com/faqp/">FAQ</a></li>
+<li id="menu-item-524" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-524"><a href="https://aws.koiwaclub.com/change-log/">更新履歴</a></li>
+</ul></div>    </div><!-- /#navi-in -->
+  </div><!-- /#navi -->
+</nav>
+<!-- /Navigation -->
+      <!-- 本体部分 -->
+      <div id="body">
+        <div id="body-in" class="cf">
+
+          
+          <!-- main -->
+          <main itemscope itemprop="mainContentOfPage">
+            <div id="main" itemscope itemtype="http://schema.org/Blog">
+          <div id="post-968" class="post-968 page type-page status-publish has-post-thumbnail">
+        <article class="article">
+          <header>
+            <h1 class="entry-title">AWS理解度確認テスト Part1</h1>
+            <p class="post-meta">
+                  
+              
+              
+              
+                          </p>
+
+            
+            
+            
+                          <div id="widget-over-page-article" class="widgets">
+              <div id="pc_text-2" class="widget-over-page-article widget_pc_text">      <div class="text-pc">
+        <script async src="js/adsbygoogle.js"></script>
+<!-- 336*280 -->
+<ins class="adsbygoogle" style="display: inline-block; width: 336px; height: 280px;" data-ad-client="ca-pub-1600680293185006" data-ad-slot="7697083373"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>      </div>
+      </div>                      </div>
+                    </header>
+
+        
+        <div id="the-content" class="entry-content">
+        <p>
+</p><h3>AWS理解度確認テスト Part1</h3>
+【閲覧権限】<br>
+フリープラン、シルバープラン、ゴールドプラン<br>
+<br>
+【目的】<br>
+EXAM系を全て学習した方向けの最終的な理解度確認用のテストになります。<br>
+<br>
+【問題集について】<br>
+EXAM系から試験範囲の問題集の抜粋になり、解答の説明はございません。<br>
+EXAM系を全て読み終えた方のみご使用ください。<br>
+<br>
+【活用方法】<br>
+ご回答後は分野単位に回答率が表示されるため効率良く弱点を克服することが可能です。<br>
+<br>
+【利用環境】<br>
+PCからご利用いただけます。<br>
+<br>
+【その他】<br>
+解答すると正解率が記録されます。トップ10に入れるように頑張ってください。(検証中)<br>
+難易度を上げるために、厳しい時間制限を設けております。<br>
+　<br>
+それでは以下より進めてください。<br>
+<br>
+        <div class="wpProQuiz_content" id="wpProQuiz_1">
+            <h2>AWS理解度確認テストPart1</h2>        <div style="display: none;" class="wpProQuiz_time_limit">
+            <div class="time">制限時間: <span>0</span></div>
+            <div class="wpProQuiz_progress"></div>
+        </div>
+                <div class="wpProQuiz_checkPage" style="display: none;">
+            <h4 class="wpProQuiz_header">テスト概要</h4>
+
+            <p>
+                <span>0</span> of 6 questions completed            </p>
+
+            <p>Questions:</p>
+
+            <div style="margin-bottom: 20px;" class="wpProQuiz_box">
+                <ol>
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li>3</li>
+                                            <li>4</li>
+                                            <li>5</li>
+                                            <li>6</li>
+                                    </ol>
+                <div style="clear: both;"></div>
+            </div>
+
+            
+            <input type="button" name="endQuizSummary" value="テストを終了" class="wpProQuiz_button">
+        </div>
+                <div class="wpProQuiz_infopage" style="display: none;">
+            <h4>Information</h4>
+
+            
+            <input type="button" name="endInfopage" value="テストを終了" class="wpProQuiz_button">
+        </div>
+                <div class="wpProQuiz_text">
+            <p>
+                </p><p>
+AWS理解度確認テストPart1</p>
+            <p></p>
+
+            
+            <div>
+                <input class="wpProQuiz_button" type="button" value="テストを開始" name="startQuiz">
+            </div>
+        </div>
+                <div style="display: none;" class="wpProQuiz_lock">
+            <p>
+                You have already completed the quiz before. Hence you can not start it again.            </p>
+        </div>
+                <div style="display: none;" class="wpProQuiz_loadQuiz">
+            <p>
+                テストを読み込んでいます            </p>
+        </div>
+                <div style="display: none;" class="wpProQuiz_startOnlyRegisteredUser">
+            <p>
+                You must sign in or sign up to start the quiz.            </p>
+        </div>
+                <div style="display: none;" class="wpProQuiz_prerequisite">
+            <p>
+                You have to finish following quiz, to start this quiz:                <span></span>
+            </p>
+        </div>
+                <div style="display: none;" class="wpProQuiz_results">
+            <h4 class="wpProQuiz_header">結果</h4>
+                            <p>
+                    <span class="wpProQuiz_correct_answer">0</span> of <span>6</span> questions answered correctly                </p>
+                            <p class="wpProQuiz_quiz_time">
+                    あなたの時間：<span></span>                </p>
+                        <p class="wpProQuiz_time_limit_expired" style="display: none;">
+                Time has elapsed            </p>
+                            <p class="wpProQuiz_points">
+                    You have reached <span>0</span> of <span>0</span> points, (<span>0</span>)                </p>
+                                        <div class="wpProQuiz_resultTable">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td class="wpProQuiz_resultName">平均得点</td>
+                            <td class="wpProQuiz_resultValue">
+                                <div style="background-color: #6CA54C;">&nbsp;</div>
+                                <span>&nbsp;</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="wpProQuiz_resultName">あなたのスコア</td>
+                            <td class="wpProQuiz_resultValue">
+                                <div style="background-color: #F79646;">&nbsp;</div>
+                                <span>&nbsp;</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                        <div class="wpProQuiz_catOverview">
+                <h4>カテゴリ</h4>
+
+                <div style="margin-top: 10px;">
+                    <ol>
+                                                    <li data-category_id="8">
+                                <span class="wpProQuiz_catName">Amazon EC2</span>
+                                <span class="wpProQuiz_catPercent">0%</span>
+                            </li>
+                                                    <li data-category_id="6">
+                                <span class="wpProQuiz_catName">Amzon CloudWatch</span>
+                                <span class="wpProQuiz_catPercent">0%</span>
+                            </li>
+                                                    <li data-category_id="1">
+                                <span class="wpProQuiz_catName">Auto Scaling</span>
+                                <span class="wpProQuiz_catPercent">0%</span>
+                            </li>
+                                                    <li data-category_id="7">
+                                <span class="wpProQuiz_catName">Elastic Load Balancing</span>
+                                <span class="wpProQuiz_catPercent">0%</span>
+                            </li>
+                                            </ol>
+                </div>
+            </div>
+            <div>
+                <ul class="wpProQuiz_resultsList">
+                                            <li style="display: none;">
+                            <div>
+                                <p>
+</p>
+                            </div>
+                        </li>
+                                    </ul>
+            </div>
+                    <div class="wpProQuiz_addToplist" style="display: none;">
+            <span style="font-weight: bold;">あなたのテスト結果を記録しますか。</span>
+
+            <div style="margin-top: 6px;">
+                <div class="wpProQuiz_addToplistMessage" style="display: none;">Loading</div>
+                <div class="wpProQuiz_addBox">
+                    <div>
+						<span>
+							<label>
+                                ユーザー名: <input type="text" placeholder="ユーザー名" name="wpProQuiz_toplistName" maxlength="15" size="16" style="width: 150px;">
+                            </label>
+							<label>
+                                E-Mail: <input type="email" placeholder="E-Mail" name="wpProQuiz_toplistEmail" size="20" style="width: 150px;">
+                            </label>
+						</span>
+
+                        <div style="margin-top: 5px;">
+                            <label>
+                                Captcha: <input type="text" name="wpProQuiz_captcha" size="8" style="width: 50px;">
+                            </label>
+                            <input type="hidden" name="wpProQuiz_captchaPrefix" value="0">
+                            <img alt="captcha" src class="wpProQuiz_captchaImg" style="vertical-align: middle;">
+                        </div>
+                    </div>
+                    <input class="wpProQuiz_button2" type="submit" value="送る" name="wpProQuiz_toplistAdd">
+                </div>
+            </div>
+        </div>
+                    <div style="margin: 10px 0px;">
+                                    <input class="wpProQuiz_button" type="button" name="restartQuiz" value="テストをやり直す">
+                                    <input class="wpProQuiz_button" type="button" name="reShowQuestion" value="View questions">
+                                                    <input class="wpProQuiz_button" type="button" name="showToplist" value="ユーザ別試験結果を見る">
+                            </div>
+        </div>
+                <div class="wpProQuiz_toplistShowInButton" style="display: none;">
+                    <div style="margin-bottom: 30px; margin-top: 10px;" class="wpProQuiz_toplist" data-quiz_id="1">
+                        <table class="wpProQuiz_toplistTable">
+                <caption>maximum of 6 points</caption>
+                <thead>
+                <tr>
+                    <th style="width: 40px;">Pos.</th>
+                    <th style="text-align: left !important;">ユーザー名</th>
+                    <th style="width: 140px;">テスト日付</th>
+                    <th style="width: 60px;">ポイント</th>
+                    <th style="width: 75px;">Result</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td colspan="5">Table is loading</td>
+                </tr>
+                <tr style="display: none;">
+                    <td colspan="5">No data available</td>
+                </tr>
+                <tr style="display: none;">
+                    <td></td>
+                    <td style="text-align: left !important;"></td>
+                    <td style=" color: rgb(124, 124, 124); font-size: x-small;"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+                </div>
+                <div class="wpProQuiz_reviewDiv" style="display: none;">
+            <div class="wpProQuiz_reviewQuestion">
+                <ol>
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li>3</li>
+                                            <li>4</li>
+                                            <li>5</li>
+                                            <li>6</li>
+                                    </ol>
+                <div style="display: none;"></div>
+            </div>
+            <div class="wpProQuiz_reviewLegend">
+                <ol>
+                    <li>
+                        <span class="wpProQuiz_reviewColor" style="background-color: #6CA54C;"></span>
+                        <span class="wpProQuiz_reviewText">Answered</span>
+                    </li>
+                    <li>
+                        <span class="wpProQuiz_reviewColor" style="background-color: #FFB800;"></span>
+                        <span class="wpProQuiz_reviewText">レビュー</span>
+                    </li>
+                </ol>
+                <div style="clear: both;"></div>
+            </div>
+            <div>
+                                    <input type="button" name="review" value="テストの回答を見る" class="wpProQuiz_button2" style="float: left; display: block;">
+                                            <input type="button" name="quizSummary" value="テスト概要" class="wpProQuiz_button2" style="float: right;">
+                                        <div style="clear: both;"></div>
+                            </div>
+        </div>
+                <div class="wpProQuiz_quizAnker" style="display: none;"></div>
+                <div style="display: none;" class="wpProQuiz_quiz">
+            <ol class="wpProQuiz_list">
+                                    <li class="wpProQuiz_listItem" style="display: none;">
+                        <div class="wpProQuiz_question_page" style="display:none;">
+                            Question <span>1</span> of <span>6</span>                        </div>
+                        <h5 style="display: none;" class="wpProQuiz_header">
+                            <span>1</span>. Question                        </h5>
+
+                        
+                                                <div class="wpProQuiz_question" style="margin: 10px 0 0 0;">
+                            <div class="wpProQuiz_question_text">
+                                <p>
+AWSにおける侵入テストについて正しい説明を二つ選択してください。</p>
+                            </div>
+                                                        <ul class="wpProQuiz_questionList" data-question_id="1" data-type="multiple">
+                                
+                                    <li class="wpProQuiz_questionListItem" data-pos="0">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="checkbox" name="question_1_1" value="1"> EC2インスタンスに対してのみ侵入テストを行えます
+                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="1">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="checkbox" name="question_1_1" value="2"> 侵入テストはAWSの事前の許可は不要です                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="2">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="checkbox" name="question_1_1" value="3"> 侵入テストを実施できるのは一部のリソースに限定されています                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="3">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="checkbox" name="question_1_1" value="4"> すべての侵入テストに許可が必要です                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="4">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="checkbox" name="question_1_1" value="5"> AWSによって自動的に侵入テストが実施されます                                            </label>
+
+                                                                            </li>
+                                                                </ul>
+                        </div>
+                        
+                        
+                                                <input type="button" name="back" value="戻る" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left !important; margin-right: 10px !important; display: none;">
+                                                <input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right !important; margin-right: 10px !important; display: none;">
+                        <input type="button" name="next" value="次へ" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;">
+
+                        <div style="clear: both;"></div>
+
+                        
+                    </li>
+
+                                    <li class="wpProQuiz_listItem" style="display: none;">
+                        <div class="wpProQuiz_question_page" style="display:none;">
+                            Question <span>2</span> of <span>6</span>                        </div>
+                        <h5 style="display: none;" class="wpProQuiz_header">
+                            <span>2</span>. Question                        </h5>
+
+                        
+                                                <div class="wpProQuiz_question" style="margin: 10px 0 0 0;">
+                            <div class="wpProQuiz_question_text">
+                                <p>
+CloudWatchの監視項目でカスタムメトリックを必要とするものを一つ選択してください。</p>
+                            </div>
+                                                        <ul class="wpProQuiz_questionList" data-question_id="2" data-type="single">
+                                
+                                    <li class="wpProQuiz_questionListItem" data-pos="0">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="radio" name="question_1_2" value="1"> メモリー使用率
+                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="1">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="radio" name="question_1_2" value="2"> CPU Utilization(CPU使用率)                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="2">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="radio" name="question_1_2" value="3"> Disk Reads(ディスク読み込み状況)                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="3">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="radio" name="question_1_2" value="4"> Network In,Out(ネットワーク状況)                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="4">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="radio" name="question_1_2" value="5"> Status Check Failed(インスタンスのステータスチェック失敗)                                            </label>
+
+                                                                            </li>
+                                                                </ul>
+                        </div>
+                        
+                        
+                                                <input type="button" name="back" value="戻る" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left !important; margin-right: 10px !important; display: none;">
+                                                <input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right !important; margin-right: 10px !important; display: none;">
+                        <input type="button" name="next" value="次へ" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;">
+
+                        <div style="clear: both;"></div>
+
+                        
+                    </li>
+
+                                    <li class="wpProQuiz_listItem" style="display: none;">
+                        <div class="wpProQuiz_question_page" style="display:none;">
+                            Question <span>3</span> of <span>6</span>                        </div>
+                        <h5 style="display: none;" class="wpProQuiz_header">
+                            <span>3</span>. Question                        </h5>
+
+                        
+                                                <div class="wpProQuiz_question" style="margin: 10px 0 0 0;">
+                            <div class="wpProQuiz_question_text">
+                                <p>
+お名前ドットコムで、koiwaclub.com のドメインを取得して、サブドメインとして <b>aws.</b>koiwaclub.com(awsがサブドメイン)を使うことを計画しています。ELB配下にあるWEBサーバーを配置して、このサブドメインを Amazon Route 53 を用いて割り当てるためには、どのような種類のレコードセットを作成する必要がありますか？最も適したものを一つ選択してください。</p>
+                            </div>
+                                                        <ul class="wpProQuiz_questionList" data-question_id="3" data-type="single">
+                                
+                                    <li class="wpProQuiz_questionListItem" data-pos="0">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="radio" name="question_1_3" value="1"> A
+                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="1">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="radio" name="question_1_3" value="2"> AAAA                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="2">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="radio" name="question_1_3" value="3"> NS                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="3">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="radio" name="question_1_3" value="4"> CNAME                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="4">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="radio" name="question_1_3" value="5"> PTR                                            </label>
+
+                                                                            </li>
+                                                                </ul>
+                        </div>
+                        
+                        
+                                                <input type="button" name="back" value="戻る" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left !important; margin-right: 10px !important; display: none;">
+                                                <input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right !important; margin-right: 10px !important; display: none;">
+                        <input type="button" name="next" value="次へ" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;">
+
+                        <div style="clear: both;"></div>
+
+                        
+                    </li>
+
+                                    <li class="wpProQuiz_listItem" style="display: none;">
+                        <div class="wpProQuiz_question_page" style="display:none;">
+                            Question <span>4</span> of <span>6</span>                        </div>
+                        <h5 style="display: none;" class="wpProQuiz_header">
+                            <span>4</span>. Question                        </h5>
+
+                        
+                                                <div class="wpProQuiz_question" style="margin: 10px 0 0 0;">
+                            <div class="wpProQuiz_question_text">
+                                <p>
+常時8つの EC2 インスタンス の起動を必要とする医療用のアプリケーションがあります。実現するために何を行えば良いですか。最も適したものを二つ選択してください。<br>
+</p>
+                            </div>
+                                                        <ul class="wpProQuiz_questionList" data-question_id="4" data-type="multiple">
+                                
+                                    <li class="wpProQuiz_questionListItem" data-pos="0">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="checkbox" name="question_1_4" value="1"> ELB配下に8つの EC2 インスタンス を割り当てる。8つの EC2 インスタンス を4つの リージョン に可能な限り均等になるように割り当てる                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="1">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="checkbox" name="question_1_4" value="2"> ELB配下に8つの EC2 インスタンス を割り当てる。8つの EC2 インスタンス を同一の リージョン 内の複数の アベイラビリティゾーン に可能な限り均等になるように割り当てる                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="2">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="checkbox" name="question_1_4" value="3"> Auto Scaling にて 同一の リージョン 内の複数の アベイラビリティゾーン に8つの EC2 インスタンス が常に実行されるようにする                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="3">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="checkbox" name="question_1_4" value="4"> Auto Scaling にて 4つの リージョン にまたがり、それぞれの リージョン で2つの EC2 インスタンス が常に実行されるようにする                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="4">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="checkbox" name="question_1_4" value="5"> Auto Scaling にて リージョン に障害が発生した場合、停止した EC2 インスタンス を他の リージョン で補うようにして常に8つの EC2 インスタンス を起動するよう割り当てる                                            </label>
+
+                                                                            </li>
+                                                                </ul>
+                        </div>
+                        
+                        
+                                                <input type="button" name="back" value="戻る" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left !important; margin-right: 10px !important; display: none;">
+                                                <input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right !important; margin-right: 10px !important; display: none;">
+                        <input type="button" name="next" value="次へ" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;">
+
+                        <div style="clear: both;"></div>
+
+                        
+                    </li>
+
+                                    <li class="wpProQuiz_listItem" style="display: none;">
+                        <div class="wpProQuiz_question_page" style="display:none;">
+                            Question <span>5</span> of <span>6</span>                        </div>
+                        <h5 style="display: none;" class="wpProQuiz_header">
+                            <span>5</span>. Question                        </h5>
+
+                        
+                                                <div class="wpProQuiz_question" style="margin: 10px 0 0 0;">
+                            <div class="wpProQuiz_question_text">
+                                <p>
+Linuxのスポットインスタンスで$ 0.10 /時の入札価格でインスタンスが開始されました。その30分後、 スポット価格が$ 0.11 /時になり、スポット価格が入札価格を上回り、Amazon EC2 はスポットインスタンスが強制終了されました。その場合の課金はいくらになりますか。<br>
+</p>
+                            </div>
+                                                        <ul class="wpProQuiz_questionList" data-question_id="5" data-type="single">
+                                
+                                    <li class="wpProQuiz_questionListItem" data-pos="0">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="radio" name="question_1_5" value="1"> $0.00                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="1">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="radio" name="question_1_5" value="2"> $0.10                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="2">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="radio" name="question_1_5" value="3"> $0.06                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="3">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="radio" name="question_1_5" value="4"> $0.11                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="4">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="radio" name="question_1_5" value="5"> $0.05                                            </label>
+
+                                                                            </li>
+                                                                </ul>
+                        </div>
+                        
+                        
+                                                <input type="button" name="back" value="戻る" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left !important; margin-right: 10px !important; display: none;">
+                                                <input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right !important; margin-right: 10px !important; display: none;">
+                        <input type="button" name="next" value="次へ" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;">
+
+                        <div style="clear: both;"></div>
+
+                        
+                    </li>
+
+                                    <li class="wpProQuiz_listItem" style="display: none;">
+                        <div class="wpProQuiz_question_page" style="display:none;">
+                            Question <span>6</span> of <span>6</span>                        </div>
+                        <h5 style="display: none;" class="wpProQuiz_header">
+                            <span>6</span>. Question                        </h5>
+
+                        
+                                                <div class="wpProQuiz_question" style="margin: 10px 0 0 0;">
+                            <div class="wpProQuiz_question_text">
+                                <p>
+Amazon CloudWatchはどのような監視項目（メトリックス）を扱うことができますか。正しいものを二つ選択してください。ただしカスタムメトリックスのモニタリングを除きます。<br>
+</p>
+                            </div>
+                                                        <ul class="wpProQuiz_questionList" data-question_id="6" data-type="multiple">
+                                
+                                    <li class="wpProQuiz_questionListItem" data-pos="0">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="checkbox" name="question_1_6" value="1"> CPU負荷、ネットワークトラフィックなどのhypervisorで扱うことのできるメトリックス                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="1">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="checkbox" name="question_1_6" value="2"> OS上のメモリ使用率・ディスク容量などのメトリックス                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="2">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="checkbox" name="question_1_6" value="3"> インスタンスの稼働状態（ステータス）のメトリックス                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="3">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="checkbox" name="question_1_6" value="4"> Webサーバのアクセス数（正常、エラーを含む）のメトリックス                                            </label>
+
+                                                                            </li>
+                                    
+                                    <li class="wpProQuiz_questionListItem" data-pos="4">
+
+                                                                                                                                <span style="display:none;"></span>
+                                            <label>
+                                                <input class="wpProQuiz_questionInput" type="checkbox" name="question_1_6" value="5"> データベースへのセッション数に関わるメトリックス                                            </label>
+
+                                                                            </li>
+                                                                </ul>
+                        </div>
+                        
+                        
+                                                <input type="button" name="back" value="戻る" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left !important; margin-right: 10px !important; display: none;">
+                                                <input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right !important; margin-right: 10px !important; display: none;">
+                        <input type="button" name="next" value="次へ" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;">
+
+                        <div style="clear: both;"></div>
+
+                        
+                    </li>
+
+                            </ol>
+                    </div>
+                </div>
+                <script type="text/javascript">
+            window.wpProQuizInitList = window.wpProQuizInitList || [];
+
+            window.wpProQuizInitList.push({
+                id: '#wpProQuiz_1',
+                init: {
+                    quizId: 1,
+                    mode: 0,
+                    globalPoints: 6,
+                    timelimit: 120,
+                    resultsGrade: [0],
+                    bo: 4099,
+                    qpp: 0,
+                    catPoints: {"1":2,"6":2,"7":1,"8":1},
+                    formPos: 0,
+                    lbn: "\u30c6\u30b9\u30c8\u3092\u7d42\u4e86",
+                    json: {"1":{"type":"multiple","id":1,"catId":1,"points":1,"correct":[0,0,1,1,0]},"2":{"type":"single","id":2,"catId":6,"points":1,"correct":[1,0,0,0,0]},"3":{"type":"single","id":3,"catId":7,"points":1,"correct":[0,0,0,1,0]},"4":{"type":"multiple","id":4,"catId":1,"points":1,"correct":[0,1,1,0,0]},"5":{"type":"single","id":5,"catId":8,"points":1,"correct":[1,0,0,0,0]},"6":{"type":"multiple","id":6,"catId":6,"points":1,"correct":[1,0,1,0,0]}}                }
+            });
+        </script>
+        <p></p>
+        </div>
+
+        <footer>
+          <!-- ページリンク -->
+
+                      <div id="widget-under-page-article" class="widgets">
+            <div id="text-16" class="widget-under-page-article widget_text">			<div class="textwidget"><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');  ga('create', 'UA-23162773-1', 'auto');  ga('send', 'pageview');</script></div>
+		</div>                </div>
+          
+
+            <!-- 文章下広告 -->
+                     <div class="ad-article-bottom ad-space">
+          <div class="ad-label">スポンサーリンク</div>
+          <div class="ad-left ad-pc adsense-336">			<div class="textwidget"><script async src="js/adsbygoogle.js"></script>
+<!-- 336*280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-1600680293185006" data-ad-slot="7697083373"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>
+          <div class="ad-right ad-pc adsense-336">			<div class="textwidget"><script async src="js/adsbygoogle.js"></script>
+<!-- 336*280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-1600680293185006" data-ad-slot="7697083373"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>
+          <div class="clear"></div>
+        </div>
+            
+          
+                    <div id="sns-group">
+          
+                    </div>
+          
+          
+          <p class="footer-post-meta">
+
+            
+            
+                      </p>
+        </footer>
+        </article><!-- .article -->
+      </div><!-- .page -->
+    
+            </div><!-- /#main -->
+          </main>
+        <!-- sidebar -->
+<div id="sidebar" role="complementary">
+    
+  <div id="sidebar-widget">
+  <!-- ウイジェット -->
+  <aside id="text-12" class="widget widget_text"><h3 class="widget_title sidebar_widget_title">◆ログイン</h3>			<div class="textwidget"><div class="swpm-login-widget-logged">
+    <div class="swpm-logged-username">
+        <div class="swpm-logged-username-label swpm-logged-label">ログイン中: </div>
+        <div class="swpm-logged-username-value swpm-logged-value">nochi0105</div>
+    </div>
+    <div class="swpm-logged-status">
+        <div class="swpm-logged-status-label swpm-logged-label">アカウント状態</div>
+        <div class="swpm-logged-status-value swpm-logged-value">Active</div>
+    </div>
+    <div class="swpm-logged-membership">
+        <div class="swpm-logged-membership-label swpm-logged-label">メンバーシップ</div>
+        <div class="swpm-logged-membership-value swpm-logged-value">ゴールドプラン</div>
+    </div>
+    <div class="swpm-logged-expiry">
+        <div class="swpm-logged-expiry-label swpm-logged-label">アカウントの有効期限</div>
+        <div class="swpm-logged-expiry-value swpm-logged-value">2019年5月31日</div>
+    </div>
+    <div class="swpm-edit-profile-link"><a href="https://aws.koiwaclub.com/membership-login/membership-profile/">Edit Profile</a></div>    <div class="swpm-logged-logout-link">
+        <a href="?swpm-logout=true">ログアウト</a>
+    </div>
+</div></div>
+		</aside><aside id="text-11" class="widget widget_text"><h3 class="widget_title sidebar_widget_title">◆問題集(SAA)</h3>			<div class="textwidget">・フリープラン<br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam01/">AWSソリューションアーキテクト#01</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam02/">AWSソリューションアーキテクト#02</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam03/">AWSソリューションアーキテクト#03</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/exam-part1/">AWS理解度確認テストPart1</a><br>
+・ゴールドプラン以上<br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam04/">AWSソリューションアーキテクト#04</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam05/">AWSソリューションアーキテクト#05</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam06/">AWSソリューションアーキテクト#06</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam07/">AWSソリューションアーキテクト#07</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam08/">AWSソリューションアーキテクト#08</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam09/">AWSソリューションアーキテクト#09</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam10/">AWSソリューションアーキテクト#10</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam11/">AWSソリューションアーキテクト#11</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam12/">AWSソリューションアーキテクト#12</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam13/">AWSソリューションアーキテクト#13</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam14/">AWSソリューションアーキテクト#14</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam15/">AWSソリューションアーキテクト#15</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam16/">AWSソリューションアーキテクト#16</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam17/">AWSソリューションアーキテクト#17</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam18/">AWSソリューションアーキテクト#18</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam19/">AWSソリューションアーキテクト#19</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam20/">AWSソリューションアーキテクト#20</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam21/">AWSソリューションアーキテクト#21</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam22/">AWSソリューションアーキテクト#22</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam23/">AWSソリューションアーキテクト#23</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam24/">AWSソリューションアーキテクト#24</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam25/">AWSソリューションアーキテクト#25</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam26/">AWSソリューションアーキテクト#26</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam27/">AWSソリューションアーキテクト#27</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam28/">AWSソリューションアーキテクト#28</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam29/">AWSソリューションアーキテクト#29</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam30/">AWSソリューションアーキテクト#30</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam31/">AWSソリューションアーキテクト#31</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam32/">AWSソリューションアーキテクト#32</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam33/">AWSソリューションアーキテクト#33</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam34/">AWSソリューションアーキテクト#34</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam35/">AWSソリューションアーキテクト#35</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam36/">AWSソリューションアーキテクト#36</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam37/">AWSソリューションアーキテクト#37</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam38/">AWSソリューションアーキテクト#38</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam39/">AWSソリューションアーキテクト#39</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam40/">AWSソリューションアーキテクト#40</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam41/">AWSソリューションアーキテクト#41</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam42/">AWSソリューションアーキテクト#42</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam43/">AWSソリューションアーキテクト#43</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam44/">AWSソリューションアーキテクト#44</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam45/">AWSソリューションアーキテクト#45</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam46/">AWSソリューションアーキテクト#46</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam47/">AWSソリューションアーキテクト#47</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam48/">AWSソリューションアーキテクト#48</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam49/">AWSソリューションアーキテクト#49</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam50/">AWSソリューションアーキテクト#50</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam51/">AWSソリューションアーキテクト#51</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam52/">AWSソリューションアーキテクト#52</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam53/">AWSソリューションアーキテクト#53</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam54/">AWSソリューションアーキテクト#54</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam55/">AWSソリューションアーキテクト#55</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam56/">AWSソリューションアーキテクト#56</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam57/">AWSソリューションアーキテクト#57</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam58/">AWSソリューションアーキテクト#58</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam59/">AWSソリューションアーキテクト#59</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam60/">AWSソリューションアーキテクト#60</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam61/">AWSソリューションアーキテクト#61</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam62/">AWSソリューションアーキテクト#62</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam63/">AWSソリューションアーキテクト#63</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam64/">AWSソリューションアーキテクト#64</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam65/">AWSソリューションアーキテクト#65</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam66/">AWSソリューションアーキテクト#66</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam67/">AWSソリューションアーキテクト#67</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam68/">AWSソリューションアーキテクト#68</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam69/">AWSソリューションアーキテクト#69</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam70/">AWSソリューションアーキテクト#70</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam71/">AWSソリューションアーキテクト#71</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam72/">AWSソリューションアーキテクト#72</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam73/">AWSソリューションアーキテクト#73</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam74/">AWSソリューションアーキテクト#74</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam75/">AWSソリューションアーキテクト#75</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam76/">AWSソリューションアーキテクト#76</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam77/">AWSソリューションアーキテクト#77</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam78/">AWSソリューションアーキテクト#78</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam79/">AWSソリューションアーキテクト#79</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam80/">AWSソリューションアーキテクト#80</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam81/">AWSソリューションアーキテクト#81</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam82/">AWSソリューションアーキテクト#82</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam83/">AWSソリューションアーキテクト#83</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam84/">AWSソリューションアーキテクト#84</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam85/">AWSソリューションアーキテクト#85</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam86/">AWSソリューションアーキテクト#86</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam87/">AWSソリューションアーキテクト#87</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam88/">AWSソリューションアーキテクト#88</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam89/">AWSソリューションアーキテクト#89</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam90/">AWSソリューションアーキテクト#90</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam91/">AWSソリューションアーキテクト#91</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam92/">AWSソリューションアーキテクト#92</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam93/">AWSソリューションアーキテクト#93</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam94/">AWSソリューションアーキテクト#94</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam95/">AWSソリューションアーキテクト#95</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam96/">AWSソリューションアーキテクト#96</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam97/">AWSソリューションアーキテクト#97</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam98/">AWSソリューションアーキテクト#98</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam99/">AWSソリューションアーキテクト#99</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam100/">AWSソリューションアーキテクト#100</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam101/">AWSソリューションアーキテクト#101</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam102/">AWSソリューションアーキテクト#102</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam103/">AWSソリューションアーキテクト#103</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam104/">AWSソリューションアーキテクト#104</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam105/">AWSソリューションアーキテクト#105</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa106/">SAA#106</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa107/">SAA#107</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa108/">SAA#108</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa109/">SAA#109</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa110/">SAA#110</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa111/">SAA#111</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa112/">SAA#112</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa113/">SAA#113</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa114/">SAA#114</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa115/">SAA#115</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa116/">SAA#116</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa117/">SAA#117</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa118/">SAA#118</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa119/">SAA#119</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa120/">SAA#120</a><br></div>
+		</aside><aside id="search-2" class="widget widget_search"><form method="get" id="searchform" action="https://aws.koiwaclub.com/">
+	<input type="text" placeholder="ブログ内を検索" name="s" id="s">
+	<input type="submit" id="searchsubmit" value>
+</form></aside>  </div>
+
+  
+</div><!-- /#sidebar -->
+        </div><!-- /#body-in -->
+      </div><!-- /#body -->
+
+      <!-- footer -->
+      <footer itemscope itemtype="http://schema.org/WPFooter">
+        <div id="footer" class="main-footer">
+          <div id="footer-in">
+
+            
+          <div class="clear"></div>
+            <div id="copyright" class="wrapper">
+                            <div class="credit">
+                &copy; 2015  <a href="https://aws.koiwaclub.com">AWS WEB問題集で学習しよう</a>.              </div>
+
+                          </div>
+        </div><!-- /#footer-in -->
+        </div><!-- /#footer -->
+      </footer>
+      <div id="page-top">
+      <a id="move-page-top"><span class="fa fa-angle-double-up fa-2x"></span></a>
+  
+</div>
+          </div><!-- /#container -->
+    <script src="js/comment-reply.min.js" async></script>
+<script src="js/javascript_1.js" defer></script>
+<script src="js/javascript.js" defer></script>
+<script type="text/javascript" src="js/editor.js"></script>
+<script type="text/javascript" src="js/wp-embed.min.js"></script>
+<script type="text/javascript" src="js/core.min.js"></script>
+<script type="text/javascript" src="js/widget.min.js"></script>
+<script type="text/javascript" src="js/mouse.min.js"></script>
+<script type="text/javascript" src="js/sortable.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WpProQuizGlobal = {"ajaxurl":"https:\/\/aws.koiwaclub.com\/wp-admin\/admin-ajax.php","loadData":"Loading","questionNotSolved":"You must answer this question.","questionsNotSolved":"You must answer all questions before you can completed the quiz.","fieldsNotFilled":"All fields have to be filled."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="js/wpProQuiz_front.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="js/wpProQuiz_toplist.min.js"></script>
+            <!-- はてブシェアボタン用スクリプト -->
+<script type="text/javascript" src="js/bookmark_button.js" charset="utf-8" async="async"></script>
+    
+
+    
+  </body>
+</html>

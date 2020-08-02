@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html class="aws-v1-page no-js aws-lng-ja_JP" lang="ja-JP" xmlns="http://www.w3.org/1999/xhtml" data-aws-assets="https://a0.awsstatic.com" data-js-version="1.0.458" data-css-version="1.0.423">
+ <head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="dns-prefetch" href="https://a0.awsstatic.com"> 
+  <link rel="dns-prefetch" href="//d0.awsstatic.com"> 
+  <link rel="dns-prefetch" href="//d1.awsstatic.com"> 
+  <title>Amazon RDS のバックアップと復元</title> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="robots" content="index, follow"> 
+  <link rel="canonical" href="https://aws.amazon.com/jp/rds/details/backup/"> 
+  <link rel="icon" type="image/ico" href="favicon.ico"> 
+  <link rel="shortcut icon" type="image/ico" href="favicon.ico"> 
+  <link rel="apple-touch-icon" sizes="57x57" href="images/touch-icon-iphone-114-smile.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="images/touch-icon-ipad-144-smile.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="images/touch-icon-iphone-114-smile.png"> 
+  <link rel="apple-touch-icon" sizes="144x144" href="images/touch-icon-ipad-144-smile.png"> 
+  <meta property="twitter:card" content="summary"> 
+  <meta property="twitter:title" content="Amazon RDS のバックアップと復元"> 
+  <meta property="twitter:description" content> 
+  <meta property="twitter:image" content="https://a0.awsstatic.com/main/images/logos/aws_logo_smile_179x109.png"> 
+  <meta property="twitter:site" content="@awscloud"> 
+  <meta property="og:title" content="Amazon RDS のバックアップと復元"> 
+  <meta property="og:type" content="company"> 
+  <meta property="og:url" content="https://aws.amazon.com/jp/rds/details/backup/"> 
+  <meta property="og:image" content="images/aws_logo_smile_1200x630.png"> 
+  <meta property="og:site_name" content="Amazon Web Services, Inc."> 
+  <meta property="fb:pages" content="153063591397681"> 
+  <meta name="google-site-verification" content="XHghG81ulgiW-3EylGcF48sG28tBW5EH0bNUhgo_DrU"> 
+  <meta name="msvalidate.01" content="6F92E52A288E266E30C2797ECB5FCCF3"> 
+  <meta name="baidu-site-verification" content="pjxJUyWxae"> 
+  <link rel="alternate" href="//aws.amazon.com/rds/details/backup/" hreflang="en-us"> 
+  <link rel="alternate" href="//aws.amazon.com/jp/rds/details/backup/" hreflang="ja-jp"> 
+  <link rel="stylesheet" href="css/style_3.css"> 
+  <script>
+    var AWS = {
+      PageSettings: {
+        supportedLanguages: ['ar', 'en', 'es', 'de', 'fr', 'id', 'it', 'jp', 'ko', 'pt', 'ru', 'th', 'tr', 'vi', 'cn', 'tw'],
+        defaultLanguage: 'en',
+        logDataSet: 'LIVE:PROD',
+        logInstance: 'PUB',
+        csdsEndpoint: 'https://aws.amazon.com/',
+        framework: 'v1',
+        g11nLibPath: 'https://a0.awsstatic.com/g11n-lib/2.0.28',
+        libraCSSPath: 'https://a0.awsstatic.com/libra-css/css/1.0.274',
+        isLoggingEnabled: true,
+        currentLanguage: 'ja-JP',
+        isRTL: false
+      },
+    };
+
+    var require = {
+      baseUrl: "https://a0.awsstatic.com/chrome/js/1.0.458/",
+      paths: {
+        "jquery": "jquery-amd",
+        "psf": "https://a0.awsstatic.com/psf/1.0.35",
+        "plc": "https://a0.awsstatic.com/plc/js/1.0.68/plc",
+        "directories": "https://a0.awsstatic.com/libra/1.0.267/directories",
+        "libra": "https://a0.awsstatic.com/libra/1.0.267",
+        "libra-cardsui": "https://a0.awsstatic.com/libra/1.0.267/libra-cardsui",
+        "librastandardlib": "https://a0.awsstatic.com/libra/1.0.267/librastandardlib"
+      },
+      deps: ["scripts"],
+      shim: {
+        "scripts": ["jquery"],
+        "forms": ["jquery"],
+        "pricing-table": ["jquery", "scripts"],
+        "plugins/bootstrap.button": ["jquery"],
+        "plugins/bootstrap.collapse": ["jquery"],
+        "plugins/bootstrap.dropdown": ["jquery"],
+        "plugins/bootstrap.popover": ["jquery"],
+        "plugins/bootstrap.tab": ["jquery"],
+        "plugins/bootstrap.tooltip": ["jquery"],
+        "plugins/free-tier": ["jquery", "scripts"],
+        "plugins/jquery.caroufredsel": ["jquery"],
+        "plugins/jquery.fancybox": ["jquery"],
+        "plugins/jwplayer.html5": ["jquery"],
+        "plugins/jwplayer": ["jquery"],
+        "plugins/pbSize": ["jquery"],
+        "plugins/pushstate": ["jquery", "scripts"],
+        "plugins/search-controller": ["jquery"],
+        "plugins/jquery.touchSwipe": ["jquery"]
+      },
+      waitSeconds: 15
+    };
+  </script> 
+  <script src="js/head.2.0.js"></script> 
+  <script src="js/awshome_s_code.js"></script> 
+  <script>
+      AWS.TargetMediator = {
+        supportedLanguages: AWS.PageSettings.supportedLanguages,holdJqueryReady: true,offerOrigin: 'https://s0.awsstatic.com',pageLanguage: 'jp'
+      };
+    </script> 
+  <script data-js-script="target-mediator" src="js/aws-target-mediator.js"></script> 
+ </head> 
+ <body> 
+  <header id="aws-page-header" class="awsm m-page-header" role="banner"> 
+   <div id="m-nav" class="m-nav" role="navigation"> 
+    <div class="m-nav-header lb-clearfix" data-menu-url="https://s0.awsstatic.com/ja_JP/nav/v3/panel-content/desktop/index.html"> 
+     <div class="m-nav-logo"> 
+      <div class="lb-bg-logo aws-amazon_web_services_smile-header-desktop-en"> 
+       <a href="https://aws.amazon.com/jp/?nc2=h_lg"><span>アマゾン ウェブ サービスのホームページに戻るには、ここをクリック</span></a> 
+      </div> 
+     </div> 
+     <div class="m-nav-secondary-links" style="min-width: 620px"> 
+      <a href="/jp/contact-us/?nc2=h_header">日本担当チームへお問い合わせ</a> 
+      <a href="https://console.aws.amazon.com/support/home?nc2=h_ql_cu">サポート</a> 
+      <a id="m-nav-language-selector" class="lb-tiny-iblock lb-txt lb-has-trigger-indicator" href="#" data-lb-popover-trigger="popover-language-selector" data-language="jp">日本語&nbsp;<i class="icon-caret-down lb-trigger-mount"></i></a> 
+      <a class="lb-tiny-iblock lb-txt lb-has-trigger-indicator" href="#" data-lb-popover-trigger="popover-my-account">アカウント&nbsp;<i class="icon-caret-down lb-trigger-mount"></i></a> 
+      <div class="m-nav-cta-btn"> 
+       <div class="lb-mbox js-mbox" data-mbox="en_header_nav_cta" data-lb-comp-ignore="true"> 
+        <div class="lb-btn"> 
+         <a id="aws-nav-cta-button" class="lb-btn-p-primary" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct&src=default" style="min-width:171px;"><span>サインアップ</span></a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="m-nav-primary-group"> 
+      <div class="m-nav-primary-links"> 
+       <i class="m-nav-angle-left-icon" aria-hidden="true"></i> 
+       <ul> 
+        <li><a href="/jp/products/?nc2=h_ql_prod" data-panel="m-nav-panel-products">製品</a></li> 
+        <li><a href="/jp/solutions/?nc2=h_ql_sol" data-panel="m-nav-panel-solutions">ソリューション</a></li> 
+        <li><a href="/jp/pricing/?nc2=h_ql_pr" data-panel="m-nav-panel-pricing">料金</a></li> 
+        <li><a href="https://docs.aws.amazon.com/index.html?nc2=h_ql_doc" data-panel="m-nav-panel-documentation">ドキュメント</a></li> 
+        <li><a href="/jp/getting-started/?nc2=h_ql_gs" data-panel="m-nav-panel-learn">学習</a></li> 
+        <li><a href="/jp/partners/?nc2=h_ql_pn" data-panel="m-nav-panel-partner">パートナー</a></li> 
+        <li><a href="https://aws.amazon.com/marketplace/?nc2=h_ql_mp" data-panel="m-nav-panel-marketplace">AWS Marketplace</a></li> 
+        <li><a href="/jp/contact-us/?nc2=h_header" data-panel="m-nav-panel-more">その他 </a></li> 
+       </ul> 
+       <div class="m-nav-icon-group"> 
+        <i class="m-nav-angle-right-icon" aria-hidden="true"></i> 
+        <i class="m-nav-search-icon"></i> 
+       </div> 
+      </div> 
+      <div class="m-nav-search"> 
+       <form action="https://aws.amazon.com/search" role="search"> 
+        <div class="m-typeahead" data-directory-id="typeahead-suggestions" data-lb-comp="typeahead"> 
+         <input class="m-nav-search-field" placeholder="検索" autocomplete="off" spellcheck="false" dir="auto" type="text" name="searchQuery"> 
+        </div> 
+       </form> 
+       <i class="m-nav-close-icon"></i> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="popover-language-selector" data-action="hover" data-position="top"> 
+     <div class="lb-grid lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-12"> 
+       <ul> 
+        <li data-language="ar"> <a href="https://aws.amazon.com/ar/?nc1=h_ls">عربي</a> </li> 
+        <li data-language="id"> <a href="https://aws.amazon.com/id/?nc1=h_ls">Bahasa Indonesia</a> </li> 
+        <li data-language="de"> <a href="https://aws.amazon.com/de/?nc1=h_ls">Deutsch</a> </li> 
+        <li data-language="en"> <a href="https://aws.amazon.com/?nc1=h_ls">English</a> </li> 
+        <li data-language="es"> <a href="https://aws.amazon.com/es/?nc1=h_ls">Espa&ntilde;ol</a> </li> 
+        <li data-language="fr"> <a href="https://aws.amazon.com/fr/?nc1=h_ls">Fran&ccedil;ais</a> </li> 
+        <li data-language="it"> <a href="https://aws.amazon.com/it/?nc1=h_ls">Italiano</a> </li> 
+        <li data-language="pt"> <a href="https://aws.amazon.com/pt/?nc1=h_ls">Portugu&ecirc;s</a> </li> 
+       </ul> 
+      </div> 
+      <div class="lb-col lb-tiny-24 lb-mid-12"> 
+       <ul> 
+        <li data-language="vi"> <a href="https://aws.amazon.com/vi/?nc1=f_ls">Tiếng Việt</a> </li> 
+        <li data-language="tr"> <a href="https://aws.amazon.com/tr/?nc1=h_ls">T&uuml;rk&ccedil;e</a> </li> 
+        <li data-language="ru"> <a href="https://aws.amazon.com/ru/?nc1=h_ls">Ρусский</a> </li> 
+        <li data-language="th"> <a href="https://aws.amazon.com/th/?nc1=f_ls">ไทย</a> </li> 
+        <li data-language="jp"> <a href="https://aws.amazon.com/jp/?nc1=h_ls">日本語</a> </li> 
+        <li data-language="ko"> <a href="https://aws.amazon.com/ko/?nc1=h_ls">한국어</a> </li> 
+        <li data-language="cn"> <a href="https://aws.amazon.com/cn/?nc1=h_ls">中文 (简体)</a> </li> 
+        <li data-language="tw"> <a href="https://aws.amazon.com/tw/?nc1=h_ls">中文 (繁體)</a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="popover-my-account" data-action="hover" data-position="top"> 
+     <ul> 
+      <li> <a href="https://console.aws.amazon.com/?nc2=h_m_mc">AWS マネジメントコンソール</a> </li> 
+      <li> <a href="https://portal.aws.amazon.com/gp/aws/manageYourAccount?nc2=h_m_ma">アカウント設定</a> </li> 
+      <li> <a href="https://console.aws.amazon.com/billing/home?nc2=h_m_bc">請求情報とコスト管理</a> </li> 
+      <li> <a href="https://console.aws.amazon.com/iam/home?nc2=h_m_sc#security_credential">セキュリティ認証情報</a> </li> 
+      <li> <a href="https://phd.aws.amazon.com/?nc2=h_m_sc">AWS Personal Health Dashboard</a> </li> 
+     </ul> 
+    </div> 
+    <script class="tt-suggestion-tpl" type="text/x-handlebars-template">
+    <div>
+      <a href="{{primaryUrl}}">
+        <div class="tt-title">
+          {{title}}
+        </div>
+        {{#if desc}}
+          <div class="tt-desc">
+            {{desc}}
+          </div>
+        {{/if}}
+      </a>
+      <div class="tt-btn-group">
+        {{#if pricingUrl}}
+          <a href="{{pricingUrl}}">
+            <div class="tt-btn">料金</div>
+          </a>
+        {{/if}}
+        {{#if docsUrl}}
+          <a href="{{docsUrl}}">
+            <div class="tt-btn">ドキュメント</div>
+          </a>
+        {{/if}}
+      </div>
+    </div>
+  </script> 
+    <script class="tt-products-head-tpl" type="text/x-handlebars-template">
+    <div class="tt-header aws-ember lb-txt-bold">
+      <p>製品</p>
+    </div>
+  </script> 
+    <script class="tt-keypages-head-tpl" type="text/x-handlebars-template">
+    <div class="tt-header aws-ember lb-txt-bold">
+      <p>関連ページ</p>
+    </div>
+  </script> 
+    <script class="tt-tutorials-head-tpl" type="text/x-handlebars-template">
+    <div class="tt-header aws-ember lb-txt-bold">
+      <p>チュートリアル</p>
+    </div>
+  </script> 
+    <script class="tt-see-all-tpl" type="text/x-handlebars-template">
+    <div class="tt-see-all">
+      <a href="https://aws.amazon.com/search/?searchQuery={{ query }}">次に対するその他の検索結果を表示 "{{ query }}"&lrm;</a>
+    </div>
+  </script> 
+   </div> 
+   <div id="m-nav-mobile" class="m-nav-mobile"> 
+    <div id="m-nav-mobile-header" class="m-nav-mobile-header" data-menu-url="https://s0.awsstatic.com/ja_JP/nav/v3/panel-content/mobile/index.html"> 
+     <div class="lb-bg-logo aws-amazon_web_services_smile-header-mobile-en"> 
+      <a href="https://aws.amazon.com/jp/?nc2=h_lg"><span>アマゾン ウェブ サービスのホームページに戻るには、ここをクリック</span></a> 
+     </div> 
+     <div class="m-nav-mobile-button-group"> 
+      <i class="m-nav-mobile-button icon-search"></i> 
+      <i class="m-nav-mobile-button icon-reorder"></i> 
+     </div> 
+    </div> 
+    <div id="m-nav-mobile-search" class="m-nav-mobile-search"> 
+     <form action="https://aws.amazon.com/search" role="search"> 
+      <div class="m-typeahead"> 
+       <input class="m-nav-search-field" placeholder="検索" autocomplete="off" spellcheck="false" dir="auto" type="text" name="searchQuery"> 
+      </div> 
+     </form> 
+    </div> 
+    <nav id="m-nav-trimdown" role="navigation"> 
+     <ul class="m-nav-mobile-menu-group"> 
+      <li> <a href="/jp/products/?nc2=h_mo">製品</a> </li> 
+      <li> <a href="/jp/solutions/?nc2=h_mo">ソリューション</a> </li> 
+      <li> <a href="/jp/pricing/?nc2=h_mo">料金</a> </li> 
+      <li> <a href="/jp/what-is-aws/?nc2=h_mo">AWS 入門</a> </li> 
+      <li> <a href="/jp/getting-started/?nc2=h_mo">開始方法</a> </li> 
+      <li> <a href="/jp/documentation/?nc2=h_mo">ドキュメント</a> </li> 
+      <li> <a href="/jp/training/?nc2=h_mo">トレーニングと認定</a> </li> 
+      <li> <a href="/jp/developer/?nc2=h_mo">開発者センター</a> </li> 
+      <li> <a href="/jp/solutions/case-studies/?nc2=h_mo">お客様の導入事例</a> </li> 
+      <li> <a href="/jp/partners/?nc2=h_mo">パートナー</a> </li> 
+      <li> <a href="https://aws.amazon.com/marketplace/?nc2=h_mo">AWS Marketplace</a> </li> 
+      <li> <a href="https://console.aws.amazon.com/support/home?nc2=h_ql_cu">サポート</a> </li> 
+      <li> <a href="https://console.aws.amazon.com/console/home">コンソールにログイン</a> </li> 
+      <li> <a href="/jp/console/mobile/">モバイルアプリケーションをダウンロード</a> </li> 
+     </ul> 
+    </nav> 
+   </div> 
+  </header> 
+  <div id="aws-page-content" class="page-content"> 
+   <div class="wrapper row"> 
+    <aside class="three columns leftnavcontainer" role="complementary"> 
+     <div class="leftnav"> 
+      <div class="sidebar parsys iparsys"> 
+       <div class="section"> 
+        <div class="new"></div> 
+       </div> 
+       <div class="iparys_inherited"> 
+        <div class="sidebar parsys iparsys"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </aside> 
+    <div class="nine columns content-with-nav"> 
+     <main role="main"> 
+      <section data-page-alert-target="true"> 
+       <div class="title-wrapper"> 
+        <div class="row title"> 
+         <div class="twelve columns"> 
+          <h1 id="Amazon_RDS_のバックアップと復元"> <a name="Amazon_RDS_のバックアップと復元"> Amazon RDS のバックアップと復元</a> </h1> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="lead-copy"> 
+        <div class="lead   "> 
+        </div> 
+       </div> 
+       <div class="parsys content"> 
+        <div class="columnbuilder parbase section"> 
+         <div class="row column-builder divider-right"> 
+          <div class="eight columns "> 
+           <div class="parsys col1"> 
+            <div class="lead-copy section"> 
+             <div class="lead   "> 
+              <p>Amazon RDS では、お客様の DB インスタンスの自動バックアップはデフォルトで Amazon S3 に作成され、指定した期間安全に保存されます。さらに、スナップショットを作成することも可能です。スナップショットはユーザー起動型のインスタンスバックアップで、明示的に削除するまで保持されます。 </p> 
+              <p>ご希望の際にいつでも、データベーススナップショットから新しいインスタンスを作成できます。データベーススナップショットはフルバックアップとして動作しますが、ストレージ使用の増加分に対してのみ課金されます。</p> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="four columns "> 
+           <div class="parsys col2"> 
+            <div class="parbase section mbox"> 
+             <div class="lb-mbox js-mbox" data-mbox="ctabox_database_rds_v" data-lb-comp-ignore="true"> 
+              <div class="parsys mbox"> 
+               <div class="aws-comp section"> 
+                <div class="vbb"> 
+                 <h4>AWS を無料でお試しください</h4> 
+                 <a href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html" class="button btn-block btn-gold" data-da="vertical-buybox-cta-button">まずは無料で始める</a> 
+                 <hr> 
+                 <div class="content"> 
+                  <p>AWS 無料利用枠では、1 年間毎月 750 時間 Micro DB Instance をご利用いただけるほか、20 GB のストレージや、Amazon Relational Database Service (RDS) を使用したバックアップ用の 20 GB のストレージもご利用いただけます。<br> </p> 
+                  <p> <a adhocenable="false" href="/jp/free/">AWS 無料利用枠の詳細はこちら &raquo;</a> <br> </p> 
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="title-wrapper section"> 
+         <div class="row title"> 
+          <div class="twelve columns"> 
+           <h3 id="自動バックアップ"> <a name="自動バックアップ"> 自動バックアップ</a> </h3> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="aws-text-box section"> 
+         <div class="  "> 
+          <p>デフォルトで有効になっている Amazon RDS の自動バックアップ機能により、データベースとトランザクションログがバックアップされます。Amazon RDS では DB インスタンスのストレージボリュームのスナップショットを自動的に作成し、個々のデータベースだけではなく、その DB インスタンス全体をバックアップします。&nbsp;</p> 
+          <p>このバックアップは、バックアップウィンドウと呼ばれるユーザーが設定可能な 30 分間隔の時間に 1 日 1 回行われます。自動バックアップは、お客様が設定した日数の間、保持されます（バックアップ保持期間と呼ばれます）。自動バックアップの保持期間は、最大 35 日間までに設定できます。<br> </p> 
+         </div> 
+        </div> 
+        <div class="title-wrapper section"> 
+         <div class="row title"> 
+          <div class="twelve columns"> 
+           <h3 id="ポイントインタイムの復元"> <a name="ポイントインタイムの復元"> ポイントインタイムの復元</a> </h3> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="aws-text-box section"> 
+         <div class="  "> 
+          <p>この保持期間中の任意の時点に DB インスタンスを復元して、新しい DB インスタンスを作成できます。DB インスタンスを復元するには、AWS コンソールまたはコマンドラインインターフェイスを使用します。<br> </p> 
+          <p>DB インスタンスの復元可能な直近の時間を調べるには、AWS コンソールまたはコマンドラインインターフェイスを使用し、DB インスタンスの [LatestRestorableTime] フィールドに返される値を参照します。DB インスタンスの復元可能な直近の時間は、通常、現在時刻の 5 分以内です。&nbsp;</p> 
+         </div> 
+        </div> 
+        <div class="title-wrapper section"> 
+         <div class="row title"> 
+          <div class="twelve columns"> 
+           <h3 id="データベースのスナップショット"> <a name="データベースのスナップショット"> データベースのスナップショット</a> </h3> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="aws-text-box section"> 
+         <div class="  "> 
+          <p>データベースのスナップショットはお客様が開始して Amazon S3 に保存するバックアップで、お客様が明示的に削除するまで保持されます。ご希望の際にいつでも、データベーススナップショットから新しいインスタンスを作成できます。データベーススナップショットはフルバックアップとして動作しますが、ストレージ使用の増加分に対してのみ課金されます。<br> </p> 
+         </div> 
+        </div> 
+        <div class="title-wrapper section"> 
+         <div class="row title"> 
+          <div class="twelve columns"> 
+           <h3 id="スナップショットのコピー"> <a name="スナップショットのコピー"> スナップショットのコピー</a> </h3> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="aws-text-box section"> 
+         <div class="  "> 
+          <p>Amazon RDS を使用すると、DB スナップショットと DB クラスタースナップショットをコピーできます。自動スナップショットも手動スナップショットもコピーできます。スナップショットをコピーすると、そのコピーは手動スナップショットになります。同じ AWS リージョン内、AWS リージョン間、および AWS アカウント間でスナップショットをコピーすることが可能です。<br> </p> 
+         </div> 
+        </div> 
+        <div class="title-wrapper section"> 
+         <div class="row title"> 
+          <div class="twelve columns"> 
+           <h3 id="スナップショットの共有"> <a name="スナップショットの共有"> スナップショットの共有</a> </h3> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="aws-text-box section"> 
+         <div class="  "> 
+          <p>Amazon RDS を使用して、手動 DB スナップショットまたは DB クラスタースナップショットをその他の AWS アカウントと共有することができます。手動 DB スナップショットまたは DB クラスタースナップショットを共有すると、暗号化の有無にかかわらず、権限のある AWS アカウントがスナップショットをコピーできるようになります。</p> 
+          <p>暗号化されていない手動 DB スナップショットを共有すると、権限のある AWS アカウントが DB インスタンスをコピーしてそこから復元するのではなく、スナップショットから DB インスタンスを直接復元できるようになります。この操作は、暗号化されている手動 DB スナップショットではサポートされていません。</p> 
+          <p>手動 DB クラスタースナップショットを共有すると、暗号化の有無にかかわらず、権限を持つ AWS アカウントが DB クラスターをコピーしてそこから復元するのではなく、スナップショットから DB クラスターを直接復元できるようになります。</p> 
+          <p>&nbsp;</p> 
+         </div> 
+        </div> 
+        <div class="divider section"> 
+         <hr> 
+        </div> 
+        <div class="parbase section mbox"> 
+         <div class="lb-mbox js-mbox" data-mbox="en_house_content_1" data-lb-comp-ignore="true"> 
+          <div class="parsys mbox"> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </section> 
+     </main> 
+    </div> 
+   </div> 
+  </div> 
+  <footer id="aws-page-footer" class="aws-page-footer" role="contentinfo"> 
+   <div class="lb-row lb-snap lb-row-max-large"> 
+    <div class="lb-mid-6 lb-mid-push-18 lb-col"> 
+     <div class="lb-mbox js-mbox" data-mbox="en_footer_cta" data-lb-comp-ignore="true"> 
+      <a href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct" class="aws-page-footer-cta-button">無料アカウントの作成</a> 
+     </div> 
+    </div> 
+    <div class="lb-mid-18 lb-mid-pull-6 lb-col aws-social"> 
+     <ul> 
+      <div data-url="https://dc.ads.linkedin.com/collect/?pid=3038&amp;fmt=gif" data-lb-comp="tracking-pixel"></div> 
+      <li><a href="https://twitter.com/awscloud?nc1=f_so_tw"><i class="icon-twitter"></i> &nbsp;Twitter</a></li> 
+      <li><a href="https://www.facebook.com/amazonwebservices?nc1=f_so_fb"><i class="icon-facebook"></i> &nbsp;Facebook</a></li> 
+      <li><a href="/jp/podcasts/aws-podcast/"><i class="icon-podcast"></i> &nbsp;ポッドキャスト</a></li> 
+      <li><a href="https://www.twitch.tv/aws"><i class="icon-twitch"></i> &nbsp;Twitch</a></li> 
+      <li><a href="https://aws.amazon.com/blogs/"><i class="icon-list-alt"></i> &nbsp;AWS ブログ</a></li> 
+      <li><a href="https://aws.amazon.com/new/feed/"><i class="icon-rss"></i> &nbsp;RSS ニュースフィード</a></li> 
+      <li><a href="https://pages.awscloud.com/communication-preferences?trk=homepage"><i class="icon-envelope-o"></i> &nbsp;最新情報メール</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div class="lb-row lb-snap lb-row-max-large aws-page-footer-main"> 
+    <div class="lb-mid-16 lb-col aws-page-footer-nav"> 
+     <div class="lb-row"> 
+      <div class="lb-tiny-12 lb-mid-6 lb-col"> 
+       <div>
+         AWS とクラウドコンピューティング 
+       </div> 
+       <ul> 
+        <li><a href="https://aws.amazon.com/jp/what-is-cloud-computing/?nc1=f_cc">クラウドコンピューティングとは?</a></li> 
+        <li><a href="https://aws.amazon.com/jp/caching/?nc1=f_cc">キャッシュとは?</a></li> 
+        <li><a href="https://aws.amazon.com/jp/nosql/?nc1=f_cc">NoSQL とは?</a></li> 
+        <li><a href="https://aws.amazon.com/jp/devops/what-is-devops/?nc1=f_cc">DevOps とは?</a></li> 
+        <li><a href="https://aws.amazon.com/jp/docker/?nc1=f_cc">Docker とは?</a></li> 
+        <li><a href="https://aws.amazon.com/jp/products/?nc1=f_cc">製品とサービス</a></li> 
+        <li><a href="https://aws.amazon.com/jp/solutions/case-studies/?nc1=f_cc">お客様の導入事例</a></li> 
+        <li><a href="https://aws.amazon.com/jp/economics/?nc1=f_cc">エコノミクスセンター</a></li> 
+        <li><a href="https://aws.amazon.com/jp/architecture/?nc1=f_cc">アーキテクチャセンター</a></li> 
+        <li><a href="https://aws.amazon.com/jp/security/?nc1=f_cc">セキュリティセンター</a></li> 
+        <li><a href="https://aws.amazon.com/jp/new/?nc1=f_cc">最新情報</a></li> 
+        <li><a href="https://aws.amazon.com/jp/whitepapers/?nc1=f_cc">ホワイトペーパー</a></li> 
+        <li><a href="https://aws.amazon.com/blogs/">AWS ブログ</a></li> 
+        <li><a href="https://aws.amazon.com/jp/about-aws/events/?nc1=f_cc">イベント</a></li> 
+        <li><a href="https://aws.amazon.com/jp/about-aws/sustainability/?nc1=f_cc">持続可能なエネルギー</a></li> 
+        <li><a href="https://press.aboutamazon.com/press-releases/aws?nc1=f_cc">プレスリリース</a></li> 
+        <li><a href="https://aws.amazon.com/jp/about-aws/in-the-news/">AWS メディア掲載記事</a></li> 
+        <li><a href="https://aws.amazon.com/jp/resources/analyst-reports/?nc1=f_cc">アナリストレポート</a></li> 
+        <li><a href="https://aws.amazon.com/jp/legal/?nc1=f_cc">法務関連</a></li> 
+        <li><a href="https://www.amazon.co.uk/gp/help/customer/display.html?ie=UTF8&nodeId=202151760&ref_=help_search_1&nc1=f_cc"></a></li> 
+       </ul> 
+      </div> 
+      <div class="lb-tiny-12 lb-mid-6 lb-col"> 
+       <div>
+         ソリューション 
+       </div> 
+       <ul> 
+        <li><a href="https://aws.amazon.com/jp/websites/?nc1=f_dr">ウェブサイトおよびウェブサイトホスティング</a></li> 
+        <li><a href="https://aws.amazon.com/jp/business-applications/?nc1=f_dr">ビジネスアプリケーション</a></li> 
+        <li><a href="https://aws.amazon.com/jp/backup-restore/?nc1=f_dr">バックアップと復旧</a></li> 
+        <li><a href="https://aws.amazon.com/jp/disaster-recovery/?nc1=f_dr">災害対策</a></li> 
+        <li><a href="https://aws.amazon.com/jp/archive/?nc1=f_dr">データアーカイブ</a></li> 
+        <li><a href="https://aws.amazon.com/jp/devops/?nc1=f_dr">DevOps</a></li> 
+        <li><a href="https://aws.amazon.com/jp/serverless/?nc1=f_dr">サーバーレスコンピューティング</a></li> 
+        <li><a href="https://aws.amazon.com/jp/big-data/?nc1=f_dr">ビッグデータ</a></li> 
+        <li><a href="https://aws.amazon.com/jp/hpc/?nc1=f_dr">ハイパフォーマンスコンピューティング</a></li> 
+        <li><a href="https://aws.amazon.com/jp/mobile/?nc1=f_dr">モバイルサービス</a></li> 
+        <li><a href="https://aws.amazon.com/jp/digital-marketing/?nc1=f_dr">デジタルマーケティング</a></li> 
+        <li><a href="https://aws.amazon.com/jp/gaming/?nc1=f_dr">ゲーム開発</a></li> 
+        <li><a href="https://aws.amazon.com/jp/digital-media/?nc1=f_dr">デジタルメディア</a></li> 
+        <li><a href="https://aws.amazon.com/jp/government-education/?nc1=f_dr">政府機関および教育</a></li> 
+        <li><a href="https://aws.amazon.com/jp/health/?nc1=f_dr">健康</a></li> 
+        <li><a href="https://aws.amazon.com/jp/financial-services/?nc1=f_dr">金融サービス</a></li> 
+        <li><a href="https://aws.amazon.com/jp/windows/?nc1=f_dr">AWS での Windows</a></li> 
+        <li><a href="https://aws.amazon.com/jp/retail/?nc1=f_dr">小売業</a></li> 
+        <li><a href="https://aws.amazon.com/jp/power-and-utilities/?nc1=f_dr">電力会社</a></li> 
+        <li><a href="https://aws.amazon.com/jp/oil-and-gas/?nc1=f_dr">石油とガス</a></li> 
+        <li><a href="https://aws.amazon.com/jp/automotive/?nc1=f_dr">自動車</a></li> 
+        <li><a href="https://aws.amazon.com/jp/blockchain/?nc1=f_dr">ブロックチェーン</a></li> 
+        <li><a href="https://aws.amazon.com/jp/manufacturing/?nc1=f_dr">製造</a></li> 
+       </ul> 
+      </div> 
+      <div class="lb-tiny-12 lb-mid-6 lb-col aws-tiny-clear aws-mid-clear-none"> 
+       <div>
+         リソースとトレーニング 
+       </div> 
+       <ul> 
+        <li><a href="https://aws.amazon.com/jp/developer/?nc1=f_dr">開発者</a></li> 
+        <li><a href="https://aws.amazon.com/jp/java/?nc1=f_dr">AWS での Java</a></li> 
+        <li><a href="https://aws.amazon.com/jp/javascript/?nc1=f_dr">AWS での JavaScript</a></li> 
+        <li><a href="https://aws.amazon.com/jp/mobile/?nc1=f_dr">AWS でのモバイル</a></li> 
+        <li><a href="https://aws.amazon.com/jp/php/?nc1=f_dr">AWS での PHP</a></li> 
+        <li><a href="https://aws.amazon.com/jp/python/?nc1=f_dr">AWS での Python</a></li> 
+        <li><a href="https://aws.amazon.com/jp/ruby/?nc1=f_dr">AWS での Ruby</a></li> 
+        <li><a href="https://aws.amazon.com/jp/net/">AWS での .NET</a></li> 
+        <li><a href="https://aws.amazon.com/jp/tools/?nc1=f_dr">SDK とツール</a></li> 
+        <li><a href="https://aws.amazon.com/marketplace/ref=mkt_ste_dev_resources_ftr?nc1=f_dr">AWS Marketplace</a></li> 
+        <li><a href="https://aws.amazon.com/jp/usergroups/?nc1=f_dr">ユーザーグループ</a></li> 
+        <li><a href="https://aws.amazon.com/jp/premiumsupport/?nc1=f_dr">サポートプラン</a></li> 
+        <li><a href="http://status.aws.amazon.com/?nc1=f_dr">サービスヘルスダッシュボード</a></li> 
+        <li><a href="https://forums.aws.amazon.com/index.jspa?nc1=f_dr">フォーラム</a></li> 
+        <li><a href="https://aws.amazon.com/jp/faqs/?nc1=f_dr">よくある質問</a></li> 
+        <li><a href="https://aws.amazon.com/jp/documentation/?nc1=f_dr">ドキュメント</a></li> 
+        <li><a href="https://aws.amazon.com/articles/?nc1=f_dr">記事 &amp; チュートリアル</a></li> 
+        <li><a href="https://aws.amazon.com/jp/quickstart/?nc1=f_dr">クイックスタート</a></li> 
+       </ul> 
+      </div> 
+      <div class="lb-tiny-12 lb-mid-6 lb-col"> 
+       <div>
+         アカウントの管理 
+       </div> 
+       <ul> 
+        <li><a href="https://aws.amazon.com/jp/console/?nc1=f_m">マネジメントコンソール</a></li> 
+        <li><a href="https://console.aws.amazon.com/billing/home?nc1=f_m">請求情報とコスト管理</a></li> 
+        <li><a href="https://pages.awscloud.com/communication-preferences.html">アップデートをサブスクライブ</a></li> 
+        <li><a href="https://portal.aws.amazon.com/gp/aws/developer/account/index.html?action=edit-aws-profile&nc1=f_m">個人情報</a></li> 
+        <li><a href="https://portal.aws.amazon.com/gp/aws/developer/account/index.html?action=edit-payment-method&nc1=f_m">お支払い方法</a></li> 
+        <li><a href="https://aws.amazon.com/jp/iam/?nc1=f_m">AWS Identity &amp; Access Management</a></li> 
+        <li><a href="https://console.aws.amazon.com/iam/home?action=access-key&nc1=f_m">セキュリティ認証情報</a></li> 
+        <li><a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase">サービスの上限緩和申請</a></li> 
+        <li><a href="https://aws.amazon.com/jp/contact-us/?nc1=f_m">お問い合わせ</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-mid-8 lb-col aws-page-footer-right-item"> 
+     <div class="aws-text-box section"> 
+      <div class="  "> 
+       <p><b>アマゾン ウェブ サービスでは人材を募集中です。</b></p> 
+       <p>アマゾン ウェブ サービス (AWS) は、ダイナミックに成長している Amazon.com のビジネスユニットです。現在、ソフトウェア開発エンジニア、プロダクトマネージャー、アカウントマネージャー、ソリューションアーキテクト、サポートエンジニア、システムエンジニア、デザイナーなどを募集しています。詳細は、<a href="https://aws.amazon.com/careers/?nc1=f_hi" target="_blank">採用情報</a>のページをご覧ください。</p> 
+       <p>&nbsp;</p> 
+       <p class="p1"><br> </p> 
+       <p>&nbsp;</p> 
+      </div> 
+     </div> 
+     <div class="aws-bg-logo lb-bg-logo aws-An_amazon_company-footer-en"> 
+      <a href="http://www.amazon.com/"><span>An Amazon.com company</span></a> 
+     </div> 
+     <div data-lb-comp="google-rlsa-pixel"></div> 
+    </div> 
+   </div> 
+   <div id="aws-page-footer-lang-links" class="lb-row lb-snap lb-row-max-large aws-language"> 
+    <div class="lb-tiny-24 lb-col"> 
+     <ul> 
+      <li>言語</li> 
+      <li data-language="ar"><a href="https://aws.amazon.com/ar/?nc1=h_ls" data-language="ar">عربي</a></li> 
+      <li data-language="id"><a href="https://aws.amazon.com/id/?nc1=h_ls" data-language="id">Bahasa Indonesia</a></li> 
+      <li data-language="de"><a href="https://aws.amazon.com/de/?nc1=f_ls" data-language="de">Deutsch</a></li> 
+      <li data-language="en"><a href="https://aws.amazon.com/?nc1=f_ls" data-language="en">English</a></li> 
+      <li data-language="es"><a href="https://aws.amazon.com/es/?nc1=f_ls" data-language="es">Espa&ntilde;ol</a></li> 
+      <li data-language="fr"><a href="https://aws.amazon.com/fr/?nc1=f_ls" data-language="fr">Fran&ccedil;ais</a></li> 
+      <li data-language="it"><a href="https://aws.amazon.com/it/?nc1=f_ls" data-language="it">Italiano</a></li> 
+      <li data-language="pt"><a href="https://aws.amazon.com/pt/?nc1=f_ls" data-language="pt">Portugu&ecirc;s</a></li> 
+      <li data-language="vi"><a href="https://aws.amazon.com/vi/?nc1=f_ls" data-language="vi">Tiếng Việt</a></li> 
+      <li data-language="tr"><a href="https://aws.amazon.com/tr/?nc1=h_ls" data-language="tr">T&uuml;rk&ccedil;e</a></li> 
+      <li data-language="ru"><a href="https://aws.amazon.com/ru/?nc1=f_ls" data-language="ru">Ρусский</a></li> 
+      <li data-language="th"><a href="https://aws.amazon.com/th/?nc1=h_ls" data-language="th">ไทย</a></li> 
+      <li data-language="jp"><a href="https://aws.amazon.com/jp/?nc1=f_ls" data-language="jp">日本語</a></li> 
+      <li data-language="ko"><a href="https://aws.amazon.com/ko/?nc1=f_ls" data-language="ko">한국어</a></li> 
+      <li data-language="cn"><a href="https://aws.amazon.com/cn/?nc1=f_ls" data-language="cn">中文 (简体)</a></li> 
+      <li data-language="tw"><a href="https://aws.amazon.com/tw/?nc1=f_ls" data-language="tw">中文 (繁體)</a></li> 
+     </ul> 
+     <div class="aws-page-footer-lang-links-right"> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="lb-row lb-snap lb-row-max-large aws-meta"> 
+    <div class="lb-small-24 lb-mid-8 lb-col"> 
+     <ul> 
+      <li><a href="https://aws.amazon.com/jp/terms/?nc1=f_pr">サイト規約</a></li> 
+      <li>|</li> 
+      <li><a href="https://aws.amazon.com/jp/privacy/?nc1=f_pr">プライバシー</a></li> 
+     </ul> 
+    </div> 
+    <div class="lb-small-24 lb-mid-16 lb-col aws-copyright"> 
+     <div>
+       &copy; 2019, Amazon Web Services, Inc. or its affiliates.All rights reserved. 
+     </div> 
+    </div> 
+   </div> 
+  </footer> 
+  <div id="aws-page-end"></div> 
+  <div id="lb-page-end"></div> 
+  <script>require(['jquery', 'scripts']);</script> 
+  <script src="js/main.js" async></script> 
+  <script src="js/aws-da.js"></script> 
+  <!-- SiteCatalyst code version: H.25.1. Copyright 1996-2012 Adobe, Inc. All Rights Reserved --> 
+  <script><!--
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script> 
+  <script><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script> 
+  <noscript> 
+   <img src="0" height="1" width="1" border="0" alt> 
+  </noscript> 
+  <!--/DO NOT REMOVE/--> 
+  <!-- End SiteCatalyst code version: H.25.1. --> 
+  <!--[if lte IE 9]>
+  <script>
+    jQuery = $ = undefined;
+  </script>
+  <p class="deprecated-browser-support-message">
+    <strong>古い</strong>ブラウザが使用されています。正常に表示するには、Internet Explorer 11 にアップグレードするか、別の最新のブラウザを使用してください。<img src="https://fls-na.amazon.com/1/action-impressions/1/OE/aws-mktg/action/awsm_:comp_DeprecatedBrowser@v=1:u=c?dataset=LIVE:PROD&instance=PUB&client=dsk&marketplaceId=A12QK8IU0H0XW5&requestId=ABCDEFGHIJKLMNOPQRST&session=123-1234567-1234567"
+           alt="deprecated-browser pixel tag" />
+      </p>
+<![endif]--> 
+  <script>
+  if (document.documentMode === 10) {
+    var msg = '<strong>古い</strong>ブラウザが使用されています。正常に表示するには、Internet Explorer 11 にアップグレードするか、別の最新のブラウザを使用してください。';
+    $('html').addClass('unsupported-version');
+    $(document.body).append('<p class="deprecated-browser-support-message">' + msg + '<img src="https://fls-na.amazon.com/1/action-impressions/1/OE/aws-mktg/action/awsm_:comp_DeprecatedBrowser@v=1:u=c?dataset=LIVE:PROD&instance=PUB&client=dsk&marketplaceId=A12QK8IU0H0XW5&requestId=ABCDEFGHIJKLMNOPQRST&session=123-1234567-1234567" alt="deprecated-browser pixel tag" /></p>');
+    jQuery = $ = undefined;
+  }
+</script> 
+  <!-- updated_at: 2019-04-29T15:32:26.101-0700 -->  
+ </body>
+</html>

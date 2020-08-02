@@ -1,0 +1,750 @@
+@charset "euc-jp";
+/*****************************************************************
+ * faqListArea_20150618.css
+ *
+ * ver:  2.0.0 (New Design)
+ * date: 2015-06-18
+ * ver:  1.0.0
+ * date: 2014-04-17
+*****************************************************************/
+div#faqContents{
+  position: relative;
+  margin: 0 0 35px 0;
+  padding: 0;
+  width: 100%;
+  min-width: 950px;
+  width: expression(document.body.clientWidth < 952? "950px" : "auto");
+  font-size: 13px;
+  line-height: 1.3;
+  border-top: none;
+}
+
+#faqContents.ebook {
+  padding: 30px 0 35px;
+  margin: 0;
+  background: #fff;
+}
+
+#faqContents h2 {
+    background-color: #eeeeee;
+    border: 1px solid #cecece;
+    display: block;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 7px;
+    text-align: left;
+}
+#faqContents > div{
+  width: auto;
+  margin: 0;
+  border: solid 1px #cecece;
+  border-top: none;
+  padding: 13px 0 13px 0;
+  clear: both;
+  overflow: hidden;
+  position: relative;
+}
+#faqContents .faqcLftInr{
+  width: 20%;
+  min-width: 260px;
+  width: expression(document.body.clientWidth < 262? "260px" : "20%");
+  float: left;
+}
+#faqContents .faqcCntInr{
+  width: 33%;
+  min-width: 265px;
+  width: expression(document.body.clientWidth < 267? "265px" : "33%");
+  float: left;
+}
+#faqContents .faqcRgtInr{
+  width: 34%;
+  padding: 3px 5px 35px 43px;
+  float: left;
+  min-height: 95px;
+  height: auto !important;
+  max-width: 529px;
+  border-left: dotted 1px #aeaeae;
+}
+#faqContents ul.faqclist{
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+#faqContents ul.faqclist li{
+  margin: 0 0 0 15px;
+  padding: 0 0 3px 7px;
+  float: none;
+  font-size: 100%;
+}
+#faqContents ul.faqclist li.mainttl{
+  margin-bottom: 20px;
+}
+#faqContents ul.faqclist li p{
+  margin: 5px 0;
+  padding: 0 0 0 1em;
+}
+#faqContents ul.inlst{
+  margin: 0;
+}
+#faqContents ul.inlst li{
+  margin: 0;
+  padding: 0 0 0 1.7em;
+  text-indent: -0.7em;
+  float: none;
+  font-size: 100%;
+}
+#faqContents ul.txtlst{
+  margin: 10px 0;
+}
+#faqContents ul.txtlst li{
+  margin: 0;
+  padding: 0 0 0 1.7em;
+  text-indent: -0.7em;
+  float: none;
+  font-size: 100%;
+}
+#faqContents .appttl{
+  font-weight: bold;
+  margin: 0 0 12px 0;
+}
+#faqContents .appLink{
+  width: 100%;
+}
+#faqContents .appLink li{
+  width: 49%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+#faqContents .appLink span{
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#faqContents .appLink .appList{
+  width: 128px;
+  margin: 0 15px;
+}
+#faqContents .appLink .appList img{
+  margin: 0 auto 10px;
+  display: block;
+}
+#faqContents .appLink .appList a img:hover{
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -ms-filter: "alpha(opacity=80)";
+}
+#faqContents .faqContentsContact{
+  width: auto;
+}
+#faqContents .faqContentsSupport{
+  width: auto;
+}
+#faqContents .faqContentsContact a,
+#faqContents .faqContentsSupport a{
+  display: block;
+  padding: 15px 15px 15px 20px;
+  border: 1px solid #9e9e9e;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #626262;
+  text-decoration: none;
+  font-weight: bold;
+}
+#faqContents .faqContentsContact a span,
+#faqContents .faqContentsSupport a span{
+  padding: 0 20px 0 0;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  background: url(../images/faqContents_contact_arrow.gif) right center no-repeat;
+}
+#faqContents .faqContentsContact a:hover,
+#faqContents .faqContentsSupport a:hover{
+  background: #dcdcdc;
+}
+/* R-chat add */
+#faqContents .faqBtns {
+  position: absolute;
+  bottom: 15px;
+  margin-left: 22px;
+}
+#faqContents .faqContentsSupport,
+#faqContents .faqContentsContact {
+  margin-right: 20px;
+}
+#faqContents .faqContentsSupport,
+#faqContents .faqContentsContact, 
+#faqContents .chat_widget {
+  display: inline-block;
+}
+#faqContents .linkBtn .chat_widget {
+  width: 100%;
+}
+#faqContents .chat_badge_base {
+  display: inline;
+}
+#faqContents .chat_badge_base .chat_body {
+  padding: 15px 15px 15px 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  color: #626262;
+  border: 1px solid #9e9e9e;
+  cursor:pointer;
+}
+#faqContents .chat_badge_base .chat_body:hover {
+  background: #dcdcdc;
+}
+#faqContents .chat_badge_base .chat_body span {
+  display: inline-block;
+  padding-right: 20px;
+  background: url(../images/faqContents_contact_arrow.gif) right center no-repeat;
+}
+
+/*Start Clearfix*/
+.clearfix:after {
+  content: " ";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0.1px;
+  font-size: 0.1em;
+  line-height: 0;
+}
+
+.clearfix {
+  display: inline-table;
+  min-height: 1%;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+/* End hide from IE-mac */
+
+#faqContents > div.clearfix:after {
+  content: " ";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0.1px;
+  font-size: 0.1em;
+  line-height: 0;
+}
+
+#faqContents > div.clearfix {
+  display: inline-table;
+  min-height: 1%;
+}
+
+/* Hides from IE-mac \*/
+* html #faqContents > div.clearfix {
+  height: 1%;
+}
+
+#faqContents > div.clearfix {
+  display: block;
+}
+
+/* End hide from IE-mac */
+
+
+#faqContents .appLink:after {
+  content: " ";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0.1px;
+  font-size: 0.1em;
+  line-height: 0;
+}
+
+#faqContents .appLink {
+  display: inline-table;
+  min-height: 1%;
+}
+
+/* Hides from IE-mac \*/
+* html #faqContents .appLink {
+  height: 1%;
+}
+
+#faqContents .appLink {
+  display: block;
+}
+
+/* End hide from IE-mac */
+
+
+/* for kobo */
+
+#faqContents.ebook div {
+  margin: 0;
+  width: auto;
+  text-align: left;
+}
+
+#faqContents.ebook > div > * {
+  font-size: .9375rem;
+}
+#faqContents.ebook .faqContentsBlock > div {
+  margin: auto 10px;
+}
+#faqContents.ebook .faqContentsBlock > p {
+  margin: 15px 10px;
+  font-size: .75rem;
+  line-height: 1.6;
+}
+
+#faqContents.ebook dl {
+  width: auto;
+}
+
+#faqContents.ebook ul {
+  margin: auto 10px;
+  overflow: hidden;
+  zoom: 1;
+}
+
+#faqContents.ebook ul:last-of-type {
+  margin-top: 15px;
+  padding-top: 9px;
+  border-top: 1px solid #f0f0f0;
+}
+
+#faqContents.ebook li {
+  float: none;
+  margin: .6em 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1;
+}
+
+#faqContents.ebook a {
+  color: #333;
+}
+#faqContents.ebook a span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#faqContents.ebook .linkBtn {
+  width: 90%;
+  margin: auto auto .5em;
+}
+#faqContents.ebook .linkBtn a {
+  position: relative;
+  display: block;
+  padding: 15px 0;
+  border: 1px solid #CFCFCF;
+  border-radius: 3px;
+  color: #666;
+  font-size: .75rem;
+  text-align: center;
+  -webkit-transition: all .3s ease;
+          transition: all .3s ease;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.15);
+}
+#faqContents.ebook .linkBtn a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  border-right: 1px solid #3f3f3f;
+  border-bottom: 1px solid #3f3f3f;
+  transform-origin: 2px 2px;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+      -ms-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+  -webkit-transition: all .3s ease;
+          transition: all .3s ease;
+}
+
+#faqContents.ebook .linkBtn a:hover {
+  background-color: #ECECEC;
+  text-decoration: none;
+}
+
+#faqContents.ebook h2 {
+  padding: 10px 15px;
+  border-width: 0 0 1px 0;
+  border-color: #CFCFCF;
+  font-size: 1.5rem;
+  font-weight: normal;
+  background: none;
+  line-height: 1;
+}
+
+#faqContents.ebook h3 {
+  margin-bottom: 15px;
+  padding: 1em;
+  background-color: #f0f0f0;
+  color: #000;
+  font-size: .875rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+#faqContents.ebook h4 {
+  margin: 0 0 .8em;
+  font-size: .9375rem;
+  line-height: 1;
+}
+
+
+#faqContents.ebook .faqContents {
+  padding: 25px 28px;
+  min-width: 894px;
+  border: none;
+}
+
+#faqContents.ebook .faqContentsBlock {
+  display: inline;
+  float: left;
+  width: 23%;
+  margin: 0 1%;
+  color: #333;
+}
+#faqContents.ebook .faqContentsBlock > div {
+  margin-bottom: 15px;
+}
+
+
+
+#faqContents.ebook .faqcLftInr {
+  box-sizing: border-box;
+  width: 18%;
+  max-width: 280px;
+  min-width: 225px;
+  padding-bottom: 45px;
+  border-right: 1px solid #aeaeae;
+  margin-right: 24px;
+}
+
+#faqContents.ebook .faqcRgtInr {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 644px;
+  max-width: none;
+  padding: 0;
+  float: none;
+  border-left: 0;
+}
+
+
+#faqContents.ebook ul.faqclist {
+  margin-bottom: 20px;
+}
+
+#faqContents.ebook ul.faqclist li {
+  margin: 0 0 0.3em 0;
+  padding: 0;
+}
+
+#faqContents.ebook .faqContentsContact {
+  bottom: 25px;
+}
+
+#faqContents.ebook .inquiryTel p {
+  margin-left: 40px;
+  font-size: .75rem;
+}
+
+#faqContents.ebook .inquiryTel p:first-of-type {
+  margin-top: -.5em;
+  margin-bottom: .2em;
+  font-size: 1rem;
+}
+
+#faqContents.ebook .inquiryRchat .description {
+  margin: -.5em 0 1em 40px;
+  font-size: .75rem;
+}
+
+#faqContents.ebook .inquiryRchat .chat_body_button {
+  position: relative;
+  padding: 15px 0;
+  margin: auto auto 0;
+  border: 1px solid #CFCFCF;
+  border-radius: 3px;
+  color: #666;
+  font-size: .75rem;
+  text-align: center;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.15);
+  text-align: center;
+}
+
+#faqContents.ebook .inquiryRchat .chat_body_button::after {
+  content: "";
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 4px;
+    height: 4px;
+    border-right: 1px solid #3f3f3f;
+    border-bottom: 1px solid #3f3f3f;
+    transform-origin: 2px 2px;
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    -ms-transform: translateY(-50%) rotate(-45deg);
+    transform: translateY(-50%) rotate(-45deg);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#faqContents.ebook .inquiryRchat img {
+  background: none;
+}
+
+#faqContents.ebook .is-hidden {
+  display: none;
+}
+
+#faqContents.ebook .kobofIcon {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#faqContents.ebook .kobofIcon::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#faqContents.ebook .kobofIcon-mail::before ,
+#faqContents.ebook .kobofIcon-tel::before,
+#faqContents.ebook .kobofIcon-chat::before {
+  width: 26px;
+  height: 26px;
+}
+
+#faqContents.ebook .kobofIcon-mail::before {
+  background-image: url(../fonts/icon_mail.svg);
+  background-size: contain;
+}
+#faqContents.ebook .kobofIcon-tel::before {
+  background-image: url(../fonts/icon_telephone.svg);
+  background-size: contain;
+}
+#faqContents.ebook .kobofIcon-twitter::before {
+  background-image: url(../fonts/icon_twitter.svg);
+  background-size: contain;
+}
+#faqContents.ebook .kobofIcon-facebook::before {
+  background-image: url(../fonts/icon_facebook.svg);
+  background-size: contain;
+}
+#faqContents.ebook .kobofIcon-chat::before {
+  background-image: url(../fonts/icon_balloon.svg);
+  background-size: contain;
+}
+
+#faqContents.ebook .faqAttention {
+  text-align: right;
+  font-size: .75rem;
+}
+#faqContents.ebook .faqAttention a::after {
+  content: "\0226B";
+}
+
+#faqContents.ebook a[href="http://books.rakuten.co.jp/info/introduction/e-book/"],
+#faqContents.ebook a[href="http://kobo.faq.rakuten.ne.jp/"],
+#faqContents.ebook a[href="https://www.facebook.com/RakutenKobo"],
+#faqContents.ebook a[href="https://twitter.com/Rakuten_Kobo/"] {
+  font-size: .9375rem;
+  line-height: 1;
+}
+
+#faqContents.ebook .abjMark img {
+    display: block;
+    margin: 1em auto;
+    text-align: center;
+    background: none;
+}
+
+#faqContents.ebook .abjMark p {
+    font-size: 10px;
+    line-height: 1.4;
+    color: #828282;
+}
+
+
+
+/* ==== extraInformation_bottom ==== */
+#extraInformation_bottom {
+margin: 25px 0 0;
+}
+#extraInformation_bottom div {
+border: 1px solid #cecece;
+background: #ffd;
+width: 350px;
+padding: 5px;
+text-align: center;
+margin: 0 auto 10px;
+font-size: 11px;
+color: #666;
+}
+#extraInformation_bottom div a {
+color: #333;
+}
+/* ==== extraInformation_bottom ==== */
+
+/* 190508 release footer */
+#faqContents.rb-faq {
+  max-width: 1490px;
+  min-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 10px 26px;
+  box-sizing: border-box;
+  position: relative;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#faqContents.rb-faq > div {
+  border: none;
+}
+
+#faqContents.rb-faq h2 {
+  background: none;
+  border: none;
+}
+
+#faqContents .rb-faq__link__item {
+  float: left;
+  font-size: 14px;
+  clear: unset;
+}
+
+#faqContents .rb-faq__link__item__title {
+  color: #333;
+  padding: 0;
+  margin: 0 0 36px;
+}
+
+#faqContents .rb-faq__link__item__list {  
+  padding: 0;
+}
+
+#faqContents .rb-faq__link__item__list li {
+  margin: 0 0 20px;
+  text-align: left;
+}
+
+#faqContents .rb-faq__link__item__list li a {
+  color: #686868;
+}
+
+#faqContents .rb-faq__link__item__notice {
+  font-size: 12px;
+  color: #999999;
+  margin: 0 0 50px;
+}
+
+#faqContents .rb-faq__link__item--about {
+  width: 21%;
+  padding: 0 2% 0 0;
+}
+
+#faqContents .rb-faq__link__item--question {
+  width: 19%;
+  padding: 0 2% 0 0;
+}
+
+#faqContents .rb-faq__link__item--price {
+  width: 28.5%;
+  padding: 0 10.5% 0 0;
+}
+
+#faqContents .rb-faq__link__item--sns {
+  float: left;
+  width: 17%;
+}
+
+#faqContents .rb-faq__button {
+  padding: 0;
+}
+
+#faqContents .rb-faq__button__item {
+  float: left;
+  background: #fff;
+  margin: 0 10px 0 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+}
+
+#faqContents .rb-faq__button__item a:hover {
+  background: #dcdcdc;
+}
+
+#faqContents .rb-faq__button__item:after,
+#faqContents.rb-faq .chat_widget:after {
+  display: block;
+  content: '';
+  width: 8px;
+  height: 8px;
+  border: 0px;
+  border-top: solid 1px #666;
+  border-right: solid 1px #666;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 40%;
+  right: 22px;
+}
+
+#faqContents .rb-faq__button__item a {
+  padding: 15px 67px;
+  display: block;
+  color: #333;
+  font-weight: bold;
+}
+
+#faqContents .rb-faq__button__item a:hover {
+  text-decoration: none;
+}
+
+#faqContents .rb-faq__button__item:first-child a {
+  padding: 15px 102px;
+}
+
+#faqContents.rb-faq .chat_widget {
+  float: left;
+  margin: 0 10px 0 0;
+  background: #fff;
+  position: relative;
+}
+
+#faqContents.rb-faq .chat_badge_base .chat_body span {
+  padding: 0;
+  background: none;
+}
+
+#faqContents.rb-faq .chat_badge_base .chat_body {
+  padding: 15px 60px;
+  border: 1px solid #ccc;
+}
+
+#faqContents.rb-faq .chat_badge_base .chat_body {
+  color: #333;
+}

@@ -1,0 +1,68 @@
+/* style of spu floating box */
+#spuFloating {
+  display: none;
+  position: fixed;
+  padding: 0;
+  width: 100%;
+  bottom: 0px;
+  left:0;
+  right:0;
+  z-index: 9001;
+  background-color: transparent;
+}
+#spuFloating .spuFloating__box {
+  position: relative;
+  height: 66px;
+}
+#spuFloating .spuFloating__box__item img {
+  vertical-align: bottom;
+  position: fixed;
+  bottom: 0px;
+  left:0;
+  right:0;
+  margin: 0 auto;
+  width:950px;
+  z-index: 9999;
+}
+#spuFloating .spuFloating__box__item span {
+  background: #e81e2b;
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  left:0;
+  right:0;
+  z-index: 100;
+  box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.4);
+}
+#spuFloating .spuFloating__box #close {
+  position: absolute;
+  top: 28px;
+  right: 10px;
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin-top: 0;
+  background-color: #fff;
+  border-radius: 24px;
+  text-align: center;
+  z-index: 9999;
+}
+#spuFloating .spuFloating__box #close:before,
+#spuFloating .spuFloating__box #close:after {
+content: "";
+display: inline-block;
+line-height: 28px;
+vertical-align: middle;
+}
+#spuFloating .spuFloating__box #close:after {
+content: "¡ß";
+color: #777;
+font-family: sans-serif;
+font-size: 26px;
+}
+#spuFloating .spuFloating__box #close:hover {
+  cursor: pointer;
+}

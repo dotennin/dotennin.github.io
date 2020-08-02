@@ -1,0 +1,254 @@
+@charset "euc-jp";
+
+/*
+============================================================
+
+  Purchase Area Enhancement (Noki Mongon for Kobo parts)
+
+  Mar 2014
+
+============================================================
+*/
+
+
+
+/* common parts for package page and e-book only page */
+
+#extra .purchaseBoxMain .purchase-box-kobo .is-very-small-font {
+	font-size: 11px;
+}
+#extra .purchaseBoxMain .purchase-box-kobo .kobo-header {
+	font-weight: bold;
+	font-size: 14px;
+}
+#extra .purchaseBoxMain .purchase-box-kobo .kobo-header img {
+	padding-right: 5px;
+	margin-bottom: -3px;
+}
+#extra .purchaseBoxMain .purchase-box-kobo .availability {
+	border: none;
+}
+#extra .purchaseBoxMain .purchase-box-kobo .availability .status-color {
+	color: #f77af6;
+}
+.purchase-box-kobo .kobo-preorder-area {
+	margin: 10px auto 5px ;
+	width: 217px;
+}
+.kobo-preorder-area .kobo-preorder-header {
+	/*background: url(//image.books.rakuten.co.jp/books/img/common/item/bg-kobo-preorder_20140417.gif) no-repeat;*/
+	cursor: pointer;
+	font-weight: bold;
+	color: #003399;
+	/*padding: 6px 24px 9px 24px;*/
+	/**padding: 6px 17px 9px 17px;*/
+	text-align: center;
+}
+.kobo-preorder-area .kobo-preorder-header span {
+	/*display: block;*/
+	/*float: left;*/
+}
+.kobo-preorder-area .kobo-preorder-header span:hover{
+	text-decoration: underline;
+}
+.kobo-preorder-area .js-kobo-preorder-area {
+	position: absolute;
+	background-color: #ffffff;
+	border: solid 1px #b9b9b9;
+	text-align: left;
+	top: 0;
+	display: none;
+	z-index: 3;
+	width: 605px;
+}
+.kobo-preorder-area .js-kobo-preorder-area .area-contents-header {
+	border-bottom: solid 1px #b9b9b9;
+	font-weight: bold;
+	padding: 8px 10px;
+}
+.kobo-preorder-area .js-kobo-preorder-area .about-kobo-preorder {	
+	line-height: 1.4;
+	border-bottom: solid 1px #b9b9b9;
+}
+.kobo-preorder-area .js-kobo-preorder-area .blocks {
+	padding: 8px 10px;
+	display: block;
+	font-size: 12px;
+}
+.kobo-preorder-area .js-kobo-preorder-area .block-01, .kobo-preorder-area .js-kobo-preorder-area .block-02 {
+	float: left;
+	width: 280px;
+}
+.kobo-preorder-area .js-kobo-preorder-area .block-02 {
+	margin-left: 25px;
+}
+.kobo-preorder-area .js-kobo-preorder-area dl {
+	padding: 8px 10px;
+	display: block;
+}
+.kobo-preorder-area .js-kobo-preorder-area .block-header {
+	font-weight: bold;
+	font-size: 13px;
+}
+.kobo-preorder-area .js-kobo-preorder-area .block-contents {
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+.kobo-preorder-area .js-kobo-preorder-area .about-kobo {
+	line-height: 1.4;
+}
+#extra .purchaseBoxMain .in-ebook-page .new_addToCart_kobo {
+	background: url(../images/btn-purchase-paperbag_20140417.png) no-repeat;
+}
+#extra .purchaseBoxMain .in-ebook-page .new_preorder_kobo {
+	background: url(../images/btn-preorder-ebook-big_20140630.png) no-repeat;
+}
+#extra #purchaseBox .in-ebook-page button.new_preorder_kobo, #extra #purchaseBox .in-ebook-page button.new_addToCart_kobo {
+	display: block;
+	width: 217px;
+	height: 40px;
+	margin: 5px auto;
+	vertical-align: middle;
+	border: none;
+	text-indent: -999px;
+	cursor: pointer;
+	zoom:1;
+}
+#extra #purchaseBox button.new_addToCart_kobo:hover, #extra #purchaseBox button.new_preorder_kobo:hover {
+	zoom: 1;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
+#extra #purchaseBox #bookmark {
+	margin: 5px 0;
+	padding-left: 73px;
+}
+#extra #purchaseBox #bookmark a img:hover {
+	zoom: 1;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
+#extra .purchaseBoxMain .purchase-box-kobo .available-period {
+	font-size: 12px;
+	padding-bottom: 10px;
+	padding-top: 3px;
+}
+#extra .purchaseBoxMain .purchase-box-kobo .available-period span { 
+	padding-left: 3px;
+}
+#extra .purchaseBoxMain .purchase-box-kobo .available-period img {
+	width: 16px;
+	height: 14px;
+	background: url(../images/icon_timer_20141029.gif) no-repeat;
+}
+#extra .purchaseBoxMain .purchase-box-kobo .special-offer .point {
+	display: inline-block;
+	*display: inline;  
+    *zoom: 1;
+
+}
+#extra .purchaseBoxMain .purchase-box-kobo span.point {
+	display: block;
+	vertical-align: middle;
+	padding-left: 20px;
+	color: #bF0000;
+	text-indent: -20px;
+	font-size: 12px;
+	font-weight: normal;
+}
+#extra .purchaseBoxMain .purchase-box-kobo span.original-point {
+text-decoration: line-through;
+}
+#extra .purchaseBoxMain .purchase-box-kobo span.point img {
+	width: 14px;
+	height: 14px;
+	vertical-align: -1px;
+	margin-right: 4px;
+	background: url(../images/icon_up_20141029.gif) no-repeat;
+	border: 0;
+}
+#extra .js-kobo-preorder-area .area-contents-header .header-text {
+	float: left;
+}
+#extra .js-kobo-preorder-area .area-contents-header .icon-cross {
+	font-size: 15px;
+	color: #cccccc;
+	float: right;
+	padding-right: 6px;
+	cursor: pointer;
+}
+
+/* purchaseBox point area */
+
+.purchase-box-point {
+    margin: 8px 16px;
+    padding: 10px 5px;
+    background: #f2f2f2;
+}
+.purchase-box-point__inner--title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    height: 22px;
+    padding: 0 30px;
+}
+.purchase-box-point__inner--benefitType-list {
+    padding: 8px 8px 8px 38px;
+    position: relative;
+}
+.purchase-box-point__inner--title span {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+}
+.purchase-box-point__content--confirm-point {
+    font-size: 12px;
+}
+
+.purchase-box-point__sub-content--num,
+.purchase-box-point__sub-content--text {
+    display: inline-block;
+}
+.purchase-box-point__text--red {
+    color: #bf0000;
+    font-weight: bold;
+}
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* e-book only page */
+
+#extra .purchaseBox-header.ebook-only {
+	border-bottom: 1px solid #bf0000;
+}
+#extra .purchaseBox-header.ebook-only span {
+	/*background-color: #63c8d5;*/
+}
+#extra .ebook-only .ebook-only-iehack {
+	/**background-color: #63c8d5;*/
+}
+#extra .wrapper.ebook-only {
+	padding: 0px 9px 9px;
+}
+#extra .purchaseBoxStyle .ebook-only .purchaseBoxMain {
+	padding: 0;
+}
+#extra .purchaseBoxStyle .ebook-only .purchaseBoxMain .in-ebook-page {
+	background-color: #ffffff;
+	padding: 10px 0;
+}
+#extra .purchaseBoxStyle .ebook-only .purchaseBoxMain .in-ebook-page .kobo-header {
+	margin-bottom: 15px;
+	font-size: 16px;
+}
+#extra .purchaseBoxStyle .ebook-only .purchaseBoxMain .in-ebook-page .availability {
+	padding: 0 10px;
+}
+#extra .in-ebook-page .availability .status-area {
+	height: auto;
+}
+#extra .in-ebook-page .availability .status-text {
+	width: 200px;
+}

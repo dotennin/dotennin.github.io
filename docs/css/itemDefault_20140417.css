@@ -1,0 +1,1752 @@
+@charset "euc-jp";
+
+/* ==============================================
+default 
+============================================== */
+body{
+	margin:0;
+	padding:0;
+}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote {
+	margin: 0;
+	padding: 0;
+}
+html {
+	overflow-y: scroll;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%; 
+	font-weight: normal;
+}
+ul {
+	list-style: none;
+}
+
+fieldset {
+	min-width: inherit;
+}
+
+
+fieldset,img {
+	border: 0;
+}
+caption,th {
+	text-align: left;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style: normal; 
+	font-weight: normal;
+}
+
+/* ==============================================
+common
+============================================== */
+
+/* link */
+a:link,
+a:visited {
+	color: #0f33cc;
+	text-decoration:none;
+}
+a:hover{
+	color: #0f33cc;
+	text-decoration:underline;
+}
+a:active {
+	color: #0f33cc;
+	text-decoration:none;
+}
+/* goTop */
+.goTop {
+	font-size: 82%;
+	line-height: 2;
+	border-top: 1px solid #909090;
+	border-bottom: 1px solid #909090;
+	margin: 30px 0 0;
+	text-align: right;
+	clear: both;
+	width: 100%;
+}
+* html .goTop {
+	padding: 5px 0;
+}
+/* skip */
+.naviSkip {
+	position: absolute;
+	left: -9999px;
+	width: 100px;
+	height: 0;
+}
+/* header override header_20121016.css  */
+* html #headerBox p#tagLine { /* win IE 6.0 */
+    margin-bottom: 10px;
+}
+*:first-child+html #headerBox p#tagLine { /* win IE 7.0 */
+    margin-bottom: 10px;
+}
+/* footer */
+#footer {
+	clear: both;
+	text-align: left;
+}
+/* goods */
+.goodsTit {
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+.goodsTxt {
+	margin-bottom: 3px;
+}
+.goodsImg img {
+	vertical-align: bottom;
+	margin-bottom: 3px;
+}
+.publisher {
+    font-weight: normal;
+	margin-bottom: 7px;
+}
+.price,.off {
+	font-weight: bold;
+	color: #BF0000;
+}
+.price span {
+	font-weight: normal;
+	color: #000000;
+	text-decoration: line-through;
+	padding-right: 3px;
+}
+.moreLink {
+	width: 100%;
+	padding-top: 7px;
+}
+
+/* contentsArea */
+div#container {
+	margin: 0;
+	z-index: 2;
+	width:100%;
+	min-width: 950px;
+}
+div#contentsArea {
+	margin: 10px;
+	line-height: 1.2;
+}
+
+div#contents {
+	font-size: 82%;
+}
+
+/* ==============================================
+   css sprites
+============================================== */
+
+h2.hds img,
+h2.hd img,
+h2.hdAdult img,
+a.rss img,
+.goTop img,
+.book img,
+.magazine img,
+.dvd img,
+.cd img,
+.game img,
+.software img,
+.fbook img,
+.bookAdult img,
+.magazineAdult img,
+.dvdAdult img,
+.softwareAdult img,
+#sidemenu ul.listIconGreen img,
+#sidemenu ul.listIconPink img,
+#sidemenu ul.general img,
+#sidemenu .partsMenu.adult ul.general img,
+#backArrow img,
+#sendArrow img,
+div#main div.goodsImg img.same,
+div#main div.goodsImg img.up,
+div#main div.goodsImg img.down,
+div#main div.goodsImg img.new,
+ol.goodsList dd.review img.reviewArr,
+ol.goodsList dd.review img,
+ol.goodsList dd.review img.allStar,
+ol.goodsList dd.review img.halfStar,
+ol.goodsList dd.googleIcn img,
+ol.goodsList dd.wavIcn,
+#rakutenMembership #deliveryInfo dt img {
+	background-image: url("../images/bg_image_120723.gif") ;
+ 	background-repeat: no-repeat;
+}
+
+/* css sprites */
+h2.hds img {
+	background-position:  0 -213px;
+}
+h2.hd img {   
+	background-position:  0 -163px;
+}
+h2.hdAdult img {   
+	background-position:  0 -188px;
+}
+a.rss img {
+	background-position:  0 -150px;
+}
+.goTop img {
+	background-position:  -22px -365px;
+}
+.book img {   
+	background-position:  0 0;
+}
+.magazine img {
+	background-position:  0 -15px;
+}
+.dvd img {   
+	background-position:  0 -30px;
+}
+.cd img {   
+	background-position:  0 -45px;
+}
+.game img {   
+	background-position:  0 -60px;
+}
+.software img {   
+	background-position:  0 -75px;
+}
+.fbook img {   
+	background-position:  0 -90px;
+}
+.bookAdult img {   
+	background-position:  0 -105px;
+}
+.magazineAdult img {   
+	background-position:  0 -120px;
+}
+.dvdAdult img {   
+	background-position:  0 -135px;
+}
+.softwareAdult img {   
+	background-position: -35px -105px;
+}
+
+/* sidemenu css sprite */
+#sidemenu ul.listIconGreen img,
+#rakutenMembership dl#deliveryInfo dt img {
+	background-position:  -8px -366px;
+    width:10px;
+}
+#sidemenu ul.listIconPink img {
+	background-position:  -8px -378px;
+}
+#sidemenu ul.general img {
+	background-position:  0 -366px;
+}
+#sidemenu .partsMenu.adult ul.general img {
+	background-position:  0 -378px;
+}
+
+/* pointCampaign css sprite */
+#backArrow img {
+	background-position:  0 -390px;
+}
+#sendArrow img {
+	background-position:  -14px -390px;
+}
+
+/* ranking css sprite */
+div#main div.goodsImg img.same {
+	background-position:  0 -301px;
+}
+div#main div.goodsImg img.up {
+	background-position:  -20px -301px;
+}
+div#main div.goodsImg img.down {
+	background-position:  -40px -301px;
+}
+div#main div.goodsImg img.new {
+	background-position:  -60px -301px;
+}
+ol.goodsList dd.review img.reviewArr {
+	background-position:  -56px -301px;
+}
+ol.goodsList dd.review img {
+	background-position:  -14px -319px;
+}
+ol.goodsList dd.review img.allStar {
+	background-position:  0 -319px;
+}
+ol.goodsList dd.review img.halfStar {
+	background-position:  -28px -319px;
+}
+ol.goodsList dd.googleIcn img {
+	background-position:  0 -334px;
+}
+ol.goodsList dd.wavIcn {
+	background-position:  -45px -318px;
+}
+/* ------------------------------------------------------------
+
+Global Footer  
+
+------------------------------------------------------------ */
+
+/* ==== Special link ==== */
+
+div#grpSpelinlk{
+margin:5px 0;
+padding:10px 0 3px 0;
+text-align:center;
+border-top:#808080 solid 1px;
+}
+
+#grpSpelinlk h3.category{
+margin:0;
+padding:0;
+line-height:1.25;
+color:#BF0000;
+font-weight:bold;
+font-size:12px;
+}
+
+#grpSpelinlk ul{
+margin:0;
+padding:0;
+color:#ADADAD;
+line-height:1.25;
+font-size:12px;
+}
+
+#grpSpelinlk ul li{
+margin:0 0 0 0.35em;
+padding:0 0.2em 0 0;
+border-right:1px solid #ADADAD;
+list-style-type:none;
+display:inline;
+}
+
+#grpSpelinlk ul li.grpLast{
+border-right:0;
+}
+
+#grpSpelinlk ul li a:link{
+color:#003399;
+}
+
+#grpSpelinlk ul li a:visited{
+color:#888899;
+}
+
+#grpSpelinlk ul li a{
+white-space:nowrap;
+}
+
+
+/* ==== Service link ==== */
+
+div#grplinks{
+	width:100%;
+}
+
+#grpServlinlk{
+	text-align:left;
+	background-color:#F4F4F4;
+	border-top:#808080 solid 1px;
+	border-bottom:#808080 solid 1px;
+}
+
+#grpServlinlk h3.category{
+margin:0;
+padding:0px 10px;
+line-height:1.25;
+color:#BF0000;
+font-weight:bold;
+font-size:12px;
+}
+
+#grpServlinlk ul{
+margin:0;
+padding:0px 10px;
+line-height:1.25;
+color:#ADADAD;
+font-size:12px;
+}
+
+#grpServlinlk ul li{
+margin:0 0 0 0.35em;
+padding:0 0.2em 0 0;
+border-right:1px solid #ADADAD;
+list-style-type:none;
+display:inline;
+}
+
+#grpServlinlk ul li.grpLast{
+border-right:0;
+}
+
+#grpServlinlk ul li a:link{
+color:#666699;
+}
+
+#grpServlinlk ul li a:visited{
+color:#888899;
+}
+
+#grpServlinlk ul li a{
+white-space:nowrap;
+}
+
+#grpCopyright{
+margin: 0 10px;
+padding: 0 0 10px 0;
+width:100%;
+text-align:center;
+font-size: 80%;
+}
+
+#grpCopyright p{
+margin: 0 10px;
+padding: 0 0 10px 0;
+text-align:center;
+}
+
+ /* ===============================================
+
+rakutenMembership
+
+=============================================== */
+
+ #rakutenMembership {
+     overflow: hidden;
+     margin-bottom: 20px;
+ }
+
+ #rakutenMembership * {
+     position: static;
+     float: none;
+     clear: none;
+     z-index: auto;
+     list-style: none;
+     width: auto;
+     min-width: none;
+     min-height: none;
+     max-width: none;
+     max-height: none;
+     line-height: 1.3;
+     vertical-align: baseline;
+     overflow: visible;
+     visibility: visible;
+     margin: 0;
+     padding: 0;
+     border: 0;
+     background-color: none;
+     background-image: none;
+     font-style: normal;
+     font-variant: normal;
+     font-weight: normal;
+     text-indent: 0;
+     text-align: left;
+     letter-spacing: normal;
+     word-spacing: normal;
+     text-transform: none;
+     white-space: normal;
+     outline: none;
+     zoom: normal;
+ }
+
+ #rakutenMembership a {
+     color: #1d54a7;
+ }
+
+ #rakutenMembership a:hover {
+     color: #c00000;
+     text-decoration: underline;
+ }
+
+ /* rakutenFrame
+----------------------------------------------- */
+
+ #rakutenMembership .rakutenFrame {
+     width: 300px;
+ }
+
+ #rakutenMembership .rakutenSmallFrame {
+     width: 190px;
+ }
+
+ /* rakutenMembershipHead
+----------------------------------------------- */
+
+ #rakutenMembership .rakutenMembershipHead {
+     height: 3px;
+     background: url(../images/membership_bg.gif) no-repeat;
+     text-align: right;
+ }
+
+ #rakutenMembership .rakutenMembershipHead img {
+     display: block;
+     float: right;
+     width: 3px;
+     height: 3px;
+     background: url(../images/membership_bg.gif) no-repeat -297px 0;
+ }
+
+ * html #rakutenMembership .rakutenMembershipHead img {
+     display: inline-block;
+     float: none;
+ }
+
+ /* rakutenMembershipBody
+----------------------------------------------- */
+
+ #rakutenMembership .rakutenMembershipBody {
+     padding-bottom: 2px;
+     border: 1px solid #bbbbbb;
+     color: #444444;
+     background: #f8f8f8;
+     zoom: 1;
+ }
+
+ /* rakutenUserName
+----------------------------------------------- */
+
+ #rakutenMembership .rakutenUserName {
+     padding: 6px 0;
+ }
+
+ #rakutenMembership .rakutenUserLoginName {
+     width: 100%;
+     overflow: hidden;
+     color: #000000;
+     font-weight: bold;
+     text-align: center;
+ }
+
+ #rakutenMembership .rakutenUserNameBox {
+     display: inline-block;
+     text-align: center;
+ }
+
+ #rakutenMembership .rakutenUserNameBox span {
+     padding: 0 2px;
+     font-weight: bold;
+ }
+
+ #rakutenMembership .rakutenUserNameBox a {
+     padding: 0 2px;
+     color: #bf0000;
+     font-weight: bold;
+     text-decoration: underline;
+ }
+
+ #rakutenMembership .rakutenUserLogout {
+     text-align: center;
+ }
+
+ /* rakutenRank
+----------------------------------------------- */
+
+ #rakutenMembership .rakutenRank {
+     overflow: hidden;
+     margin: 0 2px;
+     padding: 1px;
+     background: #ffffff;
+     zoom: 1;
+ }
+
+ #rakutenMembership .rakutenRankFrame {
+     padding: 0 3px;
+ }
+
+ /* rakutenPointClub */
+
+ #rakutenMembership .rakutenPointClub {
+     overflow: hidden;
+     padding: 7px 0 6px;
+     zoom: 1;
+ }
+
+ #rakutenMembership .rakutenPointer {
+     float: left;
+ }
+
+ #rakutenMembership .rakutenPointer img {
+     display: block;
+     width: 10px;
+     height: 10px;
+     margin: 3px 2px 0 0;
+     background: url(../images/membership_img.gif) no-repeat 0 -30px;
+ }
+
+ #rakutenMembership .rakutenPointDetail {
+     overflow: hidden;
+     zoom: 1;
+ }
+
+ #rakutenMembership .rakutenPointDetail span {
+     float: left;
+     margin-right: 3px;
+ }
+
+ #rakutenMembership .rakutenPointDetail a {
+     float: left;
+     color: #bf0000;
+ }
+
+ #rakutenMembership .rakutenPointDetail img {
+     display: block;
+     width: 70px;
+     height: 16px;
+     margin-top: 1px;
+     background: url(../images/membership_img.gif) no-repeat -10px -30px;
+ }
+
+ #rakutenMembership .rakutenPointDetail a:hover {
+     border: none;
+ }
+
+ #rakutenMembership .rakutenPointDetail a:hover img {
+     background-position: -80px -30px;
+ }
+
+ /* rakutenYourRank */
+
+ #rakutenMembership .rakutenYourRank {
+     color: #000000;
+     text-align: center;
+ }
+
+ #rakutenMembership .rakutenYourRankFrame {
+     display: inline-block;
+ }
+
+ #rakutenMembership .rakutenRanker {
+     display: inline-block;
+     vertical-align: middle;
+     margin-right: -23px;
+ }
+
+ #rakutenMembership .rakutenYourRankCase {
+     display: inline-block;
+     vertical-align: middle;
+     padding-left: 28px;
+ }
+
+ #rakutenMembership .rakutenRanker img {
+     display: block;
+     width: 23px;
+     height: 30px;
+ }
+
+ #rakutenMembership .rakutenRankName {
+     float: left;
+     margin: 3px 6px 0 0;
+ }
+
+ #rakutenMembership .rakutenRankName a {
+     float: left;
+     font-weight: bold;
+     white-space: nowrap;
+ }
+
+ #rakutenMembership .rakutenRankName span {
+     float: left;
+     white-space: nowrap;
+ }
+
+ #rakutenMembership .rakutenRankerLink {
+     float: left;
+     white-space: nowrap;
+ }
+
+ #rakutenMembership .rakutenRankerLink img {
+     vertical-align: top;
+     width: 20px;
+     height: 24px;
+ }
+
+ #rakutenMembership .rakutenRankerLink a {
+     display: inline-block;
+     vertical-align: top;
+     margin-top: 3px;
+ }
+
+ /* rakutenYourPoint */
+
+ #rakutenMembership .rakutenYourPoint {
+     margin: 3px 0 0 9px;
+     zoom: 1;
+ }
+
+ #rakutenMembership .rakutenYourPoint dt {
+     float: left;
+     margin: 3px 6px 0 0;
+     color: #000000;
+     font-weight: bold;
+ }
+
+ #rakutenMembership .rakutenYourPoint dd {
+     overflow: hidden;
+     color: #bf0000;
+     zoom: 1;
+ }
+
+ #rakutenMembership .rakutenPointNumber {
+     font-size: 122%;
+     font-weight: bold;
+     word-wrap: break-word;
+ }
+
+ #rakutenMembership .rakutenPointUnit {
+     white-space: nowrap;
+ }
+
+ /* rakutenExtraPoint */
+
+ #rakutenMembership .rakutenExtraPoint {
+     margin: 3px 0 5px 12px;
+ }
+
+ #rakutenMembership .rakutenExtraPointer {
+     float: left;
+ }
+
+ #rakutenMembership .rakutenExtraPointer img {
+     display: block;
+     width: 10px;
+     height: 10px;
+     margin-right: 3px;
+     background: url(../images/membership_img.gif) no-repeat -150px -30px;
+ }
+
+ #rakutenMembership .rakutenExtraPoint ul {
+     overflow: hidden;
+     zoom: 1;
+ }
+
+ #rakutenMembership .rakutenExtraPoint ul * {
+     float: left;
+ }
+
+ #rakutenMembership .rakutenExtraPoint dt {
+     margin-right: 4px;
+ }
+
+ #rakutenMembership .rakutenYourLimited * {
+     white-space: nowrap;
+ }
+
+ #rakutenMembership .rakutenYourLimited dd {
+     color: #bf0000;
+ }
+
+ #rakutenMembership .rakutenYourCash * {
+     white-space: nowrap;
+ }
+
+ #rakutenMembership .rakutenYourCash dd {
+     color: #05319a;
+ }
+
+ /* rakutenRankInfo */
+
+ #rakutenMembership .rakutenRankInfo {
+     padding: 7px 9px 8px;
+     zoom: 1;
+ }
+
+ #rakutenMembership .rakutenRankKeep span {
+     color: #bf0000;
+ }
+
+ #rakutenMembership .rakutenRankKeep a img {
+     vertical-align: middle;
+     width: 17px;
+     height: 15px;
+     margin: 0 2px;
+     background: url(../images/membership_img.gif) no-repeat -240px -30px;
+ }
+
+ #rakutenMembership .rakutenNextPoint,
+ #rakutenMembership .rakutenNextTime,
+ #rakutenMembership .rakutenNextCard {
+     width: 100%;
+     overflow: hidden;
+     margin-top: 6px;
+ }
+
+ #rakutenMembership .rakutenNextPoint dt,
+ #rakutenMembership .rakutenNextTime dt,
+ #rakutenMembership .rakutenNextCard dt {
+     float: left;
+     width: 120px;
+ }
+
+ #rakutenMembership .rakutenNextPoint dt span,
+ #rakutenMembership .rakutenNextTime dt span,
+ #rakutenMembership .rakutenNextCard dt span {
+     color: #bf0000;
+ }
+
+ #rakutenMembership .rakutenNextPoint dd,
+ #rakutenMembership .rakutenNextTime dd,
+ #rakutenMembership .rakutenNextCard dd {
+     overflow: hidden;
+     zoom: 1;
+ }
+
+ #rakutenMembership .rakutenNextPoint dd span,
+ #rakutenMembership .rakutenNextTime dd span,
+ #rakutenMembership .rakutenNextCard dd span {
+     color: #bf0000;
+ }
+
+ #rakutenMembership .rakutenNextPoint div {
+     border: 1px solid #808080;
+     background: #ffffff;
+ }
+
+ #rakutenMembership .rakutenNextPoint div span {
+     display: block;
+     width: 0;
+     background: url(../images/membership_img.gif) no-repeat;
+ }
+
+ #rakutenMembership .rakutenNextPoint img {
+     display: block;
+     width: 0;
+     height: 13px;
+ }
+
+ #rakutenMembership .rakutenNextTime dd img {
+     vertical-align: top;
+     width: 15px;
+     height: 15px;
+     margin: 0 5px 0 0;
+ }
+
+ #rakutenMembership .rakutenNextCard dd img {
+     vertical-align: top;
+     width: 15px;
+     height: 10px;
+     margin: 2px 5px 0 0;
+ }
+
+ #rakutenMembership .rakutenRankUp {
+     width: 100%;
+     margin: 2px 0 0 -26px;
+     overflow: hidden;
+ }
+
+ #rakutenMembership .rakutenRankUp li {
+     float: left;
+     padding: 5px 0 0 26px;
+     font-size: 79%;
+     white-space: nowrap;
+ }
+
+ #rakutenMembership .rakutenRankUp * {
+     vertical-align: middle;
+ }
+
+ #rakutenMembership .rakutenRankUp img {
+     width: 5px;
+     height: 9px;
+     margin-right: 6px;
+     background: url(../images/membership_img.gif) no-repeat -160px -30px;
+ }
+
+ /* rakutenTopics */
+
+ #rakutenMembership .rakutenTopics {
+     padding: 7px 7px 4px;
+ }
+
+ #rakutenMembership .rakutenTopics li {
+     overflow: hidden;
+     margin-top: 2px;
+     zoom: 1;
+ }
+
+ #rakutenMembership .rakutenTopics span {
+     float: left;
+ }
+
+ #rakutenMembership .rakutenTopics img {
+     display: block;
+     width: 2px;
+     height: 2px;
+     margin: 8px 7px 0 0;
+     background: url(../images/membership_img.gif) no-repeat -170px -30px;
+ }
+
+ #rakutenMembership .rakutenTopics div {
+     overflow: hidden;
+     zoom: 1;
+ }
+
+ /* rakutenExtraList */
+
+ #rakutenMembership .rakutenExtraList {
+     padding: 7px 11px 0;
+ }
+
+ #rakutenMembership .rakutenExtraList li {
+     overflow: hidden;
+     margin-top: 1px;
+     zoom: 1;
+ }
+
+ #rakutenMembership .rakutenExtraList span {
+     float: left;
+ }
+
+ #rakutenMembership .rakutenExtraList img {
+     display: block;
+     width: 12px;
+     height: 12px;
+     margin: 2px 4px 0 0;
+     background: url(../images/membership_img.gif) no-repeat -180px -30px;
+ }
+
+ #rakutenMembership .rakutenExtraList div {
+     overflow: hidden;
+     zoom: 1;
+ }
+
+ /* rakutenExtraText */
+
+ #rakutenMembership .rakutenExtraText {
+     margin: 3px 28px 6px;
+ }
+
+ #rakutenMembership .rakutenExtraText a {
+     color: #bf0000;
+ }
+
+ /* rakutenLoginIntro
+----------------------------------------------- */
+
+ #rakutenMembership .rakutenLoginIntro {
+     padding: 10px;
+ }
+
+ #rakutenMembership .rakutenLogin a {
+     font-size: 122%;
+     font-weight: bold;
+ }
+
+ #rakutenMembership .rakutenBeginner {
+     margin-top: 10px;
+ }
+
+ #rakutenMembership .rakutenBeginner dt img {
+     vertical-align: middle;
+     width: 12px;
+     height: 17px;
+     margin-right: 4px;
+     background: url(../images/membership_img.gif) no-repeat -220px -30px;
+ }
+
+ #rakutenMembership .rakutenBeginner dt a {
+     display: inline-block;
+     vertical-align: middle;
+ }
+
+ #rakutenMembership .rakutenBeginner dd {
+     margin: 5px 0 0 16px;
+ }
+
+
+ /* rakutenLoginExtra
+----------------------------------------------- */
+
+ #rakutenMembership .rakutenLoginExtra {
+     border-top: 1px solid #bbbbbb;
+     background: #ffffff;
+ }
+
+ #rakutenMembership .rakutenLoginExtra .rakutenPointClub {
+     margin: 0 6px;
+ }
+
+ #rakutenMembership .rakutenLoginExtra .rakutenTopics {
+     margin: 0 6px 8px;
+     padding: 8px 0 0;
+     background: url(../images/membership_bg.gif) no-repeat -1500px 0;
+ }
+
+ #rakutenMembership .rakutenLoginExtra .rakutenExtraLink {
+     margin: 0 8px;
+ }
+
+ /* rakutenSmallFrame
+----------------------------------------------- */
+
+ #rakutenMembership .rakutenSmallFrame .rakutenRankFrame {
+     text-align: center;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenPointBox {
+     display: inline-block;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenYourPointWrap {
+     display: inline-block;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenYourPoint {
+     margin-left: 0;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenYourPoint dd {
+     float: left;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenPointNumber {
+     word-wrap: normal;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenExtraPointWrap,
+ #rakutenMembership .rakutenSmallFrame .rakutenExtraPoint {
+     overflow: hidden;
+     zoom: 1;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenExtraPoint ul {
+     float: left;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenExtraPoint li {
+     overflow: hidden;
+     float: none;
+ }
+
+ * html #rakutenMembership .rakutenSmallFrame .rakutenExtraPoint li {
+     float: left;
+     width: 100%;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenExtraPoint {
+     margin-left: 3px;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenExtraPoint span {
+     float: left;
+     margin-right: -10px;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenExtraPoint img {
+     width: 10px;
+     height: 19px;
+     background: url(../images/membership_img.gif) no-repeat -150px -30px;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenExtraPoint .rakutenListLast img {
+     width: 10px;
+     height: 10px;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenExtraPoint dl {
+     padding-left: 13px;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenRankInfo {
+     padding: 5px 2px;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenNextPoint dt,
+ #rakutenMembership .rakutenSmallFrame .rakutenNextTime dt,
+ #rakutenMembership .rakutenSmallFrame .rakutenNextCard dt {
+     width: 90px;
+     font-size: 79%;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenNextPoint .rakutenNumber,
+ #rakutenMembership .rakutenSmallFrame .rakutenNextTime .rakutenNumber,
+ #rakutenMembership .rakutenSmallFrame .rakutenNextCard .rakutenNumber {
+     font-size: 126%;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenNextPoint dd {
+     margin-top: 2px;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenNextPoint div span {
+     background-position: 0 -20px;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenNextPoint div img {
+     display: block;
+     height: 7px;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenRankUp {
+     display: none;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenTopics {
+     padding: 3px 2px 5px;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenExtraList {
+     padding: 6px;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenExtraText {
+     margin: 1px 10px 4px;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenTopics {
+     padding-top: 7px;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenLoginExtra .rakutenTopics {
+     padding: 8px 0 0;
+ }
+
+ /* rakutenRegular
+----------------------------------------------- */
+ #rakutenMembership .rakutenRegular {
+     border: 1px solid #bbbbbb;
+ }
+
+ #rakutenMembership .rakutenRegular .rakutenRankFrame {
+     background: #ffffff;
+ }
+
+ #rakutenMembership .rakutenRegular .rakutenYourPoint {
+     margin-top: 5px;
+ }
+
+ #rakutenMembership .rakutenRegular .rakutenYourRankCase {
+     padding-left: 0;
+ }
+
+ #rakutenMembership .rakutenRegular .rakutenRankName a:hover {
+     color: #bf0000;
+ }
+
+ #rakutenMembership .rakutenRegular .rakutenRankInfo,
+ #rakutenMembership .rakutenRegular .rakutenTopics {
+     background: url(../images/membership_bg.gif) no-repeat -1500px 0;
+ }
+
+ #rakutenMembership .rakutenRegular .rakutenNextTime dd img {
+     background: url(../images/membership_img.gif) no-repeat -199px -30px;
+ }
+
+ /* rakutenSilver
+----------------------------------------------- */
+ #rakutenMembership .rakutenSilver {
+     border: 1px solid #999999;
+ }
+
+ #rakutenMembership .rakutenSilver .rakutenRankFrame {
+     background: #f0f0f0 url(../images/membership_bg.gif) no-repeat -300px 0;
+ }
+
+ #rakutenMembership .rakutenSilver .rakutenRanker img {
+     background: url(../images/membership_img.gif) no-repeat 0 -60px;
+ }
+
+ #rakutenMembership .rakutenSilver .rakutenRankName a {
+     color: #565656;
+ }
+
+ #rakutenMembership .rakutenSilver .rakutenRankName a:hover {
+     color: #bf0000;
+ }
+
+ #rakutenMembership .rakutenSilver .rakutenRankerLink img {
+     background: url(../images/env_anime_s.gif) no-repeat;
+ }
+
+ #rakutenMembership .rakutenSilver .rakutenRankInfo,
+ #rakutenMembership .rakutenSilver .rakutenTopics {
+     background: url(../images/membership_bg.gif) no-repeat -1800px 0;
+ }
+
+ #rakutenMembership .rakutenSilver .rakutenNextTime dd img {
+     background: url(../images/membership_img.gif) no-repeat -29px -60px;
+ }
+
+ /* rakutenGold
+----------------------------------------------- */
+ #rakutenMembership .rakutenGold {
+     border: 1px solid #ce9600;
+ }
+
+ #rakutenMembership .rakutenGold .rakutenRankFrame {
+     background: #fffcdf url(../images/membership_bg.gif) no-repeat -600px 0;
+ }
+
+ #rakutenMembership .rakutenGold .rakutenRanker img {
+     background: url(../images/membership_img.gif) no-repeat 0 -90px;
+ }
+
+ #rakutenMembership .rakutenGold .rakutenRankName a {
+     color: #996600;
+ }
+
+ #rakutenMembership .rakutenGold .rakutenRankName a:hover {
+     color: #bf0000;
+ }
+
+ #rakutenMembership .rakutenGold .rakutenRankerLink img {
+     background: url(../images/env_anime_g.gif) no-repeat;
+ }
+
+ #rakutenMembership .rakutenGold .rakutenRankInfo,
+ #rakutenMembership .rakutenGold .rakutenTopics {
+     background: url(../images/membership_bg.gif) no-repeat -2100px 0;
+ }
+
+ #rakutenMembership .rakutenGold .rakutenNextTime dd img {
+     background: url(../images/membership_img.gif) no-repeat -29px -90px;
+ }
+
+ /* rakutenPlatinum
+----------------------------------------------- */
+ #rakutenMembership .rakutenPlatinum {
+     border: 1px solid #72bde8;
+ }
+
+ #rakutenMembership .rakutenPlatinum .rakutenRankFrame {
+     background: #f0f9fe url(../images/membership_bg.gif) no-repeat -900px 0;
+ }
+
+ #rakutenMembership .rakutenPlatinum .rakutenRanker img {
+     background: url(../images/membership_img.gif) no-repeat 0 -120px;
+ }
+
+ #rakutenMembership .rakutenPlatinum .rakutenRankName a {
+     color: #0099cc;
+ }
+
+ #rakutenMembership .rakutenPlatinum .rakutenRankName a:hover {
+     color: #bf0000;
+ }
+
+ #rakutenMembership .rakutenPlatinum .rakutenRankerLink img {
+     background: url(../images/env_anime_p.gif) no-repeat;
+ }
+
+ #rakutenMembership .rakutenPlatinum .rakutenRankInfo,
+ #rakutenMembership .rakutenPlatinum .rakutenTopics {
+     background: url(../images/membership_bg.gif) no-repeat -2400px 0;
+ }
+
+ #rakutenMembership .rakutenPlatinum .rakutenNextTime dd img {
+     background: url(../images/membership_img.gif) no-repeat -29px -120px;
+ }
+
+ #rakutenMembership .rakutenPlatinum .rakutenNextCard dd img {
+     background: url(../images/membership_img.gif) no-repeat -50px -120px;
+ }
+
+ /* rakutenDiamond
+----------------------------------------------- */
+ #rakutenMembership .rakutenDiamond {
+     border: 1px solid #aa9bcb;
+ }
+
+ #rakutenMembership .rakutenDiamond .rakutenRankFrame {
+     overflow: hidden;
+     background: #f9f2ff url(../images/membership_bg.gif) no-repeat -1200px 0;
+     zoom: 1;
+ }
+
+ #rakutenMembership .rakutenDiamond .rakutenRanker img {
+     background: url(../images/membership_img.gif) no-repeat 0 -150px;
+ }
+
+ #rakutenMembership .rakutenDiamond .rakutenRankName a {
+     color: #333333;
+ }
+
+ #rakutenMembership .rakutenDiamond .rakutenRankName a:hover {
+     color: #bf0000;
+ }
+
+ #rakutenMembership .rakutenSmallFrame .rakutenDiamond .rakutenRankName span,
+ #rakutenMembership .rakutenSmallFrame .rakutenDiamond .rakutenRankName a {
+     float: none;
+     display: block;
+ }
+
+ #rakutenMembership .rakutenDiamond .rakutenRankerLink img {
+     background: url(../images/env_anime_d.gif) no-repeat;
+ }
+
+ #rakutenMembership .rakutenDiamond .rakutenRankInfo,
+ #rakutenMembership .rakutenDiamond .rakutenTopics {
+     background: url(../images/membership_bg.gif) no-repeat -1800px 0;
+ }
+
+ #rakutenMembership .rakutenDiamond .rakutenNextTime dd img {
+     background: url(../images/membership_img.gif) no-repeat -29px -150px;
+ }
+
+ #rakutenMembership .rakutenDiamond .rakutenNextCard dd img {
+     background: url(../images/membership_img.gif) no-repeat -50px -150px;
+ }
+
+
+
+ #rakutenMembership dl#deliveryInfo {
+     text-align: left;
+     margin: 0 6px 10px 10px;
+     padding: 4px 0 0 0;
+     border-top: 1px dotted #777777;
+ }
+ #rakutenMembership dl#deliveryInfo dt {
+     text-indent: -10px;
+     padding-left: 10px;
+     line-height: 1.5;
+ }
+ #rakutenMembership dl#deliveryInfo dd {
+     padding: 0 0 0 18px;
+     position: relative;
+ }
+ #rakutenMembership dl#deliveryInfo dd span {
+     position: absolute;
+     top: 0;
+     left: 10px;
+ }
+
+
+/*
+==========================================================
+
+* extra
+
+==========================================================
+*/
+/* myRakuten */
+#extra div#myRakuten {
+	margin-top: 20px;
+	background: #f8f8f8 url(../images/bg_myrakuten.gif) no-repeat 0 0;
+	border-bottom: 1px solid #bbbbbb;
+	color: #444444;
+	margin: 0 0 20px;
+	padding: 0 3px 2px 3px;	
+	text-align: center;
+}
+#extra div#myRakuten h2 {
+	display: none;
+}
+#extra div#myRakuten em,
+#extra div#personalize p#memberRank a,
+#extra div#personalize div#pointInfo p#pointAll span {
+	font-weight: bold;
+}
+#extra div#personalize {
+	border: 1px solid;
+	padding: 5px 10px;		
+	overflow: hidden; /* for win ie6 */
+}
+* html #extra div#personalize { /* for win ie6 */
+	width: 294px;
+}
+*:first-child+html #extra div#personalize { /* for win ie7 */
+	width: 272px;
+}
+#extra div#myRakuten.premium div#personalize {
+	background: #f0faff url(../images/bg_premium.gif) no-repeat 0 0;
+	border-color: #98cee6;
+}
+#extra div#myRakuten.gold div#personalize {
+	background: #fffde0 url(../images/bg_gold.gif) no-repeat 0 0;
+	border-color: #cc9900;
+}
+#extra div#myRakuten.silver div#personalize {
+	background: #f0f0f0 url(../images/bg_silver.gif) no-repeat 0 0;
+	border-color: #999999;
+}
+#extra div#myRakuten.regular div#personalize,
+#extra div#myRakuten.logout div#personalize {
+	background: #ffffff;
+	border-color: #bbbbbb;
+}
+#extra div#myRakuten p#welcome {
+	padding: 10px 5px;
+}
+#extra div#myRakuten p#welcome em a {
+	color: #444444;
+}
+#extra div#myRakuten p#welcome span {
+	font-size: 82%;
+	margin-top: 4px;
+	display: block;
+}
+#extra div#personalize img {
+	vertical-align: middle;
+}
+#extra div#personalize div#pointInfo,
+#extra div#personalize p#pointClub,
+#extra div#personalize ul#campaign,
+#extra div#myRakuten.logout p#welcome {
+	text-align: left;
+}
+#extra div#personalize p#pointClub a {
+	margin-right: 5px;
+	color: #bf0000;
+}
+#extra div#myRakuten p#memberRank {
+	margin: 6px 0;
+}
+#extra div#myRakuten.premium p#memberRank a {
+	color: #0099cc;
+}
+#extra div#myRakuten.gold p#memberRank a {
+	color: #996600;
+}
+#extra div#myRakuten.silver p#memberRank a {
+	color: #565656;
+}
+#extra div#myRakuten.regular p#memberRank a {
+	color: #000000;
+}
+#extra div#personalize div#pointInfo p#pointAll {
+	margin-bottom: 3px;
+}
+#extra div#personalize div#pointInfo p.limit,
+#extra div#personalize div#pointInfo p.cashOnly {
+	background: url(../images/bg_pointinfo.gif) no-repeat 5px 0; 	
+	padding: 3px 2px 0 19px;
+	border-left: none;
+}
+#extra div#personalize div#pointInfo p.cash {
+	border-left: 1px solid #969696;
+	padding-left: 5px;
+}
+#extra div#personalize div#pointInfo p.limit,
+#extra div#personalize div#pointInfo p.cash,
+#extra div#personalize div#pointInfo p.cashOnly {
+	display: inline;
+	font-size: 82%;
+	letter-spacing: -0.07em;
+}
+#extra div#myRakuten p.limit em,
+#extra div#personalize p#pointAll em {
+	color: #bf0000;
+}
+#extra div#myRakuten p.cash em,
+#extra div#myRakuten p.cashOnly em {
+	color: #0f218b;
+}
+#extra div#personalize ul#campaign {
+	padding-top: 6px;
+	margin: 6px 0 2px 0;	
+}
+#extra div#myRakuten.premium ul#campaign {
+	background: url(../images/line_premium.gif) repeat-x 0 0;
+}
+#extra div#myRakuten.gold ul#campaign {
+	background: url(../images/line_gold.gif) repeat-x 0 0;
+}
+#extra div#myRakuten.silver ul#campaign {
+	background: url(../images/line_silver.gif) repeat-x 0 0;
+}
+#extra div#myRakuten.regular ul#campaign,
+#extra div#myRakuten.logout ul#campaign {
+	background: url(../images/line_normal.gif) repeat-x 0 0;
+}
+#extra div#myRakuten.logout p#welcome a.login {
+	font-weight: bold;
+	margin: 0 0 10px 0;
+	display: block;
+}
+#extra div#myRakuten.logout p#welcome span {
+	text-align: right;
+	margin-top: 7px;
+}
+
+/* add 2010.06.06 */
+#extra div#myRakuten dl#deliveryInfo {
+	text-align: left;
+	margin: 0 6px 10px 10px;
+	padding: 4px 0 0 0;
+	border-top: 1px dotted #777777;
+}
+#extra div#myRakuten dl#deliveryInfo dt {
+    text-indent: -10px;
+	padding-left: 10px;
+	line-height: 1.5;
+}
+#extra div#myRakuten dl#deliveryInfo dd {
+	padding: 0 0 0 18px;
+	position: relative;
+}
+#extra div#myRakuten dl#deliveryInfo dd span {
+	position: absolute;
+	top: 0;
+	left: 10px;
+}
+/*
+==========================================================
+Adult
+==========================================================
+*/
+div#adultTopicPath {
+	padding: 8px 12px;
+	background: #FFEEEE;
+	font-size: 82%;
+}
+div#adultTopicPath dl {
+	font-weight: bold;
+}
+div#adultTopicPath dl { overflow: hidden; display: inline-block; }
+/* rule out MacIE \*/
+div#adultTopicPath dl { overflow: auto; display: block; } /* */
+div#adultTopicPath dt {
+	float: left;
+	margin-right: 10px;
+	color: #555555;
+}
+div#adultTopicPath dd {
+	float: left;
+	margin-right: 15px;
+	padding-left: 10px;
+	background: url(../images/icon_arrow_pink.gif) no-repeat 0 50%;
+}
+
+/* 190508 release footer */
+.goTop {
+    margin: 30px 0 0 !important;
+    min-width: 1024px;
+    width: auto;
+    box-sizing: border-box;
+}
+
+#footer {
+    background: #f9f9f9;
+    padding: 50px 0 0;
+    min-width: 1024px;
+    width: auto;
+    box-sizing: border-box;
+}
+
+#footer .container {
+    max-width: 1490px;
+    min-width: 1024px;
+    width: auto;
+    margin: 10px auto 0;
+    padding: 15px 15px 0;
+    box-sizing: border-box;
+    position: relative;
+    border-top: none;
+}
+
+#footer .container h2 {
+    text-align: left;
+    color: #333;
+}
+
+#footer #grpSpelinlk .rb-affiliate {
+    display: inline !important;
+}
+
+#footer #bta .ui-carousel {
+    background: #f9f9f9 !important;
+    padding-top: 0 !important;
+}
+
+#footer .ui-carousel-list {
+    background: #f9f9f9;
+}
+
+#footer .ui-carousel-list .ui-carousel-item:first-child {
+    margin: 0 3px 0 0;
+}
+
+#footer .ui-carousel-heading {
+    margin: 0;
+}
+
+#footer .ui-carousel-nav~.ui-carousel-content {
+    margin: 0;
+}
+
+/* groupservice */
+#footer #groupservice .content {
+    position: relative;
+}
+
+#footer #groupservice .content .rc-f-standard {
+    display: block !important;
+}
+
+#footer #groupservice .partsMenu,
+#footer #adBanners .partsMenu {
+    text-align: left;
+    margin: 10px auto 60px;
+}
+
+#footer .ui-carousel-media a,
+#footer #groupservice a {
+    color: #919191;
+}
+
+#footer #groupservice h2+dl {
+    padding: 0 6px 0 0;
+}
+
+#footer #groupservice .rc-f-standard {
+    text-align: left;
+    padding: 0;
+}
+
+#footer #groupservice .rc-f-standard .copyright {
+    color: #9c9c9c;
+}
+
+#footer #groupservice .rc-f-section01 {
+    display: block !important;
+    padding: 0 0 20px;
+}
+
+/* grpRakutenLinkArea */
+#footer #grpRakutenLinkArea .rc-f-standard,
+#footer .adultFooter .rc-f-standard {
+    background: #fff;
+}
+
+#footer .rc-f-standard.rc-f-custom00 .rc-f-section-content00 {
+    border: none;
+    background: none;
+}
+
+#footer .rc-f-section-content00 {
+    max-width: 1490px;
+    min-width: 1024px;
+    width: auto;
+    margin: 0 auto;
+    padding: 15px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#footer .rc-f-standard .rc-f-section-bar {
+    display: none;
+}
+
+#footer .rc-f-standard .rc-f-section-bar.rc-f-first {
+    display: block;
+    padding: 0;
+}
+
+#footer .rb-footer__info {
+    display: table;
+}
+
+#footer .goTop-btn {
+    display: block;
+}
+
+#footer #grpRakutenLinkArea .fb-fcb_logo,
+#footer .adultFooter .fb-fcb_logo {
+    display: table-cell !important;
+    padding: 0 60px 0 0;
+}
+
+#footer .rb-footer__info .rc-f-inner {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+#footer #grpRakutenLinkArea .rcf-list-inline,
+#footer .adultFooter .rcf-list-inline {
+    display: table-cell;
+}
+
+#footer #grpRakutenLinkArea .rcf-list-inline a,
+#footer .adultFooter .rcf-list-inline a {
+    color: #686868;
+}
+
+#footer .rc-f-standard .rc-f-text-em {
+    color: #333;
+}
+
+#footer .rc-f-dl-inline-box {
+    margin: 0 0 20px;
+}
+
+#footer .rc-f-standard .rc-f-dl-inline-box dt {
+    padding: 0;
+}
+
+#footer .rc-f-dl-inline-box a:hover {
+    text-decoration: underline;
+}
+
+#footer .rc-f-standard.rc-f-custom00 .rc-f-section-content00 .rc-f-btn {
+    border: none;
+    color: #686868;
+    font-weight: normal;
+}
+
+#footer .rc-f-standard.rc-f-custom00 .rc-f-section-content00 .rc-f-btn span:before {
+    content: unset;
+}
+
+#footer .rc-f-standard .rc-f-btn span {
+    padding: 0;
+}
+
+#footer .rc-f-standard .rc-f-section01 {
+    display: none;
+}
+
+#footer .rb-footer__info .rcf-list-inline {
+    display: block !important;
+}
+
+#footer .rb-footer__company {
+    display: none;
+    padding: 0;
+}
+
+/* copyright and goTop button */
+#footer .copyright-area {
+    display: block !important;
+    max-width: 1490px;
+    min-width: 1024px;
+    width: auto;
+    margin: 60px auto 24px;
+    padding: 0 15px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+#footer .copyright-area p {
+    color: #9c9c9c;
+    font-size: 12px;
+}
+
+#footer .goTop-btn {
+    display: table !important;
+    position: absolute;
+    right: 0;
+    top: -68px;
+    height: 68px;
+    width: 107px;
+    text-align: center;
+}
+
+#footer .goTop-btn a {
+    display: table-cell;
+    font-size: 12px;
+    color: #333;
+    height: 52px;
+    width: 107px;
+    padding: 0 0 18px;
+    vertical-align: bottom;
+    border-radius: 8px 8px 0 0;
+    background: url(../images/above-arrow.png) #fff no-repeat;
+    background-position: 43px 16px;
+}
+
+#footer .goTop-btn a:hover {
+    text-decoration: none;
+}

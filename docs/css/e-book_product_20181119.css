@@ -1,0 +1,897 @@
+@charset "EUC-JP";
+
+/* ==============================================
+   2013/07/25 created
+============================================== */
+
+/* マーチリスト
+------------------------------------------------------ */
+.monopolyArea{
+    margin-bottom: 10px;
+	overflow:hidden;
+	zoom:1;
+}
+#monopolyAll{
+	margin: 0 0 15px 0;
+    padding-bottom: 20px;
+}
+#monopolyAll .monopolyArea{
+	margin: 0 0 0 25px;
+}
+.monopolyArea li {
+    float: left;
+    margin: 7px 5px 0 0;
+    padding: 3px 5px;
+}
+.monopolyArea li:before {
+    padding-right: 5px;
+    font-family: "rb-iconfont";
+    content: "\e61d";
+    font-size: 12px;
+    color: #FFA1B5;
+}
+.monopolyArea li.monopolyMore{
+	border: none;
+	background: transparent;
+}
+.monopolyArea li.monopolyMore:before{
+    display: none;
+}
+.monopolyArea li.monopolyMore a{
+	padding-left: 20px;
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+background-image: url(../images/icon_arrow_bottom.gif);*/
+
+	/*font-weight: bold;*/
+}
+
+html* div#productInfo dl#topicPath {
+	padding-bottom: 10px;
+}
+
+/* SeriesItem
+------------------------------------------------------ */
+
+* html div#seriesItems {
+    display: none;
+}
+
+.seriesCheckAllBox{
+    text-align: right;
+    padding-bottom: 5px;
+}
+.addCartButtonBox{
+    text-align: right;
+}
+#seriesItemsAddCartButton{
+    width: 217px;
+    height: 38px;
+    background: url(../images/btn_add_cart_resume.gif);
+    background-repeat: no-repeat;
+    border: none;
+    margin: 0 20px 7px 0;
+    cursor: pointer;
+}
+#seriesItemsAddCartButton:hover{
+    background-position: 0 -38px;
+}
+.seriesItemsAddCartButton_added{
+    background-position: 0 -76px!important;
+}
+.addCartButtonBox p{
+    text-align: right;
+    margin: 0 10px 20px 0;
+    padding-top: 5px;
+    font-size: 82%;
+}
+
+div#seriesItems {
+    position: relative;
+    margin-bottom: 15px;
+    zoom: 1;
+}
+div#seriesItems h2 {
+    position: relative;
+    line-height: 1;
+    clear: both;
+    margin-bottom: 10px;
+    padding: 5px 0 5px;
+    border-bottom: 1px solid #b0b0b0;
+    color: #444;
+    font-size: 138%;
+    font-weight: bold;
+    text-align: left;
+}
+div#seriesItems div.pagenum_series {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 180px;
+    display: none;
+}
+div#seriesItems div.pagenum_series p {
+    text-align: right;
+}
+
+div#seriesItems li.recommendBack_series {
+    float: left;
+    padding-top: 40px;
+    display: none;
+}
+div#seriesItems li.recommendNext_series {
+    float: right;
+    padding-top: 40px;
+    display: none;
+}
+div#seriesItems div.showCaseWrapper_series {
+    margin: 0 15px;
+    zoom: 1;
+}
+div#seriesItems div.showCase_series {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    position: relative;
+    padding: 5px 0;
+}
+*:first-child+html div#seriesItems div.showCase_series {
+    position: relative;
+}
+*+html:first-child div#seriesItems div.showCase_series { /* for Opera */
+    background: #333;
+}
+div#seriesItems div.showCaseInner_series {
+    width: 2800px;
+    height: 230px;
+    overflow: hidden;
+    zoom: 1;
+    display: none;
+}
+div#seriesItems div.showCase_series dl {
+    float: left;
+    width: 99px;
+    height: 200px;
+    padding: 0 10px;
+    border-left: 1px dashed #929292;
+    position: relative;
+}
+* html div#seriesItems div.showCase_series dl {
+    width: 120px;
+}
+
+div#seriesItems div.showCase_series dl.first {
+    border-left: 1px dashed #ffffff;
+}
+div#seriesItems div.showCase_series dt {
+    margin: 0 auto;
+    text-align: center;
+}
+
+div#seriesItems div.showCase_series dd {
+    font-weight: normal;
+    font-size: 12px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+div#seriesItems div.showCase_series dd.publisher {
+    padding-top: 8px;
+    text-align: center;
+}
+
+.showCaseInner_series input{
+    width: 20px;
+    height: 20px;
+    margin: 0 0 5px 40px;
+}
+
+.cart_failed_txt{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+.cart_failed_box{
+    background: #dedede;
+}
+.cart_failed_alert{
+    background: #aaaaaa;
+    color: white;
+    font-size: 80%;
+    padding: 5px;
+    font-weight: normal;
+    white-space: nowrap;
+}
+.cart_failed_alert em{
+    font-size: 120%;
+    color: #bf0000;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+/* IntroductionItems
+------------------------------------------------------ */
+
+* html div#div#introductionItems {
+    display: none;
+}
+
+div#introductionItems {
+    position: relative;
+    margin-bottom: 15px;
+    zoom: 1;
+}
+
+.showCaseInner dd img,
+.showCaseInner_series dd img,
+.showCaseInner_intro dd img,
+.showCaseInner_intro2 dd img{
+    vertical-align: middle;
+    padding-right: 5px;
+}
+div#introductionItems div.pagenum_intro {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 180px;
+    display: none;
+}
+div#introductionItems div.pagenum_intro p {
+    text-align: right;
+}
+
+div#introductionItems li.recommendBack_intro {
+    float: left;
+    padding-top: 40px;
+    display: none;
+}
+div#introductionItems li.recommendNext_intro {
+    float: right;
+    padding-top: 40px;
+    display: none;
+}
+div#introductionItems div.showCaseWrapper_intro {
+    margin: 0 15px;
+    zoom: 1;
+}
+div#introductionItems div.showCase_intro {
+    width: 100%;
+    height: 215px;
+    overflow: hidden;
+    position: relative;
+    padding: 5px 0;
+}
+*:first-child+html div#introductionItems div.showCase_intro {
+    position: relative;
+}
+*+html:first-child div#introductionItems div.showCase_intro { /* for Opera */
+    background: #333;
+}
+div#introductionItems div.showCaseInner_intro {
+    width: 2800px;
+    height: 230px;
+    overflow: hidden;
+    zoom: 1;
+    display: none;
+}
+div#introductionItems div.showCase_intro dl {
+    float: left;
+    width: 99px;
+    height: 200px;
+    padding: 0 10px;
+    border-left: 1px dashed #929292;
+}
+* html div#introductionItems div.showCase_intro dl {
+    width: 120px;
+}
+
+div#introductionItems div.showCase_intro dl.first {
+    border-left: 1px dashed #ffffff;
+}
+div#introductionItems div.showCase_intro dt {
+    margin: 0 auto;
+    text-align: center;
+}
+
+div#introductionItems div.showCase_intro dd {
+    font-weight: normal;
+    font-size: 12px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+div#introductionItems div.showCase_intro dd.publisher {
+    padding-top: 8px;
+    text-align: center;
+}
+
+.showCaseInner_intro input{
+    width: 26px;
+    height: 26px;
+    margin-left: 40px;
+}
+
+
+#introductionItems2{
+    position: relative;
+}
+
+div#introductionItems2 div.pagenum_intro2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 180px;
+    display: none;
+}
+div#introductionItems2 div.pagenum_intro2 p {
+    text-align: right;
+}
+
+div#introductionItems2 li.recommendBack_intro2 {
+    float: left;
+    padding-top: 40px;
+    display: none;
+}
+div#introductionItems2 li.recommendNext_intro2 {
+    float: right;
+    padding-top: 40px;
+    display: none;
+}
+div#introductionItems2 div.showCaseWrapper_intro2 {
+    margin: 0 15px;
+    zoom: 1;
+}
+div#introductionItems2 div.showCase_intro2 {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    position: relative;
+    padding: 5px 0;
+}
+*:first-child+html div#introductionItems2 div.showCase_intro2 {
+    position: relative;
+}
+*+html:first-child div#introductionItems2 div.showCase_intro2 { /* for Opera */
+    background: #333;
+}
+div#introductionItems2 div.showCaseInner_intro2 {
+    width: 2800px;
+    height: 230px;
+    overflow: hidden;
+    zoom: 1;
+    display: none;
+}
+div#introductionItems2 div.showCase_intro2 dl {
+    float: left;
+    width: 99px;
+    height: 200px;
+    padding: 0 10px;
+    border-left: 1px dashed #929292;
+}
+* html div#introductionItems2 div.showCase_intro2 dl {
+    width: 120px;
+}
+
+div#introductionItems2 div.showCase_intro2 dl.first {
+    border-left: 1px dashed #ffffff;
+}
+div#introductionItems2 div.showCase_intro2 dt {
+    margin: 0 auto;
+    text-align: center;
+}
+
+div#introductionItems2 div.showCase_intro2 dd {
+    font-weight: normal;
+    font-size: 12px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+div#introductionItems2 div.showCase_intro2 dd.publisher {
+    padding-top: 8px;
+    text-align: center;
+}
+
+.showCaseInner_intro2 input{
+    width: 26px;
+    height: 26px;
+    margin-left: 40px;
+}
+
+
+/* kobo free-app link box
+------------------------------------------------------ */
+
+#koboAppLinkBox{
+    border: 3px solid #cccccc;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#koboAppLinkBox h3{
+    font-size: 110%;
+    font-weight: bolder;
+    margin: 10px 0 0;
+}
+#koboAppLinkBox img{
+    margin-top: 4px;
+}
+
+
+
+/* 電子書籍版でもご購入可能です！（紙書籍版itemページ）
+------------------------------------------------------ */
+
+#productPriceComparison{
+    margin: 10px 0;
+    border: 1px solid #c4c4c4;
+    max-width: 525px;
+    /display: block;
+    display: inline-block;
+}
+#productPriceComparison p{
+    font-size: 100%;
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+#productPriceComparison p img{
+    vertical-align: top;
+}
+#productPriceComparisonDetail{
+    margin: 5px 0;
+}
+#productPriceComparisonDetailLeft{
+    text-align: center;
+    padding: 0px 35px 0 10px;
+    vertical-align: top;
+}
+#productPriceComparisonDetailLeft p{
+    text-align: left;
+}
+#productPriceComparisonDetailLeft dt a{
+    font-weight: bold;
+}
+#productPriceComparisonDetailLeft dd em{
+    font-weight: bold;
+    color: #BF0000;
+}
+#productPriceComparisonDetailLeft p{
+    margin-bottom: 10px;
+    color:#333;
+}
+#productPriceComparisonDetailLeft dl{
+    border-bottom: 1px solid #cccccc;
+    margin: 0 0 0 10px;
+    padding: 5px;
+    max-width: 200px;
+}
+#productPriceComparisonDetailLeft dt{
+    float: left;
+}
+#productPriceComparisonDetailLeft dd{
+    float: right;
+}
+#productPriceComparisonDetailRight{
+    padding-right: 18px;
+    text-align: center;
+    vertical-align: top;
+}
+#productPriceComparison ul{
+    background: #f5f5f5;
+    padding: 5px 5px 3px;
+    font-size: 85%;
+}
+#productPriceComparison li{
+    float: left;
+    /display: inline;
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+
+
+/* 紙書籍版でもご購入可能です！（電子書籍版itemページ）
+------------------------------------------------------ */
+#productPriceComparison.ebook{
+    border: 1px solid #cccccc;
+    padding: 10px 10px 7px 3%;
+    margin: 20px 0;
+    font-weight: bold;
+    /*max-width:270px;*/
+	width: 270px;
+}
+#productPriceComparisonInner dl{
+    /*width: 60%;*/
+    /*max-width: 250px;*/
+    width: auto;
+    padding: 4px 10px;
+    border-bottom: 1px solid #cccccc;
+}
+#productPriceComparisonInner dl.comparisonEBook{
+    background-color: #f2f2f2;
+}
+#productPriceComparisonInner em{
+    color:#BF0000;
+    font-weight:bold;
+}
+#productPriceComparisonInner dt{
+    padding: 3px 0 1px;
+    float: left;
+}
+#productPriceComparisonInner dd{
+    padding: 3px 0 1px 0;
+    float: right;
+}
+
+
+/* 電子購入かご枠（紙書籍版itemページ）
+------------------------------------------------------ */
+
+#purchaseBoxKobo{
+    background: white;
+    border: 1px solid #cccccc;
+    margin: 10px 0 5px;
+    padding: 10px 5px;
+}
+#purchaseBoxKoboTitle{
+    font-size: 120%;
+    font-weight: bold;
+}
+#purchaseBoxKoboTitle img{
+    vertical-align: top;
+}
+
+#purchaseBoxKoboPrice{
+    width: 220px;
+    margin: 15px auto;
+    vertical-align: middle;
+}
+#purchaseBoxKoboPrice dt{
+    float: left;
+    font-weight: bolder;
+    height: 20px;
+    line-height: 20px;
+}
+#purchaseBoxKoboPrice dd{
+    font-size: 120%;
+    font-weight: bolder;
+    float: right;
+    color: #BF0000;
+    height: 20px;
+    line-height: 20px;
+}
+#purchaseBoxKobo ul{
+    background: white!important;
+}
+#purchaseBoxKobo .asurakuArea span{
+    width: 170px!important;
+    color: #BF0000;
+}
+#extra button.new_addToCart_kobo {
+    display: block;
+    width: 217px;
+    height: 39px;
+    margin: 0 auto;
+    vertical-align: middle;
+    border: none;
+    text-indent: -999px;
+    cursor: pointer;
+    background: no-repeat 0 0 url(../images/btn_add_cart_kobo.gif);
+    zoom: 1;
+}
+#extra button.new_addToCart_kobo:hover{
+    background: no-repeat 0 -39px url(../images/btn_add_cart_kobo.gif);
+    zoom: 1;
+}
+
+.couponCode span{
+    font-size: 85%;
+}
+
+.aboutRakutenCaution dl{
+    display: block;
+    font-size: 11px;
+    line-height: 12px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0 0 10px;
+    padding: 0;
+    text-align: left;
+    width: 198px;
+    zoom: 1;
+}
+
+.aboutRakutenCaution dt{
+    background: none!important;
+    border: none!important;
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 12px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 198px;
+    cursor: auto!important;
+    zoom: 1;
+}
+
+.aboutRakutenCaution dd{
+    display: block!important;
+    font-size: 11px;
+    height: auto!important;
+    line-height: 12px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 198px;
+    color: #000;
+    zoom: 1;
+}
+
+.aboutRakutenCaution p{
+    text-align: left;
+    font-size: 11px;
+    line-height: 12px;
+}
+
+.openToggleCaution dt span{
+    padding: 0 10px 0 10px;
+    margin-left: 10px;
+    background: url(../images/sprite_20130311.gif) no-repeat 0 -856px;
+}
+.openToggleCaution dt{
+    background: #FFFFFF!important;
+}
+
+
+
+/* 電子購入かご枠（電子書籍版itemページ）
+------------------------------------------------------ */
+
+#extra .purchaseBoxStyle.ebook h2{
+    border-bottom: none;
+}
+#extra .purchaseBoxStyle.ebook h2 span {
+    background: #bf0000;
+}
+
+.eBookDiscountInfo{
+    margin: 10px 0;
+    text-align: center;
+}
+.eBookDiscountInfo em{
+    color:#BF0000;
+}
+.eBookPrice{
+    margin-bottom: 10px;
+}
+.eBookPrice em{
+    font-size: 180%;
+    color:#BF0000;
+    font-weight: bold;
+}
+.purchaseBoxStyle.ebook span.point {
+	margin-bottom:10px;
+}
+.purchaseBoxStyle.ebook ul.plusInfo li.period{
+	margin-bottom:10px;
+}
+html* #extra #purchaseBox.purchaseBoxStyle.ebook .wrapper ul li.availability {
+	margin-top: 0;
+}
+
+#extra #purchaseBox.purchaseBoxStyle.ebook .wrapper ul li.availability dl.asurakuArea dt {
+    color:#BF0000;
+	background: #F2F2F2!important;
+	zoom:1;
+}
+
+#extra #purchaseBox.purchaseBoxStyle.ebook .wrapper ul li.couponCode{
+    padding: 20px 0;
+}
+
+#extra #purchaseBox.purchaseBoxStyle.ebook .openToggleCaution dt span{
+    width: 175px!important;
+    padding: 0 10px 0 10px;
+    margin-left: 25px;
+	background: url(../images/icon-caution.gif) no-repeat 4px 0;
+}
+#extra #purchaseBox.purchaseBoxStyle.ebook .wrapper ul li.availability .openToggleCaution .aboutRakutenCaution dt{
+	background: #ffffff!important;
+}
+#extra #purchaseBox.purchaseBoxStyle.ebook .openToggleCaution dd{
+	/*background: #FFFFFF!important;*/
+}
+#extra #purchaseBox.purchaseBoxStyle.ebook .aboutRakutenCaution {
+	background-color: #FFFFFF!important;
+}
+#extra #purchaseBox.purchaseBoxStyle.ebook .aboutRakutenCaution dl{
+	width: 235px;
+}
+
+#extra #purchaseBox.purchaseBoxStyle.ebook .aboutRakutenCaution dt{
+    color: #333!important;
+    width: 235px;
+}
+
+#extra #purchaseBox.purchaseBoxStyle.ebook .aboutRakutenCaution dd{
+    width: 235px;
+}
+
+#extra #purchaseBox.purchaseBoxStyle.ebook .aboutRakutenCaution p{
+    background: none!important;
+}
+
+/*div.bookmarkArea div.bkm {*/
+    /*margin: 10px 0 0!important;*/
+/*}*/
+
+#extra #purchaseBox.purchaseBoxStyle.ebook ul li#bookmark {
+	margin-top: 5px;
+}
+
+
+/* ExtraColumn relatedItemsBox
+------------------------------------------------------ */
+
+#relatedItemsBox{
+    background: #f2f2f2;
+	border:1px solid #b7b7b7;
+	margin-bottom: 10px;
+}
+#relatedItemsBox h2{
+    font-weight: bold;
+	color:#ffffff;
+    border-bottom: 1px solid #bf0000;
+}
+#relatedItemsBox.ebook h2{
+    /*border-bottom: 1px solid #2a99b2;*/
+}
+#relatedItemsBox h2 span{
+    background: #bf0000;
+	display: block;
+	background: #bf0000;
+	padding: 4px;
+	font-weight: bold;
+	font-size: 125%;
+	text-align: center;
+}
+#relatedItemsBox.ebook h2 span{
+    /*background: #63c8d5;*/
+}
+#relatedItemsBox .wrapper{
+    border-bottom: 8px solid #cccccc;
+    border-left: 8px solid #cccccc;
+    border-right: 8px solid #cccccc;
+}
+#relatedItemsBox .inner{
+    background: #f2f2f2;
+    padding: 5px;
+}
+#relatedItemsBox li{
+    border-bottom: 1px solid #cccccc;
+    padding: 5px 5px 5px;
+    line-height: 1.4;
+}
+#relatedItemsBox li.relatedEbookItems_last{
+    border-bottom: none;
+}
+#relatedItemsBox li em{
+    color:#bf0000;
+}
+#relatedItemsBox .inner img{
+    vertical-align: top;
+}
+#relatedItemsBox .inner img.category{
+	margin-right:10px;
+}
+
+
+/* レビュー
+------------------------------------------------------ */
+.moreInfo_eBook{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 6px 10px;
+    border: 1px solid #cccccc;
+}
+.moreInfo_eBook span{
+    color: #cccccc;
+}
+
+
+
+/* Ranking Tabs
+------------------------------------------------------ */
+
+#rankingPaperBooks,
+#rankingEBooks{
+    border-top: 1px solid #cccccc;
+    padding: 15px 15px 0 5px;
+}
+div#extra div.partsRanking ul {
+    margin-left: 10px;
+}
+div#extra div.partsRanking ul li.rankingTabActive{
+    float: left;
+    padding: 5px 10px;
+    margin-bottom: -1px;
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #ffffff;
+}
+div#extra div.partsRanking ul li.rankingTabInactive{
+    float: left;
+    padding: 6px 10px 4px 10px;
+    margin-bottom: 0;
+}
+div#extra div.partsRanking ul li.rankingTabActive a{
+    color: black;
+    text-decoration: none;
+}
+div#extra div.partsRanking ul li.rankingTabInactive a{
+    color: #0F33CC;
+}
+#rankingEBooks .goodsTit img{
+    vertical-align: top;
+    padding-right: 5px;
+}
+
+
+/* for IE6 DisplayNone
+------------------------------------------------------ */
+
+* html #seriesItems,
+* html #relatedItems,
+* html #introductionItems,
+* html #introductionItems2{
+    display: none!important;
+    height: 0!important;
+}
+
+
+/* Clears
+------------------------------------------------------ */
+.monopolyArea,
+#productPriceComparisonInner dl,
+#productPriceComparisonDetail,
+#productPriceComparisonDetailLeft dl,
+#productPriceComparison ul,
+#purchaseBoxKoboPrice,
+.partsRanking ul{
+    *zoom: 1;
+    min-height: 1%;
+}
+.monopolyArea:after,
+#productPriceComparisonInner dl:after,
+#productPriceComparisonDetail:after,
+#productPriceComparisonDetailLeft dl:after,
+#productPriceComparison ul:after,
+#purchaseBoxKoboPrice:after,
+.partsRanking ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*  20140403
+-------------------------------------------------- */
+div.showCase_series dd.label-preoder {
+    margin: 0 0 5px 30px;
+}
+
+/*  20140403 [予約]label
+-------------------------------------------------- */
+div#seriesItems div.showCase_series dt span {
+    display: block;
+    text-align: center;
+
+    margin-bottom: 5px;
+     line-height: 20px;
+}

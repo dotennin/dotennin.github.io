@@ -1,0 +1,1 @@
+document.write(unescape("%3Cscript src='//image.books.rakuten.co.jp/books/img/js/s_codeCommon.js?20190521' type='text/javascript'%3E%3C/script%3E"))

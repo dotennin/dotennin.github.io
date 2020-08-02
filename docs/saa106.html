@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=1280, maximum-scale=1, user-scalable=yes">
+<link rel="alternate" type="application/rss+xml" title="AWS WEB問題集で学習しよう RSS Feed" href="https://aws.koiwaclub.com/feed/">
+<link rel="pingback" href="https://aws.koiwaclub.com/xmlrpc.php">
+<meta name="description" content>
+<!-- OGP -->
+<meta property="og:type" content="article">
+<meta property="og:description" content>
+<meta property="og:title" content="SAA#106">
+<meta property="og:url" content="https://aws.koiwaclub.com/aws-exam2/saa106/">
+<meta property="og:image" content="images/og-image.jpg">
+<meta property="og:site_name" content="AWS WEB問題集で学習しよう">
+<meta property="og:locale" content="ja_JP">
+<!-- /OGP -->
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content>
+<meta name="twitter:title" content="SAA#106">
+<meta name="twitter:url" content="https://aws.koiwaclub.com/aws-exam2/saa106/">
+<meta name="twitter:image" content="https://aws.koiwaclub.com/wp-content/themes/simplicity2-child/images/og-image.jpg">
+<meta name="twitter:domain" content="aws.koiwaclub.com">
+<!-- /Twitter Card -->
+
+<title>SAA#106</title>
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="AWS WEB問題集で学習しよう &raquo; フィード" href="https://aws.koiwaclub.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="AWS WEB問題集で学習しよう &raquo; コメントフィード" href="https://aws.koiwaclub.com/comments/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/aws.koiwaclub.com\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="mtq_CoreStyleSheets-css" href="css/mtq_core_style.css" type="text/css" media="all">
+<link rel="stylesheet" id="mtq_ThemeStyleSheets-css" href="css/mtq_theme_style.css" type="text/css" media="all">
+<link rel="stylesheet" id="simplicity-style-css" href="css/style_1.css" type="text/css" media="all">
+<link rel="stylesheet" id="responsive-style-css" href="css/responsive-pc.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-style-css" href="css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="icomoon-style-css" href="css/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="extension-style-css" href="css/extension.css" type="text/css" media="all">
+<style id="extension-style-inline-css" type="text/css">
+#header .alignleft{margin-right:30px;max-width:none}@media screen and (max-width:639px){.article br{display:block}}
+</style>
+<link rel="stylesheet" id="child-style-css" href="css/style_2.css" type="text/css" media="all">
+<link rel="stylesheet" id="print-style-css" href="css/print.css" type="text/css" media="print">
+<link rel="stylesheet" id="sns-twitter-type-style-css" href="css/sns-twitter-type.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="css/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="bbp-default-css" href="css/bbpress.css" type="text/css" media="screen">
+<link rel="stylesheet" id="moderation-tools-bbpress-css" href="css/front.css" type="text/css" media="all">
+<link rel="stylesheet" id="swpm.common-css" href="css/swpm.common.css" type="text/css" media="all">
+<link rel="stylesheet" id="accordioncssfree-css" href="css/jquery.accordion.css" type="text/css" media="all">
+<link rel="stylesheet" id="whats-new-style-css" href="css/whats-new.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpProQuiz_front_style-css" href="css/wpProQuiz_front.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="sccss_style-css" href="index_1.html" type="text/css" media="all">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/jquery.accordion.js"></script>
+<link rel="canonical" href="https://aws.koiwaclub.com/aws-exam2/saa106/">
+<link rel="shortlink" href="https://aws.koiwaclub.com/?p=2719">
+<link rel="alternate" type="application/json+oembed" href="https://aws.koiwaclub.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Faws.koiwaclub.com%2Faws-exam2%2Fsaa106%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://aws.koiwaclub.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Faws.koiwaclub.com%2Faws-exam2%2Fsaa106%2F&#038;format=xml">
+<script type="text/javascript">
+             jQuery(document).bind("keydown", function(e) {
+               if(e.ctrlKey && (e.which == 65 || e.which == 67 || e.which == 88 || e.which == 83 ||e.which == 85)) {
+                 e.preventDefault();
+                 return false;
+                 }
+             });
+
+         jQuery(document).on( "mousedown", function(event) {
+             if(event.which=="3")
+             {
+             document.oncontextmenu = document.body.oncontextmenu = function() {return false;}
+
+             }
+             });
+            </script>
+
+            <style type="text/css">
+            body{
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    -khtml-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+               }
+            </style></head>
+  <body class="page-template-default page page-id-2719 page-child parent-pageid-41" itemscope itemtype="http://schema.org/WebPage">
+    <div id="container">
+
+      <!-- header -->
+      <header itemscope itemtype="http://schema.org/WPHeader">
+        <div id="header" class="clearfix">
+          <div id="header-in">
+
+                        <div id="h-top">
+              <!-- モバイルメニュー表示用のボタン -->
+<div id="mobile-menu">
+  <a id="mobile-menu-toggle" href="#"><span class="fa fa-bars fa-2x"></span></a>
+</div>
+
+              <div class="alignleft top-title-catchphrase">
+                <!-- サイトのタイトル -->
+<p id="site-title" itemscope itemtype="http://schema.org/Organization">
+  <a href="https://aws.koiwaclub.com/">AWS WEB問題集で学習しよう</a></p>
+<!-- サイトの概要 -->
+<p id="site-description">
+  赤本ではなく黒本の問題集から学習する方向け</p>
+              </div>
+
+              <div class="alignright top-sns-follows">
+                              </div>
+
+            </div><!-- /#h-top -->
+          </div><!-- /#header-in -->
+        </div><!-- /#header -->
+      </header>
+
+      <!-- Navigation -->
+<nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+  <div id="navi">
+      	<div id="navi-in">
+      <div class="menu-wiziapp_custom-container"><ul id="menu-wiziapp_custom" class="menu"><li id="menu-item-531" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-531"><a href="https://aws.koiwaclub.com/">はじめに</a></li>
+<li id="menu-item-523" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-523"><a href="https://aws.koiwaclub.com/sample/">サンプル問題集</a></li>
+<li id="menu-item-1696" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1696"><a href="https://aws.koiwaclub.com/exam/">WEB問題集</a>
+<ul class="sub-menu">
+	<li id="menu-item-530" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-530"><a href="https://aws.koiwaclub.com/aws-exam2/">SAA</a></li>
+	<li id="menu-item-713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-713"><a href="https://aws.koiwaclub.com/aws-exam2/aws-field/">SAA（分野別問題集）</a></li>
+	<li id="menu-item-1733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1733"><a href="https://aws.koiwaclub.com/exam/sysops/">SysOps</a></li>
+	<li id="menu-item-2202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2202"><a href="https://aws.koiwaclub.com/exam/sap/">SAP</a></li>
+	<li id="menu-item-2880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2880"><a href="https://aws.koiwaclub.com/exam/clf/">CLF</a></li>
+	<li id="menu-item-2072" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2072"><a href="https://aws.koiwaclub.com/exam/learningvideo/">学習動画</a></li>
+	<li id="menu-item-1989" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1989"><a href="https://aws.koiwaclub.com/exam/gradebook/">みんなの成績表</a></li>
+</ul>
+</li>
+<li id="menu-item-1846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1846"><a href="https://aws.koiwaclub.com/spot_exam/">スポット問題集</a></li>
+<li id="menu-item-525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-525"><a href="https://aws.koiwaclub.com/membership-registration/">会員登録</a>
+<ul class="sub-menu">
+	<li id="menu-item-528" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-528"><a href="https://aws.koiwaclub.com/membership-registration/membership-login/">ログインページ</a></li>
+	<li id="menu-item-527" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-527"><a href="https://aws.koiwaclub.com/membership-registration/membership-profile/">プロフィール</a></li>
+	<li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526"><a href="https://aws.koiwaclub.com/membership-registration/password-reset/">パスワード初期化</a></li>
+	<li id="menu-item-545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-545"><a href="https://aws.koiwaclub.com/paid-membership-registration/">有料会員登録</a></li>
+</ul>
+</li>
+<li id="menu-item-529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529"><a href="https://aws.koiwaclub.com/support/">フォーラム</a></li>
+<li id="menu-item-2528" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2528"><a href="https://aws.koiwaclub.com/faqp/">FAQ</a></li>
+<li id="menu-item-524" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-524"><a href="https://aws.koiwaclub.com/change-log/">更新履歴</a></li>
+</ul></div>    </div><!-- /#navi-in -->
+  </div><!-- /#navi -->
+</nav>
+<!-- /Navigation -->
+      <!-- 本体部分 -->
+      <div id="body">
+        <div id="body-in" class="cf">
+
+          
+          <!-- main -->
+          <main itemscope itemprop="mainContentOfPage">
+            <div id="main" itemscope itemtype="http://schema.org/Blog">
+          <div id="post-2719" class="post-2719 page type-page status-publish">
+        <article class="article">
+          <header>
+            <h1 class="entry-title">SAA#106</h1>
+            <p class="post-meta">
+                  
+              
+              
+              
+                          </p>
+
+            
+            
+            
+                          <div id="widget-over-page-article" class="widgets">
+              <div id="pc_text-2" class="widget-over-page-article widget_pc_text">      <div class="text-pc">
+        <script async src="js/adsbygoogle.js"></script>
+<!-- 336*280 -->
+<ins class="adsbygoogle" style="display: inline-block; width: 336px; height: 280px;" data-ad-client="ca-pub-1600680293185006" data-ad-slot="7697083373"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>      </div>
+      </div>                      </div>
+                    </header>
+
+        
+        <div id="the-content" class="entry-content">
+        <p>
+<div id="mtq_quiz_area-1" class="mtq_quiz_area mtq_color_blue"> 
+  <!--Quiz generated using mTouch Quiz Version 3.1.3 by G. Michael Guy (http://gmichaelguy.com/quizplugin/)-->
+        
+      
+  <!-- Shortcode entered mtouchquiz id=187 --> 
+  <!-- Shortcode interpreted mtouchquiz id=187 alerts=off singlepage=off hints=off startscreen=off finalscreen=on multiplechances=off showanswers=now show_stamps=on randomq=on randoma=on status=on labels=on title=on proofread=off list=on time=off scoring=off formid= vform=on autoadvance=off autosubmit=off inform=off forcecf=off forcegf=off offset=1 questions=7 firstid=1243 lastid=1249 color=blue --> 
+  <!--form action="" method="post" class="quiz-form" id="quiz-187"-->
+    <div id="mtq_quiztitle-1" class="mtq_quiztitle">
+  <h2>SAA#106</h2>
+  </div>
+      <noscript>
+  <div id="mtq_javawarning-1" class="mtq_javawarning">
+  Please wait while the activity loads.<br> If this activity does not load, try refreshing your browser. Also, this page requires javascript. Please visit using a browser with javascript enabled.  <div class="mtq_failed_button" onclick="mtq_start_one(1)">
+  もしロードが出来なかったら、ここをクリックしてください  </div></div>
+  </noscript>
+  <div id="mtq_quiz_results_bubble-1" class="mtq_quiz_results_bubble"> <div id="mtq_quiz_results-1" class="mtq_quiz_results"><p>お疲れ様でした！<em>SAA#106</em>のクイズ終了しました。</p><p>解答スコアは %%SCORE%% / %%TOTAL%%　問正解です。</p><p>%%RATING%%</p> <br>    
+  </div> <div id="mtq_quiz_results_highlight-1" class="mtq_quiz_results_highlight">
+  あなたの選択した答えは強調表示されています。  </div> </div>
+    
+  <!-- root element for mtqscrollable -->
+
+  <div id="mtq_question_container-1">
+  <div class="mtqscrollable" id="mtq_scroll_container-1">
+        <!-- root element for the items -->
+    
+    <div id="mtq_scroll_items_container-1" class="items">
+            <div class="mtq_question mtq_scroll_item-1" id="mtq_question-1-1"><table class="mtq_question_heading_table"><tr><td><div class="mtq_question_label ">問題1</div><div id="mtq_stamp-1-1" class="mtq_stamp"></div></td></tr></table><div id="mtq_question_text-1-1" class="mtq_question_text">あなたは、インターネットから社内システムへアクセス可能なウェブサーバーで構成される 2 層アプリケーションを公開しました。インターネットからウェブサーバーへのアクセスは HTTPS/443 ポートからの通信に制限する必要があります。要件を満たすオプションを選択してください。 （2 つの回答を選択）</div><table class="mtq_answer_table"><colgroup><col class="mtq_oce_first"></colgroup><tr id="mtq_row-1-1-1" onclick="mtq_button_click(1,1,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-1-1" class="mtq_css_letter_button mtq_letter_button_0" alt="問題1, Choice 1">A</div><div id="mtq_marker-1-1-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-1-1" class="mtq_answer_text">インバウンドトラフィックおよびアウトバウンドトラフィックの両方でポート443 を許可するセキュリティグループルールを作成します。</div></td></tr><tr id="mtq_row-1-2-1" onclick="mtq_button_click(1,2,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-2-1" class="mtq_css_letter_button mtq_letter_button_1" alt="問題1, Choice 2">B</div><div id="mtq_marker-1-2-1" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-2-1" class="mtq_answer_text">ポート443 のインバウンドトラフィックを許可するセキュリティグループを作成します。</div></td></tr><tr id="mtq_row-1-3-1" onclick="mtq_button_click(1,3,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-3-1" class="mtq_css_letter_button mtq_letter_button_2" alt="問題1, Choice 3">C</div><div id="mtq_marker-1-3-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-3-1" class="mtq_answer_text">インバウンドトラフィックおよびアウトバウンドトラフィックの両方でポート443 を許可するネットワーク ACL を作成します。</div></td></tr><tr id="mtq_row-1-4-1" onclick="mtq_button_click(1,4,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-4-1" class="mtq_css_letter_button mtq_letter_button_3" alt="問題1, Choice 4">D</div><div id="mtq_marker-1-4-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-4-1" class="mtq_answer_text">ポート443 のインバウンドトラフィックと全ポートのアウトバンドトラフィックを許可するネットワーク ACL を作成します。</div></td></tr><tr id="mtq_row-1-5-1" onclick="mtq_button_click(1,5,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-1-5-1" class="mtq_css_letter_button mtq_letter_button_4" alt="問題1, Choice 5">E</div><div id="mtq_marker-1-5-1" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-1-5-1" class="mtq_answer_text">社内システムへアクセスするすべてのインバウンドトラフィックをポート443 で構成します。</div></td></tr></table><div id="mtq_question_explanation-1-1" class="mtq_explanation"><div class="mtq_explanation-label">問題 1 の説明および補足&nbsp;</div><div class="mtq_explanation-text"> セキュリティグループはステートフルです。許可されたインバウンドトラフィックに対する応答（戻りのトラフィック）は、アウトバウンドルールにかかわらずアウト側に対し通過することができます。したがって、ポート443 のインバウンドトラフィックを許可するセキュリティグループを作成することで、要件を満たすことができます。また、社内システムへアクセスするすべてのインバウンドトラフィックをポート443 で構成することも必要です。<br>
+<br>
+■以下は間違いです。<br>
+・ポート443 のインバウンドトラフィックと全ポートのアウトバンドトラフィックを許可するネットワークACLを作成します。<br>
+→ネットワーク ACL はネットワークに対して動作するFWになり、特定なインスタンスに対して設定することができず、全ポートのアウトバンドトラフィックを許可することは推奨されません。<br>
+<br>
+・インバウンドトラフィックおよびアウトバウンドトラフィックの両方でポート443 を許可するセキュリティグループルールを作成します。<br>
+・インバウンドトラフィックおよびアウトバウンドトラフィックの両方でポート443 を許可するネットワークACLを作成します。<br>
+→443 の戻りの通信は任意のポートになるため間違いです。<br>
+参考URL:<a href="https://aws.amazon.com/jp/vpc/faqs/#Security_and_Filtering" target="_blank">セキュリティとフィルタリング</a></div></div></div><div class="mtq_question mtq_scroll_item-1" id="mtq_question-2-1"><table class="mtq_question_heading_table"><tr><td><div class="mtq_question_label ">問題2</div><div id="mtq_stamp-2-1" class="mtq_stamp"></div></td></tr></table><div id="mtq_question_text-2-1" class="mtq_question_text">Amazon RDS の、マルチ AZ 配置を使用した DB インスタンスのプライマリ DB インスタンスに障害が発生した場合、どうなりますか？</div><table class="mtq_answer_table"><colgroup><col class="mtq_oce_first"></colgroup><tr id="mtq_row-2-1-1" onclick="mtq_button_click(2,1,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-2-1-1" class="mtq_css_letter_button mtq_letter_button_0" alt="問題2, Choice 1">A</div><div id="mtq_marker-2-1-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-2-1-1" class="mtq_answer_text">プライマリ DB インスタンスの IP をスタンバイ DB インスタンスに切り替える。</div></td></tr><tr id="mtq_row-2-2-1" onclick="mtq_button_click(2,2,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-2-2-1" class="mtq_css_letter_button mtq_letter_button_1" alt="問題2, Choice 2">B</div><div id="mtq_marker-2-2-1" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-2-2-1" class="mtq_answer_text">正規名レコード（CNAME）は、プライマリからスタンバイに変更されます。</div></td></tr><tr id="mtq_row-2-3-1" onclick="mtq_button_click(2,3,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-2-3-1" class="mtq_css_letter_button mtq_letter_button_2" alt="問題2, Choice 3">C</div><div id="mtq_marker-2-3-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-2-3-1" class="mtq_answer_text">スタンバイのアベイラビリティーゾーンに新しい DB インスタンスが作成されます。</div></td></tr><tr id="mtq_row-2-4-1" onclick="mtq_button_click(2,4,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-2-4-1" class="mtq_css_letter_button mtq_letter_button_3" alt="問題2, Choice 4">D</div><div id="mtq_marker-2-4-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-2-4-1" class="mtq_answer_text">RDS（Relational Database Service）DB インスタンスが再起動します。</div></td></tr></table><div id="mtq_question_explanation-2-1" class="mtq_explanation"><div class="mtq_explanation-label">問題 2 の説明および補足&nbsp;</div><div class="mtq_explanation-text"> フェイルオーバー時、Amazon RDS は単純に DB インスタンスの正規名レコード（CNAME）を反転させ、スタンバイをポイントします。そしてこのスタンバイが今度は新しいプライマリになります。<br>
+Amazon RDS は、マルチ AZ 配置を使用して DB インスタンスの高可用性およびフェイルオーバーサポートを提供します。DB インスタンスの計画的な機能停止または計画外の機能停止が発生すると、マルチ AZ を有効にした場合は、Amazon RDS により別のアベイラビリティゾーン内のスタンバイレプリカに自動的に切り替えられます。フェイルオーバーが完了するまでにかかる時間は、データベースアクティビティや、プライマリ DB インスタンスが使用できなくなった時点の他の条件によって異なります。フェイルオーバー時間は通常 60 ～ 120 秒です。</div></div></div><div class="mtq_question mtq_scroll_item-1" id="mtq_question-3-1"><table class="mtq_question_heading_table"><tr><td><div class="mtq_question_label ">問題3</div><div id="mtq_stamp-3-1" class="mtq_stamp"></div></td></tr></table><div id="mtq_question_text-3-1" class="mtq_question_text">IAM ユーザーがメンバーになれるグループの数に制限について選択してください。</div><table class="mtq_answer_table"><colgroup><col class="mtq_oce_first"></colgroup><tr id="mtq_row-3-1-1" onclick="mtq_button_click(3,1,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-3-1-1" class="mtq_css_letter_button mtq_letter_button_0" alt="問題3, Choice 1">A</div><div id="mtq_marker-3-1-1" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-3-1-1" class="mtq_answer_text">すべての IAM ユーザーに対して制限がある。</div></td></tr><tr id="mtq_row-3-2-1" onclick="mtq_button_click(3,2,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-3-2-1" class="mtq_css_letter_button mtq_letter_button_1" alt="問題3, Choice 2">B</div><div id="mtq_marker-3-2-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-3-2-1" class="mtq_answer_text">制限はない</div></td></tr><tr id="mtq_row-3-3-1" onclick="mtq_button_click(3,3,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-3-3-1" class="mtq_css_letter_button mtq_letter_button_2" alt="問題3, Choice 3">C</div><div id="mtq_marker-3-3-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-3-3-1" class="mtq_answer_text">特別な許可が与えられていない限り制限はない。</div></td></tr><tr id="mtq_row-3-4-1" onclick="mtq_button_click(3,4,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-3-4-1" class="mtq_css_letter_button mtq_letter_button_3" alt="問題3, Choice 4">D</div><div id="mtq_marker-3-4-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-3-4-1" class="mtq_answer_text">root 以外のすべての IAM ユーザーに制限がある。</div></td></tr></table><div id="mtq_question_explanation-3-1" class="mtq_explanation"><div class="mtq_explanation-label">問題 3 の説明および補足&nbsp;</div><div class="mtq_explanation-text"> IAM ユーザーがメンバーになれるグループは 10 に制限されています。<br>
+参考URL:<a href="http://docs.aws.amazon.com/ja_jp/IAM/latest/UserGuide/reference_iam-limits.html" target="_blank">IAM エンティティにおける制限およびオブジェクト</a></div></div></div><div class="mtq_question mtq_scroll_item-1" id="mtq_question-4-1"><table class="mtq_question_heading_table"><tr><td><div class="mtq_question_label ">問題4</div><div id="mtq_stamp-4-1" class="mtq_stamp"></div></td></tr></table><div id="mtq_question_text-4-1" class="mtq_question_text">Auto Scaling グループは、全体の CPU 負荷が 5 分間隔で 65 ％を超えると、1 つの新しい Amazon EC2 インスタンスを起動するように設定されています。 Auto Scaling グループは、以前の規模の拡大や縮小が適用される前に 2 番目の Amazon EC2 インスタンスを起動することがあります。 2 番目のインスタンスは必須ではなく無駄なコストです。 Auto Scaling グループが 2 番目のインスタンスを起動しないようにする方法を選択してください。</div><table class="mtq_answer_table"><colgroup><col class="mtq_oce_first"></colgroup><tr id="mtq_row-4-1-1" onclick="mtq_button_click(4,1,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-4-1-1" class="mtq_css_letter_button mtq_letter_button_0" alt="問題4, Choice 1">A</div><div id="mtq_marker-4-1-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-4-1-1" class="mtq_answer_text">スケーリング動作をトリガする CPU のしきい値を調整する。</div></td></tr><tr id="mtq_row-4-2-1" onclick="mtq_button_click(4,2,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-4-2-1" class="mtq_css_letter_button mtq_letter_button_1" alt="問題4, Choice 2">B</div><div id="mtq_marker-4-2-1" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-4-2-1" class="mtq_answer_text">スケーリングポリシーのクールダウン期間を追加する。</div></td></tr><tr id="mtq_row-4-3-1" onclick="mtq_button_click(4,3,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-4-3-1" class="mtq_css_letter_button mtq_letter_button_2" alt="問題4, Choice 3">C</div><div id="mtq_marker-4-3-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-4-3-1" class="mtq_answer_text">Auto Scaling グループのライフサイクルフックを設定する。</div></td></tr><tr id="mtq_row-4-4-1" onclick="mtq_button_click(4,4,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-4-4-1" class="mtq_css_letter_button mtq_letter_button_3" alt="問題4, Choice 4">D</div><div id="mtq_marker-4-4-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-4-4-1" class="mtq_answer_text">Auto Scaling グループに新しい起動設定をアタッチする。</div></td></tr></table><div id="mtq_question_explanation-4-1" class="mtq_explanation"><div class="mtq_explanation-label">問題 4 の説明および補足&nbsp;</div><div class="mtq_explanation-text"> <b>クールダウン期間は Auto Scaling グループにおける構成可能な設定で、以前の規模の拡大や縮小が適用される前に、追加のインスタンスを起動または終了しないようにします。</b>Auto Scaling グループが簡易スケーリングポリシーを使用して動的にスケールした後、クールダウン期間が完了するのを待ってから規模の拡大や縮小を再開します。Auto Scaling グループを手動でスケールすると、デフォルトではクールダウン期間を待つことはありませんが、デフォルトをオーバーライドしてクールダウン期間を採用できます。インスタンスが正常でなくなった場合、Auto Scaling グループはクールダウン期間の完了を待つことなく、異常のあるインスタンスを置き換えます。<br>
+■以下は間違いです。<br>
+・Auto Scaling グループのライフサイクルフックを設定する。<br>
+→Auto Scaling でインスタンスの起動 or 終了時に任意の処理を実行できるのがライフサイクルフック機能のため間違いです。<br>
+・スケーリング動作をトリガする CPU のしきい値を調整する。<br>
+→しきい値を調整しても、クールダウン期間を有効にしない限り、Auto Scalingは複数のインスタンスを起動する場合があるので間違いです。<br>
+参考URL：<a href="https://docs.aws.amazon.com/ja_jp/autoscaling/ec2/userguide/Cooldown.html" target="_blank">Amazon EC2 Auto Scaling のスケーリングクールダウン</a></div></div></div><div class="mtq_question mtq_scroll_item-1" id="mtq_question-5-1"><table class="mtq_question_heading_table"><tr><td><div class="mtq_question_label ">問題5</div><div id="mtq_stamp-5-1" class="mtq_stamp"></div></td></tr></table><div id="mtq_question_text-5-1" class="mtq_question_text">Amazon S3 バケットを CloudFront に適用するアプリケーションがあります。 Amazon S3 バケット上のオブジェクトを更新してもユーザーに更新後のコンテンツが表示されません。更新後のコンテンツを表示させるために最適な方法を選択してください。</div><table class="mtq_answer_table"><colgroup><col class="mtq_oce_first"></colgroup><tr id="mtq_row-5-1-1" onclick="mtq_button_click(5,1,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-5-1-1" class="mtq_css_letter_button mtq_letter_button_0" alt="問題5, Choice 1">A</div><div id="mtq_marker-5-1-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-5-1-1" class="mtq_answer_text">コンテンツを提供している CloudFront ディストリビューションでキャッシュを削除する。</div></td></tr><tr id="mtq_row-5-2-1" onclick="mtq_button_click(5,2,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-5-2-1" class="mtq_css_letter_button mtq_letter_button_1" alt="問題5, Choice 2">B</div><div id="mtq_marker-5-2-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-5-2-1" class="mtq_answer_text">更新されたコンテンツで新しいキャッシュ動作パスを作成する。</div></td></tr><tr id="mtq_row-5-3-1" onclick="mtq_button_click(5,3,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-5-3-1" class="mtq_css_letter_button mtq_letter_button_2" alt="問題5, Choice 3">C</div><div id="mtq_marker-5-3-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-5-3-1" class="mtq_answer_text">コンテンツを提供している CloudFront ディストリビューションで無効化を実行する。</div></td></tr><tr id="mtq_row-5-4-1" onclick="mtq_button_click(5,4,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-5-4-1" class="mtq_css_letter_button mtq_letter_button_3" alt="問題5, Choice 4">D</div><div id="mtq_marker-5-4-1" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-5-4-1" class="mtq_answer_text">更新前のオブジェクトを削除するために TTL 値を変更します。</div></td></tr></table><div id="mtq_question_explanation-5-1" class="mtq_explanation"><div class="mtq_explanation-label">問題 5 の説明および補足&nbsp;</div><div class="mtq_explanation-text"> CloudFront が別のリクエストをオリジンに転送するまでにオブジェクトを CloudFront キャッシュに保持する時間を制御できます。<b>この期間を短くすると、動的なコンテンツを供給できます。</b>この期間を長くすると、ユーザー側のパフォーマンスは向上します。オブジェクトがエッジキャッシュから直接返される可能性が高くなるためです。期間を長くすると、オリジンの負荷も軽減されます。デフォルトでは、各オブジェクトは 24 時間後に自動的に有効期限切れになります。オブジェクトのキャッシュ保持期間を変更するには、CloudFront の設定でキャッシュの動作の [Minimum TTL]、[Maximum TTL]、[Default TTL] を変更します。<br>
+■以下は間違いです。<br>
+・コンテンツを提供している CloudFront ディストリビューションでキャッシュを削除する。<br>
+→キャッシュを削除した場合、新しいコンテンツがキャッシュされます。コンテンツを更新する度に毎回キャッシュを削除しなくてはいけないので良い方法ではありません。<br>
+参考URL：<a href="https://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/Expiration.html" target="_blank">コンテンツがエッジキャッシュに保持される期間の管理 (有効期限)</a></div></div></div><div class="mtq_question mtq_scroll_item-1" id="mtq_question-6-1"><table class="mtq_question_heading_table"><tr><td><div class="mtq_question_label ">問題6</div><div id="mtq_stamp-6-1" class="mtq_stamp"></div></td></tr></table><div id="mtq_question_text-6-1" class="mtq_question_text">複数のアベイラビリティーゾーンで稼働しているアプリケーションを使用して、このアプリケーションがパフォーマンスの低下やダウンタイムなしにフルキャパシティで動作し続ける必要があります。 アベイラビリティーゾーンに障害が発生した場合の解決策を選択してください。</div><table class="mtq_answer_table"><colgroup><col class="mtq_oce_first"></colgroup><tr id="mtq_row-6-1-1" onclick="mtq_button_click(6,1,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-6-1-1" class="mtq_css_letter_button mtq_letter_button_0" alt="問題6, Choice 1">A</div><div id="mtq_marker-6-1-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-6-1-1" class="mtq_answer_text">スポットインスタンスを使用する。</div></td></tr><tr id="mtq_row-6-2-1" onclick="mtq_button_click(6,2,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-6-2-1" class="mtq_css_letter_button mtq_letter_button_1" alt="問題6, Choice 2">B</div><div id="mtq_marker-6-2-1" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-6-2-1" class="mtq_answer_text">Auto Scaling を使用して、他のアベイラビリティーゾーンにインスタンスを起動する。</div></td></tr><tr id="mtq_row-6-3-1" onclick="mtq_button_click(6,3,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-6-3-1" class="mtq_css_letter_button mtq_letter_button_2" alt="問題6, Choice 3">C</div><div id="mtq_marker-6-3-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-6-3-1" class="mtq_answer_text">他のアベイラビリティーゾーンに十分な EC2 インスタンスを実行する。</div></td></tr><tr id="mtq_row-6-4-1" onclick="mtq_button_click(6,4,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-6-4-1" class="mtq_css_letter_button mtq_letter_button_3" alt="問題6, Choice 4">D</div><div id="mtq_marker-6-4-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-6-4-1" class="mtq_answer_text">すべてのアベイラビリティーゾーンで専有インスタンスを使用する。</div></td></tr></table><div id="mtq_question_explanation-6-1" class="mtq_explanation"><div class="mtq_explanation-label">問題 6 の説明および補足&nbsp;</div><div class="mtq_explanation-text"> 実行中のインスタンスの最小数または指定された数を常に維持するように Auto Scaling グループを設定できます。Amazon EC2 Auto Scaling は、現在のインスタンスレベルを維持するために、Auto Scaling グループ内で実行中のインスタンスで定期的なヘルスチェックを実行します。Amazon EC2 Auto Scaling は、インスタンスに異常があると判断すると、そのインスタンスを終了して新しいインスタンスを起動します。<br>
+参考URL：<a href="https://docs.aws.amazon.com/ja_jp/autoscaling/ec2/userguide/scaling_plan.html#scaling_typesof" target="_blank">スケーリングのオプション</a></div></div></div><div class="mtq_question mtq_scroll_item-1" id="mtq_question-7-1"><table class="mtq_question_heading_table"><tr><td><div class="mtq_question_label ">問題7</div><div id="mtq_stamp-7-1" class="mtq_stamp"></div></td></tr></table><div id="mtq_question_text-7-1" class="mtq_question_text">あなたは 2 つの独立したサービスで構成されたウェブポータルを運営しています。 各サービスは独立してスケールする必要があります。 両方のサービスは同じドメインかつ異なるサブドメインで提供される必要があります。 どの構成を用いますか。</div><table class="mtq_answer_table"><colgroup><col class="mtq_oce_first"></colgroup><tr id="mtq_row-7-1-1" onclick="mtq_button_click(7,1,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-7-1-1" class="mtq_css_letter_button mtq_letter_button_0" alt="問題7, Choice 1">A</div><div id="mtq_marker-7-1-1" class="mtq_marker mtq_correct_marker" alt="正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-7-1-1" class="mtq_answer_text">各サービスごとに 1 台、合計 2 台の AWS Application Load Balancer を使用します。  両方に同じドメインを含む CNAME を割り当てます。</div></td></tr><tr id="mtq_row-7-2-1" onclick="mtq_button_click(7,2,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-7-2-1" class="mtq_css_letter_button mtq_letter_button_1" alt="問題7, Choice 2">B</div><div id="mtq_marker-7-2-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-7-2-1" class="mtq_answer_text">1 台の AWS Classic Load Balancer を使用します。 ユーザーのソースIPに基づいてウェブサーバーにリダイレクトを作成します。</div></td></tr><tr id="mtq_row-7-3-1" onclick="mtq_button_click(7,3,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-7-3-1" class="mtq_css_letter_button mtq_letter_button_2" alt="問題7, Choice 3">C</div><div id="mtq_marker-7-3-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-7-3-1" class="mtq_answer_text">各サービスごとに 1 台、2 台の AWS Classic Load Balancer を使用します。 両方に同じドメインを含む CNAME を割り当てます。</div></td></tr><tr id="mtq_row-7-4-1" onclick="mtq_button_click(7,4,1)" class="mtq_clickable"><td class="mtq_letter_button_td"><div id="mtq_button-7-4-1" class="mtq_css_letter_button mtq_letter_button_3" alt="問題7, Choice 4">D</div><div id="mtq_marker-7-4-1" class="mtq_marker mtq_wrong_marker" alt="不正解"></div></td><td class="mtq_answer_td"><div id="mtq_answer_text-7-4-1" class="mtq_answer_text">1 台の AWS Application Load Balancer を使用します。 リスナールールを指定して、各サービスに要求をルーティングします。</div></td></tr></table><div id="mtq_question_explanation-7-1" class="mtq_explanation"><div class="mtq_explanation-label">問題 7 の説明および補足&nbsp;</div><div class="mtq_explanation-text"> 同じドメインかつ異なるサブドメインでサービスを提供するためには、ホストベースのルーティングができる Application Load Balancer を用います。サービス単位のそれぞれのサブドメイン毎にバックエンドの異なる EC2 またはコンテナにルーティングすることができます。また独立したサービス及びスケーリングが必要になるため、それぞれ Application Load Balancer を用意する必要があります。<br>
+■補足：<br>
+問題文に独立したサービスおよびスケールを行う必要があると明記されており、ALB もそれぞれ独立させる必要があります。ALB 1 台で独立したスケーリングができますが、例えば 1 つの ALB で障害がすると 2 つのサービスが同時に利用できなくなり独立したサービスになりません。LB の台数を問う問題ではなく、CLB と ALB の機能の違いと、リスナールールおよび CNAME の割り当てを問う問題になります。<br>
+参考URL:<a href="https://dev.classmethod.jp/cloud/aws/tried_hostbased_routing/" target="_blank">【新機能】ALBのHost-based routingを試してみた</a></div></div></div>            <div id="mtq_results_request-1" class="mtq_results_request mtq_scroll_item-1">
+
+<p style="text-align: left;">
+お疲れさまでした。<br>
+<br>
+以下の教材は、クラウドサービス「Amazon Web Services(AWS)」を活用してWebサイトやシステムを構築するための実践書です。AWSでアカウントを作成して仮想サーバーを立てるところからはじめ、Webサーバーをインストールしたり、IPアドレスを割り当てたり、操作画面を付けて丁寧に説明します。試験前に一読してみてはいかがでしょうか。<br>
+<br></p>
+
+<div style="text-align:left;font-size:small;line-height: 1.5em;margin:0 15px 10px 0">
+<a href="http://www.amazon.co.jp/exec/obidos/asin/4822277364/mountain0a-22/" target="_blank">
+<img src="images/51iHhT0QaSL._SL160_.jpg" align="left"></a>
+<a href="http://www.amazon.co.jp/exec/obidos/asin/4822277364/mountain0a-22/" target="_blank">Amazon Web Services クラウドデザインパターン実践ガイド　改訂版</a><br>
+著者：大澤 文孝<br>
+出版：日経BP社 2015-03-05<br>
+概要：初めてAWSを利用する人から、AWSのサービスを使いこなせるようになりたい人まで必見の書です。<br>
+<a href="http://hb.afl.rakuten.co.jp/hgc/0de966fa.5880d047.0de966fb.7c038fb2/?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F13062651%2F%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F" target="_blank"><font color="#00ff00">◆</font>楽天ブックス</a>
+<a href="http://www.amazon.co.jp/exec/obidos/asin/4822277364/mountain0a-22/" target="_blank"><font color="#00ff00">◆</font>Amazon</a>
+<a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00VHW3PG6/mountain0a-22/" target="_blank"><font color="#00ff00">◆</font>Kindle</a>
+</div>
+<br><br><br><br><br><br><br><br>
+
+<div style="text-align:left;font-size:small;line-height: 1.5em;">
+<a href="http://www.amazon.co.jp/exec/obidos/asin/B00VHW3PG6/mountain0a-22/" target="_blank">
+<img src="images/61ccXm-sprL._SL160_.jpg" align="left"></a>
+<a href="http://www.amazon.co.jp/exec/obidos/asin/B00VHW3PG6/mountain0a-22/" target="_blank">Amazon Web Services クラウドデザインパターン 実践ガイド 改訂版 日経BP Next ICT選書[Kindle版]</a><br>
+著者：アマゾン データ サービス ジャパン 玉川憲,片山暁雄,アイレット 鈴木宏康<br>
+出版：日経BP社 2015-04-01<br>
+概要：クラウドサービス「Amazon Web Services(AWS)」を活用してWebサイトやシステムを構築するための実践書です。<br>
+<a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00VHW3PG6/mountain0a-22/" target="_blank"><font color="#00ff00">◆</font>Kindle</a>
+<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4822277364/mountain0a-22/" target="_blank"><font color="#00ff00">◆</font>Amazon</a>
+</div>
+<br><br><br><br><br><br><br><br>
+
+<div style="text-align:left;font-size:small;line-height: 1.5em;">
+<a href="http://www.amazon.co.jp/exec/obidos/asin/4822277372/mountain0a-22/" target="_blank">
+<img src="images/61mLjsqCPjL._SL160_.jpg" align="left"></a>
+<a href="http://www.amazon.co.jp/exec/obidos/asin/4822277372/mountain0a-22/" target="_blank">Ａｍａｚｏｎ　Ｗｅｂ　Ｓｅｒｖｉｃｅｓ　クラウドデザインパターン設計ガイド　改訂版</a><br>
+著者：玉川憲,片山暁雄,鈴木宏康,野上 忍,瀬戸島 敏宏,坂西 隆之<br>
+出版：日経BP社 2015-05-28<br> 
+概要：本書は、クラウドサービス「Amazon Web Services（AWS）」を使用したシステムを構築するための設計パターンを集めた参考書です。<br>
+<a href="http://hb.afl.rakuten.co.jp/hgc/0de966fa.5880d047.0de966fb.7c038fb2/?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F13062652%2F%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F" target="_blank"><font color="#00ff00">◆</font>楽天ブックス</a>
+<a href="http://www.amazon.co.jp/exec/obidos/asin/4822277372/mountain0a-22/" target="_blank"><font color="#00ff00">◆</font>Amazon</a>
+<a href="http://www.amazon.co.jp/exec/obidos/ASIN/B0126HZGP8/mountain0a-22/" target="_blank"><font color="#00ff00">◆</font>Kindle</a>
+</div>
+
+<br><br><br><br><br><br><br>
+    
+      
+      
+        クイズが完了したら、「クイズの結果を見る」ボタンをクリックしてください。あなたが完了していないアイテムは、間違いのマークがされます。        <span id="mtq_results_button-1" class="mtq_action_button mtq_css_button mtq_results_button" onclick="mtq_get_results(1)"> <span class="mtq_results_text">
+        クイズの結果を見る        </span> </span> </div>
+                </div>
+        <!--End of mtqscrollable items--> 
+    
+  </div>
+  <!--End of mtqscrollable--> 
+  <!--mtq_status-->
+    <div id="mtq_quiz_status-1" class="mtq_quiz_status">
+  問題は全部で 7 問。全て答えられるように頑張りましょう！  </div>
+      <table id="mtq_listrow-1" class="mtq_listrow">
+    <tr>
+      <td class="mtq_listrow_button-td"><div id="mtq_back_button-1" class="prev browse left mtq_css_back_button mtq_listrow_button" alt="前の問題へ戻る" onclick="mtq_back_nav(1);window.scroll(0,590)">&#8592;</div></td>
+      <td>        <div id="mtq_show_list-1" class="mtq_show_list mtq_css_button mtq_list_button" onclick="mtq_show_nav(1)" rel="mtq_navigator-1"> <div class="mtq_list_text">
+          リスト          </div> </div>
+        </td>
+      <td class="mtq_listrow_button-td"><div id="mtq_next_button-1" class="next browse right mtq_css_next_button mtq_listrow_button" alt="次の質問" onclick="mtq_next_nav(1);window.scroll(0,590)">&#8594;</div></td>
+    </tr>
+  </table>
+    </div> 
+  <!--Holds all questions-->
+    <div id="mtq_navigator-1" class="mtq_navigator"> <div id="mtq_return_list_t-1" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,1)"> <div class="mtq_return_text">
+    戻る    </div> </div> <div id="mtq_shaded_item_msg-1" class="mtq_shaded_item_msg">
+    網掛け部分は完了した項目です。    </div>
+    <table id="mtq_question_list_container-1" class="mtq_question_list_container">
+      <tr>
+        <td id="mtq_list_item-1-1" class="mtq_list_item" onclick="mtq_nav_click(1,1)">1</td><td id="mtq_list_item-2-1" class="mtq_list_item" onclick="mtq_nav_click(2,1)">2</td><td id="mtq_list_item-3-1" class="mtq_list_item" onclick="mtq_nav_click(3,1)">3</td><td id="mtq_list_item-4-1" class="mtq_list_item" onclick="mtq_nav_click(4,1)">4</td><td id="mtq_list_item-5-1" class="mtq_list_item" onclick="mtq_nav_click(5,1)">5</td></tr><tr><td id="mtq_list_item-6-1" class="mtq_list_item" onclick="mtq_nav_click(6,1)">6</td><td id="mtq_list_item-7-1" class="mtq_list_item" onclick="mtq_nav_click(7,1)">7</td><td id="mtq_list_item-end-1" class="mtq_list_item" onclick="mtq_nav_click(8,1)">ゴール</td>      </tr>
+    </table>
+    <div id="mtq_return_list_b-1" class="mtq_return_list mtq_css_button mtq_return_button" onclick="mtq_nav_click(0,1)"> <div class="mtq_return_text">
+    戻る    </div> </div></div>
+    <div id="mtq_variables" class="mtq_preload" style="display:none"> <input type="hidden" id="mtq_id-1" name="mtq_id_value" value="1"><input type="hidden" name="question_id[]" value="1248"><input type="hidden" id="mtq_is_answered-1-1" value="0"><input type="hidden" id="mtq_is_correct-1-1" value="0"><input type="hidden" id="mtq_is_worth-1-1" value="100"><input type="hidden" id="mtq_num_attempts-1-1" value="0"><input type="hidden" id="mtq_points_awarded-1-1" value="0"><input type="hidden" id="mtq_is_correct-1-1-1" value="0"><input type="hidden" id="mtq_was_selected-1-1-1" value="0"><input type="hidden" id="mtq_was_ever_selected-1-1-1" value="0"><input type="hidden" id="mtq_has_hint-1-1-1" value="0"><input type="hidden" id="mtq_is_correct-1-2-1" value="1"><input type="hidden" id="mtq_was_selected-1-2-1" value="0"><input type="hidden" id="mtq_was_ever_selected-1-2-1" value="0"><input type="hidden" id="mtq_has_hint-1-2-1" value="0"><input type="hidden" id="mtq_is_correct-1-3-1" value="0"><input type="hidden" id="mtq_was_selected-1-3-1" value="0"><input type="hidden" id="mtq_was_ever_selected-1-3-1" value="0"><input type="hidden" id="mtq_has_hint-1-3-1" value="0"><input type="hidden" id="mtq_is_correct-1-4-1" value="0"><input type="hidden" id="mtq_was_selected-1-4-1" value="0"><input type="hidden" id="mtq_was_ever_selected-1-4-1" value="0"><input type="hidden" id="mtq_has_hint-1-4-1" value="0"><input type="hidden" id="mtq_is_correct-1-5-1" value="1"><input type="hidden" id="mtq_was_selected-1-5-1" value="0"><input type="hidden" id="mtq_was_ever_selected-1-5-1" value="0"><input type="hidden" id="mtq_has_hint-1-5-1" value="0"><input type="hidden" id="mtq_num_ans-1-1" value="5"><input type="hidden" id="mtq_num_correct-1-1" value="2"><input type="hidden" name="question_id[]" value="1249"><input type="hidden" id="mtq_is_answered-2-1" value="0"><input type="hidden" id="mtq_is_correct-2-1" value="0"><input type="hidden" id="mtq_is_worth-2-1" value="100"><input type="hidden" id="mtq_num_attempts-2-1" value="0"><input type="hidden" id="mtq_points_awarded-2-1" value="0"><input type="hidden" id="mtq_is_correct-2-1-1" value="0"><input type="hidden" id="mtq_was_selected-2-1-1" value="0"><input type="hidden" id="mtq_was_ever_selected-2-1-1" value="0"><input type="hidden" id="mtq_has_hint-2-1-1" value="0"><input type="hidden" id="mtq_is_correct-2-2-1" value="1"><input type="hidden" id="mtq_was_selected-2-2-1" value="0"><input type="hidden" id="mtq_was_ever_selected-2-2-1" value="0"><input type="hidden" id="mtq_has_hint-2-2-1" value="0"><input type="hidden" id="mtq_is_correct-2-3-1" value="0"><input type="hidden" id="mtq_was_selected-2-3-1" value="0"><input type="hidden" id="mtq_was_ever_selected-2-3-1" value="0"><input type="hidden" id="mtq_has_hint-2-3-1" value="0"><input type="hidden" id="mtq_is_correct-2-4-1" value="0"><input type="hidden" id="mtq_was_selected-2-4-1" value="0"><input type="hidden" id="mtq_was_ever_selected-2-4-1" value="0"><input type="hidden" id="mtq_has_hint-2-4-1" value="0"><input type="hidden" id="mtq_num_ans-2-1" value="4"><input type="hidden" id="mtq_num_correct-2-1" value="1"><input type="hidden" name="question_id[]" value="1247"><input type="hidden" id="mtq_is_answered-3-1" value="0"><input type="hidden" id="mtq_is_correct-3-1" value="0"><input type="hidden" id="mtq_is_worth-3-1" value="100"><input type="hidden" id="mtq_num_attempts-3-1" value="0"><input type="hidden" id="mtq_points_awarded-3-1" value="0"><input type="hidden" id="mtq_is_correct-3-1-1" value="1"><input type="hidden" id="mtq_was_selected-3-1-1" value="0"><input type="hidden" id="mtq_was_ever_selected-3-1-1" value="0"><input type="hidden" id="mtq_has_hint-3-1-1" value="0"><input type="hidden" id="mtq_is_correct-3-2-1" value="0"><input type="hidden" id="mtq_was_selected-3-2-1" value="0"><input type="hidden" id="mtq_was_ever_selected-3-2-1" value="0"><input type="hidden" id="mtq_has_hint-3-2-1" value="0"><input type="hidden" id="mtq_is_correct-3-3-1" value="0"><input type="hidden" id="mtq_was_selected-3-3-1" value="0"><input type="hidden" id="mtq_was_ever_selected-3-3-1" value="0"><input type="hidden" id="mtq_has_hint-3-3-1" value="0"><input type="hidden" id="mtq_is_correct-3-4-1" value="0"><input type="hidden" id="mtq_was_selected-3-4-1" value="0"><input type="hidden" id="mtq_was_ever_selected-3-4-1" value="0"><input type="hidden" id="mtq_has_hint-3-4-1" value="0"><input type="hidden" id="mtq_num_ans-3-1" value="4"><input type="hidden" id="mtq_num_correct-3-1" value="1"><input type="hidden" name="question_id[]" value="1244"><input type="hidden" id="mtq_is_answered-4-1" value="0"><input type="hidden" id="mtq_is_correct-4-1" value="0"><input type="hidden" id="mtq_is_worth-4-1" value="100"><input type="hidden" id="mtq_num_attempts-4-1" value="0"><input type="hidden" id="mtq_points_awarded-4-1" value="0"><input type="hidden" id="mtq_is_correct-4-1-1" value="0"><input type="hidden" id="mtq_was_selected-4-1-1" value="0"><input type="hidden" id="mtq_was_ever_selected-4-1-1" value="0"><input type="hidden" id="mtq_has_hint-4-1-1" value="0"><input type="hidden" id="mtq_is_correct-4-2-1" value="1"><input type="hidden" id="mtq_was_selected-4-2-1" value="0"><input type="hidden" id="mtq_was_ever_selected-4-2-1" value="0"><input type="hidden" id="mtq_has_hint-4-2-1" value="0"><input type="hidden" id="mtq_is_correct-4-3-1" value="0"><input type="hidden" id="mtq_was_selected-4-3-1" value="0"><input type="hidden" id="mtq_was_ever_selected-4-3-1" value="0"><input type="hidden" id="mtq_has_hint-4-3-1" value="0"><input type="hidden" id="mtq_is_correct-4-4-1" value="0"><input type="hidden" id="mtq_was_selected-4-4-1" value="0"><input type="hidden" id="mtq_was_ever_selected-4-4-1" value="0"><input type="hidden" id="mtq_has_hint-4-4-1" value="0"><input type="hidden" id="mtq_num_ans-4-1" value="4"><input type="hidden" id="mtq_num_correct-4-1" value="1"><input type="hidden" name="question_id[]" value="1246"><input type="hidden" id="mtq_is_answered-5-1" value="0"><input type="hidden" id="mtq_is_correct-5-1" value="0"><input type="hidden" id="mtq_is_worth-5-1" value="100"><input type="hidden" id="mtq_num_attempts-5-1" value="0"><input type="hidden" id="mtq_points_awarded-5-1" value="0"><input type="hidden" id="mtq_is_correct-5-1-1" value="0"><input type="hidden" id="mtq_was_selected-5-1-1" value="0"><input type="hidden" id="mtq_was_ever_selected-5-1-1" value="0"><input type="hidden" id="mtq_has_hint-5-1-1" value="0"><input type="hidden" id="mtq_is_correct-5-2-1" value="0"><input type="hidden" id="mtq_was_selected-5-2-1" value="0"><input type="hidden" id="mtq_was_ever_selected-5-2-1" value="0"><input type="hidden" id="mtq_has_hint-5-2-1" value="0"><input type="hidden" id="mtq_is_correct-5-3-1" value="0"><input type="hidden" id="mtq_was_selected-5-3-1" value="0"><input type="hidden" id="mtq_was_ever_selected-5-3-1" value="0"><input type="hidden" id="mtq_has_hint-5-3-1" value="0"><input type="hidden" id="mtq_is_correct-5-4-1" value="1"><input type="hidden" id="mtq_was_selected-5-4-1" value="0"><input type="hidden" id="mtq_was_ever_selected-5-4-1" value="0"><input type="hidden" id="mtq_has_hint-5-4-1" value="0"><input type="hidden" id="mtq_num_ans-5-1" value="4"><input type="hidden" id="mtq_num_correct-5-1" value="1"><input type="hidden" name="question_id[]" value="1243"><input type="hidden" id="mtq_is_answered-6-1" value="0"><input type="hidden" id="mtq_is_correct-6-1" value="0"><input type="hidden" id="mtq_is_worth-6-1" value="100"><input type="hidden" id="mtq_num_attempts-6-1" value="0"><input type="hidden" id="mtq_points_awarded-6-1" value="0"><input type="hidden" id="mtq_is_correct-6-1-1" value="0"><input type="hidden" id="mtq_was_selected-6-1-1" value="0"><input type="hidden" id="mtq_was_ever_selected-6-1-1" value="0"><input type="hidden" id="mtq_has_hint-6-1-1" value="0"><input type="hidden" id="mtq_is_correct-6-2-1" value="1"><input type="hidden" id="mtq_was_selected-6-2-1" value="0"><input type="hidden" id="mtq_was_ever_selected-6-2-1" value="0"><input type="hidden" id="mtq_has_hint-6-2-1" value="0"><input type="hidden" id="mtq_is_correct-6-3-1" value="0"><input type="hidden" id="mtq_was_selected-6-3-1" value="0"><input type="hidden" id="mtq_was_ever_selected-6-3-1" value="0"><input type="hidden" id="mtq_has_hint-6-3-1" value="0"><input type="hidden" id="mtq_is_correct-6-4-1" value="0"><input type="hidden" id="mtq_was_selected-6-4-1" value="0"><input type="hidden" id="mtq_was_ever_selected-6-4-1" value="0"><input type="hidden" id="mtq_has_hint-6-4-1" value="0"><input type="hidden" id="mtq_num_ans-6-1" value="4"><input type="hidden" id="mtq_num_correct-6-1" value="1"><input type="hidden" name="question_id[]" value="1245"><input type="hidden" id="mtq_is_answered-7-1" value="0"><input type="hidden" id="mtq_is_correct-7-1" value="0"><input type="hidden" id="mtq_is_worth-7-1" value="100"><input type="hidden" id="mtq_num_attempts-7-1" value="0"><input type="hidden" id="mtq_points_awarded-7-1" value="0"><input type="hidden" id="mtq_is_correct-7-1-1" value="1"><input type="hidden" id="mtq_was_selected-7-1-1" value="0"><input type="hidden" id="mtq_was_ever_selected-7-1-1" value="0"><input type="hidden" id="mtq_has_hint-7-1-1" value="0"><input type="hidden" id="mtq_is_correct-7-2-1" value="0"><input type="hidden" id="mtq_was_selected-7-2-1" value="0"><input type="hidden" id="mtq_was_ever_selected-7-2-1" value="0"><input type="hidden" id="mtq_has_hint-7-2-1" value="0"><input type="hidden" id="mtq_is_correct-7-3-1" value="0"><input type="hidden" id="mtq_was_selected-7-3-1" value="0"><input type="hidden" id="mtq_was_ever_selected-7-3-1" value="0"><input type="hidden" id="mtq_has_hint-7-3-1" value="0"><input type="hidden" id="mtq_is_correct-7-4-1" value="0"><input type="hidden" id="mtq_was_selected-7-4-1" value="0"><input type="hidden" id="mtq_was_ever_selected-7-4-1" value="0"><input type="hidden" id="mtq_has_hint-7-4-1" value="0"><input type="hidden" id="mtq_num_ans-7-1" value="4"><input type="hidden" id="mtq_num_correct-7-1" value="1"> <div id="mtq_have_completed_string" class="mtq_preload">
+    現在のあなたの成績    </div> <div id="mtq_questions_string" class="mtq_preload">
+    問正解！！    </div> <div id="mtq_question_string" class="mtq_preload">
+    質問    </div> <div id="mtq_your_score_is_string" class="mtq_preload">
+    正解率は    </div> <div id="mtq_correct_string" class="mtq_preload">
+    正解    </div> <div id="mtq_wrong_string" class="mtq_preload">
+    不正解    </div> <div id="mtq_partial_string" class="mtq_preload">
+    正解！だけど、正解率が少し下がっちゃったね・・・（＞＜）    </div> <div id="mtq_exit_warning_string" class="mtq_preload">
+    終わりですか？クイズが終わりなっかたら、入録した答えがなくなります。    </div> <div id="mtq_correct_answer_string" class="mtq_preload">
+    Correct Answer    </div> <div id="mtq_you_selected_string" class="mtq_preload">
+    You Selected    </div> <div id="mtq_not_attempted_string" class="mtq_preload">
+    Not Attempted    </div> <div id="mtq_final_score_on_quiz_string" class="mtq_preload">
+    Final Score on Quiz    </div> <div id="mtq_attempted_questions_correct_string" class="mtq_preload">
+    Attempted Questions Correct    </div> <div id="mtq_attempted_questions_wrong_string" class="mtq_preload">
+    Attempted Questions Wrong    </div> <div id="mtq_questions_not_attempted_string" class="mtq_preload">
+    Questions Not Attempted    </div> <div id="mtq_total_questions_on_quiz_string" class="mtq_preload">
+    Total Questions on Quiz    </div> <div id="mtq_question_details_string" class="mtq_preload">
+    Question Details    </div> <div id="mtq_quiz_results_string" class="mtq_preload">
+    Results    </div> <div id="mtq_date_string" class="mtq_preload">
+    Date    </div> <div id="mtq_score_string" class="mtq_preload">
+    Score    </div> <div id="mtq_hint_string" class="mtq_preload">
+    ★    </div>
+    <div id="mtq_time_allowed_string" class="mtq_preload">Time allowed</div>
+<div id="mtq_minutes_string" class="mtq_preload">minutes</div>
+<div id="mtq_seconds_string" class="mtq_preload">seconds</div>
+<div id="mtq_time_used_string" class="mtq_preload">Time used</div>
+<div id="mtq_answer_choices_selected_string" class="mtq_preload">Answer Choice(s) Selected</div>
+<div id="mtq_question_text_string" class="mtq_preload">Question Text</div>
+
+
+    <input type="hidden" id="mtq_answer_display-1" value="2">
+    <input type="hidden" id="mtq_autoadvance-1" value="0">
+    <input type="hidden" id="mtq_autosubmit-1" value="0">
+    <input type="hidden" id="mtq_single_page-1" value="0">
+    <input type="hidden" id="mtq_show_hints-1" value="0">
+    <input type="hidden" id="mtq_show_start-1" value="0">
+    <input type="hidden" id="mtq_show_final-1" value="1">
+    <input type="hidden" id="mtq_show_alerts-1" value="0">
+    <input type="hidden" id="mtq_multiple_chances-1" value="0">
+    <input type="hidden" id="mtq_proofread-1" value="0">
+    <input type="hidden" id="mtq_scoring-1" value="0">
+    <input type="hidden" id="mtq_vform-1" value="1">
+    <input type="hidden" name="quiz_id" id="quiz_id-1" value="187">
+    <input type="hidden" name="mtq_total_questions" id="mtq_total_questions-1" value="7">
+    <input type="hidden" name="mtq_current_score" id="mtq_current_score-1" value="0">
+    <input type="hidden" name="mtq_max_score" id="mtq_max_score-1" value="0">
+    <input type="hidden" name="mtq_questions_attempted" id="mtq_questions_attempted-1" value="0">
+    <input type="hidden" name="mtq_questions_correct" id="mtq_questions_correct-1" value="0">
+    <input type="hidden" name="mtq_questions_wrong" id="mtq_questions_wrong-1" value="0">
+    <input type="hidden" name="mtq_questions_not_attempted" id="mtq_questions_not_attempted-1" value="0">
+    <input type="hidden" id="mtq_display_number-1" value="1">
+    <input type="hidden" id="mtq_show_list_option-1" value="1">
+    <input type="hidden" id="mtq_show_stamps-1" value="1">
+    <input type="hidden" id="mtq_num_ratings-1" value="6"><input type="hidden" id="mtq_ratingval-1-1" value="-1"><div id="mtq_rating-1-1" class="mtq_preload">すべて完成</div><input type="hidden" id="mtq_ratingval-2-1" value="0"><div id="mtq_rating-2-1" class="mtq_preload">You need more practice! （もっと勉強が必要です。頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-3-1" value="40"><div id="mtq_rating-3-1" class="mtq_preload">Keep trying! （引き続き頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-4-1" value="60"><div id="mtq_rating-4-1" class="mtq_preload">Not bad! （まぁまぁです。このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-5-1" value="80"><div id="mtq_rating-5-1" class="mtq_preload">Good work! （惜しい・・・ですが、よくできました！このペースで頑張りましょう！）</div><input type="hidden" id="mtq_ratingval-6-1" value="100"><div id="mtq_rating-6-1" class="mtq_preload">Perfect! （パーフェクト！！この調子で頑張りましょう！）</div>    <input type="hidden" id="mtq_gf_present-1" value="0">
+    <input type="hidden" id="mtq_cf7_present-1" value="0">
+    <input type="hidden" id="mtq_quiz_in_form-1" value="0">
+    <input type="hidden" id="mtq_gf_formid_number-1" value>
+
+  </div>
+  
+  <!--Variables Div--> 
+  <!--/form--> 
+</div>
+<!--Quiz area div-->
+
+</p>
+        </div>
+
+        <footer>
+          <!-- ページリンク -->
+
+                      <div id="widget-under-page-article" class="widgets">
+            <div id="text-16" class="widget-under-page-article widget_text">			<div class="textwidget"><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');  ga('create', 'UA-23162773-1', 'auto');  ga('send', 'pageview');</script></div>
+		</div>                </div>
+          
+
+            <!-- 文章下広告 -->
+                     <div class="ad-article-bottom ad-space">
+          <div class="ad-label">スポンサーリンク</div>
+          <div class="ad-left ad-pc adsense-336">			<div class="textwidget"><script async src="js/adsbygoogle.js"></script>
+<!-- 336*280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-1600680293185006" data-ad-slot="7697083373"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>
+          <div class="ad-right ad-pc adsense-336">			<div class="textwidget"><script async src="js/adsbygoogle.js"></script>
+<!-- 336*280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-1600680293185006" data-ad-slot="7697083373"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>
+          <div class="clear"></div>
+        </div>
+            
+          
+                    <div id="sns-group">
+          
+                    </div>
+          
+          
+          <p class="footer-post-meta">
+
+            
+            
+                      </p>
+        </footer>
+        </article><!-- .article -->
+      </div><!-- .page -->
+    
+            </div><!-- /#main -->
+          </main>
+        <!-- sidebar -->
+<div id="sidebar" role="complementary">
+    
+  <div id="sidebar-widget">
+  <!-- ウイジェット -->
+  <aside id="text-12" class="widget widget_text"><h3 class="widget_title sidebar_widget_title">◆ログイン</h3>			<div class="textwidget"><div class="swpm-login-widget-logged">
+    <div class="swpm-logged-username">
+        <div class="swpm-logged-username-label swpm-logged-label">ログイン中: </div>
+        <div class="swpm-logged-username-value swpm-logged-value">nochi0105</div>
+    </div>
+    <div class="swpm-logged-status">
+        <div class="swpm-logged-status-label swpm-logged-label">アカウント状態</div>
+        <div class="swpm-logged-status-value swpm-logged-value">Active</div>
+    </div>
+    <div class="swpm-logged-membership">
+        <div class="swpm-logged-membership-label swpm-logged-label">メンバーシップ</div>
+        <div class="swpm-logged-membership-value swpm-logged-value">ゴールドプラン</div>
+    </div>
+    <div class="swpm-logged-expiry">
+        <div class="swpm-logged-expiry-label swpm-logged-label">アカウントの有効期限</div>
+        <div class="swpm-logged-expiry-value swpm-logged-value">2019年5月31日</div>
+    </div>
+    <div class="swpm-edit-profile-link"><a href="https://aws.koiwaclub.com/membership-login/membership-profile/">Edit Profile</a></div>    <div class="swpm-logged-logout-link">
+        <a href="?swpm-logout=true">ログアウト</a>
+    </div>
+</div></div>
+		</aside><aside id="text-11" class="widget widget_text"><h3 class="widget_title sidebar_widget_title">◆問題集(SAA)</h3>			<div class="textwidget">・フリープラン<br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam01/">AWSソリューションアーキテクト#01</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam02/">AWSソリューションアーキテクト#02</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam03/">AWSソリューションアーキテクト#03</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/exam-part1/">AWS理解度確認テストPart1</a><br>
+・ゴールドプラン以上<br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam04/">AWSソリューションアーキテクト#04</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam05/">AWSソリューションアーキテクト#05</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam06/">AWSソリューションアーキテクト#06</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam07/">AWSソリューションアーキテクト#07</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam08/">AWSソリューションアーキテクト#08</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam09/">AWSソリューションアーキテクト#09</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam10/">AWSソリューションアーキテクト#10</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam11/">AWSソリューションアーキテクト#11</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam12/">AWSソリューションアーキテクト#12</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam13/">AWSソリューションアーキテクト#13</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam14/">AWSソリューションアーキテクト#14</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam15/">AWSソリューションアーキテクト#15</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam16/">AWSソリューションアーキテクト#16</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam17/">AWSソリューションアーキテクト#17</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam18/">AWSソリューションアーキテクト#18</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam19/">AWSソリューションアーキテクト#19</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam20/">AWSソリューションアーキテクト#20</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam21/">AWSソリューションアーキテクト#21</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam22/">AWSソリューションアーキテクト#22</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam23/">AWSソリューションアーキテクト#23</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam24/">AWSソリューションアーキテクト#24</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam25/">AWSソリューションアーキテクト#25</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam26/">AWSソリューションアーキテクト#26</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam27/">AWSソリューションアーキテクト#27</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam28/">AWSソリューションアーキテクト#28</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam29/">AWSソリューションアーキテクト#29</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam30/">AWSソリューションアーキテクト#30</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam31/">AWSソリューションアーキテクト#31</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam32/">AWSソリューションアーキテクト#32</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam33/">AWSソリューションアーキテクト#33</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam34/">AWSソリューションアーキテクト#34</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam35/">AWSソリューションアーキテクト#35</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam36/">AWSソリューションアーキテクト#36</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam37/">AWSソリューションアーキテクト#37</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam38/">AWSソリューションアーキテクト#38</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam39/">AWSソリューションアーキテクト#39</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam40/">AWSソリューションアーキテクト#40</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam41/">AWSソリューションアーキテクト#41</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam42/">AWSソリューションアーキテクト#42</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam43/">AWSソリューションアーキテクト#43</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam44/">AWSソリューションアーキテクト#44</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam45/">AWSソリューションアーキテクト#45</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam46/">AWSソリューションアーキテクト#46</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam47/">AWSソリューションアーキテクト#47</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam48/">AWSソリューションアーキテクト#48</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam49/">AWSソリューションアーキテクト#49</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam50/">AWSソリューションアーキテクト#50</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam51/">AWSソリューションアーキテクト#51</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam52/">AWSソリューションアーキテクト#52</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam53/">AWSソリューションアーキテクト#53</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam54/">AWSソリューションアーキテクト#54</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam55/">AWSソリューションアーキテクト#55</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam56/">AWSソリューションアーキテクト#56</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam57/">AWSソリューションアーキテクト#57</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam58/">AWSソリューションアーキテクト#58</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam59/">AWSソリューションアーキテクト#59</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam60/">AWSソリューションアーキテクト#60</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam61/">AWSソリューションアーキテクト#61</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam62/">AWSソリューションアーキテクト#62</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam63/">AWSソリューションアーキテクト#63</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam64/">AWSソリューションアーキテクト#64</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam65/">AWSソリューションアーキテクト#65</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam66/">AWSソリューションアーキテクト#66</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam67/">AWSソリューションアーキテクト#67</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam68/">AWSソリューションアーキテクト#68</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam69/">AWSソリューションアーキテクト#69</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam70/">AWSソリューションアーキテクト#70</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam71/">AWSソリューションアーキテクト#71</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam72/">AWSソリューションアーキテクト#72</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam73/">AWSソリューションアーキテクト#73</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam74/">AWSソリューションアーキテクト#74</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam75/">AWSソリューションアーキテクト#75</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam76/">AWSソリューションアーキテクト#76</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam77/">AWSソリューションアーキテクト#77</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam78/">AWSソリューションアーキテクト#78</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam79/">AWSソリューションアーキテクト#79</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam80/">AWSソリューションアーキテクト#80</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam81/">AWSソリューションアーキテクト#81</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam82/">AWSソリューションアーキテクト#82</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam83/">AWSソリューションアーキテクト#83</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam84/">AWSソリューションアーキテクト#84</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam85/">AWSソリューションアーキテクト#85</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam86/">AWSソリューションアーキテクト#86</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam87/">AWSソリューションアーキテクト#87</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam88/">AWSソリューションアーキテクト#88</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam89/">AWSソリューションアーキテクト#89</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam90/">AWSソリューションアーキテクト#90</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam91/">AWSソリューションアーキテクト#91</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam92/">AWSソリューションアーキテクト#92</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam93/">AWSソリューションアーキテクト#93</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam94/">AWSソリューションアーキテクト#94</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam95/">AWSソリューションアーキテクト#95</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam96/">AWSソリューションアーキテクト#96</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam97/">AWSソリューションアーキテクト#97</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam98/">AWSソリューションアーキテクト#98</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam99/">AWSソリューションアーキテクト#99</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam100/">AWSソリューションアーキテクト#100</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam101/">AWSソリューションアーキテクト#101</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam102/">AWSソリューションアーキテクト#102</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam103/">AWSソリューションアーキテクト#103</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam104/">AWSソリューションアーキテクト#104</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/aws-exam105/">AWSソリューションアーキテクト#105</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa106/">SAA#106</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa107/">SAA#107</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa108/">SAA#108</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa109/">SAA#109</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa110/">SAA#110</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa111/">SAA#111</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa112/">SAA#112</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa113/">SAA#113</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa114/">SAA#114</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa115/">SAA#115</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa116/">SAA#116</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa117/">SAA#117</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa118/">SAA#118</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa119/">SAA#119</a><br>
+<a href="//aws.koiwaclub.com/aws-exam2/saa120/">SAA#120</a><br></div>
+		</aside><aside id="search-2" class="widget widget_search"><form method="get" id="searchform" action="https://aws.koiwaclub.com/">
+	<input type="text" placeholder="ブログ内を検索" name="s" id="s">
+	<input type="submit" id="searchsubmit" value>
+</form></aside>  </div>
+
+  
+</div><!-- /#sidebar -->
+        </div><!-- /#body-in -->
+      </div><!-- /#body -->
+
+      <!-- footer -->
+      <footer itemscope itemtype="http://schema.org/WPFooter">
+        <div id="footer" class="main-footer">
+          <div id="footer-in">
+
+            
+          <div class="clear"></div>
+            <div id="copyright" class="wrapper">
+                            <div class="credit">
+                &copy; 2015  <a href="https://aws.koiwaclub.com">AWS WEB問題集で学習しよう</a>.              </div>
+
+                          </div>
+        </div><!-- /#footer-in -->
+        </div><!-- /#footer -->
+      </footer>
+      <div id="page-top">
+      <a id="move-page-top"><span class="fa fa-angle-double-up fa-2x"></span></a>
+  
+</div>
+          </div><!-- /#container -->
+    <script src="js/comment-reply.min.js" async></script>
+<script src="js/javascript_1.js" defer></script>
+<script src="js/javascript.js" defer></script>
+<script type="text/javascript" src="js/editor.js"></script>
+<script type="text/javascript" src="js/wp-embed.min.js"></script>
+            <!-- はてブシェアボタン用スクリプト -->
+<script type="text/javascript" src="js/bookmark_button.js" charset="utf-8" async="async"></script>
+    
+
+    
+  </body>
+</html>

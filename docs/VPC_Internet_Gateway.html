@@ -1,0 +1,816 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>インターネットゲートウェイ - Amazon Virtual Private Cloud</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="home" href="#top">
+      <link rel="up" href="VPC_Networking.html" title="VPC のネットワーキングコンポーネント">
+      <link rel="prev" href="VPC_Route_Tables.html" title="ルートテーブル">
+      <link rel="next" href="egress-only-internet-gateway.html" title="Egress-Only インターネットゲートウェイ">
+      <meta name="description" content="インターネットゲートウェイをアタッチすることで、VPC からインターネットにアクセスできるようになります。">
+      <meta name="deployment_region" content="IAD">
+      <meta name="product" content="Amazon Virtual Private Cloud">
+      <meta name="guide" content="ユーザーガイド">
+      <meta name="guide-locale" content="ja_jp">
+      <meta name="tocs" content="toc-contents.json">
+      <link rel="icon" type="image/ico" href="favicon_2.ico">
+      <link rel="shortcut icon" type="image/ico" href="favicon_2.ico">
+      <link rel="canonical" href="https://docs.aws.amazon.com/ja_jp/vpc/latest/userguide/VPC_Internet_Gateway.html">
+      <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+      <link rel="stylesheet" type="text/css" href="css/font-awesome.min_1.css">
+      <link rel="stylesheet" type="text/css" href="css/google-font.css">
+      <link id="code-style" rel="stylesheet" type="text/css" href="css/light.css">
+      <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.css">
+      <link rel="stylesheet" type="text/css" href="css/colorbox.css">
+      <link rel="stylesheet" type="text/css" href="css/awsdocs.css"><script type="text/javascript" src="js/highlight.pack.js"></script><script type="text/javascript" src="js/jquery.min.js"></script><script type="text/javascript" src="js/jquery-ui.min.js"></script><script type="text/javascript" src="js/jquery.colorbox.js"></script><script type="text/javascript" src="js/awsdocs.min.js"></script></head>
+   <body id="top">
+      <div xmlns:db="http://docbook.org/ns/docbook" id="aws-nav" class="aws-nav-header">
+         <div class="aws-nav-header-left">
+            <div class="aws-nav-logo">
+               <!--aws_logo_105x39.png--><a href="http://aws.amazon.com"><img src="images/aws_logo_105x39.png" alt="アマゾン ウェブ サービス"></a></div>
+         </div>
+         <div id="aws-nav-header-right" class="aws-nav-header-right">
+            <div class="aws-nav-cta-button-outer"><a id="aws-nav-cta-button" class="aws-nav-button" href="https://console.aws.amazon.com/console/home">コンソールにサインインする</a></div>
+            <div class="aws-nav-popover-trigger" data-dropdown="aws-nav-dropdown-lang"><select id="languageSelection" onchange="SelectLanguage()">
+                  <option value="/de_de/vpc/latest/userguide/VPC_Internet_Gateway.html">Deutsch</option>
+                  <option value="/en_us/vpc/latest/userguide/VPC_Internet_Gateway.html">English</option>
+                  <option value="/es_es/vpc/latest/userguide/VPC_Internet_Gateway.html">Español</option>
+                  <option value="/fr_fr/vpc/latest/userguide/VPC_Internet_Gateway.html">Français</option>
+                  <option value="/it_it/vpc/latest/userguide/VPC_Internet_Gateway.html">Italiano</option>
+                  <option value="/ja_jp/vpc/latest/userguide/VPC_Internet_Gateway.html" selected="selected">日本語</option>
+                  <option value="/ko_kr/vpc/latest/userguide/VPC_Internet_Gateway.html">한국어</option>
+                  <option value="/pt_br/vpc/latest/userguide/VPC_Internet_Gateway.html">Português</option>
+                  <option value="/zh_cn/vpc/latest/userguide/VPC_Internet_Gateway.html">中文 (简体)</option>
+                  <option value="/zh_tw/vpc/latest/userguide/VPC_Internet_Gateway.html">中文 (繁體)</option></select></div><a class="btn btn-pdf-link" id="pdf-link-top" href="vpc-ug.pdf#VPC_Internet_Gateway" target="_blank" title="PDF を開く"></a><div id="aws-nav-quicklinks-separator" class="aws-nav-quicklinks-separator">
+               <div class="aws-nav-left"></div>
+               <div class="aws-nav-right"></div>
+            </div>
+         </div>
+      </div>
+      <div id="content-container">
+         <div id="left-column">
+            <div id="left-col-header">
+               <div xmlns:db="http://docbook.org/ns/docbook" id="left-col-top-content">
+                  <div id="service-name">Amazon Virtual Private Cloud </div>
+                  <div id="search"><i id="search-icon" class="fa fa-search fa-2x"></i></div>
+                  <div id="guide-info">ユーザーガイド
+                     <div id="content-button"><i id="toggle-contents" class="fa fa-bars"></i></div>
+                  </div>
+               </div>
+               <form id="finegrainedSearch" method="get" onsubmit="return searchFormSubmit(this);" action="/search/doc-search.html">
+                  <div id="search-form"><select id="search-select" name="searchPath">
+                        <option value="all">サイト全体</option>
+                        <option value="AWSMarketplace">AWS Marketplace の AMI</option>
+                        <option value="amis">あらゆる提供元の AMI</option>
+                        <option value="articles">記事＆チュートリアル</option>
+                        <option value="products_and_info">AWS 製品情報</option>
+                        <option value="case_studies">導入事例</option>
+                        <option value="customerapps">カスタマーアプリケーション</option>
+                        <option value="documentation">ドキュメント</option>
+                        <option value="documentation-product">ドキュメント – 本製品</option>
+                        <option value="documentation-guide" selected="selected">ドキュメント – 本ガイド</option>
+                        <option value="datasets">パブリックデータセット</option>
+                        <option value="releasenotes">リリースノート</option>
+                        <option value="solution_providers">パートナー</option>
+                        <option value="code">サンプルコード＆ライブラリ</option></select><br><input id="search-query" name="searchQuery" type="text" placeholder="検索"><input id="search-button" src="images/search-button.png" alt="Go" type="image"></div><input type="hidden" name="this_doc_product" id="this_doc_product" value="Amazon Virtual Private Cloud"><input type="hidden" name="this_doc_guide" id="this_doc_guide" value="ユーザーガイド"><input type="hidden" name="doc_locale" value="ja_jp"></form>
+            </div>
+            <div id="toc"></div>
+         </div>
+         <div id="main-column">
+            <div id="main">
+               <div id="main-content">
+                  <div id="main-col-body">
+                     <table summary="パンくずリスト">
+                        <tr>
+                           <td>
+                              <div class="breadcrumb"><a href="/index.html">AWS ドキュメント</a> » <a href="/vpc/index.html">Amazon VPC</a> » <a href="index.html">ユーザーガイド</a> » <a href="VPC_Networking.html">VPC のネットワーキングコンポーネント</a> » <span class="breadcrumb">インターネットゲートウェイ</span></div>
+                           </td>
+                        </tr>
+                     </table>
+                     <div id="language-notice">
+                        <div class="language-notice-text"></div>
+                     </div>
+                     <div></div>
+                     <h1 class="topictitle" id="VPC_Internet_Gateway">インターネットゲートウェイ</h1>
+                     <p>インターネットゲートウェイは、VPC のインスタンスとインターネットとの間の通信を可能にする VPC コンポーネントであり、冗長性と高い可用性を備えており、水平スケーリングが可能です。そのため、ネットワークトラフィックに課される可用性のリスクや帯域幅の制約はありません。</p>
+                     <p>インターネットゲートウェイは 2 つの目的を果たします。1 つは、インターネットでルーティング可能なトラフィックの送信先を VPC のルートテーブルに追加することです。もう
+                        1 つは、パブリック IPv4 アドレスが割り当てられているインスタンスに対してネットワークアドレス変換 (NAT) を行うことです。
+                     </p>
+                     <p>インターネットゲートウェイは、IPv4 トラフィックおよび IPv6 トラフィックをサポートしています。</p>
+                     <h2 id="vpc-igw-internet-access">インターネットアクセスを有効にする</h2>
+                     
+                     
+                     <p>VPC のサブネットのインスタンスでインターネットのアクセスを有効にするには、以下を実行する必要があります。</p>
+                     <div class="itemizedlist">
+                        
+                        
+                        
+                        
+                        
+                        <ul class="itemizedlist" type="disc">
+                           <li class="listitem">
+                              
+                              <p>VPC にインターネットゲートウェイをアタッチする。</p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p>サブネットのルートテーブルがインターネットゲートウェイに繋がっていることを確認します。</p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p>サブネットのインスタンスに、グローバルに一意な IP アドレス (パブリック IPv4 アドレス、Elastic IP アドレス、IPv6 アドレス) が割り当てられていることを確認します。</p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p>ネットワークアクセスコントロールとセキュリティグループルールがインスタンス間で関連するトラフィックを許可していることを確認します。</p>
+                              
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <p>インターネットゲートウェイを使用するには、インターネットゲートウェイにインターネット経由のトラフィックが流れるルートをサブネットのルートテーブルに追加する必要があります。そのルートに流れるトラフィックの送信先としては、明示的に既知でない送信先
+                        (IPv4 の場合は <code class="code">0.0.0.0/0</code>、IPv6 の場合は <code class="code">::/0</code>) を指定することも、特定の IP アドレス範囲の送信先 (AWS の外側にある会社のパブリックエンドポイントのパブリック IPv4 アドレスや、VPC の外側にある他の
+                        Amazon EC2 インスタンスの Elastic IP アドレスなど) を指定することもできます。サブネットに関連付けられているルートテーブルにインターネットゲートウェイへのルートがある場合、そのサブネットは「<em>パブリックサブネット</em>」と呼ばれます。
+                     </p>
+                     
+                     <p>IPv4 でインターネット通信できるようにするには、パブリック IPv4 アドレス、またはインスタンスのプライベート IPv4 アドレスに関連付けられる Elastic
+                        IP アドレスが必要です。インスタンスは、VPC とサブネット内で定義されたプライベート（内部）IP アドレス空間のみを認識します。インターネットゲートウェイはインスタンスに代わって
+                        1 対 1 の NAT を論理的に行います。そのため、トラフィックが VPC サブネットから出てインターネットへ向かうとき、返信アドレスフィールドは、インスタンスのプライベート
+                        IP アドレスではなくパブリック IPv4 アドレスまたは Elastic IP アドレスに設定されます。逆に、インスタンスのパブリック IPv4 アドレスまたは
+                        Elastic IP アドレス宛てのトラフィックは、その送信先アドレスがインスタンスのプライベート IPv4 アドレスに変換されてから、VPC に配信されます。
+                     </p>
+                     
+                     <p>IPv6 のインターネット経由の通信を有効にするには、VPC およびサブネットは IPv6 CIDR ブロックと関連付け、インスタンスはサブネットの範囲の IPv6
+                        アドレスに割り当てる必要があります。IPv6 アドレスは、グローバルに一意であるため、デフォルトではパブリックアドレスになっています。
+                     </p>
+                     
+                     <p>次の図では、VPC のサブネット 1 は、カスタムルートテーブルと関連付けられており、インターネット経由の IPv4 トラフィックはすべてインターネットゲートウェイにポイントされます。このインスタンスには、インターネットとの通信を有効にする
+                        Elastic IP アドレスが割り当てられています。
+                     </p>
+                     
+                     
+                     <div class="mediaobject">
+                        
+                        <img src="images/internet-gateway-overview-diagram.png" alt="&#xA;                インターネットゲートウェイの使用&#xA;            ">
+                        
+                        
+                        
+                     </div>
+                     
+                     
+                     <p><b>デフォルトとデフォルト以外の VPCs へのインターネットアクセス</b></p>
+                     
+                     <p>次の表では、IPv4 または IPv6 経由でインターネットアクセスに必要なコンポーネントが VPC に自動的に付与されるかどうかについて示します。</p>
+                     
+                     <div class="table">
+                        <div class="table-contents">
+                           <table id="w115aac19c11b9c19">
+                              
+                              <tr>
+                                 
+                                 <th>コンポーネント</th>
+                                 
+                                 <th>デフォルト VPC</th>
+                                 
+                                 <th>デフォルトではない VPC</th>
+                                 
+                              </tr>
+                              
+                              
+                              <tr>
+                                 
+                                 <td>インターネットゲートウェイ</td>
+                                 
+                                 <td>はい</td>
+                                 
+                                 <td>最初または 2 番目のオプションを使用して VPC を作成した場合は自動的に付与されます。それ以外の場合は、インターネットゲートウェイを手動で作成してアタッチする必要があります。</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>IPv4 トラフィックのインターネットゲートウェイ (0.0.0.0/0) にルーティングするルートテーブル。</td>
+                                 
+                                 <td>はい</td>
+                                 
+                                 <td>最初または 2 番目のオプションを使用して VPC を作成した場合は自動的に付与されます。それ以外の場合は、手動でルートテーブルを作成し、ルーティングテーブルを追加する必要があります。</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>IPv6 トラフィックのインターネットゲートウェイ (::/0) にルーティングするルートテーブル。</td>
+                                 
+                                 <td>いいえ</td>
+                                 
+                                 <td>VPC ウィザードで、最初または 2 番目のオプションを使用して VPC を作成した場合や、IPv6 を VPC CIDR ブロックを関連付けるオプションを指定した場合は自動的に付与されます。それ以外の場合は、手動でルートテーブルを作成し、ルーティングテーブルを追加する必要があります。</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>サブネットに起動されるインスタンスに自動的に割り当てられたパブリック IPv4 アドレス。</td>
+                                 
+                                 <td>Yes (デフォルトサブネット)</td>
+                                 
+                                 <td>No (デフォルト以外のサブネット)</td>
+                                 
+                              </tr>
+                              
+                              <tr>
+                                 
+                                 <td>サブネットに起動されるインスタンスに自動的に割り当てられた IPv6 アドレス。</td>
+                                 
+                                 <td>いいえ (デフォルトサブネット)</td>
+                                 
+                                 <td>No (デフォルト以外のサブネット)</td>
+                                 
+                              </tr>
+                              
+                           </table>
+                        </div>
+                     </div>
+                     
+                     
+                     <p>デフォルト VPC の詳細については、「<a href="default-vpc.html">デフォルト VPC とデフォルトサブネット</a>」を参照してください。VPC ウィザードを使用して、インターネットゲートウェイを使う VPC を作成する方法の詳細については、「<a href="VPC_Scenario1.html">シナリオ 1: 単一のパブリックサブネットを持つ VPC</a>」または「<a href="VPC_Scenario2.html">シナリオ 2: パブリックサブネットとプライベートサブネットを持つ VPC (NAT)</a>」を参照してください。
+                     </p>
+                     
+                     <p>VPC 内の IP アドレス、インスタンスにパブリック IPv4 または IPv6 アドレスを割り当てる方法を制御する方法の詳細は、「<a href="vpc-ip-addressing.html">VPC の IP アドレス指定</a>」を参照してください。
+                     </p>
+                     
+                     <p>新しいサブネットを VPC に追加するとき、サブネットに必要なルーティングとセキュリティを設定する必要があります。</p>
+                     
+                     
+                     <h2 id="working-with-igw">インターネットゲートウェイを関連付けた VPC の作成</h2>
+                     
+                     
+                     <p>インターネットアクセスをサポートするパブリックサブネットを手動で作成する方法を以下に示します。</p>
+                     
+                     <div class="highlights" id="inline-topiclist">
+                        <p><strong>タスク</strong></p>
+                        <ul>
+                           <li><a href="#Add_IGW_Create_Subnet">サブネットを作成する</a></li>
+                           <li><a href="#Add_IGW_Attach_Gateway">インターネットゲートウェイの作成とアタッチ</a></li>
+                           <li><a href="#Add_IGW_Routing">カスタムルートテーブルを作成する</a></li>
+                           <li><a href="#Add_IG_Security_Groups">セキュリティグループルールを更新する</a></li>
+                           <li><a href="#Add_IG_EIPs">Elastic IP アドレスを追加する</a></li>
+                           <li><a href="#detach-igw">VPC からのインターネットゲートウェイのアタッチ解除</a></li>
+                           <li><a href="#delete-igw">インターネットゲートウェイを削除する</a></li>
+                           <li><a href="#api_cli_overview">API とコマンドの概要</a></li>
+                        </ul>
+                     </div>
+                     
+                     
+                     
+                     <h3 id="Add_IGW_Create_Subnet">サブネットを作成する</h3>
+                     
+                     
+                     <p class="title"><b>サブネットを VPC に追加するには</b></p>
+                     <ol>
+                        <li>
+                           <p><a href="https://console.aws.amazon.com/vpc/" target="_blank">https://console.aws.amazon.com/vpc/</a>にある Amazon VPC コンソールを開きます。
+                           </p>
+                        </li>
+                        <li>
+                           
+                           <p>ナビゲーションペインで [<b>Subnets</b>] を選択し、続いて [<b>Create Subnet</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>[<b>Create Subnet</b>] ダイアログボックスで、[VPC]、[アベイラビリティーゾーン] の順に選択し、サブネットの IPv4 CIDR ブロックを指定します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>(オプション、IPv6 のみ) [<b>IPv6 CIDR block</b>] で、[<b>Specify a custom IPv6 CIDR</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>[<b>Yes, Create</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                     </ol>
+                     
+                     <p>サブネットの詳細については、「<a href="VPC_Subnets.html">VPC とサブネット</a>」を参照してください。
+                     </p>
+                     
+                     
+                     
+                     
+                     <h3 id="Add_IGW_Attach_Gateway">インターネットゲートウェイの作成とアタッチ</h3>
+                     
+                     
+                     <p class="title"><b>インターネットゲートウェイを作成して VPC にアタッチするには</b></p>
+                     <ol>
+                        <li>
+                           <p><a href="https://console.aws.amazon.com/vpc/" target="_blank">https://console.aws.amazon.com/vpc/</a>にある Amazon VPC コンソールを開きます。
+                           </p>
+                        </li>
+                        <li>
+                           
+                           <p>ナビゲーションペインで [<b>インターネットゲートウェイ</b>] を選択してから、[<b>インターネットゲートウェイの作成</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>任意でインターネットゲートウェイに名前を付け、[<b>作成</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>作成したインターネットゲートウェイを選択して、[<b>アクション]、[VPC にアタッチ</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>リストから VPC を選択し、[<b>アタッチ</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                     </ol>
+                     
+                     
+                     
+                     
+                     <h3 id="Add_IGW_Routing">カスタムルートテーブルを作成する</h3>
+                     
+                     
+                     <p>サブネットを作成すると、VPC のメインルートテーブルと自動的に関連付けられます。デフォルトでは、メインルートテーブルにインターネットゲートウェイへのルートは含まれません。次の手順では、VPC
+                        の外部あてのトラフィックをインターネットゲートウェイに送信するルートを含むカスタムルートテーブルを作成してから、それをサブネットに関連付けます。
+                     </p>
+                     
+                     <p class="title"><b>カスタムルートテーブルを作成するには</b></p>
+                     <ol>
+                        <li>
+                           <p><a href="https://console.aws.amazon.com/vpc/" target="_blank">https://console.aws.amazon.com/vpc/</a>にある Amazon VPC コンソールを開きます。
+                           </p>
+                        </li>
+                        <li>
+                           
+                           <p>ナビゲーションペインで [<b>Route Tables</b>] を選択して、[<b>Create Route Table</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>[<b>Create Route Table</b>] ダイアログボックスで、必要に応じてルートテーブルに名前を指定し、VPC を選んでから、[<b>Yes, Create</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>作成したカスタムルートテーブルを選択します。詳細ペインには、ルート、関連付け、ルートのプロパゲーションを操作するタブが表示されます。</p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>[<b>Routes</b>] タブで、[<b>Edit</b>]、[<b>Add another route</b>] の順に選択し、必要に応じて以下のルートを選択します。以上が完了したら、[<b>Save</b>] を選択します。
+                           </p>
+                           
+                           <div class="itemizedlist">
+                              
+                              
+                              
+                              <ul class="itemizedlist" type="disc">
+                                 <li class="listitem">
+                                    
+                                    <p>IPv4 トラフィックの場合、[<b>送信先</b>] ボックスで <code class="code">0.0.0.0/0</code> を指定し、[<b>ターゲット</b>] リストでインターネットゲートウェイ ID を選択します。
+                                    </p>
+                                    
+                                 </li>
+                                 <li class="listitem">
+                                    
+                                    <p>IPv6 トラフィックの場合、[<b>送信先</b>] ボックスで <code class="code">::/0</code> を指定し、[<b>ターゲット</b>] リストでインターネットゲートウェイ ID を選択します。
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                           </div>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>[<b>Subnet Associations</b>] タブで [<b>Edit</b>] を選択し、サブネットの [<b>Associate</b>] チェックボックスをオンにして、[<b>Save</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                     </ol>
+                     
+                     <p>詳細については、「<a href="VPC_Route_Tables.html">ルートテーブル</a>」を参照してください。
+                     </p>
+                     
+                     
+                     
+                     
+                     <h3 id="Add_IG_Security_Groups">セキュリティグループルールを更新する</h3>
+                     
+                     
+                     <p>VPC には、デフォルトのセキュリティグループが用意されています。VPC で起動する各インスタンスは、自動的にそのデフォルトのセキュリティグループに関連付けられます。デフォルトのセキュリティグループのデフォルトの設定では、インターネットからのインバウンドトラフィックを許可せず、インターネットに対するすべてのアウトバンドトラフィックを許可します。そのため、インスタンスがインターネットと通信できるようにするには、パブリックインスタンスがインターネットにアクセスすることを許可する新しいセキュリティグループを作成する必要があります。</p>
+                     
+                     <p class="title"><b>新しいセキュリティグループを作成し、インスタンスに関連付けるには</b></p>
+                     <ol>
+                        <li>
+                           <p><a href="https://console.aws.amazon.com/vpc/" target="_blank">https://console.aws.amazon.com/vpc/</a>にある Amazon VPC コンソールを開きます。
+                           </p>
+                        </li>
+                        <li>
+                           
+                           <p>ナビゲーションペインで [<b>Security Groups</b>] を選択して、[<b>Create Security Group</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>[<b>Create Security Group</b>] ダイアログボックスに、セキュリティグループの名前と説明を入力します。[<b>VPC</b>] リストで VPC の ID を選択し、[<b>Yes, Create</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>セキュリティグループを選択します。詳細ペインには、セキュリティグループの詳細と、インバウンドルールとアウトバンドルールを操作するタブが表示されます。</p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>[<b>Inbound Rules</b>] タブで、[<b>Edit</b>] を選択します。[<b>Add Rule</b>] を選択し、必要な情報を入力します。たとえば、[<b>Type</b>] リストから [<b>HTTP</b>] または [<b>HTTPS</b>] を選択し、IPv4 トラフィックの場合は、<code class="code">0.0.0.0/0</code>、IPv6 トラフィックの場合は <code class="code">::/0</code> を [<b>Source</b>] に入力します。以上が完了したら、[<b>Save</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           <p><a href="https://console.aws.amazon.com/ec2/" target="_blank">https://console.aws.amazon.com/ec2/</a>) にある Amazon EC2 コンソールを開きます。
+                           </p>
+                        </li>
+                        <li>
+                           
+                           <p>ナビゲーションペインで、[<b>インスタンス</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>インスタンスを選択し、[<b>Actions</b>] を選択して、続いて [<b>Networking</b>] を選択し、次に [<b>Change Security Groups</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>[<b>Change Security Groups</b>] ダイアログボックスで、現在選択しているセキュリティグループのチェックボックスをオフにし、新しいセキュリティグループを選択します。[<b>Assign Security Groups</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                     </ol>
+                     
+                     <p>詳細については、「<a href="VPC_SecurityGroups.html">VPC のセキュリティグループ</a>」を参照してください。
+                     </p>
+                     
+                     
+                     
+                     
+                     <h3 id="Add_IG_EIPs">Elastic IP アドレスを追加する</h3>
+                     
+                     
+                     <p>IPv4 経由でインターネットからインスタンスに到達できるようにするには、サブネットでインスタンスを起動した後に、そのインスタンスに Elastic IP アドレスを割り当てる必要があります。</p>
+                     
+                     <div class="aws-note">
+                        <p class="aws-note">注記</p>
+                        <p>起動中にパブリック IPv4 アドレスをインスタンスに割り当てた場合、インスタンスはインターネットから到達可能であるため、Elastic IP アドレスを割り当てる必要はありません。インスタンスの
+                           IP アドレスの割り当ての詳細については、「<a href="vpc-ip-addressing.html">VPC の IP アドレス指定</a>」を参照してください。
+                        </p>
+                     </div>
+                     
+                     <p class="title"><b>コンソールを使用して、Elastic IP アドレスを配分し、インスタンスに割り当てるには</b></p>
+                     <ol>
+                        <li>
+                           <p><a href="https://console.aws.amazon.com/vpc/" target="_blank">https://console.aws.amazon.com/vpc/</a>にある Amazon VPC コンソールを開きます。
+                           </p>
+                        </li>
+                        <li>
+                           
+                           <p>ナビゲーションペインで [<b>Elastic IP</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>[<b>Allocate new address</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>[<b>Allocate</b>] を選択します。
+                           </p>
+                           
+                           <div class="aws-note">
+                              <p class="aws-note">注記</p>
+                              <p>アカウントが EC2-Classic をサポートしている場合には、まず [<b>VPC</b>] を選択します。
+                              </p>
+                           </div>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>リストで Elastic IP アドレスを選び、[<b>Actions</b>] を選択してから [<b>Associate address</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>[<b>Instance</b>] または [<b>Network interface</b>] を選択してから、インスタンスまたはネットワークインターフェイス ID を選択します。Elastic IP アドレスを関連付けるプライベート IP アドレスを選択してから、[<b>Associate</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                     </ol>
+                     
+                     <p>詳細については、「<a href="vpc-eips.html">Elastic IP アドレス</a>」を参照してください。
+                     </p>
+                     
+                     
+                     
+                     
+                     <h3 id="detach-igw">VPC からのインターネットゲートウェイのアタッチ解除</h3>
+                     
+                     
+                     <p>デフォルトではない VPC 内に起動するインスタンスでインターネットアクセスが不要になった場合には、VPC からインターネットゲートウェイをデタッチできます。VPC
+                        に関連付けられたパブリック IP アドレスまたは Elastic IP アドレスを持つリソースがある場合、インターネットゲートウェイをデタッチすることはできません。
+                     </p>
+                     
+                     <p class="title"><b>インターネットゲートウェイをデタッチするには</b></p>
+                     <ol>
+                        <li>
+                           <p><a href="https://console.aws.amazon.com/vpc/" target="_blank">https://console.aws.amazon.com/vpc/</a>にある Amazon VPC コンソールを開きます。
+                           </p>
+                        </li>
+                        <li>
+                           
+                           <p>ナビゲーションペインで [<b>Elastic IPs</b>] を選択し、Elastic IP アドレスを選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>[<b>Actions</b>]、[<b>Disassociate address</b>] の順に選択します。[<b>Disassociate address</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>ナビゲーションペインで、[<b>Internet Gateways</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>インターネットゲートウェイを選択し、[<b>アクション]、[VPC からデタッチ</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>[<b>VPC からデタッチ</b>] ダイアログボックスで、[<b>デタッチ</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                     </ol>
+                     
+                     
+                     
+                     
+                     <h3 id="delete-igw">インターネットゲートウェイを削除する</h3>
+                     
+                     
+                     <p>インターネットゲートウェイが不要になった場合には、それを削除することができます。VPC にアタッチされているインターネットゲートウェイを削除することはできません。</p>
+                     
+                     <p class="title"><b>インターネットゲートウェイを削除するには</b></p>
+                     <ol>
+                        <li>
+                           <p><a href="https://console.aws.amazon.com/vpc/" target="_blank">https://console.aws.amazon.com/vpc/</a>にある Amazon VPC コンソールを開きます。
+                           </p>
+                        </li>
+                        <li>
+                           
+                           <p>ナビゲーションペインで、[<b>Internet Gateways</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>インターネットゲートウェイを選択し、[<b>アクション</b>]、[<b>インターネットゲートウェイの削除</b>] の順に選択します。
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>[<b>インターネットゲートウェイの削除</b>] ダイアログボックスで、[<b>削除</b>] を選択します。
+                           </p>
+                           
+                        </li>
+                     </ol>
+                     
+                     
+                     
+                     
+                     <h3 id="api_cli_overview">API とコマンドの概要</h3>
+                     
+                     
+                     <p>このページで説明しているタスクは、コマンドラインまたは API を使用して実行できます。コマンドラインインターフェイスの詳細および利用できる API アクションの一覧については、「<a href="what-is-amazon-vpc.html#VPCInterfaces">Amazon VPC へのアクセス</a>」を参照してください。
+                     </p>
+                     
+                     <div class="itemizedlist">
+                        
+                        <p class="title"><b>インターネットゲートウェイを作成する</b></p>
+                        
+                        
+                        
+                        <ul class="itemizedlist" type="disc">
+                           <li class="listitem">
+                              
+                              <p><a href="https://docs.aws.amazon.com/cli/latest/reference/ec2/create-internet-gateway.html">create-internet-gateway</a>（AWS CLI）
+                              </p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p><a href="https://docs.aws.amazon.com/powershell/latest/reference/items/New-EC2InternetGateway.html">New-EC2InternetGateway</a>（AWS Tools for Windows PowerShell）
+                              </p>
+                              
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class="itemizedlist">
+                        
+                        <p class="title"><b>インターネットゲートウェイを VPC にアタッチする</b></p>
+                        
+                        
+                        
+                        <ul class="itemizedlist" type="disc">
+                           <li class="listitem">
+                              
+                              <p><a href="https://docs.aws.amazon.com/cli/latest/reference/ec2/attach-internet-gateway.html">attach-internet-gateway</a>（AWS CLI）
+                              </p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p><a href="https://docs.aws.amazon.com/powershell/latest/reference/items/Add-EC2InternetGateway.html">Add-EC2InternetGateway</a>（AWS Tools for Windows PowerShell）
+                              </p>
+                              
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class="itemizedlist">
+                        
+                        <p class="title"><b>インターネットゲートウェイについて説明する</b></p>
+                        
+                        
+                        
+                        <ul class="itemizedlist" type="disc">
+                           <li class="listitem">
+                              
+                              <p><a href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-internet-gateways.html">describe-internet-gateways</a>（AWS CLI）
+                              </p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p><a href="https://docs.aws.amazon.com/powershell/latest/reference/items/Get-EC2InternetGateway.html">Get-EC2InternetGateway</a>（AWS Tools for Windows PowerShell）
+                              </p>
+                              
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class="itemizedlist">
+                        
+                        <p class="title"><b>VPC からインターネットゲートウェイをデタッチする</b></p>
+                        
+                        
+                        
+                        <ul class="itemizedlist" type="disc">
+                           <li class="listitem">
+                              
+                              <p><a href="https://docs.aws.amazon.com/cli/latest/reference/ec2/detach-internet-gateway.html">detach-internet-gateway</a>（AWS CLI）
+                              </p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p><a href="https://docs.aws.amazon.com/powershell/latest/reference/items/Dismount-EC2InternetGateway.html">Dismount-EC2InternetGateway</a>（AWS Tools for Windows PowerShell）
+                              </p>
+                              
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class="itemizedlist">
+                        
+                        <p class="title"><b>インターネットゲートウェイを削除する</b></p>
+                        
+                        
+                        
+                        <ul class="itemizedlist" type="disc">
+                           <li class="listitem">
+                              
+                              <p><a href="https://docs.aws.amazon.com/cli/latest/reference/ec2/delete-internet-gateway.html">delete-internet-gateway</a>（AWS CLI）
+                              </p>
+                              
+                           </li>
+                           <li class="listitem">
+                              
+                              <p><a href="https://docs.aws.amazon.com/powershell/latest/reference/items/Remove-EC2InternetGateway.html">Remove-EC2InternetGateway</a>（AWS Tools for Windows PowerShell）
+                              </p>
+                              
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     
+                  </div>
+                  <noscript>
+                     <div>
+                        <div>
+                           <div>
+                              <div id="js_error_message">
+                                 <p><img src="images/warning.png" alt="警告"> <strong>ブラウザで JavaScript が無効になっているか、使用できません。</strong></p>
+                                 <p>AWS ドキュメントを使用するには、JavaScript を有効にする必要があります。手順については、使用するブラウザのヘルプページを参照してください。</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </noscript>
+                  <div id="main-col-footer">
+                     <div id="doc-conventions"><a target="_top" href="/general/latest/gr/docconventions.html">ドキュメントの表記規則</a></div>
+                     <div id="next"><a class="awstoc" accesskey="p" href="VPC_Route_Tables.html">« 前 </a><a class="awstoc" accesskey="n" href="egress-only-internet-gateway.html">次 »</a></div>
+                     <div id="copyright-main-footer">© 2019, Amazon Web Services, Inc. or its affiliates.All rights reserved.</div>
+                  </div>
+               </div>
+            </div>
+            <div id="right-expanded">
+               <div id="right-content-wrapper">
+                  <div id="pagetoc">
+                     <p>このページの内容:</p>
+                     <ul class="pagetoc">
+                        <li class="pagetoc" name="インターネットアクセスを有効にする"><a class="pagetoc" href="#vpc-igw-internet-access">インターネットアクセスを有効にする</a></li>
+                        <li class="pagetoc" name="インターネットゲートウェイを関連付けた VPC の作成"><a class="pagetoc" href="#working-with-igw">インターネットゲートウェイを関連付けた VPC の作成</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="cookie-notice">
+         <div class="cookie-notice-text">当社はサービス改善を図るために Cookie を使用します。当サイトを使用することにより、Cookie 取得に同意したとみなされます。 <a href="http://aws.amazon.com/legal/cookies">詳細はこちら</a></div>
+      </div>
+      <div id="footer">
+         <div id="footer_short_fb" class="hide" title="フィードバック"><a target="_blank" href="https://docs.aws.amazon.com/forms/aws-doc-feedback?feedback_destination_id=d5244445-2abd-4d80-960e-8e2df308bce4&topic_url=http://docs.aws.amazon.com/ja_jp/vpc/latest/userguide/VPC_Internet_Gateway.html&hidden_guide_name=%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%AC%E3%82%A4%E3%83%89&hidden_api_version=&hidden_file_name=VPC_Internet_Gateway"><i class="awsdocs-footer-text fa fa-envelope-o"></i></a></div>
+         <div id="footer_toggle" class="mediaobject">
+            <div id="footer_toggle_img" class="awsdocs-footer-text fa fa-caret-down"></div>
+            <div id="footer_toggle_img_collapse" class="hide awsdocs-footer-text fa fa-caret-right"></div>
+         </div>
+         <div id="footer-left"><a class="awsdocs-footer-text" target="_top" href="http://aws.amazon.com/terms">利用規約</a><span class="awsdocs-footer-text"> | </span><a class="awsdocs-footer-text" target="_top" href="http://aws.amazon.com/privacy">プライバシー</a><span class="awsdocs-footer-text"> | </span><span class="awsdocs-footer-text">© 2019, Amazon Web Services, Inc. or its affiliates.All rights reserved.</span></div>
+         <div id="footer-right">
+            <div id="feedback">
+               <div id="forums"><a id="forum_link" target="_blank" href="http://forums.aws.amazon.com/forum.jspa?forumID=58" class="awsdocs-footer-text">ご不明な点がありましたら、 フォーラムをお試しください。</a></div>
+               <div id="feedback-message" class="awsdocs-footer-text">このページは役に立ちましたか?</div>
+               <div id="feedback-yesno-buttons"><a class="awstoc btn btn-default" target="_blank" href="feedbackyes.html?topic_url=http://docs.aws.amazon.com/ja_jp/vpc/latest/userguide/VPC_Internet_Gateway.html">はい</a><a class="awstoc btn btn-default" target="_blank" href="feedbackno.html?topic_url=http://docs.aws.amazon.com/ja_jp/vpc/latest/userguide/VPC_Internet_Gateway.html">いいえ</a></div>
+               <div id="feedback-feedback-button"><a class="awstoc btn btn-default" target="_blank" href="https://docs.aws.amazon.com/forms/aws-doc-feedback?feedback_destination_id=d5244445-2abd-4d80-960e-8e2df308bce4&topic_url=http://docs.aws.amazon.com/ja_jp/vpc/latest/userguide/VPC_Internet_Gateway.html&hidden_guide_name=%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%AC%E3%82%A4%E3%83%89&hidden_api_version=&hidden_file_name=VPC_Internet_Gateway">フィードバック</a></div>
+            </div>
+         </div>
+      </div>
+      <!-- SiteCatalyst code version: H.25.2.
+            Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+            More info available at http://www.omniture.com --><script language="JavaScript" type="text/javascript" src="js/awshome_s_code.js"></script><script language="JavaScript" type="text/javascript">
+         <!--
+
+            // Documentation Service Name
+            s.prop66='Amazon Virtual Private Cloud';
+            s.eVar66='D=c66';
+  
+            // Documentation Guide Name                                                                 
+            s.prop65='ユーザーガイド';
+            s.eVar65='D=c65';
+
+            var s_code=s.t();if(s_code)document.write(s_code)//--></script><script language="JavaScript" type="text/javascript">
+         <!--
+                if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+                //--></script><noscript><img src="0_1" height="1" width="1" border="0" alt></noscript>
+      <!--/DO NOT REMOVE/-->
+      <!-- End SiteCatalyst code version: H.25.2. -->
+   </body>
+</html>

@@ -1,0 +1,75 @@
+@charset "euc-jp";
+/*****************************************************************
+ * books-footer_common_link.css
+ *
+ * ver:  1.0.0
+ * date: 2015-06-18
+*****************************************************************/
+/* ==== Special link ==== */
+/* default.css override */
+#grpSpelinlk {
+  max-width: 1490px;
+  min-width: 1024px;
+  width: auto;
+  margin: 0 auto 30px;
+  box-sizing: border-box;
+  padding: 26px 15px;
+  border-top: none;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  text-align: center;
+}
+
+#grpSpelinlk li {
+  margin:0 0 0 0.35em;
+  padding: 0 23px;
+  border-right:1px solid #ADADAD;
+  list-style-type:none;
+  display:inline;
+}
+#grpSpelinlk li.grpLast {
+  border-right:0;
+}
+#grpSpelinlk li a:link {
+  color: #686868;
+}
+#grpSpelinlk li a:visited {
+  color:#888899;
+}
+#grpSpelinlk li a {
+  white-space:nowrap;
+}
+
+/* no use */
+#grpSpelinlk h3.category {
+  margin:0;
+  padding:0;
+  line-height:1.25;
+  color:#BF0000;
+  font-weight:bold;
+  font-size:12px;
+}
+
+/* ==== Service link ==== */
+#footer.ebook-footer #grpSpelinlk {
+  max-width: unset;
+  min-width: unset;
+  margin: 0 0 30px;
+  box-sizing: unset;
+  padding: 10px 0;
+  text-align: center;
+  border-top: #808080 solid 1px;
+  border-bottom: #808080 solid 1px;
+  color: #ADADAD;
+  line-height: 1.25;
+  font-size: 12px;
+}
+
+#footer.ebook-footer #grpSpelinlk li {
+  padding: 0 0.5em 0 0;
+}
+
+#footer.ebook-footer #grpSpelinlk li a:link {
+  color: #003399;
+}
+

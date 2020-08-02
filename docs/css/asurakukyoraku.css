@@ -1,0 +1,186 @@
+
+#extra .availability .delivery-option {
+    padding: 17px 16px 13px !important;
+}
+.delivery-option {
+    margin-bottom: 10px;
+    border: solid 1px #ccc;
+    background-color: #fff;
+    font-size: 12px;
+}
+.delivery-option p {
+    margin-bottom: 0;
+    font-size: 13px;
+}
+#asuraku .asuraku-header {
+    margin-bottom: 7px;
+}
+#asuraku .asuraku-header img {
+    display: inline-block;
+    margin: 0 6px 0 0;
+    vertical-align: bottom;
+}
+#asuraku .asuraku-header span {
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 13px;
+    font-weight: normal;
+}
+#asuraku .asuraku-calender {
+    display: none;
+    margin-bottom: 7px;
+    line-height: 1.4;
+}
+#asuraku .asuraku-calender .em {
+    font-weight: bold;
+    color: #bf0000;
+}
+#asuraku .calender .asuraku-delivery-date {
+    padding: 0 5px;
+}
+#asuraku .hidden {
+    display: none !important;
+}
+#asuraku .show {
+    display: inline-block !important;
+}
+
+
+
+#kyoraku {
+    margin: 3px 0 10px;
+    padding: 10px 0 8px;
+    background: #f2f2f2;
+    font-size: 13px;
+}
+#kyoraku .kyoraku-header {
+    text-align: center;
+    padding-bottom: 7px;
+    margin-bottom: 8px;
+    border-bottom: 1px dashed #9e9e9e;
+}
+#kyoraku .kyoraku-today-delivery {
+    margin-bottom: 4px;
+}
+#kyoraku .kyoraku-tomorrow-delivery {
+    margin-bottom: 4px;
+}
+#kyoraku .kyoraku-delivery-detail {
+    display: none;
+    padding: 0 4px;
+    line-height: 1.5;
+}
+#kyoraku .kyoraku-delivery-detail strong {
+    font-weight: bold;
+}
+#kyoraku .kyoraku-delivery-detail .em {
+    font-weight: bold;
+    color: #bf0000;
+}
+#kyoraku .kyoraku-delivery-detail .kyoraku-option {
+    font-size: 16px;
+}
+
+
+
+#extra .asurakuArea {
+    border: 1px solid #b0b0b0;
+}
+#extra .js-asurakuArea {
+    position: absolute;
+    width: 262px;
+    z-index: 3;
+    display: none;
+}
+#extra .availability #asurakuHead .asuraku-condition {
+    text-align: right;
+    font-weight: normal;
+    font-size: 13px;
+}
+#extra .asurakuArea dt {
+    position: relative;
+    border-bottom: 1px solid #b0b0b0;
+    color: #333;
+    padding: 5px 0;
+    background: #f2f2f2;
+}
+#extra .asurakuArea .asurakuArea-header {
+    float: left;
+    padding-left: 56px;
+}
+#extra .asurakuArea dt .icon-cross {
+    font-size: 15px;
+    color: #ccc;
+    float: right;
+    padding-right: 6px;
+    cursor: pointer;
+}
+#extra .asurakuArea dt img {
+    vertical-align: middle;
+    margin-right: 6px;
+    background: url(../images/sprite_asuraku.gif) no-repeat 0 -15px;
+}
+#extra .asurakuArea dd p {
+    padding: 7px 10px;
+    background: #fff;
+}
+#extra .asurakuArea table {
+    font-size: 100%;
+}
+#extra .asurakuArea th {
+    border-top: 1px solid #b0b0b0;
+    color: #333;
+}
+#extra .asurakuArea thead th {
+    padding: 7px 10px;
+    background: #f2f2f2;
+    text-align: center;
+}
+#extra .asurakuArea thead th span {
+    display: block;
+    margin-left: 5px;
+    font-size: 79%;
+    font-weight: normal;
+    color: #bf0000;
+}
+#extra .asurakuArea tbody th {
+    padding: 3px 6px;
+    background: #fff;
+}
+#extra .asurakuArea td {
+    padding: 5px 10px;
+    border-top: 1px solid #b0b0b0;
+    border-left: 1px solid #b0b0b0;
+    background: #fff;
+    text-align: left;
+}
+#extra .asurakuArea tbody th img {
+    background: url(../images/sprite_asuraku.gif) no-repeat -82px -15px;
+}
+#extra .asurakuArea .koshinetsu {
+    background-position: -76px 0;
+}
+#extra .asurakuArea .kanto {
+    background-position: -38px 0;
+}
+#extra .asurakuArea .hokuriku {
+    background-position: 0 0;
+}
+#extra .asurakuArea .tokai {
+    background-position: -114px 0;
+}
+#extra .asurakuArea .kansai {
+    background-position: -152px 0;
+}
+#extra .purchaseBoxStyle .js-asuraku-click {
+    color: #0f33cc;
+    cursor: pointer;
+}
+#extra .purchaseBoxStyle .js-asuraku-click:hover {
+    text-decoration: underline;
+}
+#extra .purchaseBoxStyle .js-asuraku-click-area {
+    z-index: 1;
+    position: relative;
+    background-color: #f2f2f2;
+}

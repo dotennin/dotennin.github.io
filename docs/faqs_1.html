@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html class="no-js aws-lng-ja_JP" lang="ja-JP" data-static-assets="https://a0.awsstatic.com" data-js-version="1.0.267" data-css-version="1.0.274">
+ <head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="dns-prefetch" href="https://a0.awsstatic.com"> 
+  <link rel="dns-prefetch" href="//d0.awsstatic.com"> 
+  <link rel="dns-prefetch" href="//d1.awsstatic.com"> 
+  <title>よくある質問 - Amazon RDS | AWS</title> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="robots" content="index, follow"> 
+  <link rel="canonical" href="https://aws.amazon.com/jp/rds/faqs/"> 
+  <link rel="alternate" href="//aws.amazon.com/de/rds/faqs/" hreflang="de-de"> 
+  <link rel="alternate" href="//aws.amazon.com/rds/faqs/" hreflang="en-us"> 
+  <link rel="alternate" href="//aws.amazon.com/es/rds/faqs/" hreflang="es-es"> 
+  <link rel="alternate" href="//aws.amazon.com/fr/rds/faqs/" hreflang="fr-fr"> 
+  <link rel="alternate" href="//aws.amazon.com/id/rds/faqs/" hreflang="id-id"> 
+  <link rel="alternate" href="//aws.amazon.com/it/rds/faqs/" hreflang="it-it"> 
+  <link rel="alternate" href="//aws.amazon.com/jp/rds/faqs/" hreflang="ja-jp"> 
+  <link rel="alternate" href="//aws.amazon.com/ko/rds/faqs/" hreflang="ko-kr"> 
+  <link rel="alternate" href="//aws.amazon.com/pt/rds/faqs/" hreflang="pt-br"> 
+  <link rel="alternate" href="//aws.amazon.com/ru/rds/faqs/" hreflang="ru-ru"> 
+  <link rel="alternate" href="//aws.amazon.com/th/rds/faqs/" hreflang="th-th"> 
+  <link rel="alternate" href="//aws.amazon.com/tr/rds/faqs/" hreflang="tr-tr"> 
+  <link rel="alternate" href="//aws.amazon.com/vi/rds/faqs/" hreflang="vi-vn"> 
+  <link rel="alternate" href="//aws.amazon.com/cn/rds/faqs/" hreflang="zh-cn"> 
+  <link rel="alternate" href="//aws.amazon.com/tw/rds/faqs/" hreflang="zh-tw"> 
+  <link rel="icon" type="image/ico" href="favicon_1.ico"> 
+  <link rel="shortcut icon" type="image/ico" href="favicon_1.ico"> 
+  <link rel="apple-touch-icon" sizes="57x57" href="images/touch-icon-iphone-114-smile_1.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="images/touch-icon-ipad-144-smile_1.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="images/touch-icon-iphone-114-smile_1.png"> 
+  <link rel="apple-touch-icon" sizes="144x144" href="images/touch-icon-ipad-144-smile_1.png"> 
+  <meta property="twitter:card" content="summary"> 
+  <meta property="twitter:title" content="よくある質問 - Amazon RDS | AWS"> 
+  <meta property="twitter:description" content> 
+  <meta property="twitter:image" content="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_179x109.png"> 
+  <meta property="twitter:site" content="@awscloud"> 
+  <meta property="og:title" content="よくある質問 - Amazon RDS | AWS"> 
+  <meta property="og:type" content="company"> 
+  <meta property="og:url" content="https://aws.amazon.com/jp/rds/faqs/"> 
+  <meta property="og:image" content="images/aws_logo_smile_1200x630_1.png"> 
+  <meta property="og:site_name" content="Amazon Web Services, Inc."> 
+  <meta property="fb:pages" content="153063591397681"> 
+  <meta name="google-site-verification" content="XHghG81ulgiW-3EylGcF48sG28tBW5EH0bNUhgo_DrU"> 
+  <meta name="msvalidate.01" content="6F92E52A288E266E30C2797ECB5FCCF3"> 
+  <meta name="baidu-site-verification" content="pjxJUyWxae"> 
+  <link rel="stylesheet" href="css/style-awsm.css"> 
+  <script>
+  var AWS = {
+    PageSettings: {
+      supportedLanguages: ['ar', 'en', 'es', 'de', 'fr', 'id', 'it', 'jp', 'ko', 'pt', 'ru', 'th', 'tr', 'vi', 'cn', 'tw'],
+      defaultLanguage: 'en',
+      logDataSet: 'LIVE:PROD',
+      logInstance: 'PUB',
+      csdsEndpoint: 'https://aws.amazon.com/',
+      framework: 'v2',
+      g11nLibPath: 'https://a0.awsstatic.com/g11n-lib/2.0.28',
+      libraCSSPath: 'https://a0.awsstatic.com/libra-css/css/1.0.274',
+      libraCSSImagePath: 'https://a0.awsstatic.com/libra-css/images',
+      isLoggingEnabled: true,
+      currentLanguage: 'ja-JP',
+      isMarketplace: false,
+      isRTL: false
+    }
+  };
+
+  var require = {
+    baseUrl: 'https://a0.awsstatic.com',
+    packages: [
+      { name: 'libra', location: 'libra/1.0.267' }
+    ],
+    paths: {
+      "directories": "https://a0.awsstatic.com/libra/1.0.267/directories",
+      "libra-cardsui": "https://a0.awsstatic.com/libra/1.0.267/libra-cardsui",
+      "librastandardlib": "https://a0.awsstatic.com/libra/1.0.267/librastandardlib",
+      "aws-blog": "https://a0.awsstatic.com/aws-blog/1.0.28/js",
+      "plc": "https://a0.awsstatic.com/plc/js/1.0.68/plc",
+      "scripts": "libra/1.0.267/v1-polyfills/scripts",
+      "psf": "https://a0.awsstatic.com/psf/1.0.35",
+      "libra-search": "https://a0.awsstatic.com/libra-search/1.0.8/js",
+      "pricing-calculator": "https://a0.awsstatic.com/pricing-calculator/js/1.0.2"
+    },
+    waitSeconds: 15
+  };
+</script> 
+  <script src="js/libra-head.js"></script> 
+  <script src="js/awshome_s_code.js"></script> 
+  <script>
+      AWS.TargetMediator = {
+        supportedLanguages: AWS.PageSettings.supportedLanguages,offerOrigin: 'https://s0.awsstatic.com',pageLanguage: 'jp'
+      };
+    </script> 
+  <script data-js-script="target-mediator" src="js/aws-target-mediator.js"></script> 
+ </head> 
+ <body class="awsm"> 
+  <header id="aws-page-header" class="awsm m-page-header" role="banner"> 
+   <div id="m-nav" class="m-nav" role="navigation"> 
+    <div class="m-nav-header lb-clearfix" data-menu-url="https://s0.awsstatic.com/ja_JP/nav/v3/panel-content/desktop/index.html"> 
+     <div class="m-nav-logo"> 
+      <div class="lb-bg-logo aws-amazon_web_services_smile-header-desktop-en"> 
+       <a href="https://aws.amazon.com/jp/?nc2=h_lg"><span>アマゾン ウェブ サービスのホームページに戻るには、ここをクリック</span></a> 
+      </div> 
+     </div> 
+     <div class="m-nav-secondary-links" style="min-width: 620px"> 
+      <a href="/jp/contact-us/?nc2=h_header">日本担当チームへお問い合わせ</a> 
+      <a href="https://console.aws.amazon.com/support/home?nc2=h_ql_cu">サポート</a> 
+      <a id="m-nav-language-selector" class="lb-tiny-iblock lb-txt lb-has-trigger-indicator" href="#" data-lb-popover-trigger="popover-language-selector" data-language="jp">日本語&nbsp;<i class="icon-caret-down lb-trigger-mount"></i></a> 
+      <a class="lb-tiny-iblock lb-txt lb-has-trigger-indicator" href="#" data-lb-popover-trigger="popover-my-account">アカウント&nbsp;<i class="icon-caret-down lb-trigger-mount"></i></a> 
+      <div class="m-nav-cta-btn"> 
+       <div class="lb-mbox js-mbox" data-mbox="en_header_nav_cta" data-lb-comp-ignore="true"> 
+        <div class="lb-btn"> 
+         <a id="aws-nav-cta-button" class="lb-btn-p-primary" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct&src=default" style="min-width:171px;"><span>サインアップ</span></a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="m-nav-primary-group"> 
+      <div class="m-nav-primary-links"> 
+       <i class="m-nav-angle-left-icon" aria-hidden="true"></i> 
+       <ul> 
+        <li><a href="/jp/products/?nc2=h_ql_prod" data-panel="m-nav-panel-products">製品</a></li> 
+        <li><a href="/jp/solutions/?nc2=h_ql_sol" data-panel="m-nav-panel-solutions">ソリューション</a></li> 
+        <li><a href="/jp/pricing/?nc2=h_ql_pr" data-panel="m-nav-panel-pricing">料金</a></li> 
+        <li><a href="https://docs.aws.amazon.com/index.html?nc2=h_ql_doc" data-panel="m-nav-panel-documentation">ドキュメント</a></li> 
+        <li><a href="/jp/getting-started/?nc2=h_ql_gs" data-panel="m-nav-panel-learn">学習</a></li> 
+        <li><a href="/jp/partners/?nc2=h_ql_pn" data-panel="m-nav-panel-partner">パートナー</a></li> 
+        <li><a href="https://aws.amazon.com/marketplace/?nc2=h_ql_mp" data-panel="m-nav-panel-marketplace">AWS Marketplace</a></li> 
+        <li><a href="/jp/contact-us/?nc2=h_header" data-panel="m-nav-panel-more">その他 </a></li> 
+       </ul> 
+       <div class="m-nav-icon-group"> 
+        <i class="m-nav-angle-right-icon" aria-hidden="true"></i> 
+        <i class="m-nav-search-icon"></i> 
+       </div> 
+      </div> 
+      <div class="m-nav-search"> 
+       <form action="https://aws.amazon.com/search" role="search"> 
+        <div class="m-typeahead" data-directory-id="typeahead-suggestions" data-lb-comp="typeahead"> 
+         <input class="m-nav-search-field" placeholder="検索" autocomplete="off" spellcheck="false" dir="auto" type="text" name="searchQuery"> 
+        </div> 
+       </form> 
+       <i class="m-nav-close-icon"></i> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="popover-language-selector" data-action="hover" data-position="top"> 
+     <div class="lb-grid lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-12"> 
+       <ul> 
+        <li data-language="ar"> <a href="https://aws.amazon.com/ar/?nc1=h_ls">عربي</a> </li> 
+        <li data-language="id"> <a href="https://aws.amazon.com/id/?nc1=h_ls">Bahasa Indonesia</a> </li> 
+        <li data-language="de"> <a href="https://aws.amazon.com/de/?nc1=h_ls">Deutsch</a> </li> 
+        <li data-language="en"> <a href="https://aws.amazon.com/?nc1=h_ls">English</a> </li> 
+        <li data-language="es"> <a href="https://aws.amazon.com/es/?nc1=h_ls">Espa&ntilde;ol</a> </li> 
+        <li data-language="fr"> <a href="https://aws.amazon.com/fr/?nc1=h_ls">Fran&ccedil;ais</a> </li> 
+        <li data-language="it"> <a href="https://aws.amazon.com/it/?nc1=h_ls">Italiano</a> </li> 
+        <li data-language="pt"> <a href="https://aws.amazon.com/pt/?nc1=h_ls">Portugu&ecirc;s</a> </li> 
+       </ul> 
+      </div> 
+      <div class="lb-col lb-tiny-24 lb-mid-12"> 
+       <ul> 
+        <li data-language="vi"> <a href="https://aws.amazon.com/vi/?nc1=f_ls">Tiếng Việt</a> </li> 
+        <li data-language="tr"> <a href="https://aws.amazon.com/tr/?nc1=h_ls">T&uuml;rk&ccedil;e</a> </li> 
+        <li data-language="ru"> <a href="https://aws.amazon.com/ru/?nc1=h_ls">Ρусский</a> </li> 
+        <li data-language="th"> <a href="https://aws.amazon.com/th/?nc1=f_ls">ไทย</a> </li> 
+        <li data-language="jp"> <a href="https://aws.amazon.com/jp/?nc1=h_ls">日本語</a> </li> 
+        <li data-language="ko"> <a href="https://aws.amazon.com/ko/?nc1=h_ls">한국어</a> </li> 
+        <li data-language="cn"> <a href="https://aws.amazon.com/cn/?nc1=h_ls">中文 (简体)</a> </li> 
+        <li data-language="tw"> <a href="https://aws.amazon.com/tw/?nc1=h_ls">中文 (繁體)</a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="popover-my-account" data-action="hover" data-position="top"> 
+     <ul> 
+      <li> <a href="https://console.aws.amazon.com/?nc2=h_m_mc">AWS マネジメントコンソール</a> </li> 
+      <li> <a href="https://portal.aws.amazon.com/gp/aws/manageYourAccount?nc2=h_m_ma">アカウント設定</a> </li> 
+      <li> <a href="https://console.aws.amazon.com/billing/home?nc2=h_m_bc">請求情報とコスト管理</a> </li> 
+      <li> <a href="https://console.aws.amazon.com/iam/home?nc2=h_m_sc#security_credential">セキュリティ認証情報</a> </li> 
+      <li> <a href="https://phd.aws.amazon.com/?nc2=h_m_sc">AWS Personal Health Dashboard</a> </li> 
+     </ul> 
+    </div> 
+    <script class="tt-suggestion-tpl" type="text/x-handlebars-template">
+    <div>
+      <a href="{{primaryUrl}}">
+        <div class="tt-title">
+          {{title}}
+        </div>
+        {{#if desc}}
+          <div class="tt-desc">
+            {{desc}}
+          </div>
+        {{/if}}
+      </a>
+      <div class="tt-btn-group">
+        {{#if pricingUrl}}
+          <a href="{{pricingUrl}}">
+            <div class="tt-btn">料金</div>
+          </a>
+        {{/if}}
+        {{#if docsUrl}}
+          <a href="{{docsUrl}}">
+            <div class="tt-btn">ドキュメント</div>
+          </a>
+        {{/if}}
+      </div>
+    </div>
+  </script> 
+    <script class="tt-products-head-tpl" type="text/x-handlebars-template">
+    <div class="tt-header aws-ember lb-txt-bold">
+      <p>製品</p>
+    </div>
+  </script> 
+    <script class="tt-keypages-head-tpl" type="text/x-handlebars-template">
+    <div class="tt-header aws-ember lb-txt-bold">
+      <p>関連ページ</p>
+    </div>
+  </script> 
+    <script class="tt-tutorials-head-tpl" type="text/x-handlebars-template">
+    <div class="tt-header aws-ember lb-txt-bold">
+      <p>チュートリアル</p>
+    </div>
+  </script> 
+    <script class="tt-see-all-tpl" type="text/x-handlebars-template">
+    <div class="tt-see-all">
+      <a href="https://aws.amazon.com/search/?searchQuery={{ query }}">次に対するその他の検索結果を表示 "{{ query }}"&lrm;</a>
+    </div>
+  </script> 
+   </div> 
+   <div id="m-nav-mobile" class="m-nav-mobile"> 
+    <div id="m-nav-mobile-header" class="m-nav-mobile-header" data-menu-url="https://s0.awsstatic.com/ja_JP/nav/v3/panel-content/mobile/index.html"> 
+     <div class="lb-bg-logo aws-amazon_web_services_smile-header-mobile-en"> 
+      <a href="https://aws.amazon.com/jp/?nc2=h_lg"><span>アマゾン ウェブ サービスのホームページに戻るには、ここをクリック</span></a> 
+     </div> 
+     <div class="m-nav-mobile-button-group"> 
+      <i class="m-nav-mobile-button icon-search"></i> 
+      <i class="m-nav-mobile-button icon-reorder"></i> 
+     </div> 
+    </div> 
+    <div id="m-nav-mobile-search" class="m-nav-mobile-search"> 
+     <form action="https://aws.amazon.com/search" role="search"> 
+      <div class="m-typeahead"> 
+       <input class="m-nav-search-field" placeholder="検索" autocomplete="off" spellcheck="false" dir="auto" type="text" name="searchQuery"> 
+      </div> 
+     </form> 
+    </div> 
+    <nav id="m-nav-trimdown" role="navigation"> 
+     <ul class="m-nav-mobile-menu-group"> 
+      <li> <a href="/jp/products/?nc2=h_mo">製品</a> </li> 
+      <li> <a href="/jp/solutions/?nc2=h_mo">ソリューション</a> </li> 
+      <li> <a href="/jp/pricing/?nc2=h_mo">料金</a> </li> 
+      <li> <a href="/jp/what-is-aws/?nc2=h_mo">AWS 入門</a> </li> 
+      <li> <a href="/jp/getting-started/?nc2=h_mo">開始方法</a> </li> 
+      <li> <a href="/jp/documentation/?nc2=h_mo">ドキュメント</a> </li> 
+      <li> <a href="/jp/training/?nc2=h_mo">トレーニングと認定</a> </li> 
+      <li> <a href="/jp/developer/?nc2=h_mo">開発者センター</a> </li> 
+      <li> <a href="/jp/solutions/case-studies/?nc2=h_mo">お客様の導入事例</a> </li> 
+      <li> <a href="/jp/partners/?nc2=h_mo">パートナー</a> </li> 
+      <li> <a href="https://aws.amazon.com/marketplace/?nc2=h_mo">AWS Marketplace</a> </li> 
+      <li> <a href="https://console.aws.amazon.com/support/home?nc2=h_ql_cu">サポート</a> </li> 
+      <li> <a href="https://console.aws.amazon.com/console/home">コンソールにログイン</a> </li> 
+      <li> <a href="/jp/console/mobile/">モバイルアプリケーションをダウンロード</a> </li> 
+     </ul> 
+    </nav> 
+   </div> 
+   <div class="lb-sticky-subnav" data-lb-comp="sticky-subnav" data-lb-page-path="/jp/rds/faqs/"> 
+    <div class="lb-row lb-row-max-large lb-snap"> 
+     <div class="lb-tiny-24 lb-sticky-subnav-content"> 
+      <div class="lb-sticky-subnav-title"> 
+       <a class="lb-txt" href="/jp/rds/?nc=sn&loc=0"> Amazon RDS</a> 
+      </div> 
+      <div class="lb-sticky-subnav-links"> 
+       <a class="lb-txt-bold lb-txt" href="/jp/rds/"> 概要</a> 
+       <a class="lb-txt-bold lb-txt-none lb-txt lb-has-trigger-indicator" href="/jp/rds/features/" data-lb-popover-trigger="features"> 特徴&nbsp; <i class="icon-caret-down lb-trigger-mount"></i></a> 
+       <a class="lb-txt-bold lb-txt-none lb-txt lb-has-trigger-indicator" href="#" data-mbox-ignore="true" data-lb-popover-trigger="engines"> DB エンジン&nbsp; <i class="icon-caret-down lb-trigger-mount"></i></a> 
+       <a class="lb-txt-bold lb-txt-none lb-txt" href="/jp/rds/pricing/"> 料金</a> 
+       <a class="lb-txt-bold lb-txt-none lb-txt" href="/jp/rds/resources/"> リソース</a> 
+       <a class="lb-txt-bold lb-txt-none lb-txt lb-current-page-link" href="/jp/rds/faqs/"> よくある質問</a> 
+       <a class="lb-txt-bold lb-txt-none lb-txt" href="/jp/rds/customers/"> お客様</a> 
+       <a class="lb-txt-bold lb-txt-none lb-txt" href="/jp/rds/partners/"> パートナー</a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="engines" data-action="hover" data-position="top"> 
+    <a class="lb-txt-none lb-txt" href="/jp/rds/aurora/"> Amazon Aurora</a> 
+    <a class="lb-txt-none lb-txt" href="/jp/rds/mysql/?nc=sn&loc=3&dn=2"> RDS for MySQL</a> 
+    <a class="lb-txt-none lb-txt" href="/jp/rds/postgresql/?nc=sn&loc=3&dn=3"> RDS for PostgreSQL</a> 
+    <a class="lb-txt-none lb-txt" href="/jp/rds/mariadb/?nc=sn&loc=3&dn=4"> RDS for MariaDB</a> 
+    <a class="lb-txt-none lb-txt" href="/jp/rds/oracle/?nc=sn&loc=3&dn=5"> RDS for Oracle</a> 
+    <a class="lb-txt-none lb-txt" href="/jp/rds/sqlserver/?nc=sn&loc=3&dn=6"> RDS for SQL Server</a> 
+   </div> 
+   <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="features" data-action="hover" data-position="top"> 
+    <a class="lb-txt-none lb-txt" href="/jp/rds/features/"> Amazon RDS の特徴</a> 
+    <a class="lb-txt-none lb-txt" href="/jp/rds/performance-insights/"> Performance Insights</a> 
+   </div> 
+  </header> 
+  <div id="aws-page-content" class="lb-page-with-sidebar-left lb-page-content lb-page-with-sticky-subnav" style="padding-top:0px; padding-bottom:0px;" data-page-alert-target="true"> 
+   <div> 
+    <div class="lb-bg-right-bottom-cover lb-none-v-margin lb-grid" style="margin-top:0px; background-image:url('images/Hero_pattern.40dd5bc69fbe19defa54d5d7cd2f63a7728902e5.png');"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <div class="lb-breadcrumbs lb-breadcrumbs-dropTitle"> 
+        <ul> 
+         <li> <a href="/products/">製品</a> </li> 
+         <li> <a href="/products/databases/">データベース</a> </li> 
+         <li> <a href="/rds/"><span>Amazon RDS</span></a> </li> 
+         <li> <a href="/rds/faqs/"><span>Amazon RDS のよくある質問</span></a> </li> 
+        </ul> 
+        <h1>Amazon RDS のよくある質問</h1> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <main role="main"> 
+    <div class="lb-grid"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <h2 id="General" class="lb-txt-bold lb-txt-24 lb-h2 lb-title" style="color:#232f3e;"> 全般</h2> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS とは何ですか?</b></p> 
+        <p>Amazon Relational Database Service (Amazon RDS) は、<a adhocenable="false" href="/what-is-cloud-computing/">クラウド</a>内で<a href="/dms/">リレーショナルデータベース</a>のセットアップ、運用、およびスケーリングを簡単に行うことのできるマネージド型サービスです。これにより、時間のかかるデータベース管理作業をお客様の代わりに実行して、お客様を管理業務から解放し、アプリケーションとビジネスに集中させることができます。このサービスはコスト効率もよく、データベース容量の変更にも柔軟に対応します。</p> 
+        <p>Amazon RDS では、使いなれた MySQL、MariaDB、Oracle、SQL Server、または PostgreSQL データベースの機能を引き続き利用できます。つまり、既存のデータベースで既に使用しているコード、アプリケーション、およびツールは、Amazon RDS でシームレスに機能します。Amazon RDS では、データベースは自動的にバックアップされ、データベースソフトウェアは最新バージョンによって最新の状態に保たれます。リレーショナルデータベースインスタンスに関連するコンピューティングリソースやストレージ容量を簡単に拡張できる柔軟性が得られます。さらに、Amazon RDS は、簡単にレプリケーションを使って、データベースの可用性を強化、データの耐久性を改善、ひとつのデータベースインスタンスの容量制限を拡張して読み込み付加を軽減することができるようにします。Amazon ウェブ サービスのすべてのサービスと同様に、初期費用は不要です。使用したリソースに対してのみ支払いが発生します。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS ではどのリレーショナルデータベースエンジンがサポートされていますか?</b></p> 
+        <p>Amazon RDS では Amazon Aurora、MySQL、MariaDB、Oracle、SQL Server、PostgreSQL データベースエンジンがサポートされています。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS では何を管理できますか?</b></p> 
+        <p>Amazon RDS は、お客様からリクエストされたインフラストラクチャ容量のプロビジョニングからデータベースソフトウェアのインストールまで、リレーショナルデータベースのセットアップに関係する作業を管理します。データベースが起動および実行されると、Amazon RDS では、バックアップの実行やデータベースを強化するソフトウェアのパッチ適用などの一般的な管理タスクが自動化されます。オプションの <a href="#36">マルチ AZ 配置</a>により、Amazon RDS では、アベイラビリティーゾーン全体への同期的データレプリケーションと、自動フェイルオーバーが管理されます。</p> 
+        <p>Amazon RDS ではネイティブのデータベースアクセスが提供されるので、お客様は通常の場合と同様にリレーショナルデータベースソフトウェアを操作できます。つまり、お客様はお客様のアプリケーションに特有なデータベース設定の管理にまだ責任があります。お客様は、お客様のユースケースに最適なリレーショナルスキーマを構築する必要があり、アプリケーションのワークフローに対してデータベースを最適化するための、性能調整に責任があります。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS とAmazon EC2 Relational Database AMI はどのように使い分けますか?</b></p> 
+        <p>開発者は、Amazon ウェブ サービスでデータベースに関するいくつかの選択肢を利用できます。Amazon RDS を利用すると、フル機能のリレーショナルデータベースを、データベース管理の負担なしで運用できます。<a href="/ec2/" adhocenable="false">Amazon EC2</a> で AWS のさまざまなリレーショナルデータベース AMI のいずれかを使用することにより、クラウド内でお客様自身のリレーショナルデータベースを管理できます。これらの選択肢の間には大きな違いがあるため、実際のユースケースに応じて最適なものを選ぶときは、この違いを考慮する必要があります。お客様にとって最適なソリューションを選択するガイダンスについては、<a href="/running_databases/">AWS が提供するクラウドデータベース</a>をご覧ください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS を開始する方法を教えてください。</b></p> 
+        <p>Amazon RDS にサインアップするには、アマゾン ウェブ サービスアカウントを持っている必要があります。まだ持っていない場合は、<a adhocenable="false" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html" target="_blank">アカウントを作成</a>してください。サインアップした後、<a href="http://aws.amazon.com/documentation/rds/">Amazon RDS 資料</a>をご覧ください。<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.html" adhocenable="false">入門ガイド</a>が含まれています。</p> 
+        <p>Amazon RDS は、<a href="/free/">AWS 無料利用枠</a>の一部のため、新しい AWS のお客様は、クラウド内のマネージドデータベースサービスを無料で開始できます。<br></p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-grid"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <h2 id="Database_Instances" class="lb-txt-bold lb-txt-24 lb-h2 lb-title" style="color:#232f3e;"> データベースインスタンス</h2> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: データベースインスタンス (DB インスタンス) とは何ですか?</b></p> 
+        <p>DB インスタンスを、お客様が指定したコンピューティングおよびストレージリソースを備えた、クラウド内のデータベース環境であると考えることができます。DB インスタンスの作成と削除、DB インスタンスのインフラストラクチャ属性の定義や改良を行うことができ、さらに <a href="https://console.aws.amazon.com/">AWS マネジメントコンソール</a>、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/Welcome.html">Amazon RDS API</a>、<a href="http://docs.aws.amazon.com/cli/latest/reference/rds/index.html">AWS コマンドラインインターフェイス</a>を使用してアクセスとセキュリティを管理できます。1 つ以上の DB インスタンスを実行でき、各 DB インスタンスは、1 つ以上のデータベースまたはデータベーススキーマをサポートできます (エンジンタイプによる)。</p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: DB インスタンスを作成する方法を教えてください。</b></p> 
+        <p>DB インスタンスは、<a href="https://console.aws.amazon.com/">AWS マネジメントコンソール</a>、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/Welcome.html" adhocenable="false">Amazon RDS API</a>、<a target="_blank" href="http://docs.aws.amazon.com/cli/latest/reference/rds/index.html" adhocenable="false">AWS コマンドラインインターフェイス</a>を使用して、簡単に作成できます。AWS マネジメントコンソールを使用して DB インスタンスを起動するには、[RDS] をクリックし、次に [<b>インスタンス</b>] タブにある [<b>DB インスタンスの起動</b>] ボタンをクリックします。そこから、DB エンジンとバージョン、ライセンスモデル、インスタンスタイプ、ストレージタイプと量、およびマスターユーザーの認証情報を含む DB インスタンスに対して、パラメータを指定できます。</p> 
+        <p>DB インスタンスのバックアップ保持ポリシー、任意のバックアップウィンドウ、予定メンテナンスウィンドウを変更することも可能です。代わりに、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">CreateDBInstance API</a> や <a href="http://docs.aws.amazon.com/cli/latest/reference/rds/create-db-instance.html">create-db-instance コマンド</a>を使用して、DB インスタンスを作成することも可能です。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 自分が実行中の DB インスタンスにはどのようにアクセスしますか?</b></p> 
+        <p>いったん DB インスタンスが利用可能になったら、<a href="https://console.aws.amazon.com/">AWS マネジメントコンソール</a>、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html">DescribeDBInstances API</a>、<a href="http://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-instances.html">describe-db-instances コマンド</a>の DB インスタンスの説明を使用して、そのエンドポイントを取得できます。このエンドポイントを使用して、使い慣れたデータベースツールまたはプログラミング言語により、DB インスタンスに直接接続するために必要な接続ストリングを作成できます。実行中の DB インスタンスに対するネットワークリクエストを許可するため、アクセスを許可する必要があります。接続文字列の作成方法および開始方法についての詳細は、AWS の<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.html" adhocenable="false">入門ガイド</a>をご覧ください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS ではいくつの DB インスタンスを実行できますか?</b></p> 
+        <p>デフォルトにより、お客様は合計 40 個までの Amazon RDS DB インスタンスを保有することができます。この 40 個のインスタンスのうち 10 個までは、&quot;ライセンス込み&quot; モデルの Oracle または SQL Server DB インスタンスとすることができます。40 個のインスタンスすべては、&quot;BYOL&quot; モデルで Amazon Aurora、MySQL、MariaDB、PostgreSQL、Oracle に使用できます。RDS for SQL Server では、単一の DB インスタンス上でのデータベース数は 30 に限定されています。</p> 
+        <p>アプリケーションにこれ以上の DB インスタンスが必要である場合、<a href="https://aws.amazon.com/contact-us/request-to-increase-the-amazon-rds-db-instance-limit/">こちらの申請フォーム</a>で追加の DB インスタンスをリクエストできます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 1 つの DB インスタンスで何個のデータベースまたはスキーマを実行できますか?</b></p> 
+        <ul> 
+         <li>RDS for Amazon Aurora: ソフトウェアによる制限はありません<br> </li> 
+         <li>RDS for MySQL: ソフトウェアによる制限はありません</li> 
+         <li>RDS for MariaDB: ソフトウェアによる制限はありません<br> </li> 
+         <li>RDS for Oracle: インスタンスあたり 1 個のデータベース。データベースあたりのスキーマの数については、ソフトウェアによる制限はありません<br> </li> 
+         <li>RDS for SQL Server: インスタンスあたり 30 個のデータベース</li> 
+         <li>RDS for PostgreSQL: ソフトウェアによる制限はありません</li> 
+        </ul> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS DB インスタンスにデータをインポートする方法を教えてください。</b></p> 
+        <p>データを簡単に Amazon RDS にインポートする方法は多数あります。例えば、mysqldump または mysqlimport ユーティリティ (MySQL の場合)、Data Pump、Import/Export または SQL Loader (Oracle の場合)、インポート/エクスポートウィザード、完全バックアップファイル (.bak ファイル) または一括コピープログラム (BCP) (SQL Server の場合)、pg_dump (PostgreSQL の場合) です。データのインポートとエクスポートの詳細については、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html" target="_blank" adhocenable="false">MySQL のデータインポートガイド</a>、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Oracle.Procedural.Importing.html" target="_blank" adhocenable="false">Oracle のデータインポートガイド</a>、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/SQLServer.Procedural.Importing.html" target="_blank" adhocenable="false">SQL Server のデータインポートガイド</a>、または <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/PostgreSQL.Procedural.Importing.html" adhocenable="false" target="_blank">PostgreSQL のデータインポートガイド</a>をご覧ください。</p> 
+        <p>また、<a href="/dms/">AWS Database Migration Service</a> を使用すると、データベースを簡単かつ安全に AWS に移行できます。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: メンテナンスウィンドウとは何ですか? メンテナンスイベント中にも DB インスタンスを使用できますか?</b></p> 
+        <p>DB インスタンスの修正、データベースエンジンバージョンのアップグレード、ソフトウェアパッチの適用が発生する場合、コントロールを行う機会として、Amazon RDS メンテナンスウィンドウを利用できます。メンテナンスイベントが特定の週に予定されている場合、お客様が特定する保守管理時間枠の間に開始されます。<br> </p> 
+        <p>Amazon RDS によってお客様の DB インスタンスをオフラインにする必要があるメンテナンスイベントは、コンピューティングのスケーリングオペレーション (通常、開始から終了までの所要時間は数分)、データベースエンジンバージョンのアップグレード、必須のソフトウェアのパッチ適用です。安全性と堅牢性に関連するパッチに関してのみ、必須のソフトウェアパッチ適用が自動的にスケジューリングされます。このようなパッチは頻繁に発生するものではありません（通常数ヵ月ごとに一度です）。またお客様のメンテナンスウィンドウのごく一部以外を使用する必要があることは稀なはずです。</p> 
+        <p>DB インスタンスの作成時点で希望する毎週のメンテナンスウィンドウが指定されていない場合は、30 分のデフォルト値が割り当てられます。メンテナンスの実行時に修正する場合は、<a href="https://console.aws.amazon.com/">AWS マネジメントコンソール</a>、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html">ModifyDBInstance API</a>、<a href="http://docs.aws.amazon.com/cli/latest/reference/rds/modify-db-instance.html">modify-db-instance コマンド</a>で DB インスタンスを修正することで実行できます。各 DB インスタンスには、任意で異なるメンテナンスウィンドウを設定できます。<br></p> 
+        <p>DB インスタンスを<a href="#36">マルチ AZ 配置</a>として実行すると、メンテナンスイベントの影響をさらに軽減できます。メンテナンスオペレーションの詳細については、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html">Amazon RDS ユーザーガイド</a>を参照してください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: クエリが遅いと思われる場合、どうしたらよいですか?</b></p> 
+        <p>本番用データベースでは<a href="#enhanced-monitoring">拡張モニタリング</a>を有効にするようお勧めします。拡張モニタリングでは、CPU、メモリ、ファイルシステム、ディスク I/O に関する 50 を超えるメトリクスを利用できます。このような機能はインスタンスごとに有効にでき、詳細度 (最短で 1 秒) も選択できます。CPU の高度な利用によりクエリ性能が低下する場合は、DB インスタンスクラスのスケーリングを検討することをお勧めします。DB インスタンスのモニタリングの詳細については、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Monitoring.html">Amazon RDS ユーザーガイド</a>を参照してください。<br> </p> 
+        <p>RDS for MySQL または RDS for MariaDB を使用している場合は、データベース用のスロークエリログを参照して、実行速度の遅い SQL クエリがあるかどうかを判断します。実行速度の遅いクエリがある場合は、各クエリのパフォーマンス特性を判断します。「slow_query_log」DB パラメータを設定し、mysql.slow_log テーブルをクエリして、実行速度の遅い SQL クエリを確認することができます。詳細については、<a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Appendix.MySQL.CommonDBATasks.html">Amazon RDS ユーザーガイド</a>をご覧ください。<br> </p> 
+        <p>RDS for Oracle を使用している場合は、Oracle トレースファイルデータを使用して、実行速度の遅いクエリを特定できます。トレースファイルデータへのアクセスの詳細については、<a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.CommonDBATasks.html#Appendix.Oracle.CommonDBATasks.WorkingWithTracefiles">Amazon RDS ユーザーガイド</a>を参照してください。<br> </p> 
+        <p>RDS for SQL Server を使用する場合は、クライアント側 SQL Server トレースを使用して、実行速度の遅いクエリを特定できます。サーバー側トレースファイルデータへのアクセスついては、<a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.CommonDBATasks.html#Appendix.SQLServer.CommonDBATasks.WorkingWithTracefiles">Amazon RDS ユーザーガイド</a>を参照してください。<br> </p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-grid"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <h2 id="Database_Engine_Versions" class="lb-txt-bold lb-txt-24 lb-h2 lb-title" style="color:#232f3e;"> データベースエンジンのバージョン</h2> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS ではどのリレーショナルデータベースエンジンのバージョンがサポートされていますか?</b></p> 
+        <p>サポートされるデータベースエンジンのバージョンのリストは、各エンジンのドキュメントを参照してください。</p> 
+        <ul> 
+         <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html">Amazon RDS for MySQL</a></li> 
+         <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MariaDB.html">Amazon RDS for MariaDB</a></li> 
+         <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html">Amazon RDS for PostgreSQL</a><br> </li> 
+         <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Oracle.html">Amazon RDS for Oracle</a><br> </li> 
+         <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html">Amazon RDS for SQL Server</a><br> </li> 
+         <li><a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.DatabaseEngineUpdates.html">Amazon Aurora</a></li> 
+        </ul> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS では、どのように &quot;メジャー&quot; と &quot;マイナー&quot; の DB エンジンバージョンが区別されますか?</b></p> 
+        <p>バージョン番号付けの詳細については、各 Amazon RDS データベースエンジンのよくある質問ページを参照してください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS では、新しいバージョンの DB エンジンのサポートガイドラインが提供されますか?</b></p> 
+        <p>Amazon RDS では、メジャーとマイナーのデータベースエンジンの新しいバージョンが徐々に追加されます。サポートされる新しいバージョンの数は、エンジンのベンダーや開発組織からのリリースやパッチの頻度とその内容、および AWS のデータベースエンジニアリングチームのリリースおよびパッチの診断結果により異なります。ただし、一般的なガイダンスとして、AWS では、一般公開から 5 か月以内に新しいバージョンのエンジンをサポートできるよう取り組んでいます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: サポートされている DB エンジンバージョンのうちで、自分の DB インスタンスで実行するバージョンを指定するにはどうしたらよいですか?</b></p> 
+        <p>AWS マネジメントコンソールまたは <a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">CreateDBInstance</a> API の [<b>DB インスタンスの起動</b>] をクリックして新しい DB インスタンスを作成する際に、現在サポートされているバージョン (マイナーおよびメジャー) のいずれかを指定することができます。すべての AWS リージョンですべてのバージョンのデータベースエンジンを利用できるとは限りません。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 使用中の DB インスタンスのエンジンバージョンが新しいサポートバージョンに更新されるかどうか、およびその時期をどのように制御できますか?</b></p> 
+        <p>サポート対象の新しいバージョンのデータベースエンジンを提供することで、Amazon RDS ではお客様のデータベースインスタンスを最新に維持しようとします。ベンダーまたは開発組織によって新しいデータベースエンジンのバージョンがリリースされると、Amazon RDS で利用可能になる前に、データベースエンジニアリングチームによって徹底的にテストされます。<br> </p> 
+        <p>最新のマイナーバージョンには最新のセキュリティと機能上の修正が含まれているため、データベースインスタンスを最新のバージョンにアップグレードしておくことをお勧めします。メジャーバージョンのアップグレードと異なり、マイナーバージョンのアップグレードには、データベースエンジンの以前のマイナーバージョン (同じメジャーバージョンの) に後方互換性のあるデータベースの変更のみが含まれます。<br> </p> 
+        <p>新しいマイナーバージョンに RDS のお客様に役立つ修正が含まれていない場合は、RDS でこれを利用しないように選択できます。新しいマイナーバージョンが RDS で利用可能になるとすぐに、そのバージョンを新しい DB インスタンスで使用するマイナーバージョンとして設定することができます。<br> </p> 
+        <p>データベースインスタンスをサポート対象のエンジンバージョンに手動でアップグレードするには、AWS マネジメントコンソールまたは <a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html">ModifyDBInstance</a> API の [<b>Modify DB Instance</b>] コマンドを使用して、<b>DB Engine Version</b> パラメータをご希望のバージョンに設定できます。デフォルトではアップグレードが適用されます。それ以外の場合は、次の<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#Concepts.DBMaintenance">メンテナンスウィンドウ</a>で適用されます。[<b>Apply Immediately</b>] オプションをコンソール API で選択することで、すぐにアップグレードするよう選択することもできます。<br> </p> 
+        <p>エンジンの新しいマイナーバージョンに、以前にリリースされたマイナーバージョンと比べて重大なバグ修正が含まれている場合は、[<b>Auto Minor Version Upgrade</b>] が [Yes] に設定されている DB インスタンスの自動アップグレードをスケジュールします。これらのアップグレードは、お客様が指定したメンテナンスウィンドウ中に行われるようにスケジュールされます。<br> </p> 
+        <p>マルチ AZ インスタンスであっても DB エンジンバージョンのアップグレードにあたってはダウンタイムが発生するため、お客様が対応を計画できるようにアップグレードをスケジュールしています。マイナーバージョンの自動アップグレードをオフにする場合は、[Auto Minor Version Upgrade] 設定を [No] に設定してください。<br> </p> 
+        <p>RDS for Oracle と RDS for SQL Server で、次のマイナーバージョンへのアップグレードで異なるエディションへの変更が必要となる場合は、[<b>Auto Minor Version Upgrade</b>] が有効になっている場合でも、自動アップグレードのスケジュールは行いません。このような状況で自動アップグレードをスケジュールするかどうかは、ケースバイケースで決められます。<br> </p> 
+        <p>メジャーバージョンのアップグレードには互換性のリスクがあるため、自動的には実行せず、お客様に開始していただく必要があります (メジャーバージョンが廃止される場合を除きます。下記を参照してください)。<br> </p> 
+        <p>DB インスタンスを新しいバージョンの DB エンジンにアップグレードする方法の詳細については、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html">Amazon RDS ユーザーガイド</a>を参照してください。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: アップグレード前に自分の DB インスタンスを新しいバージョンでテストできますか?</b></p> 
+        <p>はい。テストを実施するには、既存の DB インスタンスの DB スナップショットを作成し、その DB スナップショットから復元して新しい DB インスタンスを作成した後、その新しい DB インスタンスのバージョンアップグレードを開始します。その後で、オリジナルの DB インスタンスをアップグレードするかどうかを決める前に、コピーした DB インスタンスで安全性を確かめることができます。<br></p> 
+        <p>DB スナップショットの復元については、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_RestoreFromSnapshot.html">Amazon RDS ユーザーガイド</a>を参照してください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS では、現在サポートされているバージョンのデータベースエンジンの廃止についてガイドラインが提供されていますか?</b></p> 
+        <ul> 
+         <li>メジャーバージョンリリース (MySQL 5.6、PostgreSQL 9.6 など) に対しては、Amazon RDS によるサポートが開始されてから、少なくとも 3 年間のサポートを予定しています。</li> 
+         <li>マイナーバージョンリリース (MySQL 5.6.37、PostgreSQL 9.6.1 など) に対しては、Amazon RDS によるサポートが開始されてから、少なくとも 1 年間のサポートを予定しています。</li> 
+        </ul> 
+        <p>AWS では、定期的にメジャーまたはマイナーのエンジンバージョンの廃止を行います。メジャーバージョンについては、そのバージョンが延長サポートに移行された場合や、ソフトウェアの修正やセキュリティアップデートが行われなくなった場合に廃止します。マイナーバージョンについては、そのマイナーバージョンに、以降のバージョンで解決された重大なバグやセキュリティ上の問題が含まれている場合に廃止します。<br></p> 
+        <p>これらのガイドラインを満たすための作業が行われていますが、特定のメジャーバージョンまたはマイナーバージョンにセキュリティの問題がある場合には、予定より早く廃止する可能性があります。そのような状況が発生する見込みがない場合は、Amazon RDS では、データベースエンジンの自動アップグレードを実施して、問題に対処します。特定の状況では、対処すべき問題によって別のスケジュールを決定する可能性があります。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: RDS DB のエンジンバージョンが廃止されるとどうなりますか?</b></p> 
+        <p>Amazon RDS でデータベースエンジンの<u>マイナー</u>バージョンが廃止される場合、発表から自動アップグレード開始まで 3 か月の期間が設定されます。この期間が終了すると、廃止されるマイナーバージョンを実行しているすべてのインスタンスには、スケジュールされたメンテナンスウィンドウ内に、サポート対象となっている最新のマイナーバージョンへの自動アップグレードスケジュールが設定されます。<br></p> 
+        <p>Amazon RDS でデータベースエンジンの<u>メジャー</u>バージョンが廃止される場合、廃止の発表から少なくとも 6 か月の期間が設定されるため、この期間にサポート対象となっているメジャーバージョンへのアップグレードを開始できます。この期間が終了すると、廃止されるバージョンを実行しているインスタンスには、次のメジャーバージョンへの自動アップグレードが適用され、スケジュールされたメンテナンスウィンドウ中にアップグレードされます。<br></p> 
+        <p>特定のメジャーまたはマイナーバージョンのデータベースエンジンが Amazon RDS でサポートされなくなった場合、サポートされていないバージョンで作成された DB スナップショットから復元された DB インスタンスは、自動的かつすみやかに現在サポートされているバージョンにアップグレードされます。<br></p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-grid"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <h2 id="Billing" class="lb-txt-bold lb-txt-24 lb-h2 lb-title" style="color:#232f3e;"> 請求</h2> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <b>Q: Amazon RDS の利用料金は、どのようにして課金され、請求されますか?</b> 
+        <p></p> 
+        <p>使用料金は従量課金制となっており、最低料金やセットアップ料金はありません。以下の内容に基づき、請求が行われます。</p> 
+        <ul> 
+         <li>DB インスタンス時間 – 消費された DB インスタンスのクラス (例: db.t2.micro、db.m4.large など) に基づいています。1 時間に満たない DB インスタンスの利用は、1 時間として請求されます。</li> 
+         <li>ストレージ (/GB/月) – DB インスタンスに対してプロビジョニングしたストレージ容量。プロビジョニングしたストレージ容量を当月にスケールした場合、請求は日割り料金となります。</li> 
+         <li>I/O リクエスト/月 – ストレージ I/O リクエストの合計 <i>(Amazon RDS Magnetic ストレージおよび Amazon Aurora のみ)</i><br> </li> 
+         <li>プロビジョンド IOPS/月 – 消費 IOPS とは無関係な、プロビジョンド IOPS レート <i>(Amazon RDS プロビジョンド IOPS (SSD) ストレージのみ)</i></li> 
+         <li>バックアップストレージ – バックアップストレージは、自動化されたデータベースバックアップや、お客様の作成したデータベーススナップショットに関連付けられたストレージです。バックアップ保持期間を増やしたり、追加のデータベーススナップショットを取得したりすれば、お客様のデータベースが使用するバックアップストレージは増大します。<br> </li> 
+         <li>データ転送 – DB インスタンスのインターネット経由のデータ受信および送信です。</li> 
+        </ul> 
+        <p>Amazon RDS の利用料金については、<a href="https://aws.amazon.com/rds/pricing">Amazon RDS 製品ページの料金表</a>をご覧ください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS DB インスタンスへの請求はいつ始まり、いつ終わりますか?</b></p> 
+        <p>DB インスタンスが利用可能になるとすぐに、DB インスタンスへの請求が始まります。削除またはインスタンス障害の際に発生する DB インスタンスの削除まで、請求が続きます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 請求可能な Amazon RDS インスタンス時間をどのように定義していますか?</b></p> 
+        <p>利用可能な状態で DB インスタンスが動作している各時間に対して、DB インスタンス時間が請求されます。これ以上 DB インスタンスへの課金を望まない場合は、追加のインスタンス時間に対して請求されないよう、DB インスタンスを停止するか、終了する必要があります。1 時間に満たない DB インスタンスの利用は、1 時間として請求されます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 停止した DB インスタンスに対してどのように請求されますか?</b></p> 
+        <p>データベースを停止している間でも、プロビジョニングされたストレージ (プロビジョンド IOPS を含む) やバックアップストレージ (指定した保持期間内の手動スナップショットや自動バックアップを含む) に対して課金されます。ただし、DB インスタンス時間に対して料金が発生することはありません。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 追加バックアップストレージは割り当てられた DB インスタンスストレージよりもコストがかかるのはなぜですか?</b></p> 
+        <p>お客様の一次データ用の DB インスタンスに対してプロビジョニングされたストレージは、単一のアベイラビリティーゾーン内に存在しています。データベースをバックアップすると、（トランザクション ログを含む）バックアップ データは、より優れたレベルのデータ耐久性を提供するため、複数の Availability Zone に対して地理的な冗長性をもってレプリケーションされます。無料割当量を超えたバックアップ ストレージの価格は、クリティカル バックアップの耐久性を最大化するために発生する、この特別なレプリケーションを反映しています。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: マルチ AZ DB インスタンスの配置に対してどのように請求が行われますか?</b></p> 
+        <p>お客様の DB インスタンスがマルチ AZ 配置となるよう指定する場合、<a href="https://aws.amazon.com/rds/pricing">Amazon RDS 料金ページ</a>に記載されたマルチ AZ 料金設定に応じて料金が請求されます。マルチ AZ の料金は以下に基づきます。</p> 
+        <ul> 
+         <li>マルチ AZ DB インスタンス時間 – 消費された DB インスタンスのクラス (例: db.t2.micro、db.m4.large など) に基づいています。単一のアベイラビリティーゾーンへの標準配置と同様に、消費される 1 時間未満の DB インスタンス時間は 1 時間分として請求されます。特定の 1 時間以内に、標準とマルチ AZ 間で DB インスタンスの配置を交換する場合、その時間に対して該当する両方の料金が課金されることになります。</li> 
+         <li>プロビジョニングされたストレージ (マルチ AZ DB インスタンス用) – 特定の 1 時間以内に標準とマルチ AZ 間でお客様の配置を交換する場合、その時間に該当するストレージ料金のうち高い方の金額が課金されます。</li> 
+         <li>I/O リクエスト/月 – ストレージ I/O リクエストの合計。マルチ AZ 配置は、お客様のデータベース書き込み/読み込み比率によっては、標準の DB インスタンス配置よりも大容量の I/O リクエストを消費します。データベース更新に伴う書き込み I/O 使用量は、Amazon RDS がお客様のデータをスタンバイの DB インスタンスに 同時にレプリケーションする場合の2倍になります。読み込み I/O 使用量は変わりません。</li> 
+         <li>バックアップストレージ – お客様のバックアップストレージ使用量は、DB インスタンスが標準であろうと、マルチ AZ 配置であろうと変わりません。バックアップは、DB インスタンスプライマリ上の I/O 中断を避けるため、単純にお客様のスタンバイから取得されます。</li> 
+         <li>データ転送 – お客様のプライマリおよびスタンバイ間でデータをレプリケーションする際に発生するデータ転送に対しては課金されません。DB インスタンスの受信および送信におけるインターネットのデータ転送は、標準配置と同様に課金されます。</li> 
+        </ul> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 料金は税込み価格ですか?</b></p> 
+        <p>別途記載がない限り、表示される料金に VAT、売上税を含む税金等および関税は一切含まれません。&nbsp;日本の居住者であるお客様が AWS サービスをご利用になった場合には、料金とあわせて別途消費税をご請求させていただきます。<a href="/c-tax-faqs/" adhocenable="false">詳細</a>。<br></p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-grid"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <h2 id="Free_Tier" class="lb-txt-bold lb-txt-24 lb-h2 lb-title" style="color:#232f3e;"> 無料利用枠</h2> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS での AWS 無料利用枠は何を提供していますか?<br> </b></p> 
+        <p>さらに、<a href="/rds/free/">Amazon RDS の AWS 無料利用枠</a>では、MySQL、MariaDB、PostgreSQL、Oracle (「Bring-Your-Own-License (BYOL)」ライセンスモデル)、および SQL Server Express Edition を実行する単一 AZ マイクロ DB インスタンスの使用が無料です。無料利用枠は、1 か月あたり 750 インスタンス時間までとなっています。さらに、お客様は、1 か月あたり 20 GB の汎用 (SSD) データベースストレージと 20 GB のバックアップストレージを無料でご利用いただけます。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS での AWS 無料利用枠をどれくらいの期間、利用することができるのですか?</b></p> 
+        <p>新しい AWS アカウントを取得すると、12 か月の AWS 無料利用枠をお使いいただけます。詳細については、「<a adhocenable="false" href="/free/faqs/">AWS の無料利用枠のよくある質問ページ</a>」を参照してください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS での AWS 無料利用枠において、複数の DB インスタンスを実行できますか?</b></p> 
+        <p>はい。同時に複数の Single-AZ マイクロ DB インスタンスを実行でき、それらの使用量は Amazon RDS での AWS 無料利用枠内で計算されます。ただし、すべての Amazon RDS Single-AZ マイクロ DB インスタンスおよび、すべての対象データベースエンジンおよびリージョンについて 750 インスタンス時間を超えるご利用については、標準の Amazon RDS 料金が課金されます。<br></p> 
+        <p>例: 1 か月で 2 つの Single-AZ マイクロ DB インスタンスをそれぞれ 400 時間実行した場合、累算で 800 インスタンス時間の使用量になり、そのうち 750 時間が無料になります。残りの 50 時間分については、標準の Amazon RDS 料金が課金されます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: AWS 無料利用枠では、MySQL、MariaDB、PostgreSQL、Oracle、および SQL Server のマイクロ DB インスタンスについて、それぞれ 750 インスタンス時間アクセスできるのですか?</b></p> 
+        <p>いいえ、AWS 無料利用枠へのアクセス権を持つお客様は、MySQL、PostgreSQL、Oracle、または SQL Server Express Edition のいずれかを実行するマイクロインスタンスを 750 インスタンス時間までご利用いただけます。すべての Amazon RDS Single-AZ マイクロ DB インスタンスおよび、すべての対象データベースエンジンおよびリージョンについて 750 インスタンス時間を超えるご利用については、<a href="/rds/pricing/" adhocenable="false">標準の Amazon RDS 料金</a>が請求されます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: インスタンス時間の使用量が無料利用枠を超えると、どのように課金されますか?</b></p> 
+        <p>無料利用枠が提供するインスタンス時間を超えた時間については、標準の Amazon RDS 料金が課金されます。詳細については、「<a href="/rds/pricing/" adhocenable="false">Amazon RDS 料金表のページ</a>」を参照してください。<br></p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-grid"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <h2 id="Reserved_Instances" class="lb-txt-bold lb-txt-24 lb-h2 lb-title" style="color:#232f3e;"> リザーブドインスタンス</h2> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: リザーブドインスタンス (RI) とは何ですか?</b></p> 
+        <p>Amazon RDS リザーブドインスタンスとは、1 年契約または 3 年契約で DB インスタンスを予約しておくもので、予約しておくと、DB インスタンスのオンデマンドインスタンス料金に比べて大幅な割引を受けられます。RI の料金お支払い方法には「前払いなし」、「一部前払い」、「全額前払い」の 3 つがあり、前払いする金額と実際の時間あたりの価格とのバランスを取ることができます。&nbsp;</p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: リザーブドインスタンスはオンデマンド DB インスタンスとどのように異なりますか?</b></p> 
+        <p>機能的には、リザーブドインスタンスもオンデマンド DB インスタンスもまったく同一のものです。唯一異なる点は、お客様の DB インスタンスが課金される方法です。リザーブドインスタンスでは、1 年または 3 年の予約を購入して、その代わりに期間中は低料金の実行時間単価 (オンデマンド DB インスタンスと比較した場合) が適用されます。リージョンでリザーブドインスタンスを購入した場合を除き、すべての DB インスタンスはオンデマンド時間料金で課金されます。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: リザーブドインスタンスはどのように購入して作成できますか?</b></p> 
+        <p>Amazon RDS の AWS マネジメントコンソールの [リザーブドインスタンス] セクションでリザーブドインスタンスを購入できます。または、Amazon RDS API や AWS コマンドラインインターフェイスを使用して、購入可能な予約を一覧表示し、DB インスタンス予約を購入することもできます。<br></p> 
+        <p>予約購入が完了すると、リザーブド DB インスタンスはオンデマンド DB インスタンスと同じように使用できます。予約をしたものと同じインスタンスクラス、エンジン、リージョンを使って DB インスタンスを起動します。予約購入が有効である間、Amazon RDS ではお客様の新しい DB インスタンスに割引価格の時間料金を適用します。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: リザーブドインスタンスにキャパシティーの予約は含まれていますか?</b></p> 
+        <p>Amazon RDS リザーブドインスタンスは、特定のアベイラビリティーゾーンではなくリージョンに対して購入します。RI はアベイラビリティーゾーンに固有ではないため、キャパシティーの予約ではありません。つまり、1 つのアベイラビリティーゾーンのキャパシティーに限界があったとしても、そのリージョンで予約を購入することができ、そのリージョン内のアベイラビリティーゾーンに対応する使用料に割引が適用されます。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: リザーブドインスタンスはいくつ購入できますか?</b></p> 
+        <p>リザーブド DB インスタンスは 40 個まで購入できます。40 個を超える DB インスタンスを実行する場合は、<a href="https://aws.amazon.com/contact-us/request-to-increase-the-amazon-rds-db-instance-limit/">Amazon RDS DB インスタンス申請フォーム</a>にご記入ください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 既に持っている既存の DB インスタンスをリザーブドインスタンスでカバーしたい場合はどうしますか?</b></p> 
+        <p>現在実行している、または予約を考えている DB インスタンスと同じリージョン内の同じ DB インスタンスのクラス、DB エンジン、マルチ AZ オプション、およびライセンスモデルで、DB インスタンスの予約を購入します。予約購入が完了すると、Amazon RDS は既存の DB インスタンスに時間単位の新しい利用料金を自動的に適用します。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: リザーブドインスタンスにサインアップすると、期間はいつから始まりますか? DB インスタンスの使用期限が過ぎるとどうなりますか?</b></p> 
+        <p>支払い認証の処理中にお客様からのリクエストがあれば、リザーブドインスタンスに関連する価格変更が有効になります。AWS アカウントアクティビティページで、または <a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeReservedDBInstances.html">DescribeReservedDBInstances API</a> や <a href="http://docs.aws.amazon.com/cli/latest/reference/rds/describe-reserved-db-instances.html">describe-reserved-db-instances コマンド</a>を使って予約の状態を確認できます。次の請求期間に一括払いが承認されない場合は、割引料金が適用されません。<br></p> 
+        <p>予約期限が過ぎると、リザーブドインスタンスは、お客様の DB インスタンスクラスとリージョンに該当するオンデマンド時間料金に変わります。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: どの DB インスタンスがリザーブドインスタンスの料金で請求されるかは、どのようにコントロールするのですか?</b></p> 
+        <p>DB インスタンスの作成、修正、削除を実行する Amazon RDS オペレーションでは、オンデマンドとリザーブドインスタンスは区別されません。お客様への請求額を計算する際、AWS のシステムは、お客様の予約状態を自動的に適用して、該当するすべての DB インスタンスに低料金のリザーブド DB インスタンス料金を適用します。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b> Q: 保有する DB インスタンスのクラスをスケールアップまたはスケールダウンした場合、予約はどうなりますか?</b></p> 
+        <p>それぞれの予約は、DB エンジン、DB インスタンスのクラス、マルチ AZ 配置オプション、ライセンスモデル、およびリージョンといった一連の属性に関連付けられています。<br></p> 
+        <p>サイズの柔軟性を利用できる DB エンジンとライセンスモデル (MySQL、MariaDB、PostgreSQL、Amazon Aurora、Oracle の「自分のライセンス使用」) の予約は、同じデータベースエンジンとリージョンの同じインスタンスファミリー (M4、T2、R3 など) に含まれる、任意のサイズの実行中である DB インスタンスに、自動的に適用されます。また、予約はシングル AZ またはマルチ AZ 配置オプションのいずれかで実行されている DB インスタンスにも適用されます。<br></p> 
+        <p>例えば、db.m4.2xlarge の MySQL 予約を購入したとします。実行中の DB インスタンスを db.m4.4xlarge にスケールアップすることにした場合、この RI の割引率は大きい方の DB インスタンス使用量の 1/2 をカバーすることになります。<br></p> 
+        <p>サイズの柔軟性を利用<u>できない</u> DB エンジンやライセンスモデル (Microsoft SQL Server、Oracle の「ライセンス込み」) を実行している場合、それぞれの予約は契約期間中に同じ属性を持つ DB インスタンスにのみ適用できます。予約期間が終了する前に実行中の DB インスタンスの属性を変更する場合は、その DB インスタンスに対する時間料金は、オンデマンドの時間料金に切り替わります。<br></p> 
+        <p>サイズの柔軟性の詳細については、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithReservedDBInstances.html#USER_WorkingWithReservedDBInstances.SizeFlexible">Amazon RDS ユーザーガイド</a>を参照してください。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 1 つのリージョンまたはアベイラビリティーゾーンから、別のリージョンまたはアベイラビリティーゾーンへ、リザーブドインスタンスを移動できますか?</b></p> 
+        <p>各リザーブドインスタンスは、特定のリージョンに関連付けられています。これはリザーブドインスタンスの存続期間中固定されており、変更できません。ただし、それぞれの予約は、そのリージョン内のどのアベイラビリティーゾーンでも使用できます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: リザーブドインスタンスはマルチ AZ 配置で利用できますか?</b></p> 
+        <p>はい。リザーブドインスタンスを購入すると、購入可能な DB インスタンス設定でのマルチ AZ オプションを選択できます。さらに、リザーブドインスタンスのサイズ柔軟性をサポートする DB エンジンとライセンスモデルを使用している場合、マルチ AZ リザーブドインスタンスには Single-AZ DB インスタンス２つが含まれます。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: リザーブドインスタンスは、リードレプリカでも利用できますか?</b></p> 
+        <p>DB インスタンスクラスとリージョンが同じであれば、DB インスタンス予約はリードレプリカにも適用できます。お客様の請求書を計算する際、AWS のシステムは、お客様の予約状態を自動的に適用して、該当するすべての DB インスタンスに低料金のリザーブドインスタンス料金を適用します。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 予約はキャンセルできますか?</b></p> 
+        <p>いいえ。リザーブド DB インスタンスはキャンセルできず、一括払いは (該当する場合) 返金不可能です。使用したかどうかにかかわらず、リザーブド DB インスタンスの期間が終了するまで、毎時間の料金をお支払いいただきます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 支払い方法によって料金請求はどのように変わりますか? <br> </b></p> 
+        <p>RI の購入時に、お支払い方法として「全前払い」を選択した場合は、RI の期間全体の料金を一括で前払いしていただきます。いっさい前払いなしにすることもでき、その場合は「前払いなし」を選択します。「前払いなし」の RI の価額総額が期間内の各時間に分配され、お客様へのご請求は使用の有無にかかわらず、期間内の 1 時間ごとに発生することになります。「一部前払い」は、「全前払い」と「前払いなし」の間をとったお支払い方法です。最初に少額をお支払いいただき、使用の有無にかかわらず、期間内の 1 時間ごとに低い時間単価で計算した料金請求が発生します。<br></p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-grid"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <h2 id="Hardware_and_Scaling" class="lb-txt-bold lb-txt-24 lb-h2 lb-title" style="color:#232f3e;"> ハードウェアとスケーリング</h2> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: ニーズに適している初期 DB インスタンスクラスとストレージ容量はどのように判断できますか?</b></p> 
+        <p>最初の DB インスタンスのクラスとストレージ容量を選択するには、アプリケーションでのコンピューティング、メモリ、およびストレージのニーズを評価する必要があります。利用できる DB インスタンスクラスの詳細については、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">Amazon RDS ユーザーガイド</a>を参照してください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS データベースインスタンスに関連するコンピューティングリソースやストレージ容量をスケールするにはどうしたらよいですか?</b></p> 
+        <p>DB インスタンスに割り当てるコンピューティングリソースとストレージ容量は、<a href="https://console.aws.amazon.com/">AWS マネジメントコンソール</a> (任意の DB インスタンスを選択して [<b>変更</b>] ボタンをクリックする)、RDS API、AWS コマンドラインインターフェイスを使用してスケールできます。メモリおよび CPU リソースは、DB インスタンスを変更することにより修正され、ストレージ割り当てを修正すると、利用可能なストレージが変更されます。DB インスタンスクラスまたは割り当て済みストレージを修正すると、指定したメンテナンスウィンドウ期間にリクエストされた変更が適用されることにご注意ください。あるいは、「apply-immediately」フラグを使用して、拡張リクエストをすぐに適用することができます。他の未処理のシステム変更も適用されることにご注意ください。<br> </p> 
+        <p>一部の古い RDS for SQL Server インスタンスは、拡張ストレージに対応していない可能性があります。詳細については、「<a href="/rds/sqlserver/faqs/">RDS for SQL Server のよくある質問</a>」を参照してください。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b> Q: Amazon RDS ストレージのハードウェア構成はどのようなものですか?</b></p> 
+        <p>Amazon RDS は、データベースとログの格納に EBS ボリュームを使用します。要求されるストレージのサイズによって、Amazon RDS は自動的に複数の EBS ボリューム全体をストライプして、IOPS パフォーマンスを向上させます。MySQL と Oracle については、ストレージをスケールアップすると、既存の DB インスタンスの I/O 容量がある程度向上することがあります。<a href="https://console.aws.amazon.com/">AWS マネジメントコンソール</a>、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html">ModifyDBInstance API</a>、<a href="http://docs.aws.amazon.com/cli/latest/reference/rds/modify-db-instance.html">modify-db-instance コマンド</a> を使用して、DB インスタンスに割り当てられたストレージ容量をスケールできます。<br> </p> 
+        <p>詳細については、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html">Amazon RDS のストレージ</a>を参照してください。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: スケーリング中に DB インスタンスを使用できますか?</b></p> 
+        <p>DB インスタンスに割り当てたストレージ容量は、DB インスタンスの可用性を維持しながら増やすことが可能です。しかし、DB インスタンスに対して利用可能なコンピューティングリソースをスケールアップまたはスケールダウンすることを決めると、DB インスタンスクラスが修正されている間にデータベースは一時的に利用できなくなります。この利用できない期間は一般的に数分で終了しますが、修正をすぐに適用することを指定しない限り、DB インスタンス用のメンテナンスウィンドウ期間に発生します。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 最大 DB インスタンスクラスおよび最大ストレージ容量を超えて DB インスタンスをスケールするには、どのようにしたらよいですか?</b></p> 
+        <p>Amazon RDS では、さまざまなアプリケーションニーズを満たすため、さまざまな DB インスタンスクラスおよびストレージ割り当てをサポートしています。アプリケーションが最大 DB インスタンスクラスよりも多くのコンピューティングリソースを必要としているか、最大割当量よりも大きなストレージを必要としている場合、パーティション化の実施が可能であり、複数の DB インスタンスにデータを分散することができます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS 汎用 (SSD) ストレージとは何ですか?</b></p> 
+        <p>Amazon RDS 汎用（SSD）ストレージは、I/O 要件が中程度の幅広いデータベースワークロードに適しています。このストレージの選択肢は基準が 3 IOPS/GB で、最大 3,000 IOPS までバーストでき、ほとんどのアプリケーションのニーズに対応する予測可能なパフォーマンスを提供します。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS プロビジョンド IOPS (SSD) ストレージとは何ですか?</b></p> 
+        <p>Amazon RDS プロビジョンド IOPS (SSD) ストレージとは、高速かつ予測可能な一貫した I/O パフォーマンスを提供するよう設計された SSD ベースのストレージオプションです。Amazon RDS プロビジョンド IOPS (SSD) ストレージを使用する場合は、お客様が DB インスタンスの作成時に IOPS レートを指定します。Amazon RDS では、DB インスタンスが終了させられるまでその IOPS レートをプロビジョニングします。Amazon RDS プロビジョンド IOPS（SSD）ストレージは、大量の I/O が発生する、トランザクション指向（OLTP）のデータベースワークロードに最適です。詳しくは、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html">Amazon RDS ユーザーガイド</a>を参照してください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS マグネティックストレージとは何ですか?</b></p> 
+        <p>Amazon RDS マグネティックストレージは、データへのアクセスがあまり頻繁ではない軽度のデータベースワークロードに適しています。マグネティックストレージはプロダクションデータベースインスタンスには推奨されていません。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS ストレージタイプはどのように選択すればよいですか?</b></p> 
+        <p>ワークロードに最も適したストレージタイプを選択してください。<br> </p> 
+        <ul> 
+         <li>高パフォーマンスの OLTP ワークロード: Amazon RDS プロビジョンド IOPS（SSD）ストレージ</li> 
+         <li>中程度の I/O 要件のデータベースワークロード: Amazon RDS 汎用（SSD）ストレージ</li> 
+        </ul> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS でサポートされる IOPS の最小値と最大値はどれくらいですか?</b></p> 
+        <p>Amazon RDS でサポートされる IOPS は、データベースエンジンによって異なります。詳しくは、<a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/USER_PIOPS.html">Amazon RDS ユーザーガイド</a>を参照してください。<br></p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-grid"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <h2 id="Automatic_Backups_and_Database_Snapshots" class="lb-txt-bold lb-txt-24 lb-h2 lb-title" style="color:#232f3e;"> 自動化バックアップとデータベーススナップショット</h2> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 自動化バックアップと DB スナップショットの違いは何ですか?</b></p> 
+        <p>Amazon RDS は、DB インスタンスのバックアップと復元を行うための 2 つの方法を提供しています。自動バックアップとデータベーススナップショット (DB スナップショット) です。<br></p> 
+        <p>Amazon RDS の自動バックアップ機能によって、DB インスタンスのポイントインタイムリカバリが可能になります。DB インスタンスに対して自動バックアップがオンになっている場合、Amazon RDS は毎日、お客様のデータの完全なスナップショットを自動的に作成し (任意のバックアップウィンドウ中に実施)、トランザクションログを取得します (DB インスタンスに対する更新が実施される)。ポイントインタイムリカバリを開始する際、DB インスタンスをリクエストされた特定の時刻の状態に復元するために、最も適切なデイリーバックアップにトランザクションログを適用します。Amazon RDS は、DB インスタンスのバックアップを、ユーザーが指定する限られた期間 (保持期間) 中、保持します。保持期間はデフォルトでは 7 日間ですが、最大 35 日間に設定可能です。保持期間中、特定時点への復旧を開始して、最大で復元可能な最新時刻 (Latest Restorable Time) まで、任意の秒数を指定することができます。<a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html">DescribeDBInstances</a> API を使用して、DB インスタンスの復元可能な最新時刻まで戻ることができます。これは通常過去 5 分以内です。代わりに、<a href="https://console.aws.amazon.com/">AWS マネジメントコンソール</a>で DB インスタンスを選択し、コンソールの下部にあるパネルの [Description] タブでこれを閲覧することによって、その DB インスタンスの復元可能な最新時刻を知ることもできます。<br></p> 
+        <p>DB スナップショットはユーザーにより開始され、指定した頻度で既知の状態で DB インスタンスをバックアップすることができ、その後いつでもその特定の状態に復元することができます。DB スナップショットは、<a href="https://console.aws.amazon.com/">AWS マネジメントコンソール</a>、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBSnapshot.html">CreateDBSnapshot API</a>、<a href="http://docs.aws.amazon.com/cli/latest/reference/rds/create-db-snapshot.html">create-db-snapshot コマンド</a>で作成可能であり、ユーザーが明示的に削除するまで保存できます。<br></p> 
+        <p>自動バックアップを有効にするため Amazon RDS により実行されるスナップショットは、コピー (AWS コンソールまたは <a href="http://docs.aws.amazon.com/cli/latest/reference/rds/copy-db-snapshot.html">copy-db-snapshot コマンド</a>を使用)、またはスナップショットの復元機能用に使用できます。スナップショットは、「自動」のスナップショットタイプを使用して探すことができます。また、「スナップショット撮影時刻」フィールドを確認すると、スナップショットが撮影された時刻を特定できます。また、&quot;自動&quot; スナップショットの識別子にも、スナップショットが作成された時刻 (UTC) が含まれます。<br></p> 
+        <p>注意: 期間内のある時点へ、または DB スナップショットから復旧動作を実行すると、新しいエンドポイントを持つ新しい DB インスタンスが作成されます (必要な場合には、古い DB インスタンスは削除できます)。これを実行することにより、特定の DB スナップショットまたはポイントインタイムから、複数の DB インスタンスを作成できるようになります。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: DB インスタンスのバックアップは手動で有効にする必要がありますか? それとも自動でしょうか?</b></p> 
+        <p>デフォルトでは、Amazon RDS により、7 日の保持期間で DB インスタンスの自動化バックアップを行うことができます。無料のバックアップストレージは準備したデータベースのサイズに限定されており、アクティブな DB インスタンスのみに適用されます。例えば、月をまたいで 100 GB のデータベースストレージが準備されていると、当社は追加料金なしで最大 100 GB/月のバックアップストレージを提供します。バックアップ保持期間を 1 日以上に延長したい場合、（新しい DB インスタンスの作成時には CreateDBInstance API または（既存 DB インスタンスに対しては）ModifyDBInstance API で延長することができます。これらの API を使用して、1日から希望する日数まで RetentionPeriod パラメータを変更することができます。自動化バックアップの詳細については、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_CommonTasks.BackupRestore.html">Amazon RDS ユーザーガイド</a>を参照してください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: バックアップウィンドウとは何ですか? それが必要なのはなぜですか? バックアップウィンドウ期間で私のデータベースは利用できますか?</b></p> 
+        <p>任意のバックアップウィンドウは、DB インスタンスをバックアップする、ユーザーが定義した期間です。Amazon RDS が、トランザクションログと併せてこれらの定期データバックアップを使用することにより、 お客様は、最大で復元可能な最新時刻 (LatestRestorableTime) (一般的には最大数分前) まで、保持期間中の任意の瞬間で DB インスタンスを復元できます。バックアップウィンドウ中に、バックアッププロセスの初期化が行われている間にストレージ I/O が一時中断 (通常 2～3 秒未満) することがあり、レイテンシーが短期間増加する可能性があります。マルチ AZ DB 配置では I/O 中断はありません。なぜならバックアップがスタンバイから取得されるためです。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 自動バックアップと DB スナップショットの保存場所と保存内容を管理する方法について教えてください。</b></p> 
+        <p>Amazon RDS DB スナップショットと自動バックアップは S3 に保存されます。<br></p> 
+        <p><a href="https://console.aws.amazon.com/">AWS マネジメントコンソール</a>、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html">ModifyDBInstance API</a>、<a href="http://docs.aws.amazon.com/cli/latest/reference/rds/modify-db-instance.html">modify-db-instance コマンド</a>を使用して、RetentionPeriod パラメータを修正することにより、自動化バックアップが保持される期間を管理できます。自動バックアップをすべて無効にしたい場合、保持期間を 0 に設定します (推奨されません)。Amazon RDS コンソールの [スナップショット] セクションを使用して、ユーザー作成 DB スナップショットを管理できます。代わりに、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBSnapshots.html">DescribeDBSnapshots API</a> や <a href="http://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-snapshots.html">describe-db-snapshots コマンド</a>を使用して、指定 DB インスタンスのユーザー作成 DB スナップショット一覧を表示でき、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DeleteDBSnapshot.html">DeleteDBSnapshot API</a> や <a href="http://docs.aws.amazon.com/cli/latest/reference/rds/delete-db-snapshot.html">delete-db-snapshot コマンド</a>を使用して、スナップショットを削除できます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 自動化された DB スナップショットの数が、DB インスタンスに対するリテンション期間の日数よりも多いのはなぜですか?</b></p> 
+        <p>リテンション期間の日数よりも 1 日か 2 日自動化 DB のスナップショットの日数が多いのは正常です。自動化スナップショットは 1 日余計にとられていて、リテンション期間中のいつにでも復帰できる時点を設けています。例えば、バックアップウィンドウが 1 日に設定されている場合、自動化スナップショットは 2 つ必要で、これで過去 24 時間中の任意の時点への復帰をサポートしています。また、さらに多くの自動化スナップショットがある場合もありますが、これは新たな自動化スナップショットが、最も古い自動化スナップショットを削除する前に常に生成されるためです。。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: DB インスタンスを削除した場合、バックアップと DB スナップショットはどうなりますか?</b></p> 
+        <p>DB インスタンスを削除するときに、最終的な DB スナップショットを作成できます。その場合、この DB スナップショットを使用して、削除された DB インスタンスを後日復元できます。Amazon RDS は、DB インスタンスが削除された後に、このユーザーが作成した最終的な DB スナップショットと、手動で作成されたその他の DB スナップショットをすべて保持します。バックアップストレージコストの詳細については、<a href="https://aws.amazon.com/rds/pricing/">料金ページ</a>をご覧ください。<br></p> 
+        <p>自動化されたバックアップは、DB インスタンスが削除されるときに削除されます。DB インスタンスの削除後に保持されるのは、手動で作成された DB スナップショットのみです。<br></p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-grid"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <h2 id="Security" class="lb-txt-bold lb-txt-24 lb-h2 lb-title" style="color:#232f3e;"> セキュリティ</h2> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon Virtual Private Cloud (VPC) とは何ですか? どのように Amazon RDS と連携しますか?</b></p> 
+        <p>Amazon VPC を使用すると、AWS クラウドの分離したプライベートセクションに仮想ネットワーキング環境を作成できます。その環境では、プライベート IP アドレスの範囲、サブネット、ルーティングテーブル、ネットワークゲートウェイなど、さまざまな要素について全面的な制御を実行できます。Amazon VPC では、仮想ネットワークトポロジを定義し、従来の IP ネットワークと同じようにネットワーク設定をカスタマイズできるため、独自のデータセンターで運用できます。<br> </p> 
+        <p>VPC を利用できる方法の 1 つは、プライベートサブネット内のパブリックにアクセスできないバックエンドサーバーを保守しながら、パブリックに公開されているウェブアプリケーションを実行する場合です。インターネットにアクセスできるウェブサーバ用にパブリック側のサブネットを作成し、インターネットアクセスできないプライベート側のサブネットにバックエンド RDS DB インスタンスを配置することができます。Amazon VPC の詳細については、<a href="http://docs.amazonwebservices.com/AmazonVPC/latest/UserGuide/">Amazon Virtual Private Cloud ユーザーガイド</a>をご覧ください。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS を VPC 内で使用することは、それを EC2-Classic プラットフォーム (非 VPC) 上で使用することとどのように違いますか?</b></p> 
+        <p>2013 年 12 月 4 日以前に作成した AWS アカウントでは、Amazon Elastic Compute Cloud (EC2)-Classic 環境で Amazon RDS を実行できる場合があります。Amazon RDS の基本機能は EC2-Classic を使用するか、EC2-VPC を使用するかにかかわらず同じです。Amazon RDS は、DB インスタンスが VPC 内外どちらにデプロイされるかにかかわらず、バックアップ、ソフトウェアのパッチ適用、自動障害検出、リードレプリカ、および復元を管理します。EC2-Classic と EC2-VPC の相違点の詳細については、<a adhocenable="false" href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-vpc.html#differences" target="_blank">EC2 のドキュメント</a>を参照してください。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: DB サブネットグループとは何ですか? なぜ必要ですか?</b></p> 
+        <p>DB サブネットグループとは、VPC 内で RDS DB インスタンス用に指定するサブネットのコレクションです。各 DB サブネットグループには、特定の Region 内の Availability Zone ごとに 1 つ以上のサブネットを指定する必要があります。VPC 内に DB インスタンスを作成するときに、DB サブネットグループを選択する必要があります。選択すると、Amazon RDS は、その DB サブネットグループと設定した Availability Zone を使用し、サブネットとそのサブネット内の IP アドレスを選択します。Amazon RDS によって Elastic Network Interface が作成され、その IP アドレスを持つ DB インスタンスに関連付けられます。<br> </p> 
+        <p>基になる IP アドレスは変わる可能性があるため (フェイルオーバーなど)、DB インスタンスに接続するときは DNS 名を使用することを強くお勧めします。<br> </p> 
+        <p>Multi-AZ 配備の場合、Region 内のすべての Availability Zone 用にサブネットを定義すると、必要に応じて Amazon RDS で別の Availability Zone に新しいスタンバイを作成できるようになります。Single-AZ 配備の場合も、どこかの時点で Multi-AZ 配備に変換する場合に備えてこのように定義する必要があります。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: VPC では Amazon RDS DB インスタンスをどのように作成しますか?</b></p> 
+        <p>このプロセスの詳細な手順については、Amazon RDS ユーザーガイドの <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html#USER_VPC.InstanceInVPC">VPC に DB イスタンスを作成する</a>を参照してください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: DB インスタンスへのネットワークアクセスをどのようにコントロールしますか?</b></p> 
+        <p>DB インスタンスのアクセスを制御する別の方法について詳しくは、Amazon RDS ユーザーガイドの<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.RDSSecurityGroups.html">セキュリティグループ</a>を参照してください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: VPC 内の RDS DB インスタンスにはどのように接続しますか?</b></p> 
+        <p>VPC 内に展開した DB インスタンスには、同じ VPC に展開した EC2 インスタンスからアクセスできます。Elastic IP が関連付けられたパブリックサブネット内にこのような EC2 インスタンスをデプロイしている場合は、インターネットを介して EC2 インスタンスにアクセスできます。<br></p> 
+        <p>VPC 内に展開した DB インスタンスには、インターネットからアクセスできるだけでなく、VPN またはパブリックサブネットで起動できる踏み台ホストを介して VPC 以外にある EC2 インスタンスからアクセスすることができます。また、Amazon RDS の Publicly Accessible オプションを使用してアクセスすることもできます。</p> 
+        <ul> 
+         <li>踏み台ホストを使用するには、SSH の踏み台として動作する EC2 インスタンスを使用してパブリックサブネットを設定する必要があります。このパブリックサブネットには、SSH ホストを介してトラフィックを制御できるインターネットゲートウェイまたはルーティングルールが必要です。また、その SSH ホストから RDS DB インスタンスのプライベート IP アドレスに要求を転送できる必要があります。</li> 
+         <li>パブリックな接続を使用するには、Publicly Accessible オプションを yes に設定して DB インスタンスを作成します。Publicly Accessible をアクティブにすると、デフォルトにより、VPC の外部から VPC 内の DB インスタンスでアクセス可能になります。つまり、DB インスタンスへのアクセスを許可するように VPN または踏み台ホストを構成する必要はありません。</li> 
+        </ul> 
+        <p>社内ネットワークを VPC に拡張する VPN ゲートウェイを設定して、その VPC 内の RDS DB インスタンスにアクセスできるようにする方法もあります。詳細については、「<a href="http://docs.amazonwebservices.com/AmazonVPC/latest/UserGuide">Amazon VPC ユーザーガイド</a>」をご参照ください。<br></p> 
+        <p>基になる IP アドレスは変わる可能性があるので（フェイルオーバーなどの理由で）、DB インスタンスに接続するときは DNS 名を使用することを強くお勧めします。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: VPC 以外にある既存の DB インスタンスを自分の VPC に移動できますか?</b></p> 
+        <p>DB インスタンスが VPC 内に存在しない場合には、AWS マネジメントコンソールを使用して、VPC 内に DB インスタンスを簡単に移行できます。詳細については、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html#USER_VPC.Non-VPC2VPC">Amazon RDS ユーザーガイド</a>をご覧ください。VPC 以外にある DB インスタンスのスナップショットを作成して、VPC に復元できます。それには、使用する DB サブネットグループを指定します。または、「特定時点への復元」オペレーションを実行することもできます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: VPC 内にある既存の DB インスタンスを VPC 以外に移動できますか?</b></p> 
+        <p>VPC 内から VPC 以外への DB インスタンスの移行はサポートされていません。セキュリティ上の理由から、VPC 内の DB インスタンスの DB スナップショットを VPC 以外の場所に復元することはできません。「特定時点への復元」機能も同様です。&nbsp;</p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: VPC 内にある DB インスタンスをアプリケーションからアクセスできるようにするには、どのような注意事項がありますか?</b></p> 
+        <p>ルーティングテーブルと VPC 内のネットワーキング ACL を変更して、VPC 内のクライアントインスタンスから DB インスタンスに到達できるようにする必要があります。<br> </p> 
+        <p>マルチ AZ 配置の場合は、フェイルオーバー後に、クライアントの EC2 インスタンスと RDS DB インスタンスは異なるアベイラビリティーゾーンに属する可能性があります。そのため、AZ 間の通信が可能になるようにネットワーキング ACL を設定する必要があります。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: DB インスタンスの DB サブネットグループを変更できますか?</b></p> 
+        <p>既存の DB サブネットグループを更新して、既存のアベイラビリティーゾーン用、または DB インスタンスの作成後に追加した新しいアベイラビリティーゾーン用にサブネットを追加できます。既存の DB サブネットグループからサブネットを削除すると、サブネットグループから削除される特定の AZ で実行されているインスタンスが利用できなくなります。詳細については、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html#USER_VPC.VPC2VPC">Amazon RDS ユーザーガイド</a>を参照してください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS マスターユーザーアカウントとは何ですか? AWS アカウントとどのように違うのですか?</b></p> 
+        <p>Amazon RDS の使用を始めるには、AWS 開発者アカウントが必要です。Amazon RDS のサインアップの前にアカウントを持っていない場合、サインアップ プロセスの開始時にアカウントを作成するよう要求されます。マスターユーザー アカウントは、AWS 開発者アカウントとは異なっており、DB インスタンスへのアクセスをコントロールするため、Amazon RDS の範囲内でのみ使用します。マスターユーザー アカウントは、DB インターフェイスへの接続に使用できる固有のデータベース ユーザー アカウントです。DB インスタンスの作成時に、各 DB インスタンスと関連付けたいマスターユーザー名とパスワードを指定することができます。一旦 DB インスタンスを作成すると、マスターユーザー証明書を使用してデータベースへ接続することができます。後で、追加のユーザー アカウントを作成したい場合があるので、DB インスタンスへアクセスできる人を制限することができます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: DB インスタンスのマスターユーザーにはどのような特権が付与されていますか?</b></p> 
+        <p>MySQL の場合、マスターユーザーのデフォルトの特権は、create、drop、references、event、alter、delete、index、insert、select、update、create temporary tables、lock tables、trigger、create view、show view、alter routine、create routine、execute、trigger、create user、process、show databases、grant option です。<br></p> 
+        <p>Oracle の場合、マスターユーザーには「dba」の役割が付与されます。マスターユーザーは、ほとんどの役割に関連付けられた特権を継承します。制限された特権のリスト、およびその特権を必要とする管理タスクを実行するための代替方法については、<a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/">Amazon RDS ユーザーガイド</a>をご覧ください。<br></p> 
+        <p>SQL Server の場合は、データベースを作成したユーザーに db_owner ロールが付与されます。制限された特権のリスト、およびその特権を必要とする管理タスクを実行するための代替方法については、<a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/RDSFAQ.SQLServer.html">Amazon RDS ユーザーガイド</a>をご覧ください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS によるユーザー管理では何か違いがありますか?</b></p> 
+        <p>いいえ、お客様がリレーショナルデータベースを管理するときと同じ方法ですべて機能します。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 自分のデータセンターのサーバー上で動作しているプログラムから Amazon RDS データベースにアクセスできますか?</b></p> 
+        <p>はい。インターネットを介してデータベースにアクセスする機能は、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.RDSSecurityGroups.html">セキュリティグループ</a>を設定して手動で有効にする必要があります。特定の IP アドレス、IP アドレス範囲、またはお客様自身のデータセンターにあるサーバーに該当するサブネットに対してのみアクセスを認可することができます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: SSL/TLS を用いて、アプリケーションと DB インスタンスの間の接続を暗号化できますか?</b></p> 
+        <p>はい、このオプションはすべての Amazon RDS エンジンでサポートされています。<br> </p> 
+        <p>Amazon RDS は、各 DB インスタンスに対して SSL/TLS 証明書を生成します。暗号化された接続が確立されたら、DB インスタンスとお客様のアプリケーション間で転送されるデータは、転送中に暗号化されるようになります。<br> </p> 
+        <p>SSL はセキュリティ上の利点を提供しますが、SSL/TLS 暗号化がかなりの計算量を必要とするオペレーションであり、お客様のデータベース接続レイテンシーが増加しますのでご注意ください。また、Amazon RDS 内での SSL/TLS サポートは、アプリケーションと DB インスタンス間での接続暗号化のためにあることにご注意ください。これは DB インスタンスそのものの認証には使用しないでください。<br> </p> 
+        <p>Amazon RDS との暗号化された接続の確立についての詳細は、Amazon RDS の「<a adhocenable="false" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.SSLSupport">MySQL ユーザーガイド</a>」、「<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MariaDB.html#MariaDB.Concepts.SSLSupport">MariaDB ユーザーガイド</a>」、「<a adhocenable="false" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.SSL">SQL Server ユーザーガイド</a>」、「<a adhocenable="false" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts.General.SSL">PostgreSQL ユーザーガイド</a>」または 「<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Oracle.html#Oracle.Concepts.SSL">Oracle ユーザーガイド</a>」をご参照ください。これらのエンジンでの SSL/TLS の動作についての詳細は、<a adhocenable="false" href="http://dev.mysql.com/doc/refman/5.6/en/ssl-connections.html" target="_blank">MySQL のドキュメント</a>、<a href="https://mariadb.com/kb/en/mariadb/secure-connections-overview/">MariaDB のドキュメント</a>、<a adhocenable="false" href="http://msdn.microsoft.com/en-us/library/ms189067.aspx" target="_blank">MSDN SQL Server のドキュメント</a>、<a adhocenable="false" href="http://www.postgresql.org/docs/9.5/static/ssl-tcp.html">PostgreSQL のドキュメント</a>、または <a href="https://docs.oracle.com/database/121/DBSEG/asossl.htm">Oracle のドキュメント</a>を直接ご参照ください。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS データベースで保管中のデータを暗号化できますか?</b><br> </p> 
+        <p>Amazon RDS では、<a href="/kms/" adhocenable="false">AWS Key Management Service (KMS)</a> で管理されるキーを使って、すべてのデータベースエンジンで保管時の暗号化をサポートしています。Amazon RDS 暗号化を使用して実行するデータベースインスタンスでは、基盤となるストレージに保管されるデータが、自動バックアップ、リードレプリカ、スナップショットとして暗号化されます。暗号化と復号は透過的に処理されます。Amazon RDS での KMS の使用に関する詳細は、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Encryption.html" adhocenable="false">Amazon RDS ユーザーガイド</a>を参照してください。<br> </p> 
+        <p>また、以前に暗号化されていない DB インスタンスや DB クラスターに暗号化を追加するには、DB スナップショットを作成してからそのコピーを作成し、KMS 暗号化キーを指定します。こうすることで、この暗号化されたスナップショットから暗号化された DB インスタンスまたは DB クラスターを復元できます。<br> </p> 
+        <p>Amazon RDS for Oracle および Amazon RDS for SQL Server では、それぞれのエンジンの Transparent Data Encryption (TDE) テクノロジーがサポートされます。詳細については、Amazon RDS ユーザーガイドの <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.Options.html#Appendix.Oracle.Options.AdvSecurity" adhocenable="false">Oracle</a> と <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.Options.html#Appendix.SQLServer.Options.TDE" adhocenable="false">SQL Server</a> を参照してください。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 特定の RDS リソースに対してシステムとユーザーが実行できるアクションを制御するには、どうすればよいですか?</b></p> 
+        <p>RDS リソースに対して <a href="https://aws.amazon.com/iam">AWS IAM</a> ユーザーとグループが実行できるアクションを制御できます。制御するには、ユーザーとグループに適用している <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/PermissionsAndPolicies.html">AWS IAM ポリシー</a>の RDS リソースを参照します。AWS IAM ポリシーで参照できる RDS リソースには、DB インスタンス、DB スナップショット、リードレプリカ、DB セキュリティグループ、DB オプショングループ、DB パラメータグループ、イベントサブスクリプション、DB サブネットグループが含まれます。また、これらのリソースにタグを付けて、追加のメタデータをリソースに追加できます。タグを使用すると、リソースを分類し (「開発用」 DB インスタンス、「本稼働用」 DB インスタンス、「テスト用」 DB インスタンスなど)、同じタグが設定されたリソースに対して適用するアクセス許可を登録した AWS IAM ポリシーを作成することができます。詳細については、「<a href="/iam/">Amazon RDS リソースおよびデータベースへのアクセスの管理</a>」および「<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Amazon RDS リソースへのタグ付け</a>」を参照してください。</p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: RDS デプロイメントに関するセキュリティ分析またはオペレーションのトラブルシューティングを実行したいと考えています。自分のアカウントで実行したすべての RDS API 呼び出しの履歴を取得することはできますか?</b></p> 
+        <p>はい。AWS CloudTrail は、アカウントに対する AWS API コールを記録し、ログファイルを配信するウェブサービスです。CloudTrail で生成される AWS API の呼び出し履歴を利用して、セキュリティ分析、リソース変更の追跡、およびコンプライアンスの監査を行うことができます。CloudTrail の詳細については、「<a href="/cloudtrail/" adhocenable="false">​AWS CloudTrail の詳細ページ</a>」を参照してください。CloudTrail を有効にするには、「<a href="https://console.aws.amazon.com/cloudtrail/home" adhocenable="false">CloudTrail の AWS マネジメントコンソールのホームページ</a>」にアクセスしてください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS は HIPAA 準拠性を要するアプリケーションと使えますか?</b></p> 
+        <p>A: はい、RDS データベースは HIPAA に適格ですので、これらを使って HIPAA 準拠のアプリケーションを作り、ヘルスケア関連情報を格納できます。こうした情報には AWS の Business Associate Agreement (BAA) で保護された医療情報 (PHI) も含みます。既に BAA を締結している場合は、BAA の適用を受けているアカウントでこのサービスの使用を開始するために何も行う必要はありません。AWS との BAA を締結していない場合や、AWS の HIPAA 準拠のアプリケーションについてご不明な点がある場合は、<a href="/health/providers-and-insurers/hipaa/inbound/">お問い合わせ</a>ください。<br> </p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-grid"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <h2 id="Database_Configuration" class="lb-txt-bold lb-txt-24 lb-h2 lb-title" style="color:#232f3e;"> データベース設定</h2> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: DB インスタンス用に適切な設定パラメータを選択するには、どうすればよいですか?</b></p> 
+        <p>Amazon RDS では、デフォルトでインスタンスクラスとストレージ容量が考慮され、DB インスタンスに最適の設定パラメータが選択されます。ただし、変更する場合には AWS マネジメントコンソール、Amazon RDS API、AWS コマンドラインインターフェイスを使用します。推奨値からの設定パラメータの変更は、性能の低下からシステムクラッシュまで、予期しない影響を生じる場合があり、これらのリスクを想定できる上級ユーザーのみが行えることにご注意ください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: DB パラメータグループとは何ですか? どのように役立ちますか?</b></p> 
+        <p>データベース パラメータグループ（DB パラメータグループ）は、1つ以上の DB インスタンスに適用可能なエンジン設定値の「容器」として動作します。DB パラメータのグループを指定せずに DB インスタンスを作成する場合、デフォルトの DB パラメータグループが使用されます。このデフォルト値のグループは、お客様が実行している DB インスタンス用に最適化されたエンジンデフォルト値と Amazon RDS システムデフォルト値を持っています。しかし、カスタム指定のエンジン設定値で DB インスタンスを実行したい場合、新しい DB パラメータグループを作成し、必要なパラメータを修正し、新しい DB パラメータグループを使用するため DB インスタンスを修正するだけで十分です。いったん関連付けが行われると、特定の DB パラメータグループを使用するすべての DB インスタンスは、その DB パラメータグループへのすべてのパラメータアップデートを取得します。<br></p> 
+        <p>DB パラメータグループの設定の詳細については、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html">Amazon RDS ユーザーガイド</a>を参照してください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS リソースの設定をどのようにモニタリングできますか?</b></p> 
+        <p><a href="/config/">AWS Config</a> を使用して、Amazon RDS DB インスタンス、DB サブネットグループ、DB スナップショット、DB セキュリティグループ、イベントサブスクリプションの設定変更を継続的に記録し、<a href="/sns/">Amazon Simple Notification Service (SNS)</a> によって変更通知を受け取ることができます。AWS Config Rules を作成して、これらの RDS リソースが理想的な設定になっているかどうかを評価できます。</p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-grid"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <h2 id="Multi-AZ_Deployments" class="lb-txt-bold lb-txt-24 lb-h2 lb-title" style="color:#232f3e;"> マルチ AZ 配置</h2> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: DB インスタンスをマルチ AZ 配置として実行することにどのような意味がありますか?</b></p> 
+        <p>マルチ AZ 配置として実行するように DB インスタンスを作成または修正すると、Amazon RDS では、同期 &quot;スタンバイ&quot; レプリカが別のアベイラビリティーゾーンで自動的にプロビジョニングされ、管理されます。DB インスタンスに対する更新は、別のアベイラビリティーゾーンにあるスタンバイに同時にレプリケートされるため、同期が維持されるとともに、最新のデータベース更新が DB インスタンスの障害から保護されます。特定の種類の計画的なメンテナンスの期間中や、DB インスタンスの障害またはアベイラビリティーゾーンの障害といった予期しないイベントが発生した際には、Amazon RDS はスタンバイに対して自動的にフェイルオーバーし、スタンバイが昇格したら直ちにデータベースの読み込みと書き込みを再開できるようにします。DB インスタンスの名前レコードは変化しないため、アプリケーションによるデータベースオペレーションは、管理者による手動での介入なしで再開できます。Multi-AZ 配備を使うと、レプリケーションが透過的になります。スタンバイを直接操作しなくなり、読込みトラフィックには使えなくなります。Multi-AZ 配置の詳細については、<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html">Amazon RDS ユーザーガイド</a>をご覧ください。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: アベイラビリティーゾーンとは何ですか?</b></p> 
+        <p>Availability Zones とは、別の Availability Zone で発生した障害から隔離するために作られたリージョン内の場所です。各アベイラビリティーゾーンは、その独自の、物理的にはっきりと独立したインフラストラクチャ上で稼動しています。また高い信頼性を保つように設計されています。発電機や冷却装置などの障害対策用装置がアベイラビリティーゾーン間で共有されることはありません。さらに、これらは物理的にそれぞれ別々の場所にあるため、火災、竜巻、または洪水などの極めてまれな災害が発生しても、影響を受けるのは単一のアベイラビリティーゾーンのみです。同一リージョンにある Availability Zone は、待ち時間が短いネットワーク接続を提供します。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: マルチ AZ 配置のコンテキストにおいて &quot;プライマリ&quot; と &quot;スタンバイ&quot; は何を意味しますか?</b></p> 
+        <p>DB インスタンスをマルチ AZ 配置として実行する場合、&quot;プライマリ&quot; はデータベースに読み込みと書き込みの機能を提供します。さらに、Amazon RDS は、背後で「スタンバイ」を設定して管理します。これはプライマリの最新レプリカになります。スタンバイはフェイルオーバー時に（プライマリに）「昇格」します。フェイルオーバー後、スタンバイはプライマリとなり、お客様のデータベースオペレーションを受け付けるようになります。昇格前には、どの時点においても、スタンバイと直接やりとり（例: 読み込みオペレーション）することはありません。単一の DB インスタンスの容量制限を超えて読み込みトラフィックをスケーリングする方法に関心のあるお客様は、<a href="#87">リードレプリカ</a>のよくある質問をご覧ください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: マルチ AZ 配置の利点は何ですか?</b></p> 
+        <p>DB インスタンスをマルチ AZ 配置として実行することの主な利点は、データベースの耐久性と可用性を向上することです。マルチ AZ 配置によって高められる可用性と耐障害性は、本番環境に最適です。<br></p> 
+        <p>DB インスタンスをマルチ AZ 配置として実行すると、万一 DB インスタンスコンポーネントに障害が発生した場合や、特定のアベイラビリティーゾーンで可用性が失われた場合でも、データの安全が守られます。例えば、プライマリ上のストレージボリュームが障害を受ける場合、Amazon RDS はスタンバイに対して自動的にフェイルオーバーを開始し、お客様のデータベース更新はそのスタンバイですべて完全な状態に保たれます。これは、単一のAZにおける標準配備と比較した場合、さらなるデータ堅牢性を提供するものです。単一の AZ における標準配備では、ユーザーによって開始される復元オペレーションが必要で、復元可能な最新時刻（一般的には過去５分以内）後に発生した更新は利用できません。<br></p> 
+        <p>データベースの可用性を向上できることも、DB インスタンスをマルチ AZ 配置として運用する場合の利点の 1 つです。アベイラビリティーゾーンの障害または DB インスタンスの障害が発生した場合、可用性が影響を受けるのは、自動フェイルオーバーが完了するまでの間のみです。Multi-AZ の可用性に対する恩恵は、計画されたメンテナンスにも拡大されます。例えば、自動バックアップでは、バックアップがスタンバイから取得されるため、お好みのバックアップウィンドウで、プライマリ上での I/O アクティビティが中断されることはありません。パッチの適用や DB インスタンスクラスのスケーリングを行う場合、これらのオペレーションは、自動フェイルオーバーの前にスタンバイで最初に行われます。結果的に、可用性が影響を受けるのは、自動フェイルオーバーが完了するのに必要な時間に限定されます。<br></p> 
+        <p>DB インスタンスをマルチ AZ 配置として実行することによる暗黙の利点は他にもあります。それは、DB インスタンスのフェイルオーバーが自動で行われ、手動管理が必要ないことです。Amazon RDS のコンテキストでは、これはアベイラビリティーゾーンや DB インスタンスの障害時に、(RestoreDBInstanceToPointInTime または RestoreDBInstanceFromSnapshot API を使用して) DB インスタンスのイベントをモニタリングし、手動で DB インスタンスの復旧を開始する必要がないことを意味します。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: DB インスタンスをマルチ AZ 配置として実行するとパフォーマンスに影響はありますか?</b></p> 
+        <p>実行される同期的データレプリケーションの結果として、単一のアベイラビリティーゾーンにおける標準 DB インスタンスの配置と比較した場合、レイテンシーが増加する可能性があります。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: DB インスタンスをマルチ AZ 配置として実行する場合、読み込みまたは書き込みオペレーションのためにスタンバイを使用できますか?</b></p> 
+        <p>いいえ。マルチ AZ のスタンバイは、読み込みリクエストに対応していません。マルチ AZ 配置は、読み込み機能の拡張による恩恵よりも、データベースの可用性と堅牢性の強化を提供するよう設計されています。そのため、この機能はプライマリとスタンバイの間で同期するレプリケーションを行います。当社の実装では、プライマリとスタンバイが常に同期するようにしてありますが、スタンバイを読み込みまたは書き込みオペレーションのために使用する機能は除外しています。読み込みのスケーリングソリューションに興味がある場合は、<a href="#read-replicas">リードレプリカ</a>に関するよくある質問をご覧ください。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: マルチ AZ DB インスタンス配置のセットアップはどのように行うのですか?</b></p> 
+        <p>マルチ AZ DB インスタンス配置を作成するには、<a href="https://console.aws.amazon.com/">AWS マネジメントコンソール</a>で DB インスタンスを起動する際に、[マルチ AZ 配置] で [はい] のオプションをクリックするだけです。代わりに、Amazon RDS API を使用している場合は、CreateDBInstance API を呼び出して &quot;マルチ AZ&quot; のパラメータの値を &quot;true&quot; に設定することもできます。 既存の標準 (単一 AZ) DB インターフェイスをマルチ AZ に変換するには、AWS マネジメントコンソールで DB インスタンスを修正するか、ModifyDBInstance API を使用してマルチ AZ のパラメータを true に設定します。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: RDS インスタンスをシングル AZ からマルチ AZ に変換するとどうなりますか?</b></p> 
+        <p>RDS for MySQL、MariaDB、PostgreSQL、および Oracle のデータベースエンジンについては、RDS インスタンスを Single-AZ から Multi-AZ に変換すると、次のようになります。</p> 
+        <ul> 
+         <li>プライマリインスタンスのスナップショットが取得されます。</li> 
+         <li>そのスナップショットから新しいスタンバイインスタンスが別のアベイラビリティーゾーンに作成されます。</li> 
+         <li>同期レプリケーションがプライマリインスタンスとスタンバイインスタンスとの間に構成されます。</li> 
+        </ul> 
+        <p>結果として、インスタンスが Single-AZ から Multi-AZ に変換される際には、ダウンタイムは発生しません。ただし、スタンバイのデータがプライマリと一致するように処理されている間は、レイテンシーが増加することがあります。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS によるスタンバイレプリカへのフェイルオーバーは、どのようなイベントのときに発生しますか?</b></p> 
+        <p>Amazon RDS では、マルチ AZ 配置における一般的な障害シナリオの検出とリカバリが自動的に行われるので、管理者の介入は不要でデータベース操作を可能な限りすみやかに再開できます。Amazon RDS によって自動的にフェイルオーバーが実行されるのは、次のことが発生したときです。</p> 
+        <ul> 
+         <li>プライマリ利用可能ゾーンの可用性損失</li> 
+         <li>プライマリに対するネットワーク接続の喪失</li> 
+         <li>プライマリ上でのコンピューティングユニット障害</li> 
+         <li>プライマリへのストレージ不良</li> 
+        </ul> 
+        <p>注: DB インスタンスのスケーリングやシステムアップグレード (OS のパッチ適用など) のオペレーションがマルチ AZ 配置に対して行われるときは、可用性を高めるために、これらが最初にスタンバイに適用されて、その後で自動フェイルオーバーが実行されます。したがって、可用性への影響が現れるのは自動フェイルオーバーを完了するのに必要な時間までとなります。なお、Amazon RDS マルチ AZ 配置での自動フェイルオーバーは、データベースオペレーションにおけるエラー (長時間実行クエリ、デッドロック、データベース破損など) の発生に対しては行われません。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 自動フェイルオーバーが発生するときに警告がありますか?</b></p> 
+        <p>はい。Amazon RDS では DB インスタンスイベントが発行され、自動フェイルオーバーの発生が通知されます。Amazon RDS コンソールの [イベント] セクションをクリックするか、DescribeEvents API を使用して、DB インスタンスに関係のあるイベントについての情報を返すことも可能です。<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html">Amazon RDS Event Notifications</a> を使って、特定の DB イベントが発生したときに、通知を受け取ることも可能です。<br> </p> 
+       </div> 
+       <div id=".2345"></div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: マルチ AZ のフェイルオーバー中どのようなことが起き、どれくらいの間継続しますか?</b></p> 
+        <p>フェイルオーバーは Amazon RDS によって自動的に処理されるため、管理上の手動介入なく、可能な限り迅速にデータベースオペレーションを再開することができます。フェイルオーバーの際には、Amazon RDS は単純に DB インスタンスの正規名レコード (CNAME) を反転させ、スタンバイをポイントします。そしてこのスタンバイが今度は新しいプライマリになります。ベストプラクティスに従い、アプリケーションレイヤーでデータベース接続のリトライを実施することを推奨いたします。<br></p> 
+        <p>フェイルオーバーは、プライマリで障害が検出されてからスタンバイでトランザクションが再開されるまでの間隔として定義され、通常 1 ～ 2 分以内に完了します。コミットされていない大きなトランザクションを回復させる必要があるかどうかによっても、フェイルオーバー時間は異なります。最適の結果を得るには、マルチ AZ では十分に大きなインスタンスタイプを使用することをお勧めします。また、高速かつ予測可能で、安定したスループットパフォーマンスを得るには、マルチ AZ インスタンスとともにプロビジョニングされた IOPS を使用することをお勧めします。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: マルチ AZ DB インスタンス配置に対して &quot;強制フェイルオーバー&quot; を開始できますか?</b></p> 
+        <p>Amazon RDS は、さまざまな<a href="#43">障害状態</a>のときにユーザーが介入しなくても、自動的にフェイルオーバーを行います。さらに、Amazon RDS ではインスタンスが再起動されたときにフェイルオーバーを開始することもできます。この機能にアクセスするには、AWS マネジメントコンソールを使用するか、RebootDBInstance API 呼び出しを使用してください。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: マルチ AZ の同期的レプリケーションはどのようにコントロール/設定するのですか?</b></p> 
+        <p>Multi-AZ 配備を使用する場合、[Multi-AZ] パラメータを真に設定するだけです。スタンバイ、同期的レプリケーションおよびフェイルオーバーの作成は、すべて自動的に処理されます。つまり、スタンバイが配置されているアベイラビリティーゾーンを選択したり、利用可能なスタンバイ数を変更したりすることはできません (Amazon RDS は、DB インスタンスプライマリごとに 1 つの専用スタンバイを設定します)。また、スタンバイは、データベースの読み取りアクティビティを許可するよう設定できません。<a href="/rds/details/multi-az/" adhocenable="false">マルチ AZ 配置の詳細についてはこちらをご覧ください。</a><br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 私のスタンバイは私のプライマリと同一のリージョンになりますか?</b></p> 
+        <p>はい。スタンバイは、<i>同一リージョン</i>の異なるアベイラビリティーゾーンにおいて、DB インスタンスプライマリとして自動的にプロビジョニングされます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 自分のプライマリが現在どのアベイラビリティーゾーンなのかを確認できますか?</b></p> 
+        <p>はい。<a href="https://console.aws.amazon.com/">AWS マネジメントコンソール</a>または DescribeDBInstances API を使用することで、現在のプライマリロケーションを視認することができます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: フェイルオーバー後、私のプライマリは、私の他の AWS リソース（例: EC2 インスタンス）とは異なるアベイラビリティーゾーンに所在しています。レイテンシーについて懸念すべきですか?</b></p> 
+        <p>アベイラビリティーゾーンは、同一リージョンの別のアベイラビリティーゾーンに対して短いレイテンシーでネットワーク接続できるように設計されています。さらに、1 つのアベイラビリティーゾーンでサービスに障害が発生してもお客様のアプリケーションが柔軟性を保てるよう、複数のアベイラビリティーゾーン全体で冗長性を持つようにアプリケーションや他の AWS リソースのアーキテクチャーを設計することも検討できます。Multi-AZ 配備は、お客様サイドでの管理作業なく、データベースに対するこのニーズを解決します。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: DB スナップショットと自動バックアップは、マルチ AZ 配置とどのように連携するのですか?</b></p> 
+        <p>自動バックアップと DB スナップショットの機能の扱い方は、単一 AZ での標準的な配置とマルチ AZ 配置のどちらで実行するかにかかわらず同一です。マルチ AZ 配置で実行している場合は、自動バックアップと DB スナップショットはスタンバイから取得されます。これは、プライマリでの I/O 中断を避けるためです。なお、単一 AZ とマルチ AZ のどちらの配置の場合も、バックアップ取得中は I/O レイテンシーが増加する可能性があることにご注意ください（一般的には数分で元に戻ります）。<br></p> 
+        <p>復元操作（特定時点への復元または DB スナップショットからの復元）についても、マルチ AZ 配置での機能は標準の単一 AZ 配置の場合と同じです。新しい DB インスタンスの配置は、RestoreDBInstanceFromSnapshot または RestoreDBInstanceToPointInTime API のどちらかで作成できます。これらの新しい DB インスタンスの配置は、ソースバックアップが標準配置で開始されていようと、マルチ AZ 配置で開始されていようと、それとは無関係に標準またはマルチ AZ のどちらかに設定できます。<br></p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-grid"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <h2 id="Read_Replicas" class="lb-txt-bold lb-txt-24 lb-h2 lb-title" style="color:#232f3e;"> リードレプリカ</h2> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: DB インスタンスをリードレプリカとして実行することに、どのような意味がありますか?</b></p> 
+        <p>リードレプリカは、サポートされるエンジンに組み込まれているレプリケーション機能を使って、単一の DB インスタンスの容量制限を弾性的に拡大してデータベースワークロードの読み込み負荷を緩和させることができます。ユーザーは、AWS マネジメントコンソールで数回クリックするか、CreateDBInstanceReadReplica API を使って、リードレプリカを作成できます。リードレプリカを作成すると、データベースは、サポートされるエンジンのネイティブ非同期レプリケーション機能を使ってソース DB インスタンスを更新します。1 つのソース DB インスタンスに対して複数のリードレプリカを作成して、アプリケーションの読み込みトラフィックをこれらのレプリカに分散させることができます。</p> 
+        <p>リードレプリカは、サポートされるエンジンに組み込まれているレプリケーション機能を使用するため、その長所と制限が反映されます。特に、更新は、ソース DB インスタンスを更新した後にリードレプリカに反映されるため、レプリケーションが大幅に異なる場合があります。リードレプリカをマルチ AZ 配置に関連付けることにより、<a href="#36">マルチ AZ 配置</a>が提供するデータベースの書き込み可用性と耐久性に加えて、読み込み性能をスケーリングすることができます。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS リードレプリカの使用を検討すべきなのはどのような場合ですか?</b></p> 
+        <p>与えられた DB インスタンスで正しく機能するためにリードレプリカを配備する場所はさまざまです。リードレプリカをデプロイする一般的な理由は以下のとおりです。</p> 
+        <ul> 
+         <li>読み込みが多いデータベースに対して1つの DB インスタンスの処理または入出力機能を拡張します。これにより過度の読み込みトラフィックを 1 つまたは複数のリードレプリカに誘導することができます。</li> 
+         <li>ソース DB インスタンスが利用可能でない場合に読み込みトラフィックを誘導します。お客様のソース DB インスタンスが入出力リクエストを取ることができない (バックアップまたは定期メンテナンスによる入出力一時停止のため)、読み込みトラフィックをリードレプリカに誘導することができます。このようなユースケースでは、リードレプリカのデータは、ソース DB インスタンスが利用可能でないために、「古い」場合があるため注意が必要です。</li> 
+         <li>ビジネスレポーティング、またはデータウェアハウジングでは、プライマリプロダクション DB インスタンスではなく、ビジネスレポーティングクエリをリードレプリカに対して実行します。</li> 
+         <li>同じ AWS リージョンまたは別のリージョンで、ソース DB インスタンスの災害対策にリードレプリカを使用することができます。</li> 
+        </ul> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt"> 
+        <p><b>Q: リードレプリカを作成する前に、DB インスタンスで自動バックアップを有効にする必要がありますか?</b></p> 
+        <p>はい。リードレプリカを追加する前に、バックアップ保持期間を 0 以外の値に設定して、ソース DB インスタンスの自動バックアップを有効にします。リードレプリカを動作させるには、バックアップを有効にする必要があります。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS リードレプリカをサポートするのはデータベースエンジンのどのバージョンですか?</b></p> 
+        <p><i>Amazon Aurora:</i> すべての DB クラスター。</p> 
+        <p><i>Amazon RDS for MySQL:</i> すべての DB インスタンスで、リードレプリカの作成がサポートされます。リードレプリカオペレーションでは、ソース DB インスタンスで自動バックアップを有効にしておく必要があります。レプリカでの自動バックアップは、MySQL 5.6 以降 (5.5 は対象外) を実行する Amazon RDS リードレプリカでのみサポートされます。</p> 
+        <p><i>Amazon RDS for PostgreSQL:</i> PostgreSQL バージョン 9.3.5 以降の DB インスタンスで、リードレプリカの作成がサポートされます。Amazon RDS リードレプリカを利用するには、バージョン 9.3.5 より前の既存の PostgreSQL インスタンスを PostgreSQL バージョン 9.3.5 にアップグレードする必要があります。</p> 
+        <p><i>Amazon RDS for MariaDB:</i> すべての DB インスタンスで、リードレプリカの作成がサポートされます。リードレプリカオペレーションでは、ソース DB インスタンスで自動バックアップを有効にしておく必要があります。</p> 
+        <p><i>Amazon RDS for Oracle:</i>&nbsp;Oracle バージョン12.1.0.2.v12 以上、および Oracle Database Enterprise Edition で自分のライセンスを使用する (BYOL) モデルを使用しており、Active Data Guard Option のライセンスを取得しているすべての 12.2 バージョンでサポートされています。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 与えられた DB インスタンスにリードレプリカをどのようにデプロイしますか?</b></p> 
+        <p>標準の CreateDBInstanceReadReplica API を使用するか、AWS マネジメントコンソールで数回クリックするだけで数分でリードレプリカを作成できます。リードレプリカを作成する時は、SourceDBInstanceIdentifier を指定してリードレプリカを特定することができます。SourceDBInstanceIdentifier は、レプリケーションしたい「ソース」DB インスタンスを特定する DB インスタンス識別子です。標準 DB インスタンスと同様に、アベイラビリティーゾーン、DB インスタンスのクラス、推奨するメンテナンスウィンドウも指定できます。エンジンのバージョン (PostgreSQL 9.3.5 など) とリードレプリカのストレージ割り当ては、ソース DB インスタンスから継承されます。リードレプリカの作成を開始すると、Amazon RDS は、お客様のソース DB インスタンスのスナップショットを撮り、レプリケーションを開始します。その結果、スナップショットを撮る間、ソース DB インスタンスに軽度の入出力停止が発生します。入出力の一時停止は、通常 1 分程度です。ソース DB インスタンスがマルチ AZ 配置の場合は、回避されます (マルチ AZ 配置の場合は、スタンバイのスナップショットがあります)。Amazon RDS では、現在も最適化の作業が行われています (近日中に公開予定)。複数のリードレプリカを 30 分の範囲内で作成した場合、すべてのリードレプリカのソーススナップショットは同じになり、入出力の影響は最小限になります。(それぞれのリードレプリカに対する「キャッチアップ」レプリケーションは作成後に開始されます)。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 自分のリードレプリカにどのように接続しますか?</b></p> 
+        <p>DescribeDBInstance API または AWS マネジメントコンソールを使ってリードレプリカに対するエンドポイントを読み出して標準 DB インスタンスと接続するのと同じようにリードレプリカを接続します。リードレプリカが複数ある場合、読み込みトラフィックがどのように分配されるかはアプリケーションに依存します。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 与えられたソース DB インスタンスに対して、いくつのリードレプリカが作成可能ですか?</b></p> 
+        <p>Amazon RDS for MySQL、MariaDB、PostgreSQL および Oracle では、特定のソース DB インスタンスに対して、最大 5 個のリードレプリカを作成できます。</p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: ソース DB インスタンスとは異なる AWS リージョンにリードレプリカを作成できますか?</b></p> 
+        <p>はい、Amazon RDS ではリージョン間のリードレプリカがサポートされます。データがソース DB インスタンスに書き込まれてから、リードレプリカで使用可能になるまでの時間は、2 つのリージョン間のネットワークレイテンシーによって異なります。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS リードレプリカは同期レプリケーションをサポートしますか?</b></p> 
+        <p>いいえ。Amazon RDS for MySQL、MariaDB、PostgreSQL および Oracle のリードレプリカは、これらのエンジンのネイティブの非同期レプリケーションを使用して実装されています。Amazon Aurora は、別の (ただし非同期) のレプリケーションメカニズムを使用しています。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: リードレプリカを使って、障害が発生した場合のデータベースを書き込んだり、自分のソース DB インスタンスの保護を強化することはできますか?</b></p> 
+        <p>レプリケーションを使ってデータベースの書き込み性能を強化し、さまざまな障害条件に対してデータベースの最新状態を保護するためには、DB インスタンスをマルチ AZ 配置として実行することをお勧めします。サポートされるエンジンのネイティブな非同期レプリケーションを使用する Amazon RDS リードレプリカでは、データベースの書き込みがソース DB インスタンスで既に発生した後にリードレプリカで発生するため、このレプリケーションの「遅延」は状態に応じてかなり異なります。その反面、Multi-AZ 配備が使うレプリケーションは同期しています。つまり、すべてのデータベース書込みはプライマリとスタンバイで同時に行われます。このように最新のデータベース更新を保護することで、イベントのフェイルオーバー発生時にスタンバイ状態にすることができます。さらに、Multi-AZ 配備のレプリケーションは、完全に管理されています。Amazon RDS では DB インスタンスの障害条件やアベイラビリティーゾーンの障害が自動的に監視され、機能停止が発生すると、スタンバイ (Amazon Aurora の場合はリードレプリカ) への自動フェイルオーバーが開始されます。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: リードインスタンスのソースとしてマルチ AZ DB インスタンス配置を持つリードレプリカを作成できますか?</b></p> 
+        <p>はい。Multi-AZ DB インスタンスはリードレプリカとは異なるニーズに対処するため、プロダクション展開で双方を使用して、リードレプリカをマルチ AZ DB インスタンスに関連付けることは理にかなっています。「ソース」 Multi AZ-DB インスタンスは、書き込み可用性とデータの耐久性を強化し、関連するリードレプリカは、読み込みトラフィックのスケーラビリティを向上します。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: Amazon RDS リードレプリカ自体をマルチ AZ にできますか?</b></p> 
+        <p>はい。Amazon RDS for MySQL、MariaDB、PostgreSQL および Oracle では、リードレプリカのマルチ AZ 設定を有効化することで、災害対策のサポートとエンジンアップグレードによるダウンタイム最小化を実現できます。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 自分のリードレプリカがマルチ AZ DB インスタンス配置をソースとして使用する場合、マルチ AZ フェイルオーバーが発生した場合にどうなりますか?</b></p> 
+        <p>マルチ AZ フェイルオーバーが発生した場合、関連するリードレプリカ、および利用可能なリードレプリカは、フェイルオーバーが完了すると、自動的にレプリケーションを再開します (新たに昇格したプライマリから更新を取得します)。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 別のリードレプリカのリードレプリカを作成できますか?</b></p> 
+        <p><i>Amazon Aurora、Amazon RDS for MySQL、MariaDB:</i> 既存の第 1 層リードレプリカから第 2 層リードレプリカを作成できます。第 2 層リードレプリカを作成すると、マスターデータベースインスタンスからのレプリケーション負荷の一部を第 1 層リードレプリカに移動することができます。ただし、トランザクションはマスターから第 1 層レプリカにレプリケートされてから、第 2 層レプリカにレプリケートされ、レプリケーションのレイテンシーが増えるため、第 2 層リードレプリカはマスターよりも遅延する可能性があります。<br> </p> 
+        <p><i>Amazon RDS for PostgreSQL および Amazon RDS for Oracle:</i> 現在、リードレプリカのリードレプリカはサポートされていません。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: リードレプリカでデータベースの読み取りオペレーションのみを受け付けるようにすることはできますか?</b></p> 
+        <p>リードレプリカは、読み込みトラフィックを誘導するためのものです。ただし、上級ユーザーがリードレプリカに対してデータ定義言語 (DDL) SQL 記述を完了する場合があります。たとえば、同じインデックスに対応するソース DB インスタンスに追加せずに、ビジネスレポーティングに使用されるリードレプリカにデータベースインデックスを追加する場合などです。<br> </p> 
+        <p>Amazon RDS for MySQL は、リードレプリカに対する DDL SQL ステートメントを許可するように設定できます。指定されたリードレプリカに対して読み込み以外のオペレーションを有効にする場合は、リードレプリカに対してアクティブ DB パラメータグループを変更し、「read_only」パラメータを「0」に設定します。</p> 
+        <p>現在、Amazon RDS for PostgreSQL はリードレプリカに対する DDL SQL ステートメントの実行をサポートしていません。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: リードレプリカを &quot;スタンドアロン&quot; DB インスタンスに昇格することはできますか?</b></p> 
+        <p>はい。詳細については、「<a href="http://docs.amazonwebservices.com/AmazonRDS/latest/UserGuide/Overview.ReadReplica.html">Amazon RDS ユーザーガイド</a>」を参照してください。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: リードレプリカはソース DB インスタンスに応じて最新状態に保たれますか?</b></p> 
+        <p>ソース DB インスタンスの更新は、関連するすべてのリードレプリカに対して自動的にレプリケーションされます。ただし、サポートされているエンジンの非同期レプリケーションテクノロジーを使うと、さまざまな理由によりリードレプリカがソース DB インスタンスより遅れることがあります。一般的な理由は以下のとおりです。</p> 
+        <ul> 
+         <li>ソース DB インスタンスへの書き込みの入出力量が設定した値を超えた場合の変更がリードレプリカに適応されることがあります (この問題は、リードレプリカのコンピューティング性能がソース DB インスタンスより低い場合に発生する場合があります)。</li> 
+         <li>ソース DB インスタンスへの複雑または長期間のトランザクションがリードレプリカのレプリケーションを発生させる</li> 
+         <li>ネットワーク パーティションまたはソース DB インスタンス間のレイテンシーとリードレプリカ</li> 
+        </ul> 
+        <p>リードレプリカには、サポートされるエンジンのネイティブなレプリケーションの長所と短所が反映されます。リードレプリカを使う場合は、リードレプリカとそのソース DB インスタンスの間に遅延または「矛盾」が発生する可能性があることを理解していなければなりません。リードレプリカとソース間の遅延が大きくなった場合にどうすべきかに関するガイダンスは、<a href="#98">こちら</a>をクリックしてください。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: アクティブなリードレプリカのステータスはどのように表示されますか?</b></p> 
+        <p>標準の DescribeDBInstances API を使用すると、デプロイ済みのすべての DB インスタンス (リードレプリカを含む) のリストが返ります。または Amazon RDS コンソールの「Instances」タブをクリックします。<br> </p> 
+        <p>Amazon RDS には、リードレプリカがそのソース DB インスタンスからどの程度遅れているかを知るための機能があります。リードレプリカがマスターより遅れている秒数は Amazon CloudWatch メトリクス (「レプリカラグ」) として公開され、AWS マネジメントコンソールまたは Amazon CloudWatch API から閲覧できます。Amazon RDS for MySQL の場合、この情報ソースは、リードレプリカに対して標準の「Show Slave Status」 MySQL コマンドを発行することで表示されるものと同じです。Amazon RDS for PostgreSQL の場合、ソース DB インスタンスで pg_stat_replication ビューを使用して、レプリケーションのメトリクスを調べることができます。<br> </p> 
+        <p>Amazon RDS がリードレプリカのレプリケーション状態をモニタリングします。AWS マネジメントコンソールの [Replication State] フィールドが [Error] に更新された場合は、レプリケーションが何らかの理由で停止していることを示します（例: レプリカに対して試みた DML クエリが、マスターデータベースインスタンスでの更新と競合する場合は、レプリケーションエラーとなることがあります）。MySQL エンジンによってスローされた、対応するエラーの詳細を確認するには、[Replication Error] フィールドを調べます。この情報に基づいて、回復のための適切な措置をとります。レプリケーションの問題のトラブルシューティングの詳細は、Amazon RDS for <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html#USER_ReadRepl.Troubleshooting" adhocenable="false">MySQL</a> または <a adhocenable="false" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html#USER_ReadRepl.TroubleshootingPostgreSQL">PostgreSQL</a> のユーザーガイド「リードレプリカの問題のトラブルシューティング」セクションを参照してください。<br> </p> 
+        <p>レプリケーションエラーが解決すると、[Replication State (レプリケーションステータス)] は [Replicating (レプリケーション中)] に変化します。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: ソース DB インスタンスのコンピューティングやストレージ容量をスケーリングしました。関連するリードレプリカのリソースもスケーリングする必要がありますか?</b></p> 
+        <p>レプリケーションが正しく機能するためには、リードレプリカに可能な限り多くの対応するソース DB インスタンスのコンピューティングとストレージリソースを確保してください。そうしないと、レプリケーションラグが増加する可能性が増える、またはリードレプリカがレプリケーションした更新を格納するスペースが足りなくなります。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b> Q: リードレプリカはどのように削除しますか? ソース DB インスタンスを削除すると自動削除されますか？</b></p> 
+        <p>AWS マネジメントコンソールで数回クリックするか、DB インスタンス識別子を DeleteDBInstance API に渡すと、簡単にリードレプリカを削除できます。<br> </p> 
+        <p>Amazon Aurora リードレプリカはアクティブ状態のままとなり、対応するソース DB インスタンスが削除された後も読み込みトラフィックを受け入れ続けます。クラスター内にあるレプリカのうちいずれかが自動的に新しいマスターに昇格し、書き込みトラフィックの受け入れを開始します。<br> </p> 
+        <p>Amazon RDS for MySQL または Amazon RDS for MariaDB のリードレプリカは、アクティブ状態のままとなり、対応するソース DB インスタンスが削除された後も読み込みトラフィックを受け入れ続けます。ソース DB インスタンスと同時にリードレプリカも削除する場合は、DeleteDBInstance API または AWS マネジメントコンソールを使って明示的に行う必要があります。<br> </p> 
+        <p>リードレプリカがある Amazon RDS for PostgreSQL の DB インスタンスを削除すると、すべてのリードレプリカがスタンドアロン DB インスタンスに昇格されて、読み込みトラフィックと書き込みトラフィックの両方を受け付けることができるようになります。新しく昇格された DB インスタンスは、相互に独立して動作します。元のソース DB インスタンスに加えてこれらの DB インスタンスを削除する場合は、DeleteDBInstance API または AWS マネジメントコンソールを使って明示的に行う必要があります。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: リードレプリカの料金はいくらですか? 請求はいつ開始され、いつ終了しますか?</b></p> 
+        <p>リードレプリカは、標準 DB インスタンスと同じ料金で請求されます。&nbsp;標準 DB インスタンスと同様、リードレプリカに対する &quot;DB インスタンス時間&quot; ごとの料金は、リードレプリカの DB インスタンスクラスで決まります。最新の料金情報については、「<a href="https://aws.amazon.com/rds/pricing/">料金表ページ</a>」を参照してください。同じ AWS リージョン内のソース DB インスタンスとリードレプリカ間のデータレプリケーションに発生したデータ転送に対しては請求されません。<br> </p> 
+        <p>リードレプリカの請求は、そのレプリカを作成 (一覧のステータスが「アクティブ」になるなど) してから開始します。リードレプリカは、削除するコマンドを発行するまで標準 Amazon RDS DB インスタンスの時間料金で請求されます。</p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-grid"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <h2 id="Enhanced_Monitoring" class="lb-txt-bold lb-txt-24 lb-h2 lb-title" style="color:#232f3e;"> 拡張モニタリング</h2> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: RDS の拡張モニタリングとは何ですか?</b></p> 
+        <p>RDS の拡張モニタリングによって、RDS インスタンスの状況をより詳細に可視化できます。RDS DB インスタンスの [拡張モニタリング] オプションを有効にし、詳細度を設定すれば、指定された間隔でオペレーティングシステムの重要なメトリクスとプロセス情報が拡張モニタリングによって収集されます。</p> 
+        <p>データベースの負荷をさらに詳細に診断および視覚化し、データ保持期間を長くするには、「<a href="/rds/performance-insights/">Performance Insights</a>」をお試しください。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 拡張モニタリングではどのようなメトリクスとプロセスをモニタリングできますか?</b></p> 
+        <p>拡張モニタリングでは、特に CPU、メモリ、ファイルシステム、ディスク I/O といった、RDS インスタンスのシステムレベルのメトリクスが収集されます。メトリクスの詳細なリストは、「<a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html">ドキュメント</a>」で確認できます。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 拡張モニタリングではどのようなエンジンがサポートされていますか?</b></p> 
+        <p>拡張モニタリングでは、すべての RDS データベースエンジンがサポートされています。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 拡張モニタリングではどのようなインスタンスタイプがサポートされていますか?</b></p> 
+        <p>拡張モニタリングでは、t1.micro と m1.small を除くすべてのインスタンスタイプがサポートされています。このソフトウェアでは、少量の CPU、メモリ、I/O が消費されます。一般的な目的でのモニタリングでは、中規模または大規模のインスタンスに対して高い詳細度を有効にすることをお勧めします。本番以外の環境の DB インスタンスでは、拡張モニタリングはデフォルトで「オフ」に設定されています。そのまま無効にしておくことも、オンにして詳細度を変更することも可能です。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: RDS ダッシュボードにはどのような情報が表示されますか?</b></p> 
+        <p>RDS DB インスタンスのすべてのシステムメトリクスとプロセス情報を、コンソールのグラフィック形式で表示できます。各インスタンスについてモニタリングするメトリクスを管理し、必要に応じてダッシュボードをカスタマイズすることができます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: RDS アカウント内のすべてのインスタンスの詳細度が同じになるのですか?</b></p> 
+        <p>RDS アカウント内のそれぞれの DB インスタンスに、個別に詳細度を設定できます。どのインスタンスに対して拡張モニタリングを有効にするかも選択でき、必要なときにはいつでも各インスタンスに対する詳細度を変更できます。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: RDS コンソールではメトリクスの履歴をどれほど前までさかのぼれますか?</b></p> 
+        <p>すべてのメトリクスのパフォーマンス値を最大 1 時間前まで参照できます。詳細度は設定に基づいて最大 1 秒間です。<br> </p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: RDS 拡張モニタリングで生成されたメトリクスを CloudWatch でどのように可視化できますか?</b></p> 
+        <p>RDS 拡張モニタリングからのメトリクスは、CloudWatch Logs アカウントに配信されます。CloudWatch 内で、CloudWatch Logs からメトリクスフィルターを作成し、CloudWatch ダッシュボードに表示できます。詳細については、「<a href="/cloudwatch/pricing/">Amazon CloudWatch</a>」のページを参照してください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: RDS コンソールダッシュボードではなく CloudWatch を使用するのはどのようなケースですか?</b></p> 
+        <p>RDS コンソールダッシュボードで利用できる履歴データよりも前のデータが必要な場合、CloudWatch の使用が必要です。RDS インスタンスを CloudWatch でモニタリングすることで、AWS スタック全体の状況について 1 つの場所で診断できます。現在のところ、CloudWatch でサポートされている詳細度は最高 1 分間隔で、それよりも詳細度の短い場合は平均値になります。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 特定のメトリクスに基づいてアラームと通知をセットアップすることはできますか?</b></p> 
+        <p>はい。アラームの状態が変化したときに通知を送信するアラームを CloudWatch に作成できます。アラームは、指定期間にわたって単一のメトリクスを監視し、その値と複数期間に対するしきい値との比較結果に基づいて 1 つ以上のアクションを実行します。CloudWatch アラームの詳細については、<a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/AlarmThatSendsEmail.html">Amazon CloudWatch 開発者用ガイド</a>をご覧ください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 現在使用中のツールに拡張モニタリングを統合するにはどのようにすればよいですか?</b></p> 
+        <p>RDS 拡張モニタリングでは、CloudWatch Logs アカウントに配信される JSON ペイロードとして形成されるメトリクス一式が提供されています。JSON ペイロードは、その RDS インスタンスに最後に設定された詳細度で配信されます。<br></p> 
+        <p>サードパーティ製のダッシュボードやアプリケーションでそれらのメトリクスを利用するには、2 種類の方法があります。モニタリングツールでは、<a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/Subscriptions.html">CloudWatch Logs Subscriptions</a> を使用することで、メトリクスについてリアルタイムに近いフィードをセットアップできます。別の方法として、CloudWatch Logs のフィルターを使用してメトリクスを CloudWatch にブリッジし、アプリケーションを CloudWatch と統合することもできます。詳細については、<a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CWL_ES_Stream.html">Amazon CloudWatch のドキュメント</a>を参照してください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 履歴データはどのようにしてし消去できますか?</b></p> 
+        <p>拡張モニタリングでは JSON ペイロードが CloudWatch Logs アカウントのログに配信されます。このため、他の CloudWatch Logs ストリームと同じように保持期間を制御できます。CloudWatch Logs では、拡張モニタリングのデフォルト保持期間が 30 日間に設定されています。保持期間の変更方法の詳細については、<a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatch.html">Amazon CloudWatch 開発者ガイド</a>をご覧ください。<br></p> 
+       </div> 
+       <div class="lb-txt-16 lb-rtxt" style="color:#232F3E;"> 
+        <p><b>Q: 拡張モニタリングを利用すると、毎月の料金にどのような変化が発生しますか?</b></p> 
+        <p>メトリクスは CloudWatch Logs に取り込まれるため、CloudWatch Logs 無料利用枠を超過した部分の料金については、CloudWatch Logs のデータ転送レートおよびストレージレートに基づいて決まります。料金の詳細については、「<a href="/cloudwatch/pricing/">こちら</a>」を参照してください。ある RDS インスタンスについて転送される情報の量は、拡張モニタリング機能に設定された詳細度に直接比例します。管理者はアカウント内の各インスタンスの詳細度を個別に設定して、コストを管理できます。<br></p> 
+        <p>1 つのインスタンスに対する拡張モニタリングによって CloudWatch Logs に取り込まれるデータ量の概算を以下に示します。<br> </p> 
+       </div> 
+       <div class="lb-tbl lb-tbl-p lb-tbl-header-centered" data-is-sticky-header="false"> 
+        <table border="0" width="100%" cellspacing="0" cellpadding="1"> 
+         <tbody> 
+          <tr> 
+           <td style="text-align: center;"><b>詳細度</b></td> 
+           <td style="text-align: center;"><b>60 秒</b></td> 
+           <td style="text-align: center;"><b>30 秒</b></td> 
+           <td style="text-align: center;"><b>15 秒</b></td> 
+           <td style="text-align: center;"><b>10 秒</b></td> 
+           <td style="text-align: center;"><b>5 秒</b></td> 
+           <td style="text-align: center;"><b>1 秒</b></td> 
+          </tr> 
+          <tr> 
+           <td width="225" valign="top"><p>CloudWatch Logs に取り込まれるデータ量* (GB/月)</p> </td> 
+           <td width="71" valign="top"><p style="text-align: center;">0.27</p> </td> 
+           <td width="64" valign="top"><p style="text-align: center;">0.53</p> </td> 
+           <td width="64" valign="top"><p style="text-align: center;">1.07</p> </td> 
+           <td width="64" valign="top"><p style="text-align: center;">1.61</p> </td> 
+           <td width="64" valign="top"><p style="text-align: center;">3.21</p> </td> 
+           <td width="64" valign="top"><p style="text-align: center;">16.07</p> </td> 
+          </tr> 
+         </tbody> 
+        </table> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-grid"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <div class="lb-none-pad lb-none-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+        <div class="lb-col lb-tiny-24 lb-mid-8"> 
+         <figure class="lb-img"> 
+          <div> 
+           <img alt="Product-Page_Standard-Icons_01_Product-Features_SqInk" title="Product-Page_Standard-Icons_01_Product-Features_SqInk" src="images/Product-Page_Standard-Icons_01_Product-Features_SqInk.a8d5666758afc5121b4eb818ae18126031c4b61e.png"> 
+          </div> 
+         </figure> 
+         <div class="lb-tiny-align-center lb-txt-bold lb-txt-none lb-txt-18 lb-txt">
+           RDS パートナーの詳細 
+         </div> 
+         <a class="lb-tiny-align-center lb-txt-bold lb-txt-none lb-txt-blue-link lb-txt" href="/rds/partners/"> 詳細&nbsp;<i class="icon-angle-double-right"></i></a> 
+        </div> 
+        <div class="lb-col lb-tiny-24 lb-mid-8"> 
+         <figure class="lb-img"> 
+          <div> 
+           <img alt="Product-Page_Standard-Icons_02_Sign-Up_SqInk" title="Product-Page_Standard-Icons_02_Sign-Up_SqInk" src="images/Product-Page_Standard-Icons_02_Sign-Up_SqInk.f43d5ddc9c43883eec6187f34c68155402b13312.png"> 
+          </div> 
+         </figure> 
+         <div class="lb-tiny-align-center lb-txt-bold lb-txt-none lb-txt-18 lb-txt">
+           無料のアカウントにサインアップ 
+         </div> 
+         <div class="lb-tiny-align-center lb-none-v-margin lb-rtxt"> 
+          <p style="text-align: center;">AWS 無料利用枠にすぐにアクセスできます。&nbsp;</p> 
+         </div> 
+         <a class="lb-tiny-align-center lb-txt-bold lb-txt-none lb-txt-blue-link lb-txt" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html"> サインアップ&nbsp;<i class="icon-angle-double-right"></i></a> 
+        </div> 
+        <div class="lb-col lb-tiny-24 lb-mid-8"> 
+         <figure class="lb-img"> 
+          <div> 
+           <img alt="Product-Page_Standard-Icons_03_Start-Building_SqInk" title="Product-Page_Standard-Icons_03_Start-Building_SqInk" src="images/Product-Page_Standard-Icons_03_Start-Building_SqInk.6a1ef4429a6604cda9b0857084aa13e2ee4eebca.png"> 
+          </div> 
+         </figure> 
+         <div class="lb-tiny-align-center lb-txt-bold lb-txt-none lb-txt-18 lb-txt">
+           AWS コンソールで構築を開始する 
+         </div> 
+         <div class="lb-tiny-align-center lb-none-v-margin lb-rtxt"> 
+          <p style="text-align: center;">Amazon RDS は AWS コンソールから無料で始めることができます。<br> </p> 
+         </div> 
+         <a class="lb-tiny-align-center lb-txt-bold lb-txt-none lb-txt-blue-link lb-txt" href="https://console.aws.amazon.com/rds"> サインイン&nbsp;<i class="icon-angle-double-right"></i></a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-none-pad lb-none-v-margin lb-grid" style="margin-top:0px; margin-bottom:0px;"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <div class="lb-none-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+        <div class="lb-col lb-tiny-24 lb-mid-12"> 
+         <div class="lb-mbox js-mbox" data-mbox="en_2up_product-left" data-lb-comp-ignore="true"> 
+         </div> 
+        </div> 
+        <div class="lb-col lb-tiny-24 lb-mid-12"> 
+         <div class="lb-mbox js-mbox" data-mbox="en_2up_product-right" data-lb-comp-ignore="true"> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="lb-mbox js-mbox" data-mbox="en_1up_product" data-lb-comp-ignore="true"> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-sticky-sidebar lb-sticky-sidebar-modern" data-lb-comp="sticky-sidebar"> 
+     <div data-lb-comp="floating-wrapper" class="lb-floating-wrapper"> 
+      <div class="lb-floating-wrapper-content"> 
+       <div class="lb-wrapper-content"> 
+        <div class="lb-toggle-wrapper"> 
+         <div class="lb-toggle"></div> 
+        </div> 
+        <div class="lb-sidebar-content"> 
+         <div> 
+          <div class="lb-sidebar-header">
+            ページの内容 
+          </div> 
+          <a class="lb-txt-bold lb-txt-none lb-txt-16 lb-txt" href="#General"> 全般</a> 
+          <a class="lb-txt-bold lb-txt-none lb-txt-16 lb-txt" href="#Database_Instances"> データベースインスタンス</a> 
+          <a class="lb-txt-bold lb-txt-none lb-txt-16 lb-txt" href="#Database_Engine_Versions"> データベースエンジンのバージョン</a> 
+          <a class="lb-txt-bold lb-txt-none lb-txt-16 lb-txt" href="#Billing"> 請求</a> 
+          <a class="lb-txt-bold lb-txt-none lb-txt-16 lb-txt" href="#Free_Tier"> 無料利用枠</a> 
+          <a class="lb-txt-bold lb-txt-none lb-txt-16 lb-txt" href="#Reserved_Instances"> リザーブドインスタンス</a> 
+          <a class="lb-txt-bold lb-txt-none lb-txt-16 lb-txt" href="#Hardware_and_Scaling"> ハードウェアとスケーリング</a> 
+          <a class="lb-txt-bold lb-txt-none lb-txt-16 lb-txt" href="#Automatic_Backups_and_Database_Snapshots"> 自動化バックアップとデータベーススナップショット</a> 
+          <a class="lb-txt-bold lb-txt-none lb-txt-16 lb-txt" href="#Security"> セキュリティ</a> 
+          <a class="lb-txt-bold lb-txt-none lb-txt-16 lb-txt" href="#Database_Configuration"> データベース設定</a> 
+          <a class="lb-txt-bold lb-txt-none lb-txt-16 lb-txt" href="#Multi-AZ_Deployments"> マルチ AZ 配置</a> 
+          <a class="lb-txt-bold lb-txt-none lb-txt-16 lb-txt" href="#Read_Replicas"> リードレプリカ</a> 
+          <a class="lb-txt-bold lb-txt-none lb-txt-16 lb-txt" href="#Enhanced_Monitoring"> 拡張モニタリング</a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </main> 
+  </div> 
+  <footer id="aws-page-footer" class="aws-page-footer" role="contentinfo"> 
+   <div class="lb-row lb-snap lb-row-max-large"> 
+    <div class="lb-mid-6 lb-mid-push-18 lb-col"> 
+     <div class="lb-mbox js-mbox" data-mbox="en_footer_cta" data-lb-comp-ignore="true"> 
+      <a href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct" class="aws-page-footer-cta-button">無料アカウントの作成</a> 
+     </div> 
+    </div> 
+    <div class="lb-mid-18 lb-mid-pull-6 lb-col aws-social"> 
+     <ul> 
+      <div data-url="https://dc.ads.linkedin.com/collect/?pid=3038&amp;fmt=gif" data-lb-comp="tracking-pixel"></div> 
+      <li><a href="https://twitter.com/awscloud?nc1=f_so_tw"><i class="icon-twitter"></i> &nbsp;Twitter</a></li> 
+      <li><a href="https://www.facebook.com/amazonwebservices?nc1=f_so_fb"><i class="icon-facebook"></i> &nbsp;Facebook</a></li> 
+      <li><a href="/jp/podcasts/aws-podcast/"><i class="icon-podcast"></i> &nbsp;ポッドキャスト</a></li> 
+      <li><a href="https://www.twitch.tv/aws"><i class="icon-twitch"></i> &nbsp;Twitch</a></li> 
+      <li><a href="https://aws.amazon.com/blogs/"><i class="icon-list-alt"></i> &nbsp;AWS ブログ</a></li> 
+      <li><a href="https://aws.amazon.com/new/feed/"><i class="icon-rss"></i> &nbsp;RSS ニュースフィード</a></li> 
+      <li><a href="https://pages.awscloud.com/communication-preferences?trk=homepage"><i class="icon-envelope-o"></i> &nbsp;最新情報メール</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div class="lb-row lb-snap lb-row-max-large aws-page-footer-main"> 
+    <div class="lb-mid-16 lb-col aws-page-footer-nav"> 
+     <div class="lb-row"> 
+      <div class="lb-tiny-12 lb-mid-6 lb-col"> 
+       <div>
+         AWS とクラウドコンピューティング 
+       </div> 
+       <ul> 
+        <li><a href="https://aws.amazon.com/jp/what-is-cloud-computing/?nc1=f_cc">クラウドコンピューティングとは?</a></li> 
+        <li><a href="https://aws.amazon.com/jp/caching/?nc1=f_cc">キャッシュとは?</a></li> 
+        <li><a href="https://aws.amazon.com/jp/nosql/?nc1=f_cc">NoSQL とは?</a></li> 
+        <li><a href="https://aws.amazon.com/jp/devops/what-is-devops/?nc1=f_cc">DevOps とは?</a></li> 
+        <li><a href="https://aws.amazon.com/jp/docker/?nc1=f_cc">Docker とは?</a></li> 
+        <li><a href="https://aws.amazon.com/jp/products/?nc1=f_cc">製品とサービス</a></li> 
+        <li><a href="https://aws.amazon.com/jp/solutions/case-studies/?nc1=f_cc">お客様の導入事例</a></li> 
+        <li><a href="https://aws.amazon.com/jp/economics/?nc1=f_cc">エコノミクスセンター</a></li> 
+        <li><a href="https://aws.amazon.com/jp/architecture/?nc1=f_cc">アーキテクチャセンター</a></li> 
+        <li><a href="https://aws.amazon.com/jp/security/?nc1=f_cc">セキュリティセンター</a></li> 
+        <li><a href="https://aws.amazon.com/jp/new/?nc1=f_cc">最新情報</a></li> 
+        <li><a href="https://aws.amazon.com/jp/whitepapers/?nc1=f_cc">ホワイトペーパー</a></li> 
+        <li><a href="https://aws.amazon.com/blogs/">AWS ブログ</a></li> 
+        <li><a href="https://aws.amazon.com/jp/about-aws/events/?nc1=f_cc">イベント</a></li> 
+        <li><a href="https://aws.amazon.com/jp/about-aws/sustainability/?nc1=f_cc">持続可能なエネルギー</a></li> 
+        <li><a href="https://press.aboutamazon.com/press-releases/aws?nc1=f_cc">プレスリリース</a></li> 
+        <li><a href="https://aws.amazon.com/jp/about-aws/in-the-news/">AWS メディア掲載記事</a></li> 
+        <li><a href="https://aws.amazon.com/jp/resources/analyst-reports/?nc1=f_cc">アナリストレポート</a></li> 
+        <li><a href="https://aws.amazon.com/jp/legal/?nc1=f_cc">法務関連</a></li> 
+        <li><a href="https://www.amazon.co.uk/gp/help/customer/display.html?ie=UTF8&nodeId=202151760&ref_=help_search_1&nc1=f_cc"></a></li> 
+       </ul> 
+      </div> 
+      <div class="lb-tiny-12 lb-mid-6 lb-col"> 
+       <div>
+         ソリューション 
+       </div> 
+       <ul> 
+        <li><a href="https://aws.amazon.com/jp/websites/?nc1=f_dr">ウェブサイトおよびウェブサイトホスティング</a></li> 
+        <li><a href="https://aws.amazon.com/jp/business-applications/?nc1=f_dr">ビジネスアプリケーション</a></li> 
+        <li><a href="https://aws.amazon.com/jp/backup-restore/?nc1=f_dr">バックアップと復旧</a></li> 
+        <li><a href="https://aws.amazon.com/jp/disaster-recovery/?nc1=f_dr">災害対策</a></li> 
+        <li><a href="https://aws.amazon.com/jp/archive/?nc1=f_dr">データアーカイブ</a></li> 
+        <li><a href="https://aws.amazon.com/jp/devops/?nc1=f_dr">DevOps</a></li> 
+        <li><a href="https://aws.amazon.com/jp/serverless/?nc1=f_dr">サーバーレスコンピューティング</a></li> 
+        <li><a href="https://aws.amazon.com/jp/big-data/?nc1=f_dr">ビッグデータ</a></li> 
+        <li><a href="https://aws.amazon.com/jp/hpc/?nc1=f_dr">ハイパフォーマンスコンピューティング</a></li> 
+        <li><a href="https://aws.amazon.com/jp/mobile/?nc1=f_dr">モバイルサービス</a></li> 
+        <li><a href="https://aws.amazon.com/jp/digital-marketing/?nc1=f_dr">デジタルマーケティング</a></li> 
+        <li><a href="https://aws.amazon.com/jp/gaming/?nc1=f_dr">ゲーム開発</a></li> 
+        <li><a href="https://aws.amazon.com/jp/digital-media/?nc1=f_dr">デジタルメディア</a></li> 
+        <li><a href="https://aws.amazon.com/jp/government-education/?nc1=f_dr">政府機関および教育</a></li> 
+        <li><a href="https://aws.amazon.com/jp/health/?nc1=f_dr">健康</a></li> 
+        <li><a href="https://aws.amazon.com/jp/financial-services/?nc1=f_dr">金融サービス</a></li> 
+        <li><a href="https://aws.amazon.com/jp/windows/?nc1=f_dr">AWS での Windows</a></li> 
+        <li><a href="https://aws.amazon.com/jp/retail/?nc1=f_dr">小売業</a></li> 
+        <li><a href="https://aws.amazon.com/jp/power-and-utilities/?nc1=f_dr">電力会社</a></li> 
+        <li><a href="https://aws.amazon.com/jp/oil-and-gas/?nc1=f_dr">石油とガス</a></li> 
+        <li><a href="https://aws.amazon.com/jp/automotive/?nc1=f_dr">自動車</a></li> 
+        <li><a href="https://aws.amazon.com/jp/blockchain/?nc1=f_dr">ブロックチェーン</a></li> 
+        <li><a href="https://aws.amazon.com/jp/manufacturing/?nc1=f_dr">製造</a></li> 
+       </ul> 
+      </div> 
+      <div class="lb-tiny-12 lb-mid-6 lb-col aws-tiny-clear aws-mid-clear-none"> 
+       <div>
+         リソースとトレーニング 
+       </div> 
+       <ul> 
+        <li><a href="https://aws.amazon.com/jp/developer/?nc1=f_dr">開発者</a></li> 
+        <li><a href="https://aws.amazon.com/jp/java/?nc1=f_dr">AWS での Java</a></li> 
+        <li><a href="https://aws.amazon.com/jp/javascript/?nc1=f_dr">AWS での JavaScript</a></li> 
+        <li><a href="https://aws.amazon.com/jp/mobile/?nc1=f_dr">AWS でのモバイル</a></li> 
+        <li><a href="https://aws.amazon.com/jp/php/?nc1=f_dr">AWS での PHP</a></li> 
+        <li><a href="https://aws.amazon.com/jp/python/?nc1=f_dr">AWS での Python</a></li> 
+        <li><a href="https://aws.amazon.com/jp/ruby/?nc1=f_dr">AWS での Ruby</a></li> 
+        <li><a href="https://aws.amazon.com/jp/net/">AWS での .NET</a></li> 
+        <li><a href="https://aws.amazon.com/jp/tools/?nc1=f_dr">SDK とツール</a></li> 
+        <li><a href="https://aws.amazon.com/marketplace/ref=mkt_ste_dev_resources_ftr?nc1=f_dr">AWS Marketplace</a></li> 
+        <li><a href="https://aws.amazon.com/jp/usergroups/?nc1=f_dr">ユーザーグループ</a></li> 
+        <li><a href="https://aws.amazon.com/jp/premiumsupport/?nc1=f_dr">サポートプラン</a></li> 
+        <li><a href="http://status.aws.amazon.com/?nc1=f_dr">サービスヘルスダッシュボード</a></li> 
+        <li><a href="https://forums.aws.amazon.com/index.jspa?nc1=f_dr">フォーラム</a></li> 
+        <li><a href="https://aws.amazon.com/jp/faqs/?nc1=f_dr">よくある質問</a></li> 
+        <li><a href="https://aws.amazon.com/jp/documentation/?nc1=f_dr">ドキュメント</a></li> 
+        <li><a href="https://aws.amazon.com/articles/?nc1=f_dr">記事 &amp; チュートリアル</a></li> 
+        <li><a href="https://aws.amazon.com/jp/quickstart/?nc1=f_dr">クイックスタート</a></li> 
+       </ul> 
+      </div> 
+      <div class="lb-tiny-12 lb-mid-6 lb-col"> 
+       <div>
+         アカウントの管理 
+       </div> 
+       <ul> 
+        <li><a href="https://aws.amazon.com/jp/console/?nc1=f_m">マネジメントコンソール</a></li> 
+        <li><a href="https://console.aws.amazon.com/billing/home?nc1=f_m">請求情報とコスト管理</a></li> 
+        <li><a href="https://pages.awscloud.com/communication-preferences.html">アップデートをサブスクライブ</a></li> 
+        <li><a href="https://portal.aws.amazon.com/gp/aws/developer/account/index.html?action=edit-aws-profile&nc1=f_m">個人情報</a></li> 
+        <li><a href="https://portal.aws.amazon.com/gp/aws/developer/account/index.html?action=edit-payment-method&nc1=f_m">お支払い方法</a></li> 
+        <li><a href="https://aws.amazon.com/jp/iam/?nc1=f_m">AWS Identity &amp; Access Management</a></li> 
+        <li><a href="https://console.aws.amazon.com/iam/home?action=access-key&nc1=f_m">セキュリティ認証情報</a></li> 
+        <li><a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase">サービスの上限緩和申請</a></li> 
+        <li><a href="https://aws.amazon.com/jp/contact-us/?nc1=f_m">お問い合わせ</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-mid-8 lb-col aws-page-footer-right-item"> 
+     <div class="aws-text-box section"> 
+      <div class="  "> 
+       <p><b>アマゾン ウェブ サービスでは人材を募集中です。</b></p> 
+       <p>アマゾン ウェブ サービス (AWS) は、ダイナミックに成長している Amazon.com のビジネスユニットです。現在、ソフトウェア開発エンジニア、プロダクトマネージャー、アカウントマネージャー、ソリューションアーキテクト、サポートエンジニア、システムエンジニア、デザイナーなどを募集しています。詳細は、<a href="https://aws.amazon.com/careers/?nc1=f_hi" target="_blank">採用情報</a>のページをご覧ください。</p> 
+       <p>&nbsp;</p> 
+       <p class="p1"><br> </p> 
+       <p>&nbsp;</p> 
+      </div> 
+     </div> 
+     <div class="aws-bg-logo lb-bg-logo aws-An_amazon_company-footer-en"> 
+      <a href="http://www.amazon.com/"><span>An Amazon.com company</span></a> 
+     </div> 
+     <div data-lb-comp="google-rlsa-pixel"></div> 
+    </div> 
+   </div> 
+   <div id="aws-page-footer-lang-links" class="lb-row lb-snap lb-row-max-large aws-language"> 
+    <div class="lb-tiny-24 lb-col"> 
+     <ul> 
+      <li>言語</li> 
+      <li data-language="ar"><a href="https://aws.amazon.com/ar/?nc1=h_ls" data-language="ar">عربي</a></li> 
+      <li data-language="id"><a href="https://aws.amazon.com/id/?nc1=h_ls" data-language="id">Bahasa Indonesia</a></li> 
+      <li data-language="de"><a href="https://aws.amazon.com/de/?nc1=f_ls" data-language="de">Deutsch</a></li> 
+      <li data-language="en"><a href="https://aws.amazon.com/?nc1=f_ls" data-language="en">English</a></li> 
+      <li data-language="es"><a href="https://aws.amazon.com/es/?nc1=f_ls" data-language="es">Espa&ntilde;ol</a></li> 
+      <li data-language="fr"><a href="https://aws.amazon.com/fr/?nc1=f_ls" data-language="fr">Fran&ccedil;ais</a></li> 
+      <li data-language="it"><a href="https://aws.amazon.com/it/?nc1=f_ls" data-language="it">Italiano</a></li> 
+      <li data-language="pt"><a href="https://aws.amazon.com/pt/?nc1=f_ls" data-language="pt">Portugu&ecirc;s</a></li> 
+      <li data-language="vi"><a href="https://aws.amazon.com/vi/?nc1=f_ls" data-language="vi">Tiếng Việt</a></li> 
+      <li data-language="tr"><a href="https://aws.amazon.com/tr/?nc1=h_ls" data-language="tr">T&uuml;rk&ccedil;e</a></li> 
+      <li data-language="ru"><a href="https://aws.amazon.com/ru/?nc1=f_ls" data-language="ru">Ρусский</a></li> 
+      <li data-language="th"><a href="https://aws.amazon.com/th/?nc1=h_ls" data-language="th">ไทย</a></li> 
+      <li data-language="jp"><a href="https://aws.amazon.com/jp/?nc1=f_ls" data-language="jp">日本語</a></li> 
+      <li data-language="ko"><a href="https://aws.amazon.com/ko/?nc1=f_ls" data-language="ko">한국어</a></li> 
+      <li data-language="cn"><a href="https://aws.amazon.com/cn/?nc1=f_ls" data-language="cn">中文 (简体)</a></li> 
+      <li data-language="tw"><a href="https://aws.amazon.com/tw/?nc1=f_ls" data-language="tw">中文 (繁體)</a></li> 
+     </ul> 
+     <div class="aws-page-footer-lang-links-right"> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="lb-row lb-snap lb-row-max-large aws-meta"> 
+    <div class="lb-small-24 lb-mid-8 lb-col"> 
+     <ul> 
+      <li><a href="https://aws.amazon.com/jp/terms/?nc1=f_pr">サイト規約</a></li> 
+      <li>|</li> 
+      <li><a href="https://aws.amazon.com/jp/privacy/?nc1=f_pr">プライバシー</a></li> 
+     </ul> 
+    </div> 
+    <div class="lb-small-24 lb-mid-16 lb-col aws-copyright"> 
+     <div>
+       &copy; 2019, Amazon Web Services, Inc. or its affiliates.All rights reserved. 
+     </div> 
+    </div> 
+   </div> 
+  </footer> 
+  <div id="aws-page-end"></div> 
+  <div id="lb-page-end"></div> 
+  <script src="js/main.js" async></script> 
+  <script src="js/aws-da.js"></script> 
+  <!-- SiteCatalyst code version: H.25.1. Copyright 1996-2012 Adobe, Inc. All Rights Reserved --> 
+  <script><!--
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script> 
+  <script><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script> 
+  <noscript> 
+   <img src="0" height="1" width="1" border="0" alt> 
+  </noscript> 
+  <!--/DO NOT REMOVE/--> 
+  <!-- End SiteCatalyst code version: H.25.1. --> 
+  <!--[if lte IE 9]>
+  <script>
+    jQuery = $ = undefined;
+  </script>
+  <p class="deprecated-browser-support-message">
+    <strong>古い</strong>ブラウザが使用されています。正常に表示するには、Internet Explorer 11 にアップグレードするか、別の最新のブラウザを使用してください。<img src="https://fls-na.amazon.com/1/action-impressions/1/OE/aws-mktg/action/awsm_:comp_DeprecatedBrowser@v=1:u=c?dataset=LIVE:PROD&instance=PUB&client=dsk&marketplaceId=A12QK8IU0H0XW5&requestId=ABCDEFGHIJKLMNOPQRST&session=123-1234567-1234567"
+           alt="deprecated-browser pixel tag" />
+      </p>
+<![endif]--> 
+  <script>
+  if (document.documentMode === 10) {
+    var msg = '<strong>古い</strong>ブラウザが使用されています。正常に表示するには、Internet Explorer 11 にアップグレードするか、別の最新のブラウザを使用してください。';
+    $('html').addClass('unsupported-version');
+    $(document.body).append('<p class="deprecated-browser-support-message">' + msg + '<img src="https://fls-na.amazon.com/1/action-impressions/1/OE/aws-mktg/action/awsm_:comp_DeprecatedBrowser@v=1:u=c?dataset=LIVE:PROD&instance=PUB&client=dsk&marketplaceId=A12QK8IU0H0XW5&requestId=ABCDEFGHIJKLMNOPQRST&session=123-1234567-1234567" alt="deprecated-browser pixel tag" /></p>');
+    jQuery = $ = undefined;
+  }
+</script> 
+  <!-- updated_at: 2019-04-29T15:32:04.183-0700 -->  
+ </body>
+</html>

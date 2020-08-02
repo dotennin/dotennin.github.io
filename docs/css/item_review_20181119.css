@@ -1,0 +1,266 @@
+/* #itemReview
+--------------------------------------------*/
+#itemReview {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+#itemReview .itemReview__inner {
+    margin-left: 25px;
+}
+/* #productReview
+--------------------------------------------*/
+#productReview {
+    position: relative;
+    margin-bottom: 15px;
+}
+/* .reviewRate */
+.reviewRate {
+    margin: 15px 0 5px;
+}
+.reviewRate .rateDefinition {
+    padding: 5px 0;
+}
+.reviewRate .rateDefinition .rateDefinition__head {
+    display: inline;
+    margin-right: 5px;
+    font-weight: bold;
+    color: #a0a0a0;
+}
+.reviewRate .rateDefinition .rateDefinition__body {
+    display: inline;
+    vertical-align: bottom;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+}
+.reviewRate .rateDefinition .rateDefinition__body img {
+    vertical-align: -2px;
+}
+.reviewRate .rateError {
+    color: #777777;
+}
+div#productReview div.review {
+    padding-top: 10px;
+}
+div#productReview .review p.notReviewed {
+    margin: 10px 0 0;
+    padding: 20px;
+    text-align: center;
+}
+div#productReview .reviewInfo {
+    border-bottom: 1px solid #cccccc;
+    padding: 5px 0;
+    line-height: 16px;
+}
+div#productReview .allReview {
+    padding: 5px 0;
+}
+div#productReview div.review dl.allReview,
+div#productReview div.review div.reviewCount {
+    display: inline;
+    margin-right: 10px;
+}
+div#productReview .reviewCount {
+    margin: 5px 0 0 10px;
+    padding: 5px 0px 5px 20px;
+    background: url(../images/icn_review_s_trans.gif) left center no-repeat;
+}
+div#productReview .notReviewed .reviewCount {
+    margin: 5px 0 0 10px;
+}
+div#productReview div.review dl.reviewCount {
+    display: block;
+    width: 245px;
+}
+div#productReview div.review dl.allReview dt,
+div#productReview div.review dl.reviewCount dt {
+    display: inline;
+    margin-right: 5px;
+    font-weight: bold;
+    color: #a0a0a0;
+}
+div#productReview div.review dl.allReview dd,
+div#productReview div.review dl.reviewCount dd {
+    display: inline;
+    vertical-align: bottom;
+    font-size: 115%;
+    font-weight: bold;
+    color: #000000;
+}
+
+div#productReview div.review dl.allReview dd {
+    font-size: 18px;
+}
+div#productReview .reviewInfo .reviewInfo__title {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #444444;
+}
+div#productReview .reviewInfo .reviewInfo__count {
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 20px;
+    height: 16px;
+    line-height: 16px;
+    background: url(../images/icn_review_s_trans.gif) left center no-repeat;
+}
+div#productReview div.reviewList li {
+    margin-bottom: 10px;
+    border-top: 1px solid #cccccc;
+    padding: 10px;
+    background: #ffffff;
+}
+div#productReview div.reviewList li:first-child {
+    border-top: none;
+}
+div#productReview div.reviewList li p.description {
+    color: #333333;
+}
+#productReview .review-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-indent: -0.5em;
+    font-size: 14px;
+}
+#productReview .review-title.notitle {
+  color: #a0a0a0;
+}
+div#productReview div.reviewList dl {
+    margin-bottom: 7px;
+    padding-bottom: 3px;
+}
+/* rule out MacIE \*/
+div#productReview div.reviewList dl { 
+    display: block;
+    overflow: auto;
+} /* */
+div#productReview div.reviewList dt {
+    position: absolute;
+    left: 14em;
+    float: left;
+}
+div#productReview div.reviewList dt .fn {
+    line-height: 16px;
+}
+div#productReview div.reviewList dd.rating {
+    float: left;
+    vertical-align: middle;
+}
+div#productReview div.reviewList dd.rating span {
+    margin: 0 4px;
+}
+div#productReview div.reviewList dd.rating img {
+    vertical-align: -2px;
+}
+div#productReview div.reviewList dd.reviewDate {
+    float: right;
+    color: #666666;
+    font-size: 11px;
+}
+div#productReview div.reviewList p.summary {
+    margin-bottom: 4px;
+    padding-left: 18px;
+    background: url(../images/icn_review.gif) no-repeat 0 3px;
+}
+.otherAnswer {
+    margin-top: 10px;
+}
+.otherAnswer span {
+    font-weight: bold;
+    color: #BF0000;
+    font-size: 180%;
+}
+#productReview .reviewArea {
+    border-top: 1px solid #cccccc;
+    padding: 5px 0px 5px 18px;
+    background: url(../images/icn_review_s_trans.gif) left center no-repeat ;
+}
+div#productReview div.title {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-size: 125%;
+    font-weight: bold;
+    background: url(../images/sprite_20130311.gif) no-repeat 0 -200px;
+}
+div#productReview div.hreview {
+    margin-bottom: 8px;
+}
+div#productReview,div#productReview div.hreview { 
+    display: inline-block;
+    overflow: hidden;
+}
+/* rule out MacIE \*/
+div#productReview,div#productReview div.hreview { 
+    display: block;
+    overflow: hidden;
+} /* */
+div#productReview div.hreview dl.allReview,
+div#productReview div.hreview dl.reviewCount {
+    float: left;
+    width: 225px;
+}
+div#productReview div.hreview dl.allReview dt,
+div#productReview div.hreview dl.reviewCount dt {
+    display: inline;
+    margin-right: 5px;
+    font-weight: bold;
+    color: #B35C09;
+}
+div#productReview div.hreview dl.allReview dd,
+div#productReview div.hreview dl.reviewCount dd {
+    display: inline;
+    vertical-align: middle;
+    font-size: 115%;
+    font-weight: bold;
+    color: #BF0000;
+}
+div#productReview div.hreview div.moreInfo {
+    float: right;
+}
+div#productReview div.review div.moreInfo {
+    float: right;
+}
+div#productReview .moreInfo_eBook {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    border: none;
+    background: #ececec;
+}
+div#productReview .moreInfo_eBook span {
+    color: #000000;
+}
+div#productReview .productReview-readmore {
+    margin-top: 20px;
+    text-align: center;
+}
+/*underline style*/
+#productReview .reviewArea a,
+#productReview .book-title a,
+div#productReview div.review dl.reviewCount a {
+    text-decoration: none;
+}
+#productReview .reviewArea a:hover,
+#productReview .book-title a:hover,
+div#productReview div.review dl.reviewCount a:hover {
+    text-decoration: underline;
+}
+#productReview .reviewArea .count,
+div#productReview div.review dl.reviewCount .count {
+    font-size: 120%;
+    font-weight: bold;
+}
+#productReview .book-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 25px; 
+}
+#productReview .review-ebook {
+    margin-top: 40px;
+    border-top: 1px solid #cccccc;
+    padding-top: 10px;
+}
+div#productReview .moreInfo_eBook {
+    display: none;
+}

@@ -1,0 +1,5 @@
+    <svg alt="status-pending" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style="vector-effect: non-scaling-stroke; stroke: #545b64; stroke-width: 2px; fill: none;">
+      <circle cx="8" cy="8" r="7"/>
+      <line style="stroke-linecap:square;" x1="8" y1="5" x2="8" y2="9"/>
+      <line style="stroke-linecap:square;" x1="8" y1="9" x2="5" y2="9"/>
+    </svg>
